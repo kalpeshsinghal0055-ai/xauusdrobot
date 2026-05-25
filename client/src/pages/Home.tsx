@@ -1,25 +1,44 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
-
 /**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
+ * XAUUSD Robot - Advanced Gold EA Website
+ * Design: "Luxury Gold Vault" - Art Deco meets luxury fintech
+ * Colors: Near-black base with warm gold gradients, emerald accents
+ * Typography: Playfair Display (display) + DM Sans (body)
  */
-export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
 
+import { useState, useEffect, useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import StatsBar from "@/components/StatsBar";
+import HowItWorks from "@/components/HowItWorks";
+import Features from "@/components/Features";
+import AlgoTable from "@/components/AlgoTable";
+import Performance from "@/components/Performance";
+import Brokers from "@/components/Brokers";
+import Reviews from "@/components/Reviews";
+import FAQ from "@/components/FAQ";
+import CTASection from "@/components/CTASection";
+import SEOContent from "@/components/SEOContent";
+import Footer from "@/components/Footer";
+
+export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-background overflow-x-hidden">
+      <Navbar />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <StatsBar />
+        <HowItWorks />
+        <Features />
+        <AlgoTable />
+        <Performance />
+        <Brokers />
+        <Reviews />
+        <FAQ />
+        <SEOContent />
+        <CTASection />
       </main>
+      <Footer />
     </div>
   );
 }
