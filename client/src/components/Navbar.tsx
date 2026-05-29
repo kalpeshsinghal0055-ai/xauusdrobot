@@ -34,7 +34,7 @@ export default function Navbar() {
       <nav className="container flex items-center justify-between h-16 lg:h-20">
         <a href="/" className="flex items-center gap-2 group">
           <img
-            src="/manus-storage/logo_54bf4c98.png"
+            src="/photo_2026-05-29_13-44-37.jpg"
             alt="BBFx AI - XAUUSD Robot"
             className="h-8 lg:h-10 w-auto"
           />
