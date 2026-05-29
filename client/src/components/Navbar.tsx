@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link } from "wouter";
 
 const navLinks = [
-  { href: "#how", label: "How It Works" },
-  { href: "#features", label: "Features" },
-  { href: "#bots", label: "Free Algos" },
-  { href: "#brokers", label: "Brokers" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#how", label: "How It Works" },
+  { href: "/#features", label: "Features" },
+  { href: "/#bots", label: "Free Algos" },
+  { href: "/#brokers", label: "Brokers" },
+  { href: "/blog", label: "Blog", internal: true },
+  { href: "/#faq", label: "FAQ" },
   { href: "https://t.me/BBFx_Ai", label: "Telegram", external: true },
 ];
 
@@ -30,8 +32,7 @@ export default function Navbar() {
       }`}
     >
       <nav className="container flex items-center justify-between h-16 lg:h-20">
-        {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
+        <a href="/" className="flex items-center gap-2 group">
           <img
             src="/manus-storage/logo_54bf4c98.png"
             alt="BBFx AI - XAUUSD Robot"
@@ -42,19 +43,26 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-8">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noopener noreferrer" : undefined}
-              className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase"
-            >
-              {link.label}
-            </a>
-          ))}
+          {navLinks.map((link) =>
+            link.internal ? (
+              <Link key={link.href} href={link.href}>
+                <span className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase cursor-pointer">
+                  {link.label}
+                </span>
+              </Link>
+            ) : (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
+                className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase"
+              >
+                {link.label}
+              </a>
+            )
+          )}
           <a
             href="https://one.exnessonelink.com/a/uhk6peieiq"
             target="_blank"
@@ -65,7 +73,6 @@ export default function Navbar() {
           </a>
         </div>
 
-        {/* Mobile Toggle */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden p-2 text-foreground"
@@ -75,7 +82,6 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -85,18 +91,29 @@ export default function Navbar() {
             className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-gold/10"
           >
             <div className="container py-6 flex flex-col gap-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target={link.external ? "_blank" : undefined}
-                  rel={link.external ? "noopener noreferrer" : undefined}
-                  onClick={() => setMobileOpen(false)}
-                  className="text-base font-medium text-muted-foreground hover:text-gold transition-colors py-2 uppercase tracking-wide"
-                >
-                  {link.label}
-                </a>
-              ))}
+              {navLinks.map((link) =>
+                link.internal ? (
+                  <Link key={link.href} href={link.href}>
+                    <span
+                      onClick={() => setMobileOpen(false)}
+                      className="text-base font-medium text-muted-foreground hover:text-gold transition-colors py-2 uppercase tracking-wide cursor-pointer block"
+                    >
+                      {link.label}
+                    </span>
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    target={link.external ? "_blank" : undefined}
+                    rel={link.external ? "noopener noreferrer" : undefined}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-base font-medium text-muted-foreground hover:text-gold transition-colors py-2 uppercase tracking-wide"
+                  >
+                    {link.label}
+                  </a>
+                )
+              )}
               <a
                 href="https://one.exnessonelink.com/a/uhk6peieiq"
                 target="_blank"
