@@ -16,7 +16,14 @@ const blogPosts = [
     category: "Comprehensive Guide",
     date: "May 29, 2026",
     readTime: "7 min read",
-    author: "BBFxAi Development Team",
+  },
+  {
+    slug: "bbfxai-xauusd-robot-mt5-complete-guide",
+    title: "BBFxAi XAUUSD Robot for MT5 – Complete Guide to AI-Powered Gold Trading in 2026",
+    excerpt: "Everything you need to know about the BBFxAi XAUUSD Robot — what it is, how it works, key features, installation steps, best practices, and FAQs for automated gold trading.",
+    category: "AI Trading Guide",
+    date: "May 29, 2026",
+    readTime: "8 min read",
   },
 ];
 
@@ -79,7 +86,7 @@ export default function Blog() {
                 </Link>
               </motion.div>
             ))}
-            <motion.div custom={1} initial="hidden" animate="show" variants={fadeUp}>
+            <motion.div custom={blogPosts.length} initial="hidden" animate="show" variants={fadeUp}>
               <div className="h-full bg-card/30 border border-dashed border-border/30 rounded-xl flex flex-col items-center justify-center py-16 px-6 text-center opacity-60">
                 <div className="text-3xl mb-3">✍️</div>
                 <p className="text-sm text-muted-foreground">More articles coming soon</p>
