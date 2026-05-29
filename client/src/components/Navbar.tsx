@@ -32,8 +32,9 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container flex items-center justify-between h-16 lg:h-20 relative">
-        <a href="/" className="flex items-center gap-2 group">
+      <nav className="container flex items-center justify-between h-16 lg:h-20">
+        {/* Logo */}
+        <a href="/" className="flex items-center gap-2 group shrink-0">
           <img
             src="/photo_2026-05-29_13-44-37.jpg"
             alt="BBFx AI - XAUUSD Robot"
@@ -44,13 +45,13 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden lg:flex items-center gap-4 mr-2">
-            <LivePriceTicker />
-          </div>
-          <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-2">
-            <LivePriceTicker />
-          </div>
-          <div className="hidden lg:flex items-center gap-8">
+        {/* Live Price Ticker — desktop only, centered */}
+        <div className="hidden lg:flex items-center gap-3 mx-4">
+          <LivePriceTicker />
+        </div>
+
+        {/* Desktop Nav Links */}
+        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) =>
             link.internal ? (
               <Link key={link.href} href={link.href}>
@@ -74,12 +75,13 @@ export default function Navbar() {
             href="https://one.exnessonelink.com/a/uhk6peieiq"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            className="px-5 py-2.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shrink-0"
           >
             GET FREE EA
           </a>
         </div>
 
+        {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="lg:hidden p-2 text-foreground"
@@ -89,6 +91,7 @@ export default function Navbar() {
         </button>
       </nav>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
@@ -125,7 +128,7 @@ export default function Navbar() {
                 href="https://one.exnessonelink.com/a/uhk6peieiq"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-2 px-5 py-3 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded text-center tracking-wide"
+                className="mt-2 px-5 py-3 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide text-center"
               >
                 GET FREE EA
               </a>
