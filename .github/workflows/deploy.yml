@@ -38,6 +38,9 @@ jobs:
         env:
           NODE_ENV: production
 
+      - name: Add 404.html for SPA routing
+        run: cp dist/public/index.html dist/public/404.html
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
