@@ -32,7 +32,7 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <nav className="container flex items-center justify-between h-16 lg:h-20">
+      <nav className="container flex items-center justify-between h-16 lg:h-20 relative">
         <a href="/" className="flex items-center gap-2 group">
           <img
             src="/photo_2026-05-29_13-44-37.jpg"
@@ -45,6 +45,9 @@ export default function Navbar() {
         </a>
 
         <div className="hidden lg:flex items-center gap-4 mr-2">
+            <LivePriceTicker />
+          </div>
+          <div className="absolute left-1/2 -translate-x-1/2 hidden lg:flex items-center gap-2">
             <LivePriceTicker />
           </div>
           <div className="hidden lg:flex items-center gap-8">
