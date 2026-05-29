@@ -17,8 +17,6 @@ jobs:
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: 10.4.1
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -29,33 +27,21 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Remove Manus-specific plugin from vite.config.ts
+      - name: Patch vite.config.ts - remove Manus-only plugin
         run: |
-          sed -i 's/vitePluginManusRuntime(),//g' vite.config.ts
-          sed -i 's/import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";//g' vite.config.ts
           sed -i '/vite-plugin-manus-runtime/d' vite.config.ts
+          sed -i 's/vitePluginManusRuntime(),//g' vite.config.ts
+          sed -i 's/, vitePluginManusRuntime()//g' vite.config.ts
 
       - name: Build
         run: pnpm vite build
         env:
           NODE_ENV: production
 
-      - name: Copy assets from gh-pages
-        run: |
-          git fetch origin gh-pages
-          git checkout origin/gh-pages -- __manus__ 2>/dev/null || true
-          cp -r dist/public/. dist/deploy/
-        continue-on-error: true
-
-      - name: Prepare deploy folder
-        run: |
-          mkdir -p dist/deploy
-          cp -r dist/public/. dist/deploy/
-
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/public
-          keep_files: true
+          keep_files: false
           cname: xauusdrobot.com
