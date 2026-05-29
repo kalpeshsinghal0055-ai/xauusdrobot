@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "wouter";
+import LivePriceTicker from "@/components/LivePriceTicker";
 
 const navLinks = [
   { href: "/#how", label: "How It Works" },
@@ -43,7 +44,10 @@ export default function Navbar() {
           </span>
         </a>
 
-        <div className="hidden lg:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-4 mr-2">
+            <LivePriceTicker />
+          </div>
+          <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) =>
             link.internal ? (
               <Link key={link.href} href={link.href}>
