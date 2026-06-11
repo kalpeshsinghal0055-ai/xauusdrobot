@@ -10,7 +10,7 @@ const brokers = [
           { label: "XAUUSD Spread", value: "From 0.1 pips" },
           { label: "Min Deposit", value: "$10" },
           { label: "Platform", value: "MT4 / MT5" },
-          { label: "Algo Trading", value: "✓ Supported" },
+          { label: "Algo Trading", value: "Supported" },
               ],
         href: "https://one.exnessonelink.com/a/uhk6peieiq",
   },
@@ -57,7 +57,7 @@ const brokers = [
         name: "Markets4you",
         badge: "FLEXIBLE",
         badgeColor: "bg-purple-500/20 text-purple-400",
-        desc: "Flexible account types with low spreads on XAUUSD. Regulated, fast withdrawals, and full MT4/MT5 support — ideal for running our free gold Expert Advisor.",
+        desc: "Flexible account types with low spreads on XAUUSD. Regulated, fast withdrawals, and full MT4/MT5 support - ideal for running our free gold Expert Advisor.",
         specs: [
           { label: "XAUUSD Spread", value: "From 0.2 pips" },
           { label: "Min Deposit", value: "$50" },
@@ -83,7 +83,7 @@ export default function Brokers() {
                                               Brokers
                                   </span>span>
                                   <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-6">
-                                              Open via Affiliate & Get
+                                              Open via Affiliate &amp; Get
                                               <br />
                                               <span className="text-gold/80">Free Algo Instantly</span>span>
                                   </h2>h2>
@@ -104,7 +104,7 @@ export default function Brokers() {
                                         transition={{ delay: i * 0.1, duration: 0.5 }}
                                         className="group gold-border rounded-xl p-8 bg-card hover:shadow-xl hover:shadow-gold/5 transition-all duration-500"
                                       >
-                          {/* Badge & Name */}
+                          {/* Badge */}
                                       <div className="flex items-center gap-3 mb-4">
                                                       <span className={`px-3 py-1 rounded text-xs font-bold uppercase tracking-wider ${broker.badgeColor}`}>
                                                         {broker.badge}
@@ -134,7 +134,7 @@ export default function Brokers() {
                                                         rel="noopener noreferrer"
                                                         className="block w-full text-center py-3 px-6 rounded-lg bg-gold/10 border border-gold/30 text-gold font-semibold text-sm hover:bg-gold/20 hover:border-gold/60 transition-all duration-300"
                                                       >
-                                                      Open Account → Free EA
+                                                      Open Account - Free EA
                                       </a>a>
                         </motion.div>motion.div>
                       ))}
