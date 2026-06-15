@@ -70,6 +70,13 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <a
+              href="/BBFxAi_GGHP_v2_0_0.ex5"
+              download
+              className="group px-8 py-4 bg-emerald text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-emerald/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
+            >
+              <span>⬇</span> DOWNLOAD EA (.EX5)
+            </a>
+            <a
               href="https://one.exnessonelink.com/a/uhk6peieiq"
               target="_blank"
               rel="noopener noreferrer"
@@ -86,6 +93,24 @@ export default function HeroSection() {
               <span>💬</span> TALK TO US
             </a>
           </motion.div>
+
+          {/* License key contact */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="mt-5 text-sm text-muted-foreground"
+          >
+            For license key, contact{" "}
+            <a
+              href="https://t.me/BBFx_Ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold font-semibold hover:underline"
+            >
+              @BBFx_Ai on Telegram
+            </a>
+          </motion.p>
         </div>
       </div>
 
