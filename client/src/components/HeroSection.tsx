@@ -77,7 +77,7 @@ export default function HeroSection() {
               <span>⬇</span> DOWNLOAD EA (.EX5)
             </a>
             <a
-              href="https://one.exnessonelink.com/a/uhk6peieiq"
+              href="https://www.markets4you.online/?affid=ky6kt3m"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
