@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "wouter";
-import LivePriceTicker from "@/components/LivePriceTicker";
-
 const navLinks = [
   { href: "/#how", label: "How It Works" },
   { href: "/#features", label: "Features" },
@@ -47,7 +45,7 @@ export default function Navbar() {
 
         {/* Live Price Ticker — desktop only, centered */}
         <div className="hidden lg:flex items-center gap-3 mx-4">
-          <LivePriceTicker />
+                        <div dangerouslySetInnerHTML={{ __html: '<tv-ticker-tape symbols="FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,TVC:USOIL"></tv-ticker-tape>' }} />
         </div>
 
         {/* Desktop Nav Links */}
