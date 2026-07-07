@@ -5,8 +5,7 @@
  * Typography: Playfair Display (display) + DM Sans (body)
  */
 
-import { useState, useEffect, useRef } from "react";
-import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsBar from "@/components/StatsBar";
@@ -20,16 +19,42 @@ import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 import { useSeo } from "@/lib/seo";
+
 function TrustpilotWidget() {
   const ref = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if ((window as any).Trustpilot && ref.current) {
-      (window as any).Trustpilot.loadFromElement(ref.current, true);
-    }
-  }, []);
-  return <div ref={ref} className="trustpilot-widget container py-12" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a4ccdc32d710c062e249956" data-style-height="52px" data-style-width="100%" data-token="53e33d66-bef6-4254-b461-f35525f292b0" dangerouslySetInnerHTML={{ __html: '<a href="https://www.trustpilot.com/review/xauusdrobot.com" target="_blank" rel="noopener">Trustpilot</a>' }} />;
-}
 
+  useEffect(() => {
+    let tries = 0;
+    const id = setInterval(() => {
+      tries++;
+      const tp = (window as any).Trustpilot;
+      if (tp && ref.current) {
+        tp.loadFromElement(ref.current, true);
+        clearInterval(id);
+      } else if (tries > 40) {
+        clearInterval(id);
+      }
+    }, 250);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="container mx-auto py-12">
+      <div
+        ref={ref}
+        className="trustpilot-widget"
+        data-locale="en-US"
+        data-template-id="56278e9abfbbba0bdcd568bc"
+        data-businessunit-id="6a4ccdc32d710c062e249956"
+        data-style-height="52px"
+        data-style-width="100%"
+        data-token="53e33d66-bef6-4254-b461-f35525f292b0"
+      >
+        <a href="https://www.trustpilot.com/review/xauusdrobot.com" target="_blank" rel="noopener">Trustpilot</a>
+      </div>
+    </div>
+  );
+}
 
 export default function Home() {
   useSeo({
@@ -38,6 +63,7 @@ export default function Home() {
       "Free XAUUSD Robot MT5 Expert Advisor for automated gold algo trading. AI-powered EA. Get the free MT5 EA via broker affiliate. Best gold trading algorithm 2026.",
     canonical: "https://xauusdrobot.com/",
   });
+
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
@@ -48,11 +74,10 @@ export default function Home() {
         <Features />
         <AlgoTable />
         <Performance />
-          <TrustpilotWidget />
+        <TrustpilotWidget />
         <Brokers />
         <Reviews />
         <FAQ />
-        <SEOContent />
         <CTASection />
       </main>
       <Footer />
