@@ -2,9 +2,29 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, Home } from "lucide-react";
 import { useLocation } from "wouter";
+import { useEffect } from "react";
+import { useSeo } from "@/lib/seo";
 
 export default function NotFound() {
   const [, setLocation] = useLocation();
+  useSeo({
+    title: "Page Not Found | XAUUSD Robot",
+    description: "The page you are looking for could not be found.",
+    canonical: "https://xauusdrobot.com/404",
+  });
+  useEffect(() => {
+    let robots = document.head.querySelector('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement("meta");
+      robots.setAttribute("name", "robots");
+      document.head.appendChild(robots);
+    }
+    const previous = robots.getAttribute("content");
+    robots.setAttribute("content", "noindex, follow");
+    return () => {
+      if (previous) robots!.setAttribute("content", previous);
+    };
+  }, []);
 
   const handleGoHome = () => {
     setLocation("/");
