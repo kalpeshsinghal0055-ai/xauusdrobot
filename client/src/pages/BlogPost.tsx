@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { useSeo } from "@/lib/seo";
 
 const postsMeta: Record<string, { title: string; category: string; date: string; readTime: string; author: string }> = {
   "bbfxai-xauusd-expert-advisor-guide": {
@@ -154,6 +155,33 @@ export default function BlogPost() {
   const slug = params?.slug ?? "";
   const meta = postsMeta[slug];
   const PostContent = postComponents[slug];
+  const canonical = `https://xauusdrobot.com/blog/${slug}`;
+  const description =
+    slug === "bbfxai-xauusd-robot-mt5-complete-guide"
+      ? "Complete 2026 guide to the BBFxAi XAUUSD Robot for MT5: how the AI gold EA works, setup, risk management, and getting it free via partner brokers."
+      : "A comprehensive guide to the BBFxAi XAUUSD Expert Advisor: its non-martingale trend-following strategy, specs, VPS setup, and free access via brokers.";
+  useSeo({
+    title: meta ? `${meta.title} | XAUUSD Robot` : "Blog | XAUUSD Robot",
+    description,
+    canonical,
+    jsonLd: meta
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BlogPosting",
+          headline: meta.title,
+          author: { "@type": "Organization", name: meta.author },
+          publisher: {
+            "@type": "Organization",
+            name: "XAUUSD Robot by BBFx AI",
+            logo: { "@type": "ImageObject", url: "https://xauusdrobot.com/logo.png" },
+          },
+          datePublished: "2026-05-29",
+          dateModified: "2026-05-29",
+          mainEntityOfPage: canonical,
+          description,
+        }
+      : null,
+  });
 
   if (!meta || !PostContent) {
     return (
