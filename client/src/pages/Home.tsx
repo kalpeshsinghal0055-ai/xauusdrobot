@@ -20,8 +20,15 @@ import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import SEOContent from "@/components/SEOContent";
 import Footer from "@/components/Footer";
+import { useSeo } from "@/lib/seo";
 
 export default function Home() {
+  useSeo({
+    title: "XAUUSD Robot – #1 Free Gold EA for MT4 & MT5 | AI Algo Trading Bot 2026",
+    description:
+      "Free XAUUSD Robot MT5 Expert Advisor for automated gold algo trading. AI-powered EA. Get the free MT5 EA via broker affiliate. Best gold trading algorithm 2026.",
+    canonical: "https://xauusdrobot.com/",
+  });
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
