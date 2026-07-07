@@ -26,8 +26,9 @@ function TrustpilotWidget() {
     if ((window as any).Trustpilot && ref.current) {
       (window as any).Trustpilot.loadFromElement(ref.current, true);
     }
-    return <div ref={ref} className="trustpilot-widget container py-12" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a4ccdc32d710c062e249956" data-style-height="52px" data-style-width="100%" data-token="53e33d66-bef6-4254-b461-f35525f292b0" dangerouslySetInnerHTML={{ __html: '<a href="https://www.trustpilot.com/review/xauusdrobot.com" target="_blank" rel="noopener">Trustpilot</a>' }} />
-  }
+  }, []);
+  return <div ref={ref} className="trustpilot-widget container py-12" data-locale="en-US" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="6a4ccdc32d710c062e249956" data-style-height="52px" data-style-width="100%" data-token="53e33d66-bef6-4254-b461-f35525f292b0" dangerouslySetInnerHTML={{ __html: '<a href="https://www.trustpilot.com/review/xauusdrobot.com" target="_blank" rel="noopener">Trustpilot</a>' }} />;
+}
 
 
 export default function Home() {
