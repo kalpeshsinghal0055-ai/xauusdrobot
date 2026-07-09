@@ -58,11 +58,6 @@ export default function Navbar() {
           </span>
         </a>
 
-        {/* Live Price Ticker — desktop only, centered */}
-        <div className="hidden lg:flex items-center gap-3 mx-4">
-                        <div dangerouslySetInnerHTML={{ __html: '<tv-ticker-tape symbols="FOREXCOM:NSXUSD,FOREXCOM:DJI,FX:EURUSD,BITSTAMP:BTCUSD,BITSTAMP:ETHUSD,CMCMARKETS:GOLD,TVC:USOIL"></tv-ticker-tape>' }} />
-        </div>
-
         {/* Desktop Nav Links */}
         <div className="hidden lg:flex items-center gap-6 xl:gap-8">
           {navLinks.map((link) =>
