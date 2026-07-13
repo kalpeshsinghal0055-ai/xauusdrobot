@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Set Up a XAUUSD Robot on MT4 &amp; MT5 (Step-by-Step Guide)</title>
+<meta name="description" content="A beginner-friendly, step-by-step guide to installing, backtesting, and running a XAUUSD robot on MT4 and MT5 the safe way — demo first, then live.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How to Set Up a XAUUSD Robot on MT4 &amp; MT5 (Step-by-Step Guide)">
+<meta property="og:description" content="A beginner-friendly, step-by-step guide to installing, backtesting, and running a XAUUSD robot on MT4 and MT5 the safe way — demo first, then live.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/">
+<meta property="og:site_name" content="XAUUSD Robot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:18px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}
+.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}
+main{padding:44px 0 20px}
+h1{font-size:38px;line-height:1.2;margin:0 0 10px;letter-spacing:-.5px}
+h2{font-size:26px;margin:38px 0 12px;letter-spacing:-.3px}
+h3{font-size:20px;margin:26px 0 8px;color:var(--gold2)}
+.meta{color:var(--muted);font-size:15px;margin-bottom:8px}
+.lead{font-size:20px;color:#cfd4de}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:26px 0}
+.faq h3{margin-top:20px}
+.disclaimer{font-size:14px;color:var(--muted);border-top:1px solid var(--line);margin-top:44px;padding-top:22px}
+.cta{display:inline-block;background:linear-gradient(180deg,var(--gold2),var(--gold));color:#1a1200;font-weight:700;padding:13px 24px;border-radius:10px;margin:8px 0}
+.cta:hover{text-decoration:none;filter:brightness(1.05)}
+.postlist{list-style:none;padding:0}
+.postlist li{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin:16px 0}
+.postlist h2{margin:0 0 6px;font-size:23px}
+.postlist p{margin:6px 0 0;color:var(--muted)}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:30px}
+strong{color:#fff}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Set Up a XAUUSD Robot on MT4 & MT5 (Step-by-Step Guide)", "description": "A beginner-friendly, step-by-step guide to installing, backtesting, and running a XAUUSD robot on MT4 and MT5 the safe way — demo first, then live.", "datePublished": "2026-07-12", "dateModified": "2026-07-12", "author": {"@type": "Organization", "name": "XAUUSD Robot"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot"}, "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I know if my XAUUSD robot is working?", "acceptedAnswer": {"@type": "Answer", "text": "Look for the smiley face in the top-right of the chart and a green Algo Trading button in the toolbar. You can also check the Experts and Journal tabs at the bottom of the platform for the robot's log messages."}}, {"@type": "Question", "name": "Can I run the robot on multiple charts?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the robot. Some are designed for a single XAUUSD chart; others support multiple pairs. Check the manual, since running two conflicting instances on one account can cause problems."}}, {"@type": "Question", "name": "Do I really need a VPS?", "acceptedAnswer": {"@type": "Answer", "text": "For serious live trading, yes. A VPS keeps the robot running 24/5 with a stable connection close to the broker's servers, which reduces slippage and prevents missed trades."}}, {"@type": "Question", "name": "Why isn't my robot placing any trades?", "acceptedAnswer": {"@type": "Answer", "text": "The most common causes are Algo Trading being disabled, market conditions not yet matching the robot's entry rules, the spread being too high for a scalping robot, or being outside the robot's allowed trading hours."}}, {"@type": "Question", "name": "Is MT4 or MT5 better for a gold robot?", "acceptedAnswer": {"@type": "Answer", "text": "Both are excellent. Use whichever your robot and broker support. MT5 offers more features and instruments; MT4 remains extremely popular and well-supported."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap">
+<a class="brand" href="/">XAUUSD<span> Robot</span></a>
+<nav><a href="/">Home</a><a href="/blog/">Blog</a></nav>
+</div></header>
+<main><div class="wrap">
+
+<p class="meta">Updated 2026-07-12 · 7 min read</p>
+<h1>How to Set Up a XAUUSD Robot on MT4 &amp; MT5: Step-by-Step Guide for Beginners</h1>
+<p class="lead">Installing a XAUUSD robot for the first time can feel intimidating, but the process is genuinely simple once you've seen it laid out. This guide walks you through every step in the correct, safe order.</p>
+<p>We'll cover MetaTrader 4 (MT4) and MetaTrader 5 (MT5), since the steps are nearly identical on both.</p>
+
+<h2>What You'll Need Before You Start</h2>
+<ul>
+<li><strong>A broker account that allows Expert Advisors</strong> and offers XAUUSD with low spreads.</li>
+<li><strong>The MT4 or MT5 platform</strong> installed on your computer.</li>
+<li><strong>The robot file</strong> — usually an <code>.ex4</code> (MT4) or <code>.ex5</code> (MT5) file, sometimes with a <code>.set</code> settings file.</li>
+<li><strong>A demo account.</strong> Always test here first. This is non-negotiable.</li>
+</ul>
+<p>Optional but recommended for live trading: a <strong>VPS</strong> so your robot runs 24/5 even when your computer is off.</p>
+
+<h2>Step 1: Open and Fund a Compatible Account</h2>
+<p>Choose a regulated broker that supports algorithmic trading and offers competitive spreads on gold. Open a demo account first; it uses virtual money but real market prices, which is exactly what you need for testing.</p>
+
+<h2>Step 2: Install the MetaTrader Platform</h2>
+<p>Download MT4 or MT5 from your broker and install it. Log in with your credentials, selecting the demo server for now.</p>
+
+<h2>Step 3: Add the Robot File to MetaTrader</h2>
+<ol>
+<li>In MetaTrader, click <strong>File → Open Data Folder</strong>.</li>
+<li>Open the <strong>MQL4</strong> folder (MT4) or <strong>MQL5</strong> folder (MT5).</li>
+<li>Open the <strong>Experts</strong> subfolder.</li>
+<li>Copy your robot's <code>.ex4</code> or <code>.ex5</code> file into this Experts folder.</li>
+<li>Back in MetaTrader, right-click <strong>Expert Advisors</strong> in the Navigator and choose <strong>Refresh</strong>.</li>
+</ol>
+<p>Your XAUUSD robot should now appear in the Navigator list.</p>
+
+<h2>Step 4: Enable Automated Trading</h2>
+<ol>
+<li>Go to <strong>Tools → Options → Expert Advisors</strong>.</li>
+<li>Tick <strong>Allow Algo Trading</strong> (and "Allow WebRequest" if the robot needs external data).</li>
+<li>Click the <strong>Algo Trading</strong> button in the toolbar so it turns green.</li>
+</ol>
+<p>If this button is red, no robot will trade. This is the number-one reason beginners think their EA is broken.</p>
+
+<h2>Step 5: Attach the Robot to the Gold Chart</h2>
+<ol>
+<li>Open a <strong>XAUUSD chart</strong>.</li>
+<li>Set the timeframe your robot recommends (for example M5 or M15).</li>
+<li>Drag the robot from the Navigator onto the chart.</li>
+<li>Load the recommended <code>.set</code> file if one was provided, then confirm your inputs.</li>
+<li>Make sure "Allow Algo Trading" is ticked in the Common tab, and click OK.</li>
+</ol>
+<p>A small smiley face in the top-right corner of the chart means the robot is active.</p>
+
+<h2>Step 6: Backtest Before Trusting It</h2>
+<p>In MetaTrader's <strong>Strategy Tester</strong>, select your robot, XAUUSD, and the recommended timeframe. Choose a date range that includes both trending and choppy markets, use high-quality tick data, and run the test.</p>
+<p>Look beyond the profit number. Pay attention to <strong>maximum drawdown</strong>, the <strong>profit factor</strong>, and how the equity curve looks. A smooth, gradual curve is healthier than a jagged one that spikes and crashes.</p>
+
+<h2>Step 7: Run It on Demo for Several Weeks</h2>
+<p>A backtest shows the past; a demo run shows how the robot handles live conditions — real spreads, slippage, and execution delays. Let it trade on demo for at least two to four weeks and confirm the live behaviour roughly matches the backtest before risking a cent.</p>
+
+<h2>Step 8: Go Live — Carefully</h2>
+<ul>
+<li>Start with the <strong>minimum recommended balance</strong> and conservative lot sizes.</li>
+<li>Use a <strong>VPS</strong> so the robot never stops due to a power cut, internet drop, or sleep.</li>
+<li>Monitor it regularly, especially early on and around major news events.</li>
+<li>Scale up only after the robot has proven itself on live money over time.</li>
+</ul>
+
+<h2>Common Setup Mistakes to Avoid</h2>
+<ul>
+<li><strong>Algo Trading button left red</strong> — the robot silently does nothing.</li>
+<li><strong>Wrong timeframe or chart</strong> — attaching to a currency pair instead of XAUUSD.</li>
+<li><strong>Skipping the demo phase</strong> and going straight to live money.</li>
+<li><strong>Over-leveraging</strong> to chase faster returns.</li>
+<li><strong>No VPS</strong>, so the robot stops the moment your computer sleeps.</li>
+</ul>
+
+<div class="card">
+<h2 style="margin-top:0">New to gold robots?</h2>
+<p>Start with our complete guide to how automated XAUUSD trading works before you go live.</p>
+<a class="cta" href="/blog/xauusd-robot-complete-guide/">Read the Complete Guide →</a>
+</div>
+
+<div class="faq">
+<h2>Frequently Asked Questions</h2>
+<h3>How do I know if my XAUUSD robot is working?</h3><p>Look for the smiley face in the top-right of the chart and a green Algo Trading button in the toolbar. You can also check the Experts and Journal tabs at the bottom of the platform for the robot&#x27;s log messages.</p><h3>Can I run the robot on multiple charts?</h3><p>It depends on the robot. Some are designed for a single XAUUSD chart; others support multiple pairs. Check the manual, since running two conflicting instances on one account can cause problems.</p><h3>Do I really need a VPS?</h3><p>For serious live trading, yes. A VPS keeps the robot running 24/5 with a stable connection close to the broker&#x27;s servers, which reduces slippage and prevents missed trades.</p><h3>Why isn&#x27;t my robot placing any trades?</h3><p>The most common causes are Algo Trading being disabled, market conditions not yet matching the robot&#x27;s entry rules, the spread being too high for a scalping robot, or being outside the robot&#x27;s allowed trading hours.</p><h3>Is MT4 or MT5 better for a gold robot?</h3><p>Both are excellent. Use whichever your robot and broker support. MT5 offers more features and instruments; MT4 remains extremely popular and well-supported.</p>
+</div>
+<p class="disclaimer">Disclaimer: This article is for educational purposes only and is not investment or financial advice. Trading gold (XAUUSD) and other CFDs involves substantial risk of loss and is not suitable for every investor. Past performance and backtested results do not guarantee future results. Always test on a demo account and only trade with capital you can afford to lose.</p>
+
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/blog/">Blog</a> · <a href="/">Home</a></div></footer>
+</body>
+</html>
