@@ -27,6 +27,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      # Prerender tooling is installed ad hoc so package.json/lockfile stay untouched.
+      # pnpm v10 blocks puppeteer's postinstall, so Chromium is fetched explicitly.
+      - name: Install prerender tooling
+        run: |
+          pnpm add -D puppeteer sirv
+          pnpm exec puppeteer browsers install chrome
+
       - name: Patch vite.config.ts - remove Manus-only plugin
         run: |
           sed -i '/vite-plugin-manus-runtime/d' vite.config.ts
@@ -37,6 +44,10 @@ jobs:
         run: pnpm vite build
         env:
           NODE_ENV: production
+
+      # Prerender React routes to static HTML so crawlers get real content.
+      - name: Prerender routes
+        run: node scripts/prerender.mjs
 
       - name: Add 404.html for SPA routing
         run: cp dist/public/index.html dist/public/404.html
