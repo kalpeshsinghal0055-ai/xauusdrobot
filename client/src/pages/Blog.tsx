@@ -4,12 +4,27 @@
  */
 
 import { motion } from "framer-motion";
-import { Link } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
+  {
+    slug: "xauusd-robot-complete-guide",
+    title: "XAUUSD Robot: The Complete 2026 Guide to Automated Gold Trading",
+    excerpt: "What a gold trading robot is, how it works, the strategies it uses, and what to realistically expect.",
+    category: "Guide",
+    date: "July 12, 2026",
+    readTime: "8 min read",
+  },
+  {
+    slug: "how-to-set-up-xauusd-robot-mt4-mt5",
+    title: "How to Set Up a XAUUSD Robot on MT4 & MT5",
+    excerpt: "A beginner-friendly, step-by-step guide to installing, backtesting, and running a gold robot the safe way.",
+    category: "Tutorial",
+    date: "July 12, 2026",
+    readTime: "7 min read",
+  },
   {
     slug: "bbfxai-xauusd-expert-advisor-guide",
     title: "Maximizing Gold Trading Efficiency: A Comprehensive Guide to the BBFxAi XAUUSD Expert Advisor",
@@ -68,7 +83,7 @@ export default function Blog() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post, i) => (
               <motion.div key={post.slug} custom={i} initial="hidden" animate="show" variants={fadeUp} className="group">
-                <Link href={`/blog/${post.slug}`}>
+                <a href={`/blog/${post.slug}`}>
                   <div className="h-full bg-card border border-border/30 rounded-xl overflow-hidden hover:border-gold/30 transition-all duration-300 hover:shadow-xl hover:shadow-gold/5 cursor-pointer">
                     <div className="relative h-48 bg-gradient-to-br from-[#0d0b07] via-[#1a1200] to-background flex items-center justify-center overflow-hidden">
                       <div className="absolute inset-0" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 29px,rgba(212,160,23,0.05) 30px),repeating-linear-gradient(90deg,transparent,transparent 29px,rgba(212,160,23,0.05) 30px)" }} />
@@ -90,7 +105,7 @@ export default function Blog() {
                       </div>
                     </div>
                   </div>
-                </Link>
+                </a>
               </motion.div>
             ))}
             <motion.div custom={blogPosts.length} initial="hidden" animate="show" variants={fadeUp}>
