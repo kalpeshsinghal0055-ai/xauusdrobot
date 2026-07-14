@@ -79,7 +79,7 @@ export default function HeroSection() {
             <a
               href="https://my.xs.com/links/go/5382"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored nofollow"
               className="group px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
               <span>⚡</span> GET FREE MT5 ALGO
