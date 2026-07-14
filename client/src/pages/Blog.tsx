@@ -11,6 +11,7 @@ import { useSeo } from "@/lib/seo";
 const blogPosts = [
   {
     slug: "xauusd-robot-complete-guide",
+    ext: true,
     title: "XAUUSD Robot: The Complete 2026 Guide to Automated Gold Trading",
     excerpt: "What a gold trading robot is, how it works, the strategies it uses, and what to realistically expect.",
     category: "Guide",
@@ -19,6 +20,7 @@ const blogPosts = [
   },
   {
     slug: "how-to-set-up-xauusd-robot-mt4-mt5",
+    ext: true,
     title: "How to Set Up a XAUUSD Robot on MT4 & MT5",
     excerpt: "A beginner-friendly, step-by-step guide to installing, backtesting, and running a gold robot the safe way.",
     category: "Tutorial",
@@ -83,7 +85,7 @@ export default function Blog() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {blogPosts.map((post, i) => (
               <motion.div key={post.slug} custom={i} initial="hidden" animate="show" variants={fadeUp} className="group">
-                <a href={`/blog/${post.slug}`}>
+                <a href={`/blog/${post.slug}${(post as any).ext ? "/" : ""}`}>
                   <div className="h-full bg-card border border-border/30 rounded-xl overflow-hidden hover:border-gold/30 transition-all duration-300 hover:shadow-xl hover:shadow-gold/5 cursor-pointer">
                     <div className="relative h-48 bg-gradient-to-br from-[#0d0b07] via-[#1a1200] to-background flex items-center justify-center overflow-hidden">
                       <div className="absolute inset-0" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 29px,rgba(212,160,23,0.05) 30px),repeating-linear-gradient(90deg,transparent,transparent 29px,rgba(212,160,23,0.05) 30px)" }} />
