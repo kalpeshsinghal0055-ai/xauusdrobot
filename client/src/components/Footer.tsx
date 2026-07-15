@@ -90,7 +90,7 @@ export default function Footer() {
                 <a
                   href="https://one.exnessonelink.com/a/uhk6peieiq"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer sponsored nofollow"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
                   Get Free EA (Exness)
@@ -100,7 +100,7 @@ export default function Footer() {
                 <a
                   href="https://icmarkets.com/?camp=78272"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer sponsored nofollow"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
                   Get Free Algo (IC Markets)
@@ -110,7 +110,7 @@ export default function Footer() {
                 <a
                   href="https://tickmill.link/3RimUpD"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer sponsored nofollow"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
                   Get Free Algo (Tickmill)
@@ -120,7 +120,7 @@ export default function Footer() {
                 <a
                   href="https://vigco.co/la-com-inv/bbfxai"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer sponsored nofollow"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
                   Get Free Algo (Vantage)
@@ -140,7 +140,7 @@ export default function Footer() {
                 <a
                   href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer sponsored nofollow"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
                   VPS Hosting
