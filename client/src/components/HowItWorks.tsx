@@ -79,7 +79,7 @@ export default function HowItWorks() {
                 <a
                   href={step.cta.href}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel={/(exness|xs\.com|icmarkets|tickmill|vigco|markets4you|govpsfx)/.test(step.cta.href) ? "noopener noreferrer sponsored nofollow" : "noopener noreferrer"}
                   className="inline-flex items-center text-gold font-semibold text-sm hover:text-gold-light transition-colors tracking-wide"
                 >
                   {step.cta.label}
