@@ -47,7 +47,7 @@ export default function SEOContent() {
                 <a
                   href="https://one.exnessonelink.com/a/uhk6peieiq"
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer sponsored nofollow"
                   className="text-gold hover:text-gold-light transition-colors"
                 >
                   broker affiliate link
