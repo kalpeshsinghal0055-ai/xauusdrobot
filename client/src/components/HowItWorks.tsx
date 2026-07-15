@@ -79,7 +79,7 @@ export default function HowItWorks() {
                 <a
                   href={step.cta.href}
                   target="_blank"
-                  rel="noopener noreferrer sponsored nofollow"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center text-gold font-semibold text-sm hover:text-gold-light transition-colors tracking-wide"
                 >
                   {step.cta.label}
