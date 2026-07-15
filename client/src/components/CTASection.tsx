@@ -36,7 +36,7 @@ export default function CTASection() {
             <a
               href="https://one.exnessonelink.com/a/uhk6peieiq"
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer sponsored nofollow"
               className="px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded hover:shadow-xl hover:shadow-gold/25 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
               <span>⚡</span> GET FREE MT5 EA NOW
