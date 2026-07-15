@@ -173,6 +173,8 @@ export default function Footer() {
             <a href="/privacy-policy/" className="hover:text-gold transition-colors">Privacy Policy</a>
             <span className="mx-2">·</span>
             <a href="/affiliate-disclosure/" className="hover:text-gold transition-colors">Affiliate Disclosure</a>
+            <span className="mx-2">·</span>
+            <a href="/sitemap/" className="hover:text-gold transition-colors">Sitemap</a>
           </p>
           <p className="text-xs text-muted-foreground mb-4">
             © 2026 XAUUSDRobot.com by{" "}
