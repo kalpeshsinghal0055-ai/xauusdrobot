@@ -169,6 +169,11 @@ export default function Footer() {
 
         {/* Copyright & Disclaimer */}
         <div className="mt-8 pt-8 border-t border-border/20 text-center">
+          <p className="text-xs text-muted-foreground mb-3">
+            <a href="/privacy-policy/" className="hover:text-gold transition-colors">Privacy Policy</a>
+            <span className="mx-2">·</span>
+            <a href="/affiliate-disclosure/" className="hover:text-gold transition-colors">Affiliate Disclosure</a>
+          </p>
           <p className="text-xs text-muted-foreground mb-4">
             © 2026 XAUUSDRobot.com by{" "}
             <a
