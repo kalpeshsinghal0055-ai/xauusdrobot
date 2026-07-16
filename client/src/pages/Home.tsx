@@ -80,6 +80,33 @@ export default function Home() {
         <FAQ />
         <CTASection />
       </main>
+      
+      <section className="py-16">
+        <div className="container mx-auto px-4 max-w-4xl">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-white">Latest Guides</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+          <a href="/blog/xauusd-robot-complete-guide/" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
+            <span className="text-xs text-gold font-semibold uppercase tracking-wide">Guide</span>
+            <h3 className="text-lg font-semibold mt-1 text-white">XAUUSD Robot: The Complete 2026 Guide</h3>
+          </a>
+          <a href="/blog/how-to-set-up-xauusd-robot-mt4-mt5/" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
+            <span className="text-xs text-gold font-semibold uppercase tracking-wide">Tutorial</span>
+            <h3 className="text-lg font-semibold mt-1 text-white">How to Set Up a XAUUSD Robot on MT4 & MT5</h3>
+          </a>
+          <a href="/blog/bbfxai-xauusd-expert-advisor-guide" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
+            <span className="text-xs text-gold font-semibold uppercase tracking-wide">Guide</span>
+            <h3 className="text-lg font-semibold mt-1 text-white">BBFxAi XAUUSD Expert Advisor Guide</h3>
+          </a>
+          <a href="/blog/bbfxai-xauusd-robot-mt5-complete-guide" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
+            <span className="text-xs text-gold font-semibold uppercase tracking-wide">Guide</span>
+            <h3 className="text-lg font-semibold mt-1 text-white">BBFxAi XAUUSD Robot for MT5 Guide</h3>
+          </a>
+          </div>
+          <div className="text-center mt-8">
+            <a href="/blog/" className="text-gold font-semibold hover:underline">View all guides →</a>
+          </div>
+        </div>
+      </section>
       <Footer />
     </div>
   );
