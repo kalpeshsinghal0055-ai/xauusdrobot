@@ -60,7 +60,7 @@ export default function Home() {
   useSeo({
     title: "XAUUSD Robot – Free Gold EA for MT4 & MT5 (2026)",
     description:
-      "Free XAUUSD Robot MT5 Expert Advisor for automated gold algo trading. AI-powered EA. Get the free MT5 EA via broker affiliate. Best gold trading algorithm 2026.",
+      "Free XAUUSD Robot for MT4 & MT5 — AI-powered gold trading EA. Get the algo free via our broker affiliate. No subscriptions, no hidden fees.",
     canonical: "https://xauusdrobot.com/",
   });
 
