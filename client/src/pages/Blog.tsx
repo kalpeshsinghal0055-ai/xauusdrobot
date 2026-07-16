@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "best-xauusd-robot-gold-ea-2026",
+    title: "Best XAUUSD Robots & Gold EAs 2026 (Honest Comparison)",
+    excerpt: "An honest comparison of the best XAUUSD robots and gold EAs for 2026 — the traits that matter, red flags to avoid, and how to pick one that fits your goals.",
+    category: "Comparison",
+    date: "2026-07-16",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "best-gold-ea-prop-firm-ftmo",
     title: "Best Gold EA for Prop Firm & FTMO Challenges (2026 Guide)",
     excerpt: "Can a XAUUSD robot pass an FTMO or prop firm challenge? The rules that matter, prop-firm-safe EA traits, red flags, and honest expectations.",
