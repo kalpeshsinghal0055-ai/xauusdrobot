@@ -82,6 +82,18 @@ export default function Home() {
       </main>
       
       <section className="py-16">
+        <div className="container mx-auto px-4 max-w-3xl">
+          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-white">Understanding Automated Gold Trading</h2>
+<p className="text-white/70 leading-relaxed mb-4">The precious-metals market is one of the most actively traded in the world. Prices react quickly to inflation data, central-bank decisions, interest-rate expectations and geopolitical events — creating the kind of movement that both attracts and challenges traders. An expert advisor removes the emotional side of that equation by following a defined set of rules on the MetaTrader platform, around the clock, without hesitation or fatigue.</p>
+<p className="text-white/70 leading-relaxed mb-4">Automation appeals to newcomers and experienced participants alike. A beginner benefits from consistency and discipline that would otherwise take years to develop, while a seasoned trader gains the ability to run a strategy continuously without sitting in front of a screen. Because the software reacts to price in milliseconds, it can enter and exit positions faster than any person, which matters a great deal when spreads widen during volatile sessions.</p>
+<p className="text-white/70 leading-relaxed mb-4">Of course, no automated system is a shortcut to guaranteed profit. Bullion markets can move violently, and any tool is only as sound as the logic and risk settings behind it. That is why we place so much emphasis on transparency: a verified track record, sensible position sizing, a protective stop on every trade, and a filter that steps aside around high-impact news. These safeguards will not remove risk, but they help keep losses within reasonable limits.</p>
+<p className="text-white/70 leading-relaxed mb-4">Different traders want different things from automation. Some prefer a conservative, trend-following approach that trades only a handful of times each week; others look for a more active style that captures short intraday moves. Prop-firm participants, meanwhile, need tight control over daily and overall drawdown so they can pass an evaluation without breaking the rules. Matching the strategy to your goals and risk tolerance is far more important than chasing the highest advertised return.</p>
+<p className="text-white/70 leading-relaxed mb-4">Choosing the right broker matters just as much as the strategy itself. Tight spreads, rapid execution and low commissions can be the difference between a system that performs and one that struggles. A virtual private server keeps the software running continuously, so trades are never missed while your computer is switched off, and a stable connection reduces the slippage that eats into results over time.</p>
+<p className="text-white/70 leading-relaxed mb-4">Ultimately, automated trading is a tool — not a promise. Used thoughtfully, tested on a demo account first, with realistic expectations and only capital you can afford to lose, it can bring structure and discipline to a market that rewards both patience and preparation. The guides below walk through how the whole process works, from installation and back-testing to choosing settings and going live.</p>
+        </div>
+      </section>
+
+      <section className="py-16">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-white">Latest Guides</h2>
           <div className="grid md:grid-cols-2 gap-4">
