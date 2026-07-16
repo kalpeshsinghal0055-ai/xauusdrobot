@@ -58,7 +58,7 @@ function TrustpilotWidget() {
 
 export default function Home() {
   useSeo({
-    title: "XAUUSD Robot – #1 Free Gold EA for MT4 & MT5 | AI Algo Trading Bot 2026",
+    title: "XAUUSD Robot – Free Gold EA for MT4 & MT5 (2026)",
     description:
       "Free XAUUSD Robot MT5 Expert Advisor for automated gold algo trading. AI-powered EA. Get the free MT5 EA via broker affiliate. Best gold trading algorithm 2026.",
     canonical: "https://xauusdrobot.com/",
