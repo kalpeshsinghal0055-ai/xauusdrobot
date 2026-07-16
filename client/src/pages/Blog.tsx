@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "best-gold-ea-prop-firm-ftmo",
+    title: "Best Gold EA for Prop Firm & FTMO Challenges (2026 Guide)",
+    excerpt: "Can a XAUUSD robot pass an FTMO or prop firm challenge? The rules that matter, prop-firm-safe EA traits, red flags, and honest expectations.",
+    category: "Guide",
+    date: "2026-07-16",
+    readTime: "9 min read",
+    ext: true,
+  },
+  {
     slug: "xauusd-robot-complete-guide",
     ext: true,
     title: "XAUUSD Robot: The Complete 2026 Guide to Automated Gold Trading",
