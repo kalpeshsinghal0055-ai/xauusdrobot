@@ -1,0 +1,31 @@
+# XAUUSD Robot
+
+> Free AI-powered XAUUSD (gold) trading robot / Expert Advisor (EA) for MetaTrader 4 and MetaTrader 5. The algo is provided free of charge when you open a trading account through a partner broker affiliate link. No subscriptions, no hidden fees. Educational information only — not financial advice.
+
+## About
+- Site: https://xauusdrobot.com/
+- Product: BBFxAi XAUUSD Expert Advisor (automated gold trading algorithm for MT4/MT5)
+- Model: Free EA via broker affiliate signup; no direct cost to the user
+- Verified results: MyFXBook-verified live track record
+- Contact: Telegram @BBFx_Ai
+
+## Key Pages
+- [Home](https://xauusdrobot.com/): Overview, features, free EA download, broker list, FAQ
+- [Blog](https://xauusdrobot.com/blog/): Guides and tutorials on automated gold trading
+- [Sitemap](https://xauusdrobot.com/sitemap/): All pages
+
+## Guides
+- [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, and what to expect
+- [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Step-by-step install, backtest, and run guide
+- [Best Gold EA for Prop Firm & FTMO Challenges](https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/): Whether a gold EA can pass prop firm challenges, the rules that matter, and honest expectations
+- [BBFxAi XAUUSD Expert Advisor Guide](https://xauusdrobot.com/blog/bbfxai-xauusd-expert-advisor-guide): Deep dive into the BBFxAi gold EA
+- [BBFxAi XAUUSD Robot for MT5](https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide): AI-powered gold trading, features, and FAQs
+
+## Policies
+- [Privacy Policy](https://xauusdrobot.com/privacy-policy/)
+- [Affiliate Disclosure](https://xauusdrobot.com/affiliate-disclosure/)
+
+## Important Notes
+- Trading gold (XAUUSD) and CFDs involves substantial risk of loss and is not suitable for every investor.
+- Past performance and backtested results do not guarantee future results.
+- This site earns affiliate commissions from broker referrals at no extra cost to the user.
