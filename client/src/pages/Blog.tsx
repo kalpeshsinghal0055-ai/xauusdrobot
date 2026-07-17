@@ -10,6 +10,14 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "best-brokers-xauusd-gold-ea",
+    title: "Best Brokers for XAUUSD / Gold EA Trading (2026)",
+    excerpt: "The best MT4 & MT5 brokers for automated gold trading — what matters in spreads, execution and EA support, plus our top broker picks.",
+    category: "Brokers",
+    date: "2026-07-17",
+    readTime: "6 min read",
+    ext: true,
+  },{
     slug: "best-xauusd-robot-gold-ea-2026",
     title: "Best XAUUSD Robots & Gold EAs 2026 (Honest Comparison)",
     excerpt: "An honest comparison of the best XAUUSD robots and gold EAs for 2026 — the traits that matter, red flags to avoid, and how to pick one that fits your goals.",
