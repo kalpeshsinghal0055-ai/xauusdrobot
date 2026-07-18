@@ -138,7 +138,7 @@ export default function Blog() {
     title: "XAUUSD Robot Blog — Gold Algo Trading Guides & MT5 EA Tips",
     description:
       "Guides, tutorials and insights on XAUUSD algo trading, the free MT5 gold EA, broker setup and automated gold strategies from the BBFxAi team.",
-    canonical: "https://xauusdrobot.com/blog",
+    canonical: "https://xauusdrobot.com/blog/",
   });
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
