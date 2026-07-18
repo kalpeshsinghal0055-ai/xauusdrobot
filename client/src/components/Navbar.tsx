@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "wouter";
+import { LOGO_SRC } from "../lib/logo";
 const navLinks = [
   { href: "/#how", label: "How It Works" },
   { href: "/#features", label: "Features" },
@@ -49,7 +50,7 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2 group shrink-0">
           <img
-            src="/photo_2026-05-29_13-44-37.jpg"
+            src={LOGO_SRC}
             alt="BBFx AI - XAUUSD Robot"
             className="h-8 lg:h-10 w-auto"
           />
