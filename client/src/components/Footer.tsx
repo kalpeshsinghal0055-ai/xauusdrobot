@@ -1,3 +1,5 @@
+import { LOGO_SRC } from "../lib/logo";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border/20 bg-card/30">
@@ -7,7 +9,7 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
               <img
-                src="/manus-storage/logo_54bf4c98.png"
+                src={LOGO_SRC}
                 alt="BBFx AI Logo"
                 className="h-8 w-auto"
               />
