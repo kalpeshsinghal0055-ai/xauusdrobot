@@ -1,47 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://xauusdrobot.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/bbfxai-xauusd-expert-advisor-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/xauusd-robot-complete-guide/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-
-  <url>
-    <loc>https://xauusdrobot.com/privacy-policy/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://xauusdrobot.com/affiliate-disclosure/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-
-  <url>
-    <loc>https://xauusdrobot.com/sitemap/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <url>
-    <loc>https://xauusdrobot.com/blog/best-xauusd-robot-gold-ea-2026/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url><loc>https://xauusdrobot.com/blog/best-brokers-xauusd-gold-ea/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/do-gold-trading-robots-work/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/free-xauusd-gold-ea/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/gold-ea-strategy-types/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/best-vps-gold-ea/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/how-to-backtest-gold-ea/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/blog/gold-ea-risk-management/</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://xauusdrobot.com/about/</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://xauusdrobot.com/contact/</loc><changefreq>yearly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://xauusdrobot.com/</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/</loc><lastmod>2026-07-20</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/bbfxai-xauusd-expert-advisor-guide/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/xauusd-robot-complete-guide/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/privacy-policy/</loc><lastmod>2026-07-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://xauusdrobot.com/affiliate-disclosure/</loc><lastmod>2026-07-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://xauusdrobot.com/sitemap/</loc><lastmod>2026-07-20</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/best-xauusd-robot-gold-ea-2026/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/best-brokers-xauusd-gold-ea/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/do-gold-trading-robots-work/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/free-xauusd-gold-ea/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/gold-ea-strategy-types/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/best-vps-gold-ea/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/how-to-backtest-gold-ea/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/blog/gold-ea-risk-management/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://xauusdrobot.com/about/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://xauusdrobot.com/contact/</loc><lastmod>2026-07-20</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
 </urlset>
