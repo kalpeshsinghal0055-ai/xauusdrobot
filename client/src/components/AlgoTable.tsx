@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 
 const algos = [
   { name: "Gold Scalper Pro EA", pair: "XAUUSD", tf: "M5 / M15", ret: "+12.4% avg", strategy: "AI Scalping", status: "LIVE" },

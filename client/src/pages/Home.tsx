@@ -5,20 +5,23 @@
  * Typography: Playfair Display (display) + DM Sans (body)
  */
 
-import { useEffect, useRef } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsBar from "@/components/StatsBar";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
-import AlgoTable from "@/components/AlgoTable";
-import Performance from "@/components/Performance";
-import Brokers from "@/components/Brokers";
-import Reviews from "@/components/Reviews";
-import FAQ from "@/components/FAQ";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
 import { useSeo } from "@/lib/seo";
+
+// Below-the-fold sections load after the hero so heavy libraries
+// (recharts in Performance, carousel in Reviews) stay off the critical path.
+const AlgoTable = lazy(() => import("@/components/AlgoTable"));
+const Performance = lazy(() => import("@/components/Performance"));
+const Brokers = lazy(() => import("@/components/Brokers"));
+const Reviews = lazy(() => import("@/components/Reviews"));
+const FAQ = lazy(() => import("@/components/FAQ"));
+const CTASection = lazy(() => import("@/components/CTASection"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 function TrustpilotWidget() {
   const ref = useRef<HTMLDivElement>(null);
@@ -72,13 +75,15 @@ export default function Home() {
         <StatsBar />
         <HowItWorks />
         <Features />
-        <AlgoTable />
-        <Performance />
-        <TrustpilotWidget />
-        <Brokers />
-        <Reviews />
-        <FAQ />
-        <CTASection />
+        <Suspense fallback={<div className="min-h-screen" aria-hidden="true" />}>
+          <AlgoTable />
+          <Performance />
+          <TrustpilotWidget />
+          <Brokers />
+          <Reviews />
+          <FAQ />
+          <CTASection />
+        </Suspense>
       </main>
       
       <section className="py-16">
@@ -119,7 +124,9 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Suspense fallback={<div className="h-64" aria-hidden="true" />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

@@ -3,7 +3,7 @@
  * Style: Luxury Gold Vault theme
  */
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useSeo } from "@/lib/seo";

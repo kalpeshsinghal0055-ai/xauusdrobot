@@ -2,7 +2,7 @@
  * BlogPost Page - XAUUSD Robot
  */
 
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 import { Link, useRoute } from "wouter";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m as motion } from "framer-motion";
 
 const performanceData = [
   { name: "Gold Bot AI", value: 32.6, color: "bg-gold" },
