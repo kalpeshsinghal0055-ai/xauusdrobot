@@ -219,6 +219,13 @@ export default defineConfig({
   build: {
     outDir: path.resolve(import.meta.dirname, "dist/public"),
     emptyOutDir: true,
+    // Only preload the vendor chunks needed for first hydration. Below-the-fold
+    // section chunks and the async motion engine load on demand instead of being
+    // eagerly preloaded, which keeps the initial download small.
+    modulePreload: {
+      resolveDependencies: (_file: string, deps: string[]) =>
+        deps.filter((d) => d.includes("react-vendor") || d.includes("radix")),
+    },
     rollupOptions: {
       output: {
         manualChunks(id) {
