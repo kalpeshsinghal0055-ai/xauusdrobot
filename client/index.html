@@ -69,6 +69,23 @@ gtag('config', 'G-L0Y8GMG2PG');
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <script>
+(function(){
+  function send(n,p){ if(typeof gtag==="function"){ gtag("event",n,p||{}); } }
+  var PARTNERS={"my.xs.com":"XS","one.exnessonelink.com":"Exness","icmarkets.com":"IC Markets","tickmill.link":"Tickmill","vigco.co":"Vantage","markets4you.online":"Markets4you","my.govpsfx.com":"GoVPSFX"};
+  document.addEventListener("click",function(e){
+    var a=e.target&&e.target.closest?e.target.closest("a"):null;
+    if(!a) return;
+    var href=a.getAttribute("href")||""; if(!href||href.charAt(0)==="#") return;
+    var u; try{ u=new URL(href,location.href); }catch(err){ return; }
+    var host=u.hostname.replace(/^www\./,""), page=location.pathname;
+    if(/\.(ex5|ex4|mq5|mq4|zip)$/i.test(u.pathname)){ send("ea_download",{file_name:u.pathname.split("/").pop(),page_path:page}); return; }
+    if(host==="t.me"||host==="telegram.me"){ send("telegram_click",{link_url:u.href,page_path:page}); return; }
+    if(host==="myfxbook.com"){ send("results_click",{link_url:u.href,page_path:page}); return; }
+    for(var d in PARTNERS){ if(host===d||host.indexOf("."+d)===host.length-d.length-1){ send("affiliate_click",{partner:PARTNERS[d],link_url:u.href,page_path:page}); return; } }
+  },true);
+})();
+</script>
+</body>
 
 </html>
