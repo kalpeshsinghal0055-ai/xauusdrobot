@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "trading-gold-during-news-nfp-fomc-cpi",
+    title: "Trading Gold During News: Should Your EA Trade NFP & FOMC?",
+    excerpt: "What really happens to XAUUSD spreads and stops during NFP, FOMC and CPI — and how a news filter works.",
+    category: "Guides",
+    date: "2026-07-20",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "do-gold-trading-robots-work",
     title: "Do Gold Trading Robots Actually Work? (2026)",
     excerpt: "An honest look at when XAUUSD robots succeed, when they fail, and how to spot a scam.",
