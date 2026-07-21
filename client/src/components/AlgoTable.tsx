@@ -1,12 +1,8 @@
 import { m as motion } from "framer-motion";
 
 const algos = [
-  { name: "Gold Scalper Pro EA", pair: "XAUUSD", tf: "M5 / M15", strategy: "AI Scalping", status: "LIVE" },
-  { name: "Gold Bot AI", pair: "XAUUSD", tf: "H1 / H4", strategy: "Trend Following", status: "LIVE" },
-  { name: "XAUUSD Swing Algo", pair: "XAUUSD", tf: "H4 / D1", strategy: "Swing / Structure", status: "LIVE" },
-  { name: "EURUSD Trend Bot", pair: "EURUSD", tf: "H1", strategy: "Trend + Breakout", status: "LIVE" },
-  { name: "BTC Momentum AI", pair: "BTCUSD", tf: "M30", strategy: "Momentum AI", status: "LIVE" },
-  { name: "Crypto Grid Bot", pair: "Multi-pair", tf: "H1", strategy: "Smart Grid", status: "LIVE" },
+  { name: "XAUUSD PRO", pair: "XAUUSD", platform: "MT4 & MT5", strategy: "Trend Following", status: "LIVE" },
+  { name: "BTCUSD PRO", pair: "BTCUSD", platform: "MT4 & MT5", strategy: "Trend Following", status: "LIVE" },
 ];
 
 export default function AlgoTable() {
@@ -44,7 +40,7 @@ export default function AlgoTable() {
               <tr className="border-b border-gold/10 bg-card/80">
                 <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider">Algorithm Name</th>
                 <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider">Pair</th>
-                <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider hidden sm:table-cell">Timeframe</th>
+                <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider hidden sm:table-cell">Platform</th>
                 <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider hidden md:table-cell">Strategy</th>
                 <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider">Status</th>
                 <th className="px-6 py-4 text-xs font-semibold text-gold uppercase tracking-wider">Price</th>
@@ -58,7 +54,7 @@ export default function AlgoTable() {
                 >
                   <td className="px-6 py-4 font-semibold text-foreground text-sm">{algo.name}</td>
                   <td className="px-6 py-4 text-sm text-muted-foreground">{algo.pair}</td>
-                  <td className="px-6 py-4 text-sm text-muted-foreground hidden sm:table-cell">{algo.tf}</td>
+                  <td className="px-6 py-4 text-sm text-muted-foreground hidden sm:table-cell">{algo.platform}</td>
                   <td className="px-6 py-4 text-sm text-muted-foreground hidden md:table-cell">{algo.strategy}</td>
                   <td className="px-6 py-4">
                     <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald/10 text-emerald text-xs font-semibold">
