@@ -11,6 +11,7 @@ export default function Footer() {
               <img
                 src={LOGO_SRC}
                 alt="BBFx AI Logo"
+                loading="lazy"
                 className="h-8 w-auto"
               />
               <span className="font-serif font-bold text-lg text-foreground">
@@ -156,9 +157,8 @@ export default function Footer() {
           </h4>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
             <span>Platform: MT4 & MT5</span>
-            <span>Asset: XAUUSD Gold</span>
-            <span>Strategy: AI Scalping + Trend</span>
-            <span>Execution: ECN 12ms</span>
+            <span>Assets: XAUUSD & BTCUSD</span>
+            <span>Strategy: Trend Following</span>
             <span>Risk: Fixed Fractional</span>
             <span>Martingale: ✗ Disabled</span>
             <span>News Filter: ✓ Built-in</span>

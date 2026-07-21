@@ -27,8 +27,8 @@ const features = [
   },
   {
     icon: "⚡",
-    title: "12ms Trade Execution",
-    desc: "ECN broker integration ensures institutional-speed order execution. Low latency means your XAUUSD algo gets the price you see — no requotes.",
+    title: "Fast, Automated Execution",
+    desc: "Pair the EA with a low-latency ECN broker and a VPS so orders fire the moment a setup appears — no manual delay, running 24/5.",
     tag: "SPEED OPTIMIZED",
   },
   {
