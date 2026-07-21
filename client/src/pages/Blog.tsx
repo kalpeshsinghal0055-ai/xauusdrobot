@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "mt4-vs-mt5-for-gold-ea",
+    title: "MT4 vs MT5 for a Gold EA: Which Should You Run?",
+    excerpt: "MT4 or MT5 for your XAUUSD robot? Speed, backtesting, the economic calendar and which MetaTrader platform to choose.",
+    category: "Comparison",
+    date: "2026-07-22",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
     slug: "how-much-money-to-start-gold-ea",
     title: "How Much Money Do You Need to Start a Gold EA?",
     excerpt: "Realistic XAUUSD minimums — $100 vs $500 vs $1,000, lot sizes, the drawdown buffer, and the cent-account shortcut.",
