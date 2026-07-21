@@ -67,21 +67,6 @@ export default function Features() {
           </p>
         </motion.div>
 
-        {/* Feature Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true }}
-          className="mb-16 lg:mb-20 rounded-xl overflow-hidden gold-border"
-        >
-          <img
-            src="https://d2xsxph8kpxj0f.cloudfront.net/310519663516965961/Cbv9jtGGeaDuk52nzLan2A/algorithm-dashboard-aw6qby5J22gmLk3QoDDxEK.webp"
-            alt="XAUUSD Robot Algorithm Dashboard - MT5 EA Gold Trading Interface"
-            className="w-full h-auto"
-            loading="lazy"
-          />
-        </motion.div>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
