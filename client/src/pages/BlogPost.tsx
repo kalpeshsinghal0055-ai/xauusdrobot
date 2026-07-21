@@ -28,18 +28,12 @@ const brokers = [
 
 function SupportCards() {
   return (
-    <div className="grid sm:grid-cols-2 gap-4 my-6">
+    <div className="my-6 flex justify-center">
       <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer"
-        className="flex flex-col items-center justify-center bg-card border border-border/30 rounded-xl py-6 px-4 text-center hover:border-gold/30 transition-all hover:-translate-y-0.5">
+        className="flex flex-col items-center justify-center bg-card border border-border/30 rounded-xl py-6 px-10 text-center hover:border-gold/30 transition-all hover:-translate-y-0.5 w-full max-w-sm">
         <div className="text-3xl mb-2">✈️</div>
-        <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Telegram</div>
+        <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Talk to us on Telegram</div>
         <div className="text-gold font-semibold text-sm">@BBFx_Ai</div>
-      </a>
-      <a href="https://wa.me/919251195316" target="_blank" rel="noopener noreferrer"
-        className="flex flex-col items-center justify-center bg-card border border-border/30 rounded-xl py-6 px-4 text-center hover:border-gold/30 transition-all hover:-translate-y-0.5">
-        <div className="text-3xl mb-2">💬</div>
-        <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-1">WhatsApp</div>
-        <div className="text-gold font-semibold text-sm">+91 92511 95316</div>
       </a>
     </div>
   );
