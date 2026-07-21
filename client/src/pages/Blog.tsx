@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "how-much-money-to-start-gold-ea",
+    title: "How Much Money Do You Need to Start a Gold EA?",
+    excerpt: "Realistic XAUUSD minimums — $100 vs $500 vs $1,000, lot sizes, the drawdown buffer, and the cent-account shortcut.",
+    category: "Guides",
+    date: "2026-07-21",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
     slug: "trading-gold-during-news-nfp-fomc-cpi",
     title: "Trading Gold During News: Should Your EA Trade NFP & FOMC?",
     excerpt: "What really happens to XAUUSD spreads and stops during NFP, FOMC and CPI — and how a news filter works.",
