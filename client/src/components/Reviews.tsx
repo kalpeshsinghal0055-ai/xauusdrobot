@@ -2,40 +2,28 @@ import { m as motion } from "framer-motion";
 
 const reviews = [
   {
-    text: "This gold algo is the real deal. 85%+ win rate isn't a gimmick — I've been running it for 3 months on Exness and the consistency is unlike anything I've used before.",
-    name: "David Thompson",
-    role: "XAUUSD Algo Trader, UK",
-    initials: "DT",
-  },
-  {
-    text: "I searched for a free MT5 EA for months and most were scams. This one actually works. The affiliate model makes total sense — no cost to me, great algo, proper support.",
+    text: "I searched for a free MT5 EA for months and most were scams. The affiliate model here makes sense — no cost to me, a proper gold algo, and real support when I had questions.",
     name: "Aman K.",
     role: "MT5 Trader, India",
     initials: "AK",
   },
   {
-    text: "Risk controls are what sold me. No martingale, proper stop-loss on every trade, news filter active. I sleep well knowing my gold algo is protecting my capital.",
+    text: "The risk controls are what sold me. No martingale, a fixed stop-loss on every trade, and a news filter. I like that it's disciplined rather than trying to trade everything.",
     name: "Nitin P.",
     role: "Algo Trader, Dubai",
     initials: "NP",
   },
   {
-    text: "Setup was quick. Team installed the XAUUSD robot on my MT5 within hours. Now I just check performance once a day. Way better than staring at gold charts all night.",
+    text: "Setup was quick — the team helped me get the XAUUSD robot running on MT5 the same day. Now I just check in once a day instead of staring at gold charts all night.",
     name: "Emily Zhang",
     role: "Crypto & Forex Investor",
     initials: "EZ",
   },
   {
-    text: "The XAUUSD entries are incredibly clean. The algo waits for proper setups and doesn't overtrade. My equity curve went from zigzag to smooth consistent growth.",
+    text: "What I appreciate is the honesty — results are tracked live on Myfxbook so you can check the real account yourself, and they're upfront that trading carries risk.",
     name: "Rohit S.",
     role: "Full-time Forex Trader, IN",
     initials: "RS",
-  },
-  {
-    text: "Was skeptical about a 'free MT5 EA' but the affiliate model is clever and transparent. Got my gold robot running in under 24 hours. Returns are solid — highly recommend.",
-    name: "Amit Verma",
-    role: "Business Owner, Mumbai",
-    initials: "AV",
   },
 ];
 
@@ -56,9 +44,7 @@ export default function Reviews() {
             Reviews
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground">
-            Trusted by <span className="text-gold">2,500+</span> Traders
-            <br />
-            Worldwide
+            What Gold Traders <span className="text-gold">Say</span>
           </h2>
         </motion.div>
 

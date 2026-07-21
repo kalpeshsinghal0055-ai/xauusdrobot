@@ -35,12 +35,20 @@ export default function Performance() {
           viewport={{ once: true }}
           className="max-w-lg mx-auto text-center p-8 lg:p-10 rounded-2xl bg-card/60 border border-border/40"
         >
-          <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-3">
+          <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-4">
             Live &amp; Independently Verified
           </div>
-          <p className="text-muted-foreground mb-6">
-            Full trade-by-trade history, updated in real time. Past performance does not
-            guarantee future results — trade only with capital you can afford to lose.
+          <a href={MYFXBOOK_URL} target="_blank" rel="noopener nofollow" className="block mb-6">
+            <img
+              src="https://widget.myfxbook.com/widget/widget.png?accountOid=12092687&type=4"
+              alt="Live Myfxbook performance for the BBFx AI XAUUSD account"
+              className="w-full h-auto rounded-lg border border-border/40"
+              loading="lazy"
+            />
+          </a>
+          <p className="text-muted-foreground text-sm mb-6">
+            Full trade-by-trade history, updated in real time on Myfxbook. Past performance does
+            not guarantee future results — trade only with capital you can afford to lose.
           </p>
           <a
             href={MYFXBOOK_URL}

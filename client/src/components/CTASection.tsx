@@ -27,8 +27,8 @@ export default function CTASection() {
             <span className="gold-shimmer">Today — For Free</span>
           </h2>
           <p className="text-muted-foreground text-lg mb-10 max-w-xl mx-auto">
-            Join 2,500+ traders already using our AI-powered XAUUSD robot on MT4 & MT5. Open a
-            broker account via affiliate, and we install your free gold EA within 24 hours.
+            Start with our AI-powered XAUUSD robot on MT4 & MT5. Open a broker account via our
+            affiliate link, and we help you get your free gold EA set up and running.
           </p>
 
           {/* CTA Buttons */}

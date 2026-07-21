@@ -30,10 +30,10 @@ function AnimatedCounter({ end, suffix = "", duration = 2000 }: { end: number; s
 }
 
 const stats = [
-  { value: 85, suffix: "%", label: "Win Rate" },
-  { value: 2500, suffix: "+", label: "Active Traders" },
-  { value: 24, suffix: "/7", label: "Auto Trading" },
+  { value: 2, suffix: "", label: "Platforms — MT4 & MT5" },
+  { value: 24, suffix: "/5", label: "Auto Trading" },
   { value: 100, suffix: "%", label: "Free — All Algos" },
+  { value: 0, suffix: "", label: "Subscription Fees" },
 ];
 
 export default function StatsBar() {
