@@ -160,15 +160,19 @@ export default function BlogPost() {
     slug === "bbfxai-xauusd-robot-mt5-complete-guide"
       ? "Complete 2026 guide to the BBFxAi XAUUSD Robot for MT5: how the AI gold EA works, setup, risk management, and getting it free via partner brokers."
       : "A comprehensive guide to the BBFxAi XAUUSD Expert Advisor: its non-martingale trend-following strategy, specs, VPS setup, and free access via brokers.";
+  const postImage = `https://xauusdrobot.com/images/${slug}.jpg`;
   useSeo({
     title: meta ? `${meta.title} | XAUUSD Robot` : "Blog | XAUUSD Robot",
     description,
     canonical,
+    image: meta ? postImage : undefined,
+    ogType: meta ? "article" : "website",
     jsonLd: meta
       ? {
           "@context": "https://schema.org",
           "@type": "BlogPosting",
           headline: meta.title,
+          image: postImage,
           author: { "@type": "Organization", name: meta.author },
           publisher: {
             "@type": "Organization",
