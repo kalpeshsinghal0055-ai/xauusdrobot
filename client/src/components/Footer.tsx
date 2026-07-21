@@ -69,11 +69,8 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                "XAUUSD Gold Robot",
-                "Gold Scalper Pro EA",
-                "MT5 Gold Algo",
-                "BTC Momentum Bot",
-                "EURUSD Trend EA",
+                "XAUUSD PRO",
+                "BTCUSD PRO",
               ].map((item) => (
                 <li key={item}>
                   <span className="text-sm text-muted-foreground">{item}</span>
