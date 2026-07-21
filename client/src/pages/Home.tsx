@@ -5,7 +5,7 @@
  * Typography: Playfair Display (display) + DM Sans (body)
  */
 
-import { lazy, Suspense, useEffect, useRef } from "react";
+import { lazy, Suspense } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsBar from "@/components/StatsBar";
@@ -18,46 +18,9 @@ import { useSeo } from "@/lib/seo";
 const AlgoTable = lazy(() => import("@/components/AlgoTable"));
 const Performance = lazy(() => import("@/components/Performance"));
 const Brokers = lazy(() => import("@/components/Brokers"));
-const Reviews = lazy(() => import("@/components/Reviews"));
 const FAQ = lazy(() => import("@/components/FAQ"));
 const CTASection = lazy(() => import("@/components/CTASection"));
 const Footer = lazy(() => import("@/components/Footer"));
-
-function TrustpilotWidget() {
-  const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    let tries = 0;
-    const id = setInterval(() => {
-      tries++;
-      const tp = (window as any).Trustpilot;
-      if (tp && ref.current) {
-        tp.loadFromElement(ref.current, true);
-        clearInterval(id);
-      } else if (tries > 40) {
-        clearInterval(id);
-      }
-    }, 250);
-    return () => clearInterval(id);
-  }, []);
-
-  return (
-    <div className="container mx-auto py-12">
-      <div
-        ref={ref}
-        className="trustpilot-widget"
-        data-locale="en-US"
-        data-template-id="56278e9abfbbba0bdcd568bc"
-        data-businessunit-id="6a4ccdc32d710c062e249956"
-        data-style-height="52px"
-        data-style-width="100%"
-        data-token="53e33d66-bef6-4254-b461-f35525f292b0"
-      >
-        <a href="https://www.trustpilot.com/review/xauusdrobot.com" target="_blank" rel="noopener">Trustpilot</a>
-      </div>
-    </div>
-  );
-}
 
 export default function Home() {
   useSeo({
@@ -78,9 +41,7 @@ export default function Home() {
         <Suspense fallback={<div className="min-h-screen" aria-hidden="true" />}>
           <AlgoTable />
           <Performance />
-          <TrustpilotWidget />
           <Brokers />
-          <Reviews />
           <FAQ />
           <CTASection />
         </Suspense>
