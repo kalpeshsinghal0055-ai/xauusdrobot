@@ -47,8 +47,8 @@ const blogPosts = [
   },
   {
     slug: "free-xauusd-gold-ea",
-    title: "Free XAUUSD Gold EA: What You Get & How to Download",
-    excerpt: "What a free gold EA really gives you, how the no-cost model works, and how to test it safely.",
+    title: "Free XAUUSD Trading Bot & Gold EA: What You Get & How to Download",
+    excerpt: "What a free XAUUSD trading bot (gold EA) really gives you, how the no-cost model works, how to download it, and how to test it safely.",
     category: "Guides",
     date: "2026-07-17",
     readTime: "6 min read",

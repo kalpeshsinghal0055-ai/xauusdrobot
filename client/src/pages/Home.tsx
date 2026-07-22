@@ -24,9 +24,9 @@ const Footer = lazy(() => import("@/components/Footer"));
 
 export default function Home() {
   useSeo({
-    title: "XAUUSD Robot – Free Gold Trading EA for MT4 & MT5 (2026)",
+    title: "XAUUSD Robot & Gold Trading Bot – Free EA for MT4 & MT5",
     description:
-      "Free XAUUSD Robot for MT4 & MT5 — AI-powered gold trading EA. Get the algo free via our broker affiliate. No subscriptions, no hidden fees.",
+      "Free XAUUSD robot and gold trading bot for MT4 & MT5. Download our AI-powered gold EA free via a broker affiliate — no subscriptions, no hidden fees.",
     canonical: "https://xauusdrobot.com/",
   });
 

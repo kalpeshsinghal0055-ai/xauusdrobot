@@ -56,8 +56,8 @@ export default function HeroSection() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg lg:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
           >
-            <strong className="text-foreground">AI-powered XAUUSD Expert Advisor</strong> for
-            MetaTrader 4 & MT5. Get our algo completely{" "}
+            <strong className="text-foreground">AI-powered XAUUSD Expert Advisor</strong> — a
+            free gold trading bot for MetaTrader 4 & MT5. Download our algo completely{" "}
             <strong className="text-gold">free</strong> — just open a broker account via our
             affiliate link. No subscriptions. No hidden fees.{" "}
             <em>Pure algorithmic gold trading.</em>
