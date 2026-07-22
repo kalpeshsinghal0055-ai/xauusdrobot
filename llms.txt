@@ -21,8 +21,7 @@
 - [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, and what to expect
 - [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Step-by-step install, backtest, and run guide
 - [Best Gold EA for Prop Firm & FTMO Challenges](https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/): Whether a gold EA can pass prop firm challenges, the rules that matter, and honest expectations
-- [BBFxAi XAUUSD Expert Advisor Guide](https://xauusdrobot.com/blog/bbfxai-xauusd-expert-advisor-guide): Deep dive into the BBFxAi gold EA
-- [BBFxAi XAUUSD Robot for MT5](https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide): AI-powered gold trading, features, and FAQs
+- [BBFxAi XAUUSD Robot for MT5](https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide/): AI-powered gold trading, features, and FAQs
 
 - [Do Gold Trading Robots Actually Work?](https://xauusdrobot.com/blog/do-gold-trading-robots-work/): Honest reality check on when XAUUSD robots succeed, when they fail, and how to spot a scam
 - [Free XAUUSD Gold EA](https://xauusdrobot.com/blog/free-xauusd-gold-ea/): What the free gold EA includes, how the no-cost model works, and how to download and test it
