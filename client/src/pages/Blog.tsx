@@ -193,12 +193,15 @@ export default function Blog() {
               <motion.div key={post.slug} custom={i} initial="hidden" animate="show" variants={fadeUp} className="group">
                 <a href={`/blog/${post.slug}${(post as any).ext ? "/" : ""}`}>
                   <div className="h-full bg-card border border-border/30 rounded-xl overflow-hidden hover:border-gold/30 transition-all duration-300 hover:shadow-xl hover:shadow-gold/5 cursor-pointer">
-                    <div className="relative h-48 bg-gradient-to-br from-[#0d0b07] via-[#1a1200] to-background flex items-center justify-center overflow-hidden">
-                      <div className="absolute inset-0" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 29px,rgba(212,160,23,0.05) 30px),repeating-linear-gradient(90deg,transparent,transparent 29px,rgba(212,160,23,0.05) 30px)" }} />
-                      <div className="relative z-10 text-center">
-                        <div className="text-5xl mb-2 drop-shadow-[0_0_15px_rgba(212,160,23,0.5)]">⬡</div>
-                        <div className="text-gold/70 text-xs uppercase tracking-widest font-semibold">BBFxAi · XAUUSD EA</div>
-                      </div>
+                    <div className="relative h-48 overflow-hidden bg-card">
+                      <img
+                        src={`/images/${post.slug}.jpg`}
+                        alt={post.title}
+                        width={1200}
+                        height={630}
+                        loading="lazy"
+                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                      />
                     </div>
                     <div className="p-6">
                       <div className="flex items-center gap-3 mb-3 flex-wrap">
