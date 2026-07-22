@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "xauusd-scalping-bot",
+    title: "XAUUSD Scalping Bot: Free Gold Scalper EA for MT4 & MT5",
+    excerpt: "How gold scalping bots work, why the broker spread and VPS decide everything, scalping vs trend-following — plus our free XAUUSD Scalping EA.",
+    category: "Guides",
+    date: "2026-07-23",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "mt4-vs-mt5-for-gold-ea",
     title: "MT4 vs MT5 for a Gold EA: Which Should You Run?",
     excerpt: "MT4 or MT5 for your XAUUSD robot? Speed, backtesting, the economic calendar and which MetaTrader platform to choose.",
