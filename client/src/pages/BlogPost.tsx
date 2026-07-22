@@ -210,16 +210,16 @@ export default function BlogPost() {
           </motion.div>
         </div>
         <div className="container max-w-3xl mb-12">
-          <motion.div initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }}
-            className="w-full h-56 sm:h-72 rounded-xl border border-border/30 flex items-center justify-center relative overflow-hidden"
-            style={{ background: "radial-gradient(ellipse at 30% 50%, rgba(212,160,23,0.15) 0%, transparent 60%), linear-gradient(135deg, #0d0b07 0%, #1a1200 40%, #0a0a0a 100%)" }}>
-            <div className="absolute inset-0" style={{ backgroundImage: "repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(212,160,23,0.04) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(212,160,23,0.04) 40px)" }} />
-            <div className="relative z-10 text-center">
-              <div className="text-5xl mb-3 drop-shadow-[0_0_20px_rgba(212,160,23,0.5)]">⬡</div>
-              <div className="font-serif text-gold font-bold text-base tracking-widest uppercase">BBFxAi · XAUUSD Expert Advisor</div>
-              <div className="text-muted-foreground text-xs mt-1">MetaTrader 5 · Automated Gold Trading</div>
-            </div>
-          </motion.div>
+          <motion.img
+            initial={{ opacity: 0, scale: 0.98 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.1 }}
+            src={`/images/${slug}.jpg`}
+            alt={meta.title}
+            width={1200}
+            height={630}
+            className="w-full h-auto rounded-xl border border-border/30"
+            loading="eager"
+            fetchPriority="high"
+          />
         </div>
         <motion.article initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0.2 }}
           className="container max-w-3xl">
