@@ -8,13 +8,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useSeo } from "@/lib/seo";
 
-const postsMeta: Record<string, { title: string; category: string; date: string; readTime: string; author: string }> = {
+const postsMeta: Record<string, { title: string; seoTitle?: string; category: string; date: string; readTime: string; author: string }> = {
   "bbfxai-xauusd-expert-advisor-guide": {
     title: "Maximizing Gold Trading Efficiency: A Comprehensive Guide to the BBFxAi XAUUSD Expert Advisor",
+    seoTitle: "BBFxAi XAUUSD Expert Advisor: Complete Guide (2026)",
     category: "Comprehensive Guide", date: "May 29, 2026", readTime: "7 min read", author: "BBFxAi Development Team",
   },
   "bbfxai-xauusd-robot-mt5-complete-guide": {
     title: "BBFxAi XAUUSD Robot for MT5 – Complete Guide to AI-Powered Gold Trading in 2026",
+    seoTitle: "BBFxAi XAUUSD Robot for MT5: Complete 2026 Guide",
     category: "AI Trading Guide", date: "May 29, 2026", readTime: "8 min read", author: "BBFxAi Development Team",
   },
 };
@@ -156,7 +158,7 @@ export default function BlogPost() {
       : "A comprehensive guide to the BBFxAi XAUUSD Expert Advisor: its non-martingale trend-following strategy, specs, VPS setup, and free access via brokers.";
   const postImage = `https://xauusdrobot.com/images/${slug}.jpg`;
   useSeo({
-    title: meta ? `${meta.title} | XAUUSD Robot` : "Blog | XAUUSD Robot",
+    title: meta ? (meta.seoTitle ?? `${meta.title} | XAUUSD Robot`) : "Blog | XAUUSD Robot",
     description,
     canonical,
     image: meta ? postImage : undefined,

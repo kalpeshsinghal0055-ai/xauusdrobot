@@ -31,6 +31,8 @@ export function useSeo({ title, description, canonical, jsonLd, image, ogType }:
   setMeta("property", "og:url", canonical);
   setMeta("property", "og:type", ogType || "website");
   setMeta("property", "og:image", img);
+  setMeta("property", "og:image:width", "1200");
+  setMeta("property", "og:image:height", "630");
   setMeta("name", "twitter:card", "summary_large_image");
   setMeta("name", "twitter:title", title);
   setMeta("name", "twitter:description", description);
