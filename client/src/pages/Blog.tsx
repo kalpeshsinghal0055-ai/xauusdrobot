@@ -134,14 +134,6 @@ const blogPosts = [
     readTime: "7 min read",
   },
   {
-    slug: "bbfxai-xauusd-expert-advisor-guide",
-    title: "Maximizing Gold Trading Efficiency: A Comprehensive Guide to the BBFxAi XAUUSD Expert Advisor",
-    excerpt: "Discover how BBFxAi's non-martingale, trend-following algorithm delivers institutional-grade gold trading automation on MetaTrader 5 — completely free via our affiliate ecosystem.",
-    category: "Comprehensive Guide",
-    date: "May 29, 2026",
-    readTime: "7 min read",
-  },
-  {
     slug: "bbfxai-xauusd-robot-mt5-complete-guide",
     title: "BBFxAi XAUUSD Robot for MT5 – Complete Guide to AI-Powered Gold Trading in 2026",
     excerpt: "Everything you need to know about the BBFxAi XAUUSD Robot — what it is, how it works, key features, installation steps, best practices, and FAQs for automated gold trading.",

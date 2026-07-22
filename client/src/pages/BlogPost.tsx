@@ -9,11 +9,6 @@ import Footer from "@/components/Footer";
 import { useSeo } from "@/lib/seo";
 
 const postsMeta: Record<string, { title: string; seoTitle?: string; category: string; date: string; readTime: string; author: string }> = {
-  "bbfxai-xauusd-expert-advisor-guide": {
-    title: "Maximizing Gold Trading Efficiency: A Comprehensive Guide to the BBFxAi XAUUSD Expert Advisor",
-    seoTitle: "BBFxAi XAUUSD Expert Advisor: Complete Guide (2026)",
-    category: "Comprehensive Guide", date: "May 29, 2026", readTime: "7 min read", author: "BBFxAi Development Team",
-  },
   "bbfxai-xauusd-robot-mt5-complete-guide": {
     title: "BBFxAi XAUUSD Robot for MT5 – Complete Guide to AI-Powered Gold Trading in 2026",
     seoTitle: "BBFxAi XAUUSD Robot for MT5: Complete 2026 Guide",
@@ -41,13 +36,22 @@ function SupportCards() {
   );
 }
 
-function Post1() {
+function Post2() {
   return (
     <div className="space-y-8 text-muted-foreground text-[15px] leading-relaxed">
-      <p>In the dynamic world of financial markets, automated trading has emerged as a cornerstone for traders seeking precision. <strong className="text-foreground">BBFxAi</strong> offers a sophisticated Expert Advisor for <strong className="text-foreground">XAUUSD (Gold)</strong> on <strong className="text-foreground">MetaTrader 5</strong>.</p>
+      <p>Gold (XAU/USD) is one of the most actively traded instruments. The <strong className="text-foreground">BBFxAi XAUUSD Expert Advisor (EA)</strong> combines AI analysis and automated execution so traders can participate on MetaTrader 5 without watching charts all day.</p>
       <div>
-        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">The BBFxAi Philosophy</h2>
-        <p>BBFxAi uses a <strong className="text-foreground">non-martingale, non-grid, trend-following algorithm</strong> to identify high-probability setups with controlled drawdowns.</p>
+        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">What is BBFxAi?</h2>
+        <p>An <strong className="text-foreground">AI-powered XAUUSD robot</strong> for MT5 that automatically analyzes conditions and executes trades.</p>
+        <div className="my-4 grid sm:grid-cols-2 gap-3">
+          {["Reduce emotional trading","Automate execution","Improve discipline","Monitor 24/5","Manage risk efficiently"].map((item,i)=>(
+            <div key={i} className="flex items-center gap-3 bg-card border border-border/20 rounded-lg px-4 py-3"><span className="text-gold">⬡</span><span className="text-sm text-foreground">{item}</span></div>
+          ))}
+        </div>
+      </div>
+      <div>
+        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">The BBFxAi Strategy: A Non-Martingale Expert Advisor</h2>
+        <p>Unlike many gold robots, the BBFxAi Expert Advisor (EA) runs a <strong className="text-foreground">non-martingale, non-grid, trend-following algorithm</strong> — it never doubles down on losing trades, which keeps drawdowns controlled and account risk transparent.</p>
         <div className="my-6 pl-5 border-l-2 border-gold bg-gold/5 py-4 pr-4 rounded-r-lg italic text-sm">
           "Our mission is to provide retail traders with institutional-grade tools, perfectly tuned to XAUUSD liquidity and volatility patterns."
           <div className="mt-2 not-italic text-xs text-gold font-semibold">— BBFxAi Development Team</div>
@@ -62,48 +66,6 @@ function Post1() {
               <tr key={i} className="border-b border-border/10 hover:bg-gold/5"><td className="px-4 py-3 text-foreground font-medium">{f}</td><td className="px-4 py-3">{s}</td></tr>
             ))}</tbody>
           </table>
-        </div>
-      </div>
-      <div>
-        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">VPS Recommendation</h2>
-        <div className="bg-card border border-border/30 rounded-xl p-5 flex gap-4 items-start">
-          <div className="text-3xl flex-shrink-0">🖥️</div>
-          <div>
-            <h3 className="text-foreground font-semibold text-sm mb-1">Recommended: GoVPSFX</h3>
-            <p className="text-xs text-muted-foreground mb-3">Use affiliate code for optimal compatibility:</p>
-            <a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer" className="font-mono text-xs bg-background border border-gold/20 text-gold px-3 py-1.5 rounded inline-block">NDM0ODU6OlJV</a>
-          </div>
-        </div>
-      </div>
-      <div>
-        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">Partner Brokers — Get EA Free</h2>
-        <div className="overflow-x-auto rounded-xl border border-border/30">
-          <table className="w-full text-sm">
-            <thead><tr className="bg-gold/10 border-b border-border/30"><th className="text-left px-4 py-3 text-gold text-xs uppercase">Broker</th><th className="text-left px-4 py-3 text-gold text-xs uppercase">IB Code</th><th className="text-left px-4 py-3 text-gold text-xs uppercase">Register</th></tr></thead>
-            <tbody>{brokers.map((b,i)=><tr key={i} className="border-b border-border/10 hover:bg-gold/5"><td className="px-4 py-3 text-foreground font-semibold">{b.name}</td><td className="px-4 py-3"><span className="font-mono text-xs bg-background border border-gold/20 text-gold px-2 py-1 rounded">{b.code}</span></td><td className="px-4 py-3"><a href={b.url} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background text-xs font-bold rounded inline-block">Register</a></td></tr>)}</tbody>
-          </table>
-        </div>
-        <div className="my-4 bg-gold/5 border border-gold/15 rounded-lg p-4 text-sm"><span className="text-gold font-semibold">💡 </span>Using our affiliate links qualifies you for the BBFxAi EA completely free.</div>
-      </div>
-      <div>
-        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">Support</h2>
-        <SupportCards />
-      </div>
-    </div>
-  );
-}
-
-function Post2() {
-  return (
-    <div className="space-y-8 text-muted-foreground text-[15px] leading-relaxed">
-      <p>Gold (XAU/USD) is one of the most actively traded instruments. <strong className="text-foreground">BBFxAi</strong> combines AI analysis and automated execution so traders can participate without watching charts all day.</p>
-      <div>
-        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">What is BBFxAi?</h2>
-        <p>An <strong className="text-foreground">AI-powered XAUUSD robot</strong> for MT5 that automatically analyzes conditions and executes trades.</p>
-        <div className="my-4 grid sm:grid-cols-2 gap-3">
-          {["Reduce emotional trading","Automate execution","Improve discipline","Monitor 24/5","Manage risk efficiently"].map((item,i)=>(
-            <div key={i} className="flex items-center gap-3 bg-card border border-border/20 rounded-lg px-4 py-3"><span className="text-gold">⬡</span><span className="text-sm text-foreground">{item}</span></div>
-          ))}
         </div>
       </div>
       <div>
@@ -132,8 +94,37 @@ function Post2() {
         <div className="space-y-3">{[["Is BBFxAi for beginners?","Yes — simple setup, works within minutes."],["Guaranteed profits?","No system guarantees profits. Use proper risk management."],["Works on MT5?","Yes, optimized specifically for MetaTrader 5."],["Fully automated?","Yes — analyzes and trades automatically."],["VPS recommended?","Yes, for continuous 24/5 operation."]].map(([q,a],i)=><div key={i} className="bg-card border border-border/20 rounded-xl p-5"><div className="text-foreground font-semibold text-sm mb-2">Q: {q}</div><div className="text-xs leading-relaxed">{a}</div></div>)}</div>
       </div>
       <div>
+        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">Recommended VPS</h2>
+        <div className="bg-card border border-border/30 rounded-xl p-5 flex gap-4 items-start">
+          <div className="text-3xl flex-shrink-0">🖥️</div>
+          <div>
+            <h3 className="text-foreground font-semibold text-sm mb-1">Recommended: GoVPSFX</h3>
+            <p className="text-xs text-muted-foreground mb-3">A VPS keeps the EA running 24/5 without your PC on. Use this code for optimal compatibility:</p>
+            <a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer" className="font-mono text-xs bg-background border border-gold/20 text-gold px-3 py-1.5 rounded inline-block">NDM0ODU6OlJV</a>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">Partner Brokers — Get the EA Free</h2>
+        <div className="overflow-x-auto rounded-xl border border-border/30">
+          <table className="w-full text-sm">
+            <thead><tr className="bg-gold/10 border-b border-border/30"><th className="text-left px-4 py-3 text-gold text-xs uppercase">Broker</th><th className="text-left px-4 py-3 text-gold text-xs uppercase">IB Code</th><th className="text-left px-4 py-3 text-gold text-xs uppercase">Register</th></tr></thead>
+            <tbody>{brokers.map((b,i)=><tr key={i} className="border-b border-border/10 hover:bg-gold/5"><td className="px-4 py-3 text-foreground font-semibold">{b.name}</td><td className="px-4 py-3"><span className="font-mono text-xs bg-background border border-gold/20 text-gold px-2 py-1 rounded">{b.code}</span></td><td className="px-4 py-3"><a href={b.url} target="_blank" rel="noopener noreferrer" className="px-3 py-1.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background text-xs font-bold rounded inline-block">Register</a></td></tr>)}</tbody>
+          </table>
+        </div>
+        <div className="my-4 bg-gold/5 border border-gold/15 rounded-lg p-4 text-sm"><span className="text-gold font-semibold">💡 </span>Using our affiliate links qualifies you for the BBFxAi EA completely free.</div>
+      </div>
+      <div>
+        <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">Related Guides</h2>
+        <div className="grid sm:grid-cols-2 gap-3">
+          {[["XAUUSD Robot: The Complete 2026 Guide","/blog/xauusd-robot-complete-guide/"],["How to Set Up a XAUUSD Robot on MT4 & MT5","/blog/how-to-set-up-xauusd-robot-mt4-mt5/"],["Best XAUUSD Robots & Gold EAs 2026","/blog/best-xauusd-robot-gold-ea-2026/"],["Gold EA Risk Management","/blog/gold-ea-risk-management/"]].map(([t,u],i)=>(
+            <a key={i} href={u} className="flex items-center gap-2 bg-card border border-border/20 rounded-lg px-4 py-3 text-sm text-foreground hover:border-gold/30 transition-colors"><span className="text-gold">→</span><span>{t}</span></a>
+          ))}
+        </div>
+      </div>
+      <div>
         <h2 className="font-serif text-xl lg:text-2xl font-bold text-foreground mt-10 mb-4 pb-3 border-b border-border/30">Conclusion &amp; Support</h2>
-        <p>BBFxAi provides <strong className="text-foreground">AI-driven automation and disciplined risk management</strong> for gold traders — free via our affiliate model.</p>
+        <p>The BBFxAi XAUUSD Expert Advisor provides <strong className="text-foreground">AI-driven automation and disciplined, non-martingale risk management</strong> for gold traders — free via our affiliate model.</p>
         <div className="my-4 bg-gold/5 border border-gold/15 rounded-lg p-4 text-sm"><span className="text-gold font-semibold">🚀 Ready? </span>Register with a partner broker via our affiliate link to get the EA free.</div>
         <SupportCards />
       </div>
@@ -142,7 +133,6 @@ function Post2() {
 }
 
 const postComponents: Record<string, () => JSX.Element> = {
-  "bbfxai-xauusd-expert-advisor-guide": Post1,
   "bbfxai-xauusd-robot-mt5-complete-guide": Post2,
 };
 
@@ -153,9 +143,7 @@ export default function BlogPost() {
   const PostContent = postComponents[slug];
   const canonical = `https://xauusdrobot.com/blog/${slug}/`;
   const description =
-    slug === "bbfxai-xauusd-robot-mt5-complete-guide"
-      ? "Complete 2026 guide to the BBFxAi XAUUSD Robot for MT5: how the AI gold EA works, setup, risk management, and getting it free via partner brokers."
-      : "A comprehensive guide to the BBFxAi XAUUSD Expert Advisor: its non-martingale trend-following strategy, specs, VPS setup, and free access via brokers.";
+    "Complete 2026 guide to the BBFxAi XAUUSD Robot & Expert Advisor for MT5: its non-martingale trend-following strategy, key features, setup, risk management, VPS, and getting it free via partner brokers.";
   const postImage = `https://xauusdrobot.com/images/${slug}.jpg`;
   useSeo({
     title: meta ? (meta.seoTitle ?? `${meta.title} | XAUUSD Robot`) : "Blog | XAUUSD Robot",
@@ -176,7 +164,7 @@ export default function BlogPost() {
             logo: { "@type": "ImageObject", url: "https://xauusdrobot.com/logo.png" },
           },
           datePublished: "2026-05-29",
-          dateModified: "2026-05-29",
+          dateModified: "2026-07-22",
           mainEntityOfPage: canonical,
           description,
         }

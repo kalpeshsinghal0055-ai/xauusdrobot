@@ -28,7 +28,6 @@ const PORT = 4180;
 const ROUTES = [
   "/",
   "/blog",
-  "/blog/bbfxai-xauusd-expert-advisor-guide",
   "/blog/bbfxai-xauusd-robot-mt5-complete-guide",
 ];
 

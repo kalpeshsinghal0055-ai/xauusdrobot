@@ -71,13 +71,13 @@ export default function Home() {
             <span className="text-xs text-gold font-semibold uppercase tracking-wide">Tutorial</span>
             <h3 className="text-lg font-semibold mt-1 text-white">How to Set Up a XAUUSD Robot on MT4 & MT5</h3>
           </a>
-          <a href="/blog/bbfxai-xauusd-expert-advisor-guide" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
-            <span className="text-xs text-gold font-semibold uppercase tracking-wide">Guide</span>
-            <h3 className="text-lg font-semibold mt-1 text-white">BBFxAi XAUUSD Expert Advisor Guide</h3>
+          <a href="/blog/best-xauusd-robot-gold-ea-2026/" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
+            <span className="text-xs text-gold font-semibold uppercase tracking-wide">Comparison</span>
+            <h3 className="text-lg font-semibold mt-1 text-white">Best XAUUSD Robots &amp; Gold EAs 2026</h3>
           </a>
-          <a href="/blog/bbfxai-xauusd-robot-mt5-complete-guide" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
+          <a href="/blog/bbfxai-xauusd-robot-mt5-complete-guide/" className="block p-5 rounded-xl border border-white/10 hover:border-white/30 transition-colors">
             <span className="text-xs text-gold font-semibold uppercase tracking-wide">Guide</span>
-            <h3 className="text-lg font-semibold mt-1 text-white">BBFxAi XAUUSD Robot for MT5 Guide</h3>
+            <h3 className="text-lg font-semibold mt-1 text-white">BBFxAi XAUUSD Robot &amp; EA for MT5 Guide</h3>
           </a>
           </div>
           <div className="text-center mt-8">
