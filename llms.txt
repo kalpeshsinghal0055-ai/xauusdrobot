@@ -1,34 +1,40 @@
 # XAUUSD Robot
 
-> Free AI-powered XAUUSD (gold) trading robot / Expert Advisor (EA) for MetaTrader 4 and MetaTrader 5. The algo is provided free of charge when you open a trading account through a partner broker affiliate link. No subscriptions, no hidden fees. Educational information only — not financial advice.
+> Free AI-powered XAUUSD (gold) trading robots / Expert Advisors (EAs) for MetaTrader 4 and MetaTrader 5. The algos are provided free of charge when you open a trading account through a partner broker affiliate link. No subscriptions, no hidden fees. Educational information only — not financial advice.
 
 ## About
 - Site: https://xauusdrobot.com/
-- Product: BBFxAi XAUUSD Expert Advisor (automated gold trading algorithm for MT4/MT5)
-- Model: Free EA via broker affiliate signup; no direct cost to the user
-- Verified results: MyFXBook-verified live track record
+- Products: (1) BBFxAi XAUUSD Robot — a trend-following, non-martingale gold EA for MT4/MT5 with a fixed stop-loss on every trade; (2) XAUUSD Scalping EA — a higher-frequency gold scalper for MT4/MT5.
+- Model: Free EAs via broker affiliate signup; no direct cost to the user. Delivered and set up over Telegram.
+- Strategy: Rule-based, non-martingale, non-grid; fixed stop-loss and risk management on the main robot. No guaranteed-profit claims.
+- Verified results: Myfxbook-tracked live results are linked on the site.
+- Recommended brokers: XS, Exness, Vantage, Markets4you (regulated, tight XAUUSD spreads, full MT4/MT5 EA support).
 - Contact: Telegram @BBFx_Ai
 
 ## Key Pages
-- [Home](https://xauusdrobot.com/): Overview, features, free EA download, broker list, FAQ
-- [Blog](https://xauusdrobot.com/blog/): Guides and tutorials on automated gold trading
-- [Sitemap](https://xauusdrobot.com/sitemap/): All pages
-
-- [About](https://xauusdrobot.com/about/): Who runs XAUUSD Robot, how guides are researched, and how the site is funded
-- [Contact](https://xauusdrobot.com/contact/): Email, Telegram and Instagram contact details and support scope
+- [Home](https://xauusdrobot.com/): Overview, features, free EA access, broker list, and FAQ.
+- [Blog](https://xauusdrobot.com/blog/): Guides and tutorials on automated gold (XAUUSD) trading.
+- [Sitemap](https://xauusdrobot.com/sitemap/): All pages.
+- [About](https://xauusdrobot.com/about/): Who runs XAUUSD Robot, how guides are researched, and how the site is funded.
+- [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
-- [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, and what to expect
-- [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Step-by-step install, backtest, and run guide
-- [Best Gold EA for Prop Firm & FTMO Challenges](https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/): Whether a gold EA can pass prop firm challenges, the rules that matter, and honest expectations
-- [BBFxAi XAUUSD Robot for MT5](https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide/): AI-powered gold trading, features, and FAQs
-
-- [Do Gold Trading Robots Actually Work?](https://xauusdrobot.com/blog/do-gold-trading-robots-work/): Honest reality check on when XAUUSD robots succeed, when they fail, and how to spot a scam
-- [Free XAUUSD Gold EA](https://xauusdrobot.com/blog/free-xauusd-gold-ea/): What the free gold EA includes, how the no-cost model works, and how to download and test it
-- [Gold EA Strategy Types Explained](https://xauusdrobot.com/blog/gold-ea-strategy-types/): Scalping, grid, martingale, trend, breakout, mean-reversion and news strategies with risk levels
-- [Best VPS for Gold EA Trading](https://xauusdrobot.com/blog/best-vps-gold-ea/): Latency, uptime and specs that matter for running a gold EA 24/5 on MT4 or MT5
-- [How to Backtest a Gold EA Properly](https://xauusdrobot.com/blog/how-to-backtest-gold-ea/): Data quality, modelling quality, realistic spreads, forward testing and avoiding over-optimisation
-- [Gold EA Risk Management](https://xauusdrobot.com/blog/gold-ea-risk-management/): Risk per trade, lot sizing, stop-loss, drawdown limits and daily loss caps
+- [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, the strategies it uses, and what to realistically expect.
+- [XAUUSD Scalping Bot: Free Gold Scalper EA](https://xauusdrobot.com/blog/xauusd-scalping-bot/): How gold scalping bots work, why broker spread and VPS latency decide results, scalping vs trend-following, and our free XAUUSD Scalping EA.
+- [Free XAUUSD Gold EA](https://xauusdrobot.com/blog/free-xauusd-gold-ea/): What the free gold EA / trading bot includes, how the no-cost model works, and how to download and test it.
+- [Best XAUUSD Robots & Gold EAs 2026](https://xauusdrobot.com/blog/best-xauusd-robot-gold-ea-2026/): An honest comparison — the traits that matter, red flags to avoid, and how to pick one that fits your goals.
+- [Do Gold Trading Robots Actually Work?](https://xauusdrobot.com/blog/do-gold-trading-robots-work/): An honest reality check on when XAUUSD robots succeed, when they fail, and how to spot a scam.
+- [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Beginner-friendly, step-by-step install, backtest, and run guide.
+- [BBFxAi XAUUSD Robot for MT5](https://xauusdrobot.com/blog/bbfxai-xauusd-robot-mt5-complete-guide/): The BBFxAi robot and Expert Advisor — features, non-martingale strategy, install steps, and FAQs.
+- [Gold EA Strategy Types Explained](https://xauusdrobot.com/blog/gold-ea-strategy-types/): Scalping, grid, martingale, trend and news gold EA strategies — how each works and the risks.
+- [MT4 vs MT5 for a Gold EA](https://xauusdrobot.com/blog/mt4-vs-mt5-for-gold-ea/): Speed, backtesting, the economic calendar, and which MetaTrader platform to run your gold robot on.
+- [Best Brokers for XAUUSD / Gold EA Trading](https://xauusdrobot.com/blog/best-brokers-xauusd-gold-ea/): What matters in spreads, execution and EA support, plus recommended brokers for automated gold trading.
+- [Best VPS for Gold EA Trading](https://xauusdrobot.com/blog/best-vps-gold-ea/): What a forex VPS does for a gold robot, the latency/uptime specs that matter, and how to choose one.
+- [Best Gold EA for Prop Firm & FTMO Challenges](https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/): Whether a gold EA can pass a prop firm challenge, the rules that matter, and honest expectations.
+- [Trading Gold During News (NFP, FOMC, CPI)](https://xauusdrobot.com/blog/trading-gold-during-news-nfp-fomc-cpi/): What really happens to XAUUSD spreads and stops during major news, and how a news filter works.
+- [How Much Money to Start a Gold EA](https://xauusdrobot.com/blog/how-much-money-to-start-gold-ea/): Realistic XAUUSD minimums ($100 vs $500 vs $1,000), lot sizes, the drawdown buffer, and the cent-account shortcut.
+- [How to Backtest a Gold EA Properly](https://xauusdrobot.com/blog/how-to-backtest-gold-ea/): Data quality, realistic spreads, forward testing, and avoiding over-optimisation on MT4 and MT5.
+- [Gold EA Risk Management](https://xauusdrobot.com/blog/gold-ea-risk-management/): Risk per trade, lot sizing, stop-loss, and drawdown limits that keep a gold robot safe.
 
 ## Policies
 - [Privacy Policy](https://xauusdrobot.com/privacy-policy/)
@@ -36,5 +42,6 @@
 
 ## Important Notes
 - Trading gold (XAUUSD) and CFDs involves substantial risk of loss and is not suitable for every investor.
-- Past performance and backtested results do not guarantee future results.
-- This site earns affiliate commissions from broker referrals at no extra cost to the user.
+- Past performance and backtested results do not guarantee future results. No profit is guaranteed.
+- The EAs are free because the site earns affiliate commissions from broker referrals, at no extra cost to the user.
+- Scalping performance in particular depends heavily on the broker's spread and execution; always test on a demo account first.
