@@ -161,7 +161,7 @@ export default function BlogPost() {
           publisher: {
             "@type": "Organization",
             name: "XAUUSD Robot by BBFx AI",
-            logo: { "@type": "ImageObject", url: "https://xauusdrobot.com/logo.png" },
+            logo: { "@type": "ImageObject", url: "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg" },
           },
           datePublished: "2026-05-29",
           dateModified: "2026-07-22",
