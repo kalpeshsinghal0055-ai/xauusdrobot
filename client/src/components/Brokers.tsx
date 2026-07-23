@@ -28,32 +28,6 @@ const brokers = [
     href: "https://one.exnessonelink.com/a/uhk6peieiq",
   },
   {
-    name: "IC Markets",
-    badge: "ECN PRO",
-    badgeColor: "bg-emerald/20 text-emerald",
-    desc: "Institutional ECN execution. Lowest latency for MT5 algo trading. Regulation: ASIC, CySEC. Perfect for our XAUUSD scalper and trend algos.",
-    specs: [
-      { label: "XAUUSD Spread", value: "From 0.0 pips" },
-      { label: "Min Deposit", value: "$200" },
-      { label: "Platform", value: "MT4 / MT5 / cTrader" },
-      { label: "Execution", value: "ECN / STP" },
-    ],
-    href: "https://icmarkets.com/?camp=78272",
-  },
-  {
-    name: "Tickmill",
-    badge: "ULTRA TIGHT",
-    badgeColor: "bg-blue-500/20 text-blue-400",
-    desc: "Ultra-tight spreads with institutional-grade execution. FCA, CySEC, FSA regulated. Excellent for XAUUSD algo scalping with our free MT5 Expert Advisor.",
-    specs: [
-      { label: "XAUUSD Spread", value: "From 0.0 pips" },
-      { label: "Min Deposit", value: "$100" },
-      { label: "Platform", value: "MT4 / MT5" },
-      { label: "Execution", value: "NDD / STP" },
-    ],
-    href: "https://tickmill.link/3RimUpD",
-  },
-  {
     name: "Vantage",
     badge: "LOW SPREAD",
     badgeColor: "bg-orange-500/20 text-orange-400",

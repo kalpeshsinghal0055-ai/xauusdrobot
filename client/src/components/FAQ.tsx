@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Which broker should I use for the XAUUSD algo?",
-    a: "We recommend Exness (lowest XAUUSD spreads, instant withdrawals), IC Markets (best ECN execution for algo trading), Tickmill (ultra-tight spreads with institutional execution), or Vantage (great low-spread option). All four are regulated, support MT5 EAs, and give excellent gold trading conditions.",
+    a: "We recommend XS (ultra-low XAUUSD spreads, our top pick), Exness (lowest spreads, instant withdrawals), or Vantage (great low-spread option). All are regulated, support MT5 EAs, and give excellent gold trading conditions.",
   },
   {
     q: "Do I need trading experience to use the algo?",
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: "What is the minimum deposit required?",
-    a: "We recommend starting with at least $200–$500 for standard accounts. The algo automatically adjusts lot sizes based on your account balance, so it works at any deposit level. Exness accepts as low as $10, Tickmill from $100.",
+    a: "We recommend starting with at least $200–$500 for standard accounts. The algo automatically adjusts lot sizes based on your account balance, so it works at any deposit level. Exness accepts as low as $10, XS from $5.",
   },
   {
     q: "Can the robot trade Bitcoin and Forex too?",

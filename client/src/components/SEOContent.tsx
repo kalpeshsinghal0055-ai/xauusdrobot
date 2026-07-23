@@ -149,18 +149,17 @@ export default function SEOContent() {
                 Choosing the right broker is critical for successful algo trading. For XAUUSD
                 automated trading, you need low spreads, fast execution, and reliable MT5 platform
                 support. Our recommended brokers —{" "}
-                <strong className="text-foreground">Exness</strong>,{" "}
-                <strong className="text-foreground">IC Markets</strong>,{" "}
-                <strong className="text-foreground">Tickmill</strong>, and{" "}
+                <strong className="text-foreground">XS</strong>,{" "}
+                <strong className="text-foreground">Exness</strong>, and{" "}
                 <strong className="text-foreground">Vantage</strong> — all offer ECN/STP execution
                 with spreads starting from 0.0 pips on gold. Each broker is fully regulated by
                 tier-1 authorities (FCA, ASIC, CySEC) and supports Expert Advisors on MetaTrader 5.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Tickmill stands out for its ultra-tight spreads and institutional-grade execution
-                speed, making it particularly suitable for high-frequency XAUUSD scalping
-                algorithms. Combined with NDD (No Dealing Desk) execution, your MT5 EA gets
-                filled at the best available price with minimal slippage.
+                XS stands out for its ultra-low XAUUSD spreads and fast ECN execution, making it
+                our top pick for running the free gold EA. Combined with reliable MT5 platform
+                support, your Expert Advisor gets filled at the best available price with minimal
+                slippage.
               </p>
             </article>
           </div>

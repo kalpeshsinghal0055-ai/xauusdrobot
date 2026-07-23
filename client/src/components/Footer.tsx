@@ -98,26 +98,6 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://icmarkets.com/?camp=78272"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored nofollow"
-                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
-                >
-                  Get Free Algo (IC Markets)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://tickmill.link/3RimUpD"
-                  target="_blank"
-                  rel="noopener noreferrer sponsored nofollow"
-                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
-                >
-                  Get Free Algo (Tickmill)
-                </a>
-              </li>
-              <li>
-                <a
                   href="https://vigco.co/la-com-inv/bbfxai"
                   target="_blank"
                   rel="noopener noreferrer sponsored nofollow"
