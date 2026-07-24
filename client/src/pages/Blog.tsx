@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "best-time-to-trade-xauusd",
+    title: "Best Time to Trade XAUUSD: Gold Trading Hours & Sessions",
+    excerpt: "When gold actually moves — the Asian, London and New York sessions in GMT, the London-NY overlap, and when spreads quietly kill your edge.",
+    category: "Guides",
+    date: "2026-07-23",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
     slug: "xauusd-scalping-bot",
     title: "XAUUSD Scalping Bot: Free Gold Scalper EA for MT4 & MT5",
     excerpt: "How gold scalping bots work, why the broker spread and VPS decide everything, scalping vs trend-following — plus our free XAUUSD Scalping EA.",
