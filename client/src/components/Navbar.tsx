@@ -9,6 +9,7 @@ const navLinks = [
   { href: "/#bots", label: "Free Algos" },
   { href: "/#brokers", label: "Brokers" },
   { href: "/blog", label: "Blog", internal: true },
+  { href: "/tools/", label: "Tools" },
   { href: "/#faq", label: "FAQ" },
   { href: "https://t.me/BBFx_Ai", label: "Telegram", external: true },
 ];

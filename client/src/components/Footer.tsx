@@ -157,6 +157,7 @@ export default function Footer() {
             <span className="mx-2">·</span>
             <a href="/affiliate-disclosure/" className="hover:text-gold transition-colors">Affiliate Disclosure</a>
             <span className="mx-2">·</span>
+            <a href="/tools/" className="hover:text-gold transition-colors">Free Tools</a>
             <a href="/sitemap/" className="hover:text-gold transition-colors">Sitemap</a>
           </p>
           <p className="text-xs text-muted-foreground mb-4">
