@@ -44,9 +44,9 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <h4 className="text-xs font-bold text-gold uppercase tracking-wider mb-4">
+            <div className="text-xs font-bold text-gold uppercase tracking-wider mb-4">
               Navigation
-            </h4>
+            </div>
             <ul className="space-y-2.5">
               {["How It Works", "EA Features", "Free Algos", "Performance", "Brokers", "FAQ"].map(
                 (item) => (
@@ -65,9 +65,9 @@ export default function Footer() {
 
           {/* Free EAs */}
           <div>
-            <h4 className="text-xs font-bold text-gold uppercase tracking-wider mb-4">
+            <div className="text-xs font-bold text-gold uppercase tracking-wider mb-4">
               Free EAs
-            </h4>
+            </div>
             <ul className="space-y-2.5">
               <li>
                 <a
@@ -93,9 +93,9 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-xs font-bold text-gold uppercase tracking-wider mb-4">
+            <div className="text-xs font-bold text-gold uppercase tracking-wider mb-4">
               Quick Links
-            </h4>
+            </div>
             <ul className="space-y-2.5">
               <li>
                 <a
@@ -143,9 +143,9 @@ export default function Footer() {
 
         {/* Algo Specifications */}
         <div className="mt-12 pt-8 border-t border-border/20">
-          <h4 className="text-xs font-bold text-gold/60 uppercase tracking-wider mb-4 text-center">
+          <div className="text-xs font-bold text-gold/60 uppercase tracking-wider mb-4 text-center">
             Algo Specification
-          </h4>
+          </div>
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-muted-foreground">
             <span>Platform: MT4 & MT5</span>
             <span>Assets: XAUUSD & BTCUSD</span>

@@ -143,7 +143,7 @@ export default function BlogPost() {
   const PostContent = postComponents[slug];
   const canonical = `https://xauusdrobot.com/blog/${slug}/`;
   const description =
-    "Complete 2026 guide to the BBFxAi XAUUSD Robot & Expert Advisor for MT5: its non-martingale trend-following strategy, key features, setup, risk management, VPS, and getting it free via partner brokers.";
+    "Complete 2026 guide to the BBFxAi XAUUSD Robot for MT5: non-martingale trend-following strategy, features, setup, risk management, and getting it free.";
   const postImage = `https://xauusdrobot.com/images/${slug}.jpg`;
   useSeo({
     title: meta ? (meta.seoTitle ?? `${meta.title} | XAUUSD Robot`) : "Blog | XAUUSD Robot",
