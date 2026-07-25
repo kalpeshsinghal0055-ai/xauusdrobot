@@ -1,0 +1,326 @@
+/*
+ * Gold News Calendar generator.
+ * Fetches the Forex Factory weekly calendar feed, keeps USD (gold-relevant)
+ * events, and writes the full static page to client/public/gold-news-calendar/index.html.
+ * Run locally:  node scripts/build-calendar.mjs
+ * Runs daily via .github/workflows/update-calendar.yml
+ */
+
+import { writeFileSync, mkdirSync } from "node:fs";
+import { dirname, join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
+
+const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const OUT_FILE = join(ROOT, "client", "public", "gold-news-calendar", "index.html");
+const FEED_URL = "https://nfs.faireconomy.media/ff_calendar_thisweek.json";
+
+// Events that historically move XAUUSD the most (matched against the title).
+const GOLD_MOVERS = [
+  /non-?farm/i,
+  /\bCPI\b/i,
+  /FOMC/i,
+  /federal funds rate/i,
+  /fed chair|powell/i,
+  /\bPCE\b/i,
+  /\bGDP\b/i,
+  /ISM (Manufacturing|Services) PMI/i,
+  /unemployment claims/i,
+  /unemployment rate/i,
+  /average hourly earnings/i,
+  /retail sales/i,
+];
+
+const esc = (s) =>
+  String(s ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+async function fetchFeed() {
+  let lastErr;
+  for (let i = 0; i < 3; i++) {
+    try {
+      const res = await fetch(FEED_URL, { headers: { "user-agent": "Mozilla/5.0 (xauusdrobot.com calendar builder)" } });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      if (!Array.isArray(data) || data.length === 0) throw new Error("empty feed");
+      return data;
+    } catch (e) {
+      lastErr = e;
+      await new Promise((r) => setTimeout(r, 3000 * (i + 1)));
+    }
+  }
+  throw lastErr;
+}
+
+const fmtGmtTime = (d) =>
+  d.toLocaleTimeString("en-GB", { timeZone: "UTC", hour: "2-digit", minute: "2-digit" });
+const fmtDayHeading = (d) =>
+  d.toLocaleDateString("en-US", { timeZone: "UTC", weekday: "long", month: "short", day: "numeric" });
+const fmtShort = (d) =>
+  d.toLocaleDateString("en-US", { timeZone: "UTC", month: "short", day: "numeric" });
+
+function impactMeta(impact) {
+  switch ((impact || "").toLowerCase()) {
+    case "high": return { key: "high", label: "High" };
+    case "medium": return { key: "medium", label: "Medium" };
+    case "low": return { key: "low", label: "Low" };
+    default: return { key: "holiday", label: "Holiday" };
+  }
+}
+
+function build(events) {
+  const all = events
+    .map((e) => ({ ...e, d: new Date(e.date) }))
+    .filter((e) => !Number.isNaN(e.d.getTime()))
+    .sort((a, b) => a.d - b.d);
+
+  const usd = all.filter((e) => e.country === "USD");
+  const weekStart = fmtShort(all[0].d);
+  const weekEnd = fmtShort(all[all.length - 1].d);
+  const year = all[0].d.getUTCFullYear();
+  const weekLabel = `${weekStart} – ${weekEnd}, ${year}`;
+
+  const highCount = usd.filter((e) => e.impact === "High").length;
+  const moverCount = usd.filter((e) => GOLD_MOVERS.some((rx) => rx.test(e.title))).length;
+
+  // Group by GMT day
+  const days = new Map();
+  for (const e of usd) {
+    const key = e.d.toISOString().slice(0, 10);
+    if (!days.has(key)) days.set(key, []);
+    days.get(key).push(e);
+  }
+
+  let dayCards = "";
+  for (const [key, list] of days) {
+    const heading = fmtDayHeading(list[0].d);
+    const rows = list
+      .map((e) => {
+        const im = impactMeta(e.impact);
+        const mover = GOLD_MOVERS.some((rx) => rx.test(e.title));
+        const forecast = e.forecast?.trim() ? esc(e.forecast) : "—";
+        const previous = e.previous?.trim() ? esc(e.previous) : "—";
+        return `<tr data-impact="${im.key}" data-mover="${mover ? 1 : 0}">
+<td class="tcell"><span class="gmt">${fmtGmtTime(e.d)}</span><span class="localtime" data-ts="${e.d.getTime()}"></span></td>
+<td class="ecell">${esc(e.title)}${mover ? ' <span class="mover">⭐ Gold Mover</span>' : ""}</td>
+<td><span class="imp imp-${im.key}">${im.label}</span></td>
+<td class="num">${forecast}</td>
+<td class="num">${previous}</td>
+</tr>`;
+      })
+      .join("\n");
+    dayCards += `<section class="daycard" id="day-${key}">
+<h3 class="dayhead">${heading}</h3>
+<div class="tablewrap"><table class="cal">
+<thead><tr><th>Time (GMT)</th><th>Event</th><th>Impact</th><th>Forecast</th><th>Previous</th></tr></thead>
+<tbody>${rows}</tbody>
+</table></div>
+</section>\n`;
+  }
+  if (!usd.length) {
+    dayCards = `<div class="box"><p style="margin:0">No USD events are scheduled for this week — check back after the weekend refresh.</p></div>`;
+  }
+
+  const now = new Date();
+  const updatedLong = now.toLocaleDateString("en-US", { timeZone: "UTC", year: "numeric", month: "long", day: "numeric" });
+  const updatedISO = now.toISOString().slice(0, 10);
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>Gold News Calendar — XAUUSD Economic Calendar (Updated Daily)</title>
+<meta name="description" content="Free gold news calendar for XAUUSD traders: this week's US economic events with Low / Medium / High impact levels, gold-mover highlights, forecast vs previous — updated daily.">
+<link rel="canonical" href="https://xauusdrobot.com/gold-news-calendar/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Gold News Calendar — XAUUSD Economic Calendar">
+<meta property="og:description" content="This week's gold-moving news events (NFP, CPI, FOMC) with impact levels — free, updated daily.">
+<meta property="og:url" content="https://xauusdrobot.com/gold-news-calendar/">
+<meta property="og:image" content="https://xauusdrobot.com/images/free-xauusd-gold-ea.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gold News Calendar (XAUUSD) — Updated Daily">
+<meta name="twitter:description" content="Which news moves gold this week — NFP, CPI, FOMC and more, with impact levels.">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/free-xauusd-gold-ea.jpg">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--orange:#f0a03a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgnav:hover{opacity:.9;text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}.lead{font-size:19px;color:#e9ecf2}
+.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.tgbtn:hover{opacity:.9;text-decoration:none}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+/* calendar-specific */
+.statsrow{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 18px;font-size:14.5px;color:var(--muted)}
+.stat b{color:#fff;font-size:18px;display:block;line-height:1.2}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 6px;position:sticky;top:64px;z-index:9;background:rgba(13,15,20,.92);backdrop-filter:blur(8px);padding:10px 0}
+.fbtn{background:var(--card);border:1px solid var(--line);color:var(--muted);border-radius:20px;padding:7px 16px;font-size:14px;font-weight:700;cursor:pointer}
+.fbtn:hover{border-color:var(--gold)}
+.fbtn.active{background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;border-color:var(--gold)}
+.daycard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px 18px 12px;margin:18px 0}
+.dayhead{color:#fff;font-size:17px;margin:14px 0 4px;border-bottom:1px solid var(--line);padding-bottom:10px}
+.tablewrap{overflow-x:auto}
+table.cal{margin:8px 0 4px;font-size:14.5px;min-width:560px}
+table.cal th{background:transparent;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+table.cal td{padding:10px 12px}
+.tcell{white-space:nowrap}.gmt{color:#fff;font-weight:700;display:block}
+.localtime{display:block;color:var(--muted);font-size:12.5px}
+.ecell{min-width:220px}
+.num{white-space:nowrap;color:var(--muted)}
+.imp{display:inline-block;font-size:12.5px;font-weight:800;padding:3px 12px;border-radius:20px;white-space:nowrap}
+.imp-high{background:rgba(224,96,63,.15);border:1px solid var(--red);color:var(--red)}
+.imp-medium{background:rgba(240,160,58,.15);border:1px solid var(--orange);color:var(--orange)}
+.imp-low{background:rgba(63,181,106,.15);border:1px solid var(--green);color:var(--green)}
+.imp-holiday{background:rgba(154,163,178,.12);border:1px solid var(--muted);color:var(--muted)}
+.mover{display:inline-block;background:rgba(232,181,58,.14);border:1px solid var(--gold);color:var(--gold2);font-size:11.5px;font-weight:800;padding:2px 9px;border-radius:20px;margin-left:6px;white-space:nowrap}
+.legend{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:20px 0}
+.lg{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:14.5px;color:var(--muted)}
+.lg .imp{margin-bottom:6px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Gold News Calendar — XAUUSD Economic Calendar","url":"https://xauusdrobot.com/gold-news-calendar/","description":"Weekly calendar of US economic events that move gold (XAUUSD), with Low, Medium and High impact levels. Updated daily.","dateModified":"${updatedISO}","publisher":{"@type":"Organization","name":"XAUUSD Robot"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://xauusdrobot.com/"},{"@type":"ListItem","position":2,"name":"Gold News Calendar","item":"https://xauusdrobot.com/gold-news-calendar/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Which news events move gold (XAUUSD) the most?","acceptedAnswer":{"@type":"Answer","text":"The biggest gold movers are US events: Non-Farm Payrolls (NFP), CPI inflation data, FOMC rate decisions and statements, Fed Chair speeches, Core PCE, GDP and the ISM PMIs. They move the US dollar and interest-rate expectations, which drive the gold price directly."}},{"@type":"Question","name":"What time is NFP released?","acceptedAnswer":{"@type":"Answer","text":"Non-Farm Payrolls is released on the first Friday of each month at 8:30 AM New York time (12:30 or 13:30 GMT depending on daylight saving). It is usually the most volatile scheduled event for gold."}},{"@type":"Question","name":"Should I trade gold during high-impact news?","acceptedAnswer":{"@type":"Answer","text":"Most traders and most gold robots should not. During red (high-impact) events, XAUUSD spreads can widen several times over, prices gap, and stop-losses can slip. A common approach — and what our EA's news filter does automatically — is to pause trading from shortly before until after the release."}},{"@type":"Question","name":"Do low-impact events affect the gold price?","acceptedAnswer":{"@type":"Answer","text":"Rarely in a meaningful way. Low (green) events usually cause little to no XAUUSD movement on their own. Medium (orange) events can move gold when the number surprises. High (red) events are the ones that regularly cause large, fast moves."}},{"@type":"Question","name":"Why does this gold calendar only show US (USD) events?","acceptedAnswer":{"@type":"Answer","text":"Gold is priced in US dollars, so USD data and Federal Reserve policy dominate XAUUSD movement. Events from other currencies mostly matter for gold only when they shift the dollar indirectly, so filtering to USD keeps the calendar focused on what actually moves gold."}},{"@type":"Question","name":"How often is this calendar updated?","acceptedAnswer":{"@type":"Answer","text":"Automatically every day. The event list, forecasts and previous values refresh daily, and the calendar rolls over to the new week each weekend."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/tools/">Tools</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>Gold News Calendar (XAUUSD)</h1>
+<p class="meta">Week of <strong style="color:var(--gold2)">${weekLabel}</strong> · Updated ${updatedLong} · auto-refreshes daily</p>
+
+<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> This is a free economic calendar filtered for gold traders — only the US (USD) events that actually move XAUUSD, marked <strong>Low / Medium / High</strong> impact. Red events like NFP, CPI and FOMC regularly move gold $10–$30+ within minutes; ⭐ Gold Mover tags highlight them. Times are shown in GMT with your local time underneath.</p></div>
+
+<div class="statsrow">
+<div class="stat"><b>${usd.length}</b>USD events this week</div>
+<div class="stat"><b style="color:var(--red)">${highCount}</b>High impact</div>
+<div class="stat"><b style="color:var(--gold2)">${moverCount}</b>⭐ Gold movers</div>
+</div>
+
+<div class="filters" id="filters">
+<button class="fbtn active" data-f="all">All</button>
+<button class="fbtn" data-f="mover">⭐ Gold Movers</button>
+<button class="fbtn" data-f="high">🔴 High</button>
+<button class="fbtn" data-f="medium">🟠 Medium</button>
+<button class="fbtn" data-f="low">🟢 Low</button>
+</div>
+
+${dayCards}
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Don't want to babysit the news?</strong></p><p style="color:var(--muted);margin-top:4px;">Our free gold robot has a built-in news filter — it pauses trading around red events like NFP, FOMC and CPI automatically.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">🤖 Get the Free Gold Robot</a></div>
+
+<h2 id="impact">How to read the impact levels</h2>
+<div class="legend">
+<div class="lg"><span class="imp imp-low">Low</span><br><strong>Green — minor data.</strong> Usually little to no visible effect on XAUUSD. Safe to ignore for most gold strategies.</div>
+<div class="lg"><span class="imp imp-medium">Medium</span><br><strong>Orange — can surprise.</strong> Moves gold when the released number differs clearly from the forecast. Watch spreads around these.</div>
+<div class="lg"><span class="imp imp-high">High</span><br><strong>Red — volatility events.</strong> NFP, CPI, FOMC and friends. Fast $10–$30+ gold moves, wide spreads, slippage. Most robots should pause here.</div>
+</div>
+<p>The impact rating tells you how much scheduled volatility to expect — not the direction. A red event can send gold up or down; what matters is the <em>released number vs the forecast</em>. Bigger surprise = bigger move.</p>
+
+<h2 id="movers">Which events move gold the most?</h2>
+<p>Gold is priced in US dollars and driven by real interest-rate expectations, so US data and the Federal Reserve dominate. These are the events worth planning your week around:</p>
+<table>
+<thead><tr><th>Event</th><th>Why it moves gold</th></tr></thead>
+<tbody>
+<tr><td><strong>Non-Farm Payrolls (NFP)</strong></td><td>The monthly US jobs report. Strong jobs → stronger dollar and higher rate expectations → gold usually falls (and vice versa). The most volatile scheduled event for XAUUSD.</td></tr>
+<tr><td><strong>CPI (inflation)</strong></td><td>Hot inflation shifts Fed rate-cut bets instantly. Gold often moves $15–$30 within minutes of a surprise CPI print.</td></tr>
+<tr><td><strong>FOMC rate decision &amp; statement</strong></td><td>The Fed sets the interest rates gold competes against. Decisions, dot plots and press conferences are all red events.</td></tr>
+<tr><td><strong>Fed Chair speeches</strong></td><td>A single hawkish or dovish sentence can reprice rate expectations and move gold sharply mid-session.</td></tr>
+<tr><td><strong>Core PCE</strong></td><td>The Fed's preferred inflation gauge — same mechanism as CPI, usually a smaller but still real reaction.</td></tr>
+<tr><td><strong>GDP</strong></td><td>Growth surprises move the dollar and risk sentiment; gold reacts as both a dollar trade and a safe haven.</td></tr>
+<tr><td><strong>ISM Manufacturing / Services PMI</strong></td><td>Forward-looking economy check. Weak PMIs fuel rate-cut hopes, which supports gold.</td></tr>
+<tr><td><strong>Unemployment Claims</strong></td><td>Weekly jobs pulse — normally small moves, but large surprises get traded, especially near Fed meetings.</td></tr>
+</tbody>
+</table>
+<p>Deeper explanation of the mechanics: <a href="/blog/what-moves-gold-price/">what moves the gold price</a> and <a href="/blog/trading-gold-during-news-nfp-fomc-cpi/">trading gold during NFP, FOMC &amp; CPI</a>.</p>
+
+<h2 id="how">How to use this calendar as a gold trader</h2>
+<ol>
+<li><strong>Check the week every Monday.</strong> Note the red events and ⭐ Gold Movers — that's when volatility is scheduled.</li>
+<li><strong>Avoid entries right before red news.</strong> Spreads widen and stops slip in the minutes around a release. Manual traders usually stand aside from ~15–30 minutes before until after the number.</li>
+<li><strong>If you run an EA, use a news filter.</strong> A robot that keeps scalping through NFP is gambling. Our <a href="/gold-trading-ea/">free XAUUSD robot</a> pauses itself around high-impact events automatically.</li>
+<li><strong>Compare the released number to the forecast, not to zero.</strong> The market trades the surprise. Released ≈ forecast often means the move fades quickly.</li>
+<li><strong>Mind your session times.</strong> Most red USD events land in the New York morning — cross-check with our <a href="/tools/gold-session-clock/">live gold session clock</a> and the <a href="/blog/best-time-to-trade-xauusd/">best time to trade XAUUSD</a>.</li>
+</ol>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>Which news events move gold the most?</h3><p>US events: NFP, CPI, FOMC decisions and statements, Fed Chair speeches, Core PCE, GDP and the ISM PMIs. They drive the dollar and rate expectations — the two forces gold trades on.</p>
+<h3>What time is NFP released?</h3><p>First Friday of the month, 8:30 AM New York time (12:30/13:30 GMT depending on daylight saving). This calendar shows the exact GMT time each month, with your local time underneath.</p>
+<h3>Should I trade gold during high-impact news?</h3><p>Most traders shouldn't — spreads widen several times over and stop-losses can slip badly. Stand aside around red events, or use a robot with a news filter that pauses automatically.</p>
+<h3>Do low-impact (green) events matter for XAUUSD?</h3><p>Rarely. Green events seldom move gold on their own. Orange events matter when the number surprises; red events regularly cause large fast moves.</p>
+<h3>Why only USD events on a gold calendar?</h3><p>Because gold is priced in dollars — USD data and Fed policy are what actually move XAUUSD. Filtering out the rest removes noise without losing anything a gold trader needs.</p>
+<h3>How often is this page updated?</h3><p>Daily, automatically — forecasts and previous values refresh, and the calendar rolls to the new week each weekend.</p>
+
+<h2>Conclusion</h2>
+<p>News is the one form of gold volatility you can see coming. Check this page at the start of each week, respect the red events, and let the green ones go. If you'd rather have that discipline automated, our free XAUUSD robot ships with the news filter built in.</p>
+
+<div class="box" style="text-align:center">
+<p style="margin:0 0 10px;font-size:18px"><strong>Trade gold with the news filter built in — free robot:</strong></p>
+<a class="cta" href="/free-gold-trading-robot-download/">🤖 Download the Free Gold Robot →</a>
+</div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides &amp; Tools</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/trading-gold-during-news-nfp-fomc-cpi/" style="font-weight:600;">&rarr; Trading Gold During News (NFP, FOMC, CPI)</a></li>
+<li><a href="/blog/what-moves-gold-price/" style="font-weight:600;">&rarr; What Moves the Gold Price? The 7 Real Drivers</a></li>
+<li><a href="/blog/best-time-to-trade-xauusd/" style="font-weight:600;">&rarr; Best Time to Trade XAUUSD</a></li>
+<li><a href="/tools/gold-session-clock/" style="font-weight:600;">&rarr; Live Gold Session Clock</a></li>
+<li><a href="/gold-trading-ea/" style="font-weight:600;">&rarr; BBFxAi Gold Trading EA — Full Product Details</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Calendar data is provided as-is from public sources; release times and forecasts can change — always confirm critical events with your broker. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss. We may earn a commission if you open an account through partner links, at no extra cost to you. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© ${year} XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>
+(function(){
+  // local time under each GMT time
+  var els=document.querySelectorAll('.localtime');
+  var tz=(Intl.DateTimeFormat().resolvedOptions().timeZone||'').split('/').pop().replace('_',' ');
+  els.forEach(function(el){
+    var d=new Date(parseInt(el.getAttribute('data-ts'),10));
+    el.textContent=d.toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'})+(tz?' '+tz:' local');
+  });
+  // impact / gold-mover filters
+  var btns=document.querySelectorAll('.fbtn');
+  btns.forEach(function(b){
+    b.addEventListener('click',function(){
+      btns.forEach(function(x){x.classList.remove('active')});
+      b.classList.add('active');
+      var f=b.getAttribute('data-f');
+      document.querySelectorAll('tr[data-impact]').forEach(function(tr){
+        var show = f==='all' || (f==='mover' ? tr.getAttribute('data-mover')==='1' : tr.getAttribute('data-impact')===f);
+        tr.style.display=show?'':'none';
+      });
+      document.querySelectorAll('.daycard').forEach(function(card){
+        var any=false;
+        card.querySelectorAll('tr[data-impact]').forEach(function(tr){if(tr.style.display!=='none')any=true;});
+        card.style.display=any?'':'none';
+      });
+    });
+  });
+})();
+</script>
+</body></html>
+`;
+}
+
+const events = await fetchFeed();
+const html = build(events);
+mkdirSync(dirname(OUT_FILE), { recursive: true });
+writeFileSync(OUT_FILE, html, "utf-8");
+console.log(`Wrote ${OUT_FILE} (${events.filter((e) => e.country === "USD").length} USD events)`);

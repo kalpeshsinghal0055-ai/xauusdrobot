@@ -119,6 +119,14 @@ export default function Footer() {
               </li>
               <li>
                 <a
+                  href="/gold-news-calendar/"
+                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
+                >
+                  Gold News Calendar
+                </a>
+              </li>
+              <li>
+                <a
                   href="https://t.me/BBFx_Ai"
                   target="_blank"
                   rel="noopener noreferrer"
