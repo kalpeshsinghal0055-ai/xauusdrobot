@@ -69,14 +69,25 @@ export default function Footer() {
               Free EAs
             </h4>
             <ul className="space-y-2.5">
-              {[
-                "XAUUSD PRO",
-                "BTCUSD PRO",
-              ].map((item) => (
-                <li key={item}>
-                  <span className="text-sm text-muted-foreground">{item}</span>
-                </li>
-              ))}
+              <li>
+                <a
+                  href="/gold-trading-ea/"
+                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
+                >
+                  Gold Trading EA (XAUUSD PRO)
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/free-gold-trading-robot-download/"
+                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
+                >
+                  Free Robot Download
+                </a>
+              </li>
+              <li>
+                <span className="text-sm text-muted-foreground">BTCUSD PRO</span>
+              </li>
             </ul>
           </div>
 

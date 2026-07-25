@@ -13,6 +13,8 @@
 
 ## Key Pages
 - [Home](https://xauusdrobot.com/): Overview, features, free EA access, broker list, and FAQ.
+- [Gold Trading EA (Product)](https://xauusdrobot.com/gold-trading-ea/): Full product page for the BBFxAi XAUUSD Expert Advisor — strategy, risk management, specifications, and how to get it free.
+- [Free Gold Trading Robot Download](https://xauusdrobot.com/free-gold-trading-robot-download/): 3-step download guide for the free gold robot (MT4/MT5) — requirements, free-vs-paid comparison, and safe-testing checklist.
 - [Blog](https://xauusdrobot.com/blog/): Guides and tutorials on automated gold (XAUUSD) trading.
 - [Sitemap](https://xauusdrobot.com/sitemap/): All pages.
 - [About](https://xauusdrobot.com/about/): Who runs XAUUSD Robot, how guides are researched, and how the site is funded.
