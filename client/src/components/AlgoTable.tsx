@@ -3,6 +3,8 @@ import { m as motion } from "framer-motion";
 const algos = [
   { name: "XAUUSD PRO", pair: "XAUUSD", platform: "MT4 & MT5", strategy: "Trend Following", status: "LIVE" },
   { name: "BTCUSD PRO", pair: "BTCUSD", platform: "MT4 & MT5", strategy: "Trend Following", status: "LIVE" },
+  { name: "XAUUSD SCALPING EA", pair: "XAUUSD", platform: "MT4 & MT5", strategy: "Scalping", status: "LIVE" },
+  { name: "XAUUSD HEDGE EA", pair: "XAUUSD", platform: "MT5", strategy: "Hedging", status: "LIVE" },
 ];
 
 export default function AlgoTable() {

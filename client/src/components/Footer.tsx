@@ -88,6 +88,17 @@ export default function Footer() {
               <li>
                 <span className="text-sm text-muted-foreground">BTCUSD PRO</span>
               </li>
+              <li>
+                <a
+                  href="/blog/xauusd-scalping-bot/"
+                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
+                >
+                  XAUUSD Scalping EA
+                </a>
+              </li>
+              <li>
+                <span className="text-sm text-muted-foreground">XAUUSD Hedge EA</span>
+              </li>
             </ul>
           </div>
 
