@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: "Does the EA use martingale or grid strategies?",
-    a: "No martingale. No grid. Our gold algorithm uses fixed fractional position sizing with a hard stop-loss on every trade. This is one of the safest MT5 EAs available, designed to protect your capital first. Risk per trade is always proportional to your account balance.",
+    a: "Our flagship XAUUSD PRO uses no martingale and no grid — fixed fractional position sizing with a hard stop-loss on every trade, designed to protect your capital first. We also offer a separate XAUUSD Hedge EA for traders who specifically want a hedging-style system; it carries a different risk profile, so read its guide and test on demo before using it.",
   },
   {
     q: "What is the minimum deposit required?",

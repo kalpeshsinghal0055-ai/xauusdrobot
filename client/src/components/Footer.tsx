@@ -97,7 +97,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-sm text-muted-foreground">XAUUSD Hedge EA</span>
+                <a
+                  href="/blog/xauusd-hedge-ea/"
+                  className="text-sm text-muted-foreground hover:text-gold transition-colors"
+                >
+                  XAUUSD Hedge EA
+                </a>
               </li>
             </ul>
           </div>

@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "xauusd-hedge-ea",
+    title: "XAUUSD Hedge EA: How Gold Hedging Robots Really Work",
+    excerpt: "Hedge-and-recover cycles, hedging vs martingale, the floating-drawdown risk nobody advertises — plus our free XAUUSD Hedge EA for MT5.",
+    category: "Guides",
+    date: "2026-07-27",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "gold-ea-drawdown-explained",
     title: "Drawdown Explained: The Number That Matters More Than Profit",
     excerpt: "What max drawdown really means, the brutal recovery math, balance vs equity drawdown, and how much is acceptable for a gold EA.",
