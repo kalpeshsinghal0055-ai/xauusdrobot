@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "gold-ea-drawdown-explained",
+    title: "Drawdown Explained: The Number That Matters More Than Profit",
+    excerpt: "What max drawdown really means, the brutal recovery math, balance vs equity drawdown, and how much is acceptable for a gold EA.",
+    category: "Guides",
+    date: "2026-07-24",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
     slug: "what-moves-gold-price",
     title: "What Moves the Gold Price? XAUUSD Drivers Explained",
     excerpt: "The five real forces behind gold — the US dollar, real rates, inflation, safe-haven demand and central banks — and what an EA does with them.",

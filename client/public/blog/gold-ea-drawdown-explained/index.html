@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>What Is Drawdown in Trading? Gold EA Drawdown Guide</title>
+<meta name="description" content="Drawdown explained simply: what max drawdown means, how much is acceptable for a gold EA, the brutal recovery math, and how to read it on a backtest or Myfxbook.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/gold-ea-drawdown-explained/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/gold-ea-drawdown-explained.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/gold-ea-drawdown-explained.jpg">
+<meta property="og:title" content="What Is Drawdown? The Number That Matters More Than Profit">
+<meta property="og:description" content="Max drawdown, acceptable levels for a gold EA, the recovery math, and how to read it on a backtest or Myfxbook.">
+<meta name="twitter:title" content="Drawdown Explained (Gold EA)">
+<meta name="twitter:description" content="Why drawdown matters more than profit — with the recovery math.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/gold-ea-drawdown-explained/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:22px 0}.toc strong{color:var(--gold2)}.toc ol{margin:8px 0 0;padding-left:20px}.toc li{margin:4px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"What Is Drawdown? The Number That Matters More Than Profit","description":"Drawdown explained for gold EA traders — what maximum drawdown means, how much is acceptable, the asymmetric recovery math, and how to read drawdown on a backtest or Myfxbook record.","image":"https://xauusdrobot.com/images/gold-ea-drawdown-explained.jpg","author":{"@type":"Organization","name":"XAUUSD Robot Team"},"publisher":{"@type":"Organization","name":"XAUUSD Robot","logo":{"@type":"ImageObject","url":"https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}},"datePublished":"2026-07-24","dateModified":"2026-07-24","mainEntityOfPage":"https://xauusdrobot.com/blog/gold-ea-drawdown-explained/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://xauusdrobot.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://xauusdrobot.com/blog/"},{"@type":"ListItem","position":3,"name":"Gold EA Drawdown Explained","item":"https://xauusdrobot.com/blog/gold-ea-drawdown-explained/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is drawdown in trading?","acceptedAnswer":{"@type":"Answer","text":"Drawdown is the decline from an account's peak value to its lowest point before a new peak. If a $1,000 account grows to $1,200 and then falls to $900, the drawdown is $300, or 25% from the peak. It measures the pain a strategy makes you sit through."}},{"@type":"Question","name":"What is maximum drawdown?","acceptedAnswer":{"@type":"Answer","text":"Maximum drawdown is the largest peak-to-trough fall an account has ever experienced. It is the single most important risk number on a backtest or live record, because it shows the worst losing stretch you would have had to survive."}},{"@type":"Question","name":"How much drawdown is acceptable for a gold EA?","acceptedAnswer":{"@type":"Answer","text":"There is no universal number, but many disciplined traders treat under 10-15% as conservative, 15-30% as moderate, and anything above 40-50% as a serious warning — at 50% drawdown you need a 100% gain just to break even. Judge it against the strategy's returns and your own tolerance."}},{"@type":"Question","name":"Why is drawdown more important than profit?","acceptedAnswer":{"@type":"Answer","text":"Because recovery is asymmetric: a 25% drawdown needs a 33% gain to break even and a 50% drawdown needs 100%. High profit numbers achieved with deep drawdowns mean the account was repeatedly close to ruin — the profit tells you what happened, the drawdown tells you the risk of it not happening again."}},{"@type":"Question","name":"What is the difference between balance and equity drawdown?","acceptedAnswer":{"@type":"Answer","text":"Balance drawdown only counts closed trades, while equity drawdown includes floating losses on open positions. Equity drawdown is the honest number — martingale and grid systems often show smooth balance curves while hiding huge equity drawdowns in open trades."}},{"@type":"Question","name":"How do I check a gold EA's real drawdown?","acceptedAnswer":{"@type":"Answer","text":"Look at maximal equity drawdown on a long backtest, and better, on a third-party verified live record such as Myfxbook. Be suspicious of smooth equity curves from martingale or grid strategies — their drawdown hides in floating losses until one bad trend exposes it."}},{"@type":"Question","name":"Does a stop-loss reduce drawdown?","acceptedAnswer":{"@type":"Answer","text":"A hard stop-loss caps the loss on each individual trade, which keeps equity drawdown visible, honest and bounded. Combined with small risk per trade (1-2%), it is the main mechanism that keeps maximum drawdown survivable."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>Drawdown Explained: The Number That Matters More Than Profit</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated July 2026</p>
+<img class="hero" src="/images/gold-ea-drawdown-explained.jpg" alt="Drawdown explained — the number that matters more than profit for a gold EA" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> Drawdown is the fall from your account's <strong>peak to its lowest point</strong> before a new peak — and <strong>maximum drawdown</strong> is the worst such fall ever recorded. It matters more than profit because recovery is asymmetric: a 25% drawdown needs +33% to break even, and a 50% drawdown needs +100%. For a gold EA, judge the <em>equity</em> drawdown (not just balance) on a verified record.</p></div>
+
+<div class="toc"><strong>On this page</strong><ol>
+<li><a href="#what">What drawdown actually is</a></li>
+<li><a href="#why">Why it beats profit as a metric</a></li>
+<li><a href="#recovery">The brutal recovery math</a></li>
+<li><a href="#types">Balance vs equity drawdown (the martingale trick)</a></li>
+<li><a href="#acceptable">How much is acceptable?</a></li>
+<li><a href="#check">How to check a gold EA's real drawdown</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol></div>
+
+<h2 id="what">What drawdown actually is</h2>
+<p>Drawdown measures the drop from a peak. Your account grows from $1,000 to $1,200, then a losing streak takes it to $900 before it recovers: that's a <strong>$300 drawdown — 25% from the peak</strong>. The <strong>maximum drawdown</strong> is the deepest such valley in the whole history of the account or backtest.</p>
+<p>Think of it as the answer to one question: <em>"How much pain would I have had to sit through — and would I have kept going?"</em> Most people wouldn't. That's why strategies with deep drawdowns fail in real hands even when the maths eventually recovers: humans switch the robot off at the bottom.</p>
+
+<h2 id="why">Why it beats profit as a metric</h2>
+<p>Profit tells you what happened. Drawdown tells you <strong>what it cost to get there — and how close the account came to not surviving</strong>. Two EAs can both show +60% a year:</p>
+<table>
+<thead><tr><th></th><th>EA "A"</th><th>EA "B"</th></tr></thead>
+<tbody>
+<tr><td>Annual return</td><td>+60%</td><td>+60%</td></tr>
+<tr><td>Max drawdown</td><td>12%</td><td>55%</td></tr>
+<tr><td>What it means</td><td>Steady edge, survivable losing streaks</td><td>Repeatedly one bad week from ruin</td></tr>
+</tbody>
+</table>
+<p>Same profit — completely different risk. Marketing shows you the +60%. The drawdown line is where the truth lives, which is why we lead with it in our <a href="/blog/do-gold-trading-robots-work/">honest look at whether gold robots work</a>.</p>
+
+<h2 id="recovery">The brutal recovery math</h2>
+<p>Losses and gains are not symmetric. Whatever percentage you lose, you need a <em>bigger</em> percentage to get back:</p>
+<table>
+<thead><tr><th>Drawdown</th><th>Gain needed to recover</th></tr></thead>
+<tbody>
+<tr><td>10%</td><td>+11%</td></tr>
+<tr><td>25%</td><td>+33%</td></tr>
+<tr><td>50%</td><td>+100%</td></tr>
+<tr><td>75%</td><td>+300%</td></tr>
+<tr><td>90%</td><td>+900%</td></tr>
+</tbody>
+</table>
+<p>This is why "avoid deep drawdowns" isn't cautious advice — it's arithmetic. A strategy that halves the account has to <em>double</em> just to get back to zero progress. You can play with your own numbers in our free <a href="/tools/gold-risk-calculator/">risk &amp; drawdown calculator</a>, which simulates losing streaks at any risk level.</p>
+
+<h2 id="types">Balance vs equity drawdown — the martingale trick</h2>
+<p>This distinction catches almost every beginner:</p>
+<ul>
+<li><strong>Balance drawdown</strong> counts only <em>closed</em> trades.</li>
+<li><strong>Equity drawdown</strong> includes <em>floating</em> losses on open positions.</li>
+</ul>
+<p>Martingale and grid EAs exploit the gap. They hold losing positions open (so the balance curve stays beautifully smooth) while the <em>equity</em> sinks deeper and deeper underwater. The record looks perfect right up until one strong trend forces the floating loss to become real — and the account is gone. We covered these systems in <a href="/blog/gold-ea-strategy-types/">gold EA strategy types</a>.</p>
+<div class="box"><p style="margin:0"><strong>Rule:</strong> always judge an EA by <strong>equity</strong> drawdown. A smooth balance curve with hidden floating losses isn't low risk — it's deferred risk.</p></div>
+
+<h2 id="acceptable">How much drawdown is acceptable?</h2>
+<p>There's no magic number, but honest working ranges look like this:</p>
+<table>
+<thead><tr><th>Max equity drawdown</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td>Under 10–15%</td><td>Conservative — typical of small fixed-risk, hard-SL systems</td></tr>
+<tr><td>15–30%</td><td>Moderate — acceptable if returns justify it and you can stomach it</td></tr>
+<tr><td>30–50%</td><td>Aggressive — most people abandon the system mid-valley</td></tr>
+<tr><td>50%+</td><td>Red flag — needs a +100% gain just to break even</td></tr>
+</tbody>
+</table>
+<p>Two personal filters matter more than the table: <strong>could you watch your real money fall that far without switching the robot off?</strong> And is the risk per trade small enough that a normal losing streak stays in the survivable zone? That second part is exactly what <a href="/blog/gold-ea-risk-management/">gold EA risk management</a> settings control.</p>
+
+<h2 id="check">How to check a gold EA's real drawdown</h2>
+<ol>
+<li><strong>Backtest:</strong> read "maximal drawdown" on a long, realistic test — and treat it as the <em>minimum</em> you'll see live. Details in <a href="/blog/how-to-backtest-gold-ea/">how to backtest a gold EA</a>.</li>
+<li><strong>Live verified record:</strong> a Myfxbook-style third-party record over months beats any backtest. Check the drawdown chart, not just the growth line.</li>
+<li><strong>Strategy logic:</strong> a hard stop-loss on every trade + fixed small risk per trade keeps drawdown bounded and honest. No stop-loss + "recovery" logic = hidden equity drawdown.</li>
+<li><strong>Stress it:</strong> assume the worst streak happens the week after you go live — because sometimes it does. Size the account for that, not for the average month.</li>
+</ol>
+
+<div class="box"><p style="margin:0 0 10px"><strong>Where our robot stands:</strong> the free XAUUSD Robot is non-martingale with a hard stop-loss on every trade and fixed fractional sizing — drawdown stays visible and bounded rather than hidden in floating losses. Results are tracked live on Myfxbook.</p><a class="cta" href="/">Get the Free Gold EA →</a></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is drawdown in trading?</h3><p>The decline from an account's peak to its lowest point before a new peak — e.g. $1,200 → $900 is a 25% drawdown. It measures the pain a strategy puts you through.</p>
+<h3>What is maximum drawdown?</h3><p>The largest peak-to-trough fall ever recorded — the single most important risk number on any backtest or live record.</p>
+<h3>How much drawdown is acceptable for a gold EA?</h3><p>Roughly: under 10–15% conservative, 15–30% moderate, 40–50%+ a red flag. At 50% you need +100% just to break even.</p>
+<h3>Why is drawdown more important than profit?</h3><p>Recovery is asymmetric — 25% down needs +33%, 50% down needs +100%. Deep drawdowns mean the account was repeatedly near ruin regardless of the profit shown.</p>
+<h3>Balance vs equity drawdown?</h3><p>Balance counts closed trades only; equity includes floating losses. Equity is the honest number — martingale systems hide risk in open trades.</p>
+<h3>How do I check an EA's real drawdown?</h3><p>Maximal equity drawdown on a long backtest plus a third-party live record (Myfxbook). Distrust smooth curves from grid/martingale logic.</p>
+<h3>Does a stop-loss reduce drawdown?</h3><p>It caps each trade's loss, keeping drawdown bounded, visible and survivable — especially combined with 1–2% risk per trade.</p>
+
+<h2>Conclusion</h2>
+<p>Profit is the number strategies advertise; drawdown is the number they survive — or don't. Learn to read maximum <em>equity</em> drawdown, respect the asymmetric recovery math, and size every account for the worst streak instead of the average month. Do that, and you'll filter out most bad gold EAs before they cost you anything.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Questions about drawdown or risk settings?</strong></p><p style="color:var(--muted);margin-top:4px;">We'll help you read a record or set sensible risk.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/gold-ea-risk-management/" style="font-weight:600;">→ Gold EA Risk Management: Settings That Protect You</a></li>
+<li><a href="/tools/gold-risk-calculator/" style="font-weight:600;">→ Risk &amp; Drawdown Calculator (free tool)</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+<li><a href="/blog/do-gold-trading-robots-work/" style="font-weight:600;">→ Do Gold Trading Robots Actually Work?</a></li>
+<li><a href="/blog/gold-ea-strategy-types/" style="font-weight:600;">→ Gold EA Strategy Types Explained</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Drawdown ranges described are illustrative, not guarantees. Trading gold (XAUUSD) carries substantial risk of loss. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+</body></html>
