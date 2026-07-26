@@ -22,6 +22,7 @@
 - [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
+- [XAUUSD Hedge EA: How Gold Hedging Robots Work](https://xauusdrobot.com/blog/xauusd-hedge-ea/): How hedge-and-recover robots work, hedging vs martingale, floating-drawdown risks, and the free XAUUSD Hedge EA for MT5.
 - [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, the strategies it uses, and what to realistically expect.
 - [XAUUSD Scalping Bot: Free Gold Scalper EA](https://xauusdrobot.com/blog/xauusd-scalping-bot/): How gold scalping bots work, why broker spread and VPS latency decide results, scalping vs trend-following, and our free XAUUSD Scalping EA.
 - [Free XAUUSD Gold EA](https://xauusdrobot.com/blog/free-xauusd-gold-ea/): What the free gold EA / trading bot includes, how the no-cost model works, and how to download and test it.
