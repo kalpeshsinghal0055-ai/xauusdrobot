@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663516965961/Cbv9jtGGeaDuk52nzLan2A/hero-gold-vault-AHFnK4pX5f5BpLLbDDSyAt.webp"
+          src="/images/hero-gold-vault.webp"
           alt="Gold vault background - XAUUSD algo trading"
           fetchPriority="high"
           className="w-full h-full object-cover"

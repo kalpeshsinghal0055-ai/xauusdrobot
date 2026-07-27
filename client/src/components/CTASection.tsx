@@ -6,7 +6,7 @@ export default function CTASection() {
       {/* Background */}
       <div className="absolute inset-0">
         <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663516965961/Cbv9jtGGeaDuk52nzLan2A/gold-bars-abstract-8fCpFjnDp7X2wJqDMFaawn.webp"
+          src="/images/gold-bars-abstract.webp"
           alt="Gold bars - Start algo trading today"
           className="w-full h-full object-cover opacity-20"
           loading="lazy"

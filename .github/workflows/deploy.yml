@@ -34,11 +34,6 @@ jobs:
           pnpm add -D puppeteer sirv
           pnpm exec puppeteer browsers install chrome
 
-      - name: Patch vite.config.ts - remove Manus-only plugin
-        run: |
-          sed -i '/vite-plugin-manus-runtime/d' vite.config.ts
-          sed -i 's/vitePluginManusRuntime(),//g' vite.config.ts
-          sed -i 's/, vitePluginManusRuntime()//g' vite.config.ts
 
       - name: Build
         run: pnpm vite build
