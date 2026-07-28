@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "how-to-read-myfxbook",
+    title: "How to Read a Myfxbook Record — and Spot a Fake One",
+    excerpt: "The 5-minute verification checklist: what the two badges prove, why equity drawdown beats the gain number, and the 7 tricks sellers use to fake results.",
+    category: "Guides",
+    date: "2026-07-28",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "xauusd-hedge-ea",
     title: "XAUUSD Hedge EA: How Gold Hedging Robots Really Work",
     excerpt: "Hedge-and-recover cycles, hedging vs martingale, the floating-drawdown risk nobody advertises — plus our free XAUUSD Hedge EA for MT5.",
