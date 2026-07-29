@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>XAUUSD Spread Explained: Gold's Hidden Trading Cost</title>
+<meta name="description" content="Why is the gold spread so high? XAUUSD spread explained — bid vs ask, when spreads blow out, how much it costs per trade, and what it means for your EA.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/xauusd-spread-explained/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/xauusd-spread-explained.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/xauusd-spread-explained.jpg">
+<meta property="og:title" content="XAUUSD Spread Explained: The Hidden Cost That Decides Your EA's Results">
+<meta property="og:description" content="Bid vs ask, session spread patterns, real cost per trade — and why spread decides whether a gold EA's edge survives.">
+<meta name="twitter:title" content="XAUUSD Spread Explained">
+<meta name="twitter:description" content="Gold's hidden trading cost — and what it does to your EA.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/xauusd-spread-explained/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:22px 0}.toc strong{color:var(--gold2)}.toc ol{margin:8px 0 0;padding-left:20px}.toc li{margin:4px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"XAUUSD Spread Explained: The Hidden Cost That Decides Your EA's Results","description":"What the XAUUSD spread is, why gold's spread is higher than forex pairs, when it blows out, how much it really costs per trade, and why it can make or break an automated gold strategy.","image":"https://xauusdrobot.com/images/xauusd-spread-explained.jpg","author":{"@type":"Organization","name":"XAUUSD Robot Team"},"publisher":{"@type":"Organization","name":"XAUUSD Robot","logo":{"@type":"ImageObject","url":"https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}},"datePublished":"2026-07-29","dateModified":"2026-07-29","mainEntityOfPage":"https://xauusdrobot.com/blog/xauusd-spread-explained/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://xauusdrobot.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://xauusdrobot.com/blog/"},{"@type":"ListItem","position":3,"name":"XAUUSD Spread Explained","item":"https://xauusdrobot.com/blog/xauusd-spread-explained/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the spread in XAUUSD trading?","acceptedAnswer":{"@type":"Answer","text":"The spread is the difference between the price you can sell at (bid) and the price you can buy at (ask). If gold's bid is 2412.30 and the ask is 2412.55, the spread is 25 cents — a cost you pay on every single trade, because every position opens slightly in the red by that amount."}},{"@type":"Question","name":"Why is the gold spread so high compared to forex pairs?","acceptedAnswer":{"@type":"Answer","text":"Gold is more volatile than major currency pairs and its liquidity is spread across futures, spot and OTC markets, so market makers charge more to take the risk of quoting it. A typical raw XAUUSD spread of 10–35 cents is normal, versus a fraction of a pip on EURUSD."}},{"@type":"Question","name":"What is a good spread for XAUUSD?","acceptedAnswer":{"@type":"Answer","text":"On a raw/low-spread account during the London–New York overlap, roughly 10–25 cents (plus commission) is competitive. On standard accounts 30–50 cents is common. Consistently paying much more than that puts an automated strategy at a measurable disadvantage."}},{"@type":"Question","name":"When is the XAUUSD spread widest?","acceptedAnswer":{"@type":"Answer","text":"Around the daily rollover (about 21:00–23:00 GMT), during the thin Asian session, at Sunday market open, and in the seconds around high-impact news like NFP, CPI and FOMC — when it can jump from cents to several dollars for a few minutes."}},{"@type":"Question","name":"How does spread affect a gold EA?","acceptedAnswer":{"@type":"Answer","text":"Every trade starts negative by the spread, so the more often an EA trades and the smaller its average profit target, the bigger the spread's share of the edge. A scalping EA can lose its entire statistical edge to a wide spread, while a slower trend-following EA is more tolerant."}},{"@type":"Question","name":"Does a wide spread trigger stop-losses early?","acceptedAnswer":{"@type":"Answer","text":"Yes. Stops on long positions fill at the bid, and spread widening pushes the bid down even if the mid-price barely moves. During news spikes a temporarily blown-out spread can take out a tight stop-loss on its own — one reason sensible gold EAs avoid trading through major releases."}},{"@type":"Question","name":"How do I reduce spread costs on gold?","acceptedAnswer":{"@type":"Answer","text":"Use a raw or low-spread account type at a reputable broker, trade during the London–New York overlap when liquidity is deepest, avoid rollover hours and news seconds, and measure your broker's real average spread rather than the advertised minimum."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>XAUUSD Spread Explained: The Hidden Cost That Decides Your EA's Results</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated July 2026</p>
+<img class="hero" src="/images/xauusd-spread-explained.jpg" alt="XAUUSD spread explained — gold's hidden trading cost, bid vs ask" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> the XAUUSD spread is the gap between gold's <strong>bid</strong> (sell) and <strong>ask</strong> (buy) price — typically <strong>10–35 cents</strong> on a good account, more on standard accounts. You pay it on <em>every</em> trade, it widens dramatically at rollover, in the Asian session and around news, and for a frequently-trading gold EA it's often the single biggest factor separating a profitable backtest from a losing live account.</p></div>
+
+<div class="toc"><strong>On this page</strong><ol>
+<li><a href="#what">What the spread actually is</a></li>
+<li><a href="#why">Why gold's spread is higher than forex</a></li>
+<li><a href="#cost">What it really costs you per trade</a></li>
+<li><a href="#when">When the spread blows out (and why it matters)</a></li>
+<li><a href="#ea">What spread does to an EA's edge</a></li>
+<li><a href="#reduce">How to pay less spread</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol></div>
+
+<h2 id="what">What the spread actually is</h2>
+<p>Every instrument has two prices at any moment: the <strong>bid</strong> (what buyers will pay you — where your sells and long-exits fill) and the <strong>ask</strong> (what sellers charge you — where your buys fill). The difference is the spread:</p>
+<div class="box"><p style="margin:0">Bid <strong>2412.30</strong> / Ask <strong>2412.55</strong> → spread = <strong>$0.25 (25 cents)</strong></p></div>
+<p>The moment you open a position, you're down by the spread — a buy fills at the ask, but could only be closed instantly at the lower bid. That's not a fee your broker lists on a statement; it's baked into the fill prices. Which is exactly why it's the most under-counted cost in gold trading.</p>
+
+<h2 id="why">Why gold's spread is higher than forex</h2>
+<p>New traders coming from EURUSD are often shocked by gold's spread. Three structural reasons:</p>
+<ul>
+<li><strong>Volatility.</strong> Gold moves several dollars in minutes when it's active. Market makers quoting both sides of that risk charge more for it.</li>
+<li><strong>Fragmented liquidity.</strong> Gold trades across futures (COMEX), spot OTC and ETFs — the liquidity your broker taps is deep, but not as concentrated as a major currency pair.</li>
+<li><strong>Session dependence.</strong> Real depth exists mainly during London and New York hours; outside them, fewer quotes = wider spreads. We mapped this in <a href="/blog/best-time-to-trade-xauusd/">the best time to trade XAUUSD</a>.</li>
+</ul>
+
+<h2 id="cost">What it really costs you per trade</h2>
+<p>On XAUUSD, a $0.10 move is commonly counted as 1 pip (10 points). At 0.01 lots, each $0.10 of movement ≈ $0.10 of P&amp;L — you can check any size instantly with our <a href="/tools/gold-pip-calculator/">gold pip calculator</a>. So:</p>
+<table>
+<thead><tr><th>Spread</th><th>Cost at 0.01 lot</th><th>Cost at 0.10 lot</th><th>Cost at 1.00 lot</th></tr></thead>
+<tbody>
+<tr><td>20 cents</td><td>$0.20</td><td>$2.00</td><td>$20</td></tr>
+<tr><td>35 cents</td><td>$0.35</td><td>$3.50</td><td>$35</td></tr>
+<tr><td>50 cents</td><td>$0.50</td><td>$5.00</td><td>$50</td></tr>
+</tbody>
+</table>
+<p>Looks small — until you multiply. An EA taking <strong>4 trades a day at 0.10 lots with a 35-cent spread pays ~$70/week in spread alone</strong>, win or lose. Over a year that's several thousand dollars of headwind on a modest account. The spread is a silent partner taking a cut of every single trade.</p>
+
+<h2 id="when">When the spread blows out (and why it matters)</h2>
+<table>
+<thead><tr><th>Period</th><th>What happens</th></tr></thead>
+<tbody>
+<tr><td><strong>Rollover (~21:00–23:00 GMT)</strong></td><td>Liquidity providers reset; spreads can jump 3–10× for a while every single day</td></tr>
+<tr><td><strong>Asian session</strong></td><td>Thinner books — persistently wider than London/NY hours</td></tr>
+<tr><td><strong>Sunday open</strong></td><td>Weekend gap + thin liquidity = wide, jumpy quotes</td></tr>
+<tr><td><strong>News seconds (NFP, CPI, FOMC)</strong></td><td>Spread can hit several <em>dollars</em> for a few minutes — covered in <a href="/blog/trading-gold-during-news-nfp-fomc-cpi/">trading gold during news</a></td></tr>
+</tbody>
+</table>
+<p>The nasty part: <strong>stops on long positions fill at the bid</strong>. When the spread blows out, the bid drops even if the "price" you see barely moved — and a tight stop-loss can be executed by the spread alone. This is why serious gold EAs restrict trading hours and avoid news windows, not because volatility is scary but because <em>execution costs</em> explode precisely then.</p>
+
+<h2 id="ea">What spread does to an EA's edge</h2>
+<p>Think of an EA's edge as its average profit per trade <em>before</em> costs. Spread eats a fixed slice of that on every trade — so the smaller the target, the bigger the bite:</p>
+<table>
+<thead><tr><th>Strategy style</th><th>Avg target</th><th>35c spread eats</th><th>Verdict</th></tr></thead>
+<tbody>
+<tr><td>Scalping</td><td>$1.00</td><td><strong>35%</strong> of the target</td><td>Spread-critical — needs a raw account, tight hours</td></tr>
+<tr><td>Intraday</td><td>$3.00</td><td>~12%</td><td>Significant — measure and manage it</td></tr>
+<tr><td>Swing/trend</td><td>$10.00+</td><td>~3%</td><td>Tolerant — spread rarely the deciding factor</td></tr>
+</tbody>
+</table>
+<p>This single table explains why our <a href="/blog/xauusd-scalping-bot/">XAUUSD Scalping EA guide</a> insists on low-spread accounts, while the flagship XAUUSD PRO — a slower trend-following system — is more forgiving of account type. It also explains a classic mystery: <strong>a backtest run at a fixed 20-cent spread can show profits that vanish live on a 45-cent account.</strong> Same EA, same logic — the spread was the difference. Always <a href="/blog/how-to-backtest-gold-ea/">backtest with realistic spreads</a>.</p>
+
+<h2 id="reduce">How to pay less spread</h2>
+<ol>
+<li><strong>Pick the right account type.</strong> Raw/ECN-style accounts charge ~10–25 cents + a fixed commission — usually cheaper overall than "zero-commission" standard accounts with 40–50 cent spreads. Our <a href="/blog/best-brokers-xauusd-gold-ea/">broker guide for gold EAs</a> compares the options.</li>
+<li><strong>Trade the deep hours.</strong> London–New York overlap has the tightest spreads of the day.</li>
+<li><strong>Avoid rollover and news seconds.</strong> A time filter costs nothing and skips the worst execution of the day.</li>
+<li><strong>Measure, don't trust.</strong> Advertised "from 0.0" spreads are minimums, not averages. Run the EA on demo and log the real average spread your broker delivers on XAUUSD.</li>
+<li><strong>Size trades properly.</strong> Spread cost scales with lot size — our <a href="/tools/gold-lot-size-calculator/">lot size calculator</a> keeps sizing tied to risk, not hope.</li>
+</ol>
+
+<div class="box"><p style="margin:0 0 10px"><strong>Where our robot stands:</strong> the free XAUUSD Robot trades a trend-following style with meaningful profit targets, restricts trading to liquid hours and stands aside around major news — a design that keeps spread a manageable cost rather than the edge-killer it is for high-frequency systems. It runs best on the low-spread accounts of our partner brokers.</p><a class="cta" href="/">Get the Free Gold EA →</a></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is the spread in XAUUSD trading?</h3><p>The gap between bid (sell price) and ask (buy price) — e.g. 2412.30 / 2412.55 = 25 cents. Every trade starts down by this amount.</p>
+<h3>Why is the gold spread so high?</h3><p>Higher volatility and more fragmented liquidity than major forex pairs — market makers charge more to quote gold's risk.</p>
+<h3>What is a good spread for XAUUSD?</h3><p>Roughly 10–25 cents (+ commission) on a raw account during liquid hours; 30–50 cents is typical on standard accounts.</p>
+<h3>When is the spread widest?</h3><p>Daily rollover (~21:00–23:00 GMT), the Asian session, Sunday open, and the seconds around NFP/CPI/FOMC — when it can hit several dollars.</p>
+<h3>How does spread affect a gold EA?</h3><p>It takes a fixed bite of every trade's target. Scalping systems can lose their whole edge to it; slower trend systems are more tolerant.</p>
+<h3>Can spread widening hit my stop-loss?</h3><p>Yes — long stops fill at the bid, and a blown-out spread drops the bid even without a real price move. News-time spreads take out tight stops on their own.</p>
+<h3>How do I pay less spread?</h3><p>Raw account type, liquid hours, avoid rollover/news, measure your broker's real average, size positions by risk.</p>
+
+<h2>Conclusion</h2>
+<p>The spread is gold trading's quietest cost: no line on a statement, just slightly worse fills thousands of times over. Know what your broker actually charges on XAUUSD, trade the hours where it's tightest, and match your strategy's profit targets to the spread it must overcome. Do that and the spread becomes a known business cost — ignore it and it becomes the reason a "profitable" EA somehow never makes money.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Not sure if your account's spread is EA-friendly?</strong></p><p style="color:var(--muted);margin-top:4px;">Tell us your broker and account type — we'll give you an honest read.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/best-brokers-xauusd-gold-ea/" style="font-weight:600;">→ Best Brokers for Running a Gold EA</a></li>
+<li><a href="/blog/best-time-to-trade-xauusd/" style="font-weight:600;">→ Best Time to Trade XAUUSD: Sessions &amp; Hours</a></li>
+<li><a href="/blog/xauusd-scalping-bot/" style="font-weight:600;">→ XAUUSD Scalping Bot: The Honest Guide</a></li>
+<li><a href="/blog/trading-gold-during-news-nfp-fomc-cpi/" style="font-weight:600;">→ Trading Gold During News: NFP, FOMC &amp; CPI</a></li>
+<li><a href="/tools/gold-pip-calculator/" style="font-weight:600;">→ Gold Pip Calculator (free tool)</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Spread figures are typical ranges, not guarantees — measure your own broker's live spreads. Trading gold (XAUUSD) carries substantial risk of loss. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>

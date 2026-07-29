@@ -22,6 +22,7 @@
 - [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
+- [XAUUSD Spread Explained](https://xauusdrobot.com/blog/xauusd-spread-explained/): Gold's hidden trading cost — bid vs ask, why gold spreads beat forex pairs, session blowouts, real cost per trade, and what it does to an EA's edge.
 - [How to Read a Myfxbook Record](https://xauusdrobot.com/blog/how-to-read-myfxbook/): Verify any EA before trusting it — the two verification badges, equity vs balance drawdown, open trades, and 7 tricks sellers use to fake results.
 - [XAUUSD Hedge EA: How Gold Hedging Robots Work](https://xauusdrobot.com/blog/xauusd-hedge-ea/): How hedge-and-recover robots work, hedging vs martingale, floating-drawdown risks, and the free XAUUSD Hedge EA for MT5.
 - [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, the strategies it uses, and what to realistically expect.
