@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "xauusd-spread-explained",
+    title: "XAUUSD Spread Explained: The Hidden Cost That Decides Your EA's Results",
+    excerpt: "Bid vs ask, why gold's spread beats forex pairs, when it blows out, the real cost per trade — and why it can make or break an automated strategy.",
+    category: "Guides",
+    date: "2026-07-29",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "how-to-read-myfxbook",
     title: "How to Read a Myfxbook Record — and Spot a Fake One",
     excerpt: "The 5-minute verification checklist: what the two badges prove, why equity drawdown beats the gain number, and the 7 tricks sellers use to fake results.",
