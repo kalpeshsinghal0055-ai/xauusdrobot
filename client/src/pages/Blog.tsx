@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "best-leverage-xauusd",
+    title: "Best Leverage for XAUUSD: What Gold Traders Actually Need",
+    excerpt: "1:100 or 1:500? The margin math, the leverage-risk myth almost everyone believes, stop-out mechanics — and the honest answer for EA users.",
+    category: "Guides",
+    date: "2026-07-30",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "xauusd-spread-explained",
     title: "XAUUSD Spread Explained: The Hidden Cost That Decides Your EA's Results",
     excerpt: "Bid vs ask, why gold's spread beats forex pairs, when it blows out, the real cost per trade — and why it can make or break an automated strategy.",
