@@ -2,7 +2,6 @@ import { m as motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 const MYFXBOOK_URL = "https://www.myfxbook.com/members/BBFx_Ai/bbfxai-100-usd/12092687";
-const CHANNEL_URL = "https://t.me/pssforxr";
 
 type ShotPost = { id: number; date: string | null; files: string[] };
 
@@ -27,26 +26,23 @@ function TelegramShots() {
     >
       <div className="text-center mb-8">
         <h3 className="font-serif text-2xl lg:text-3xl font-bold text-foreground mb-3">
-          Latest Results from Our <span className="text-gold">Telegram Channel</span>
+          Latest <span className="text-gold">Live Trading Results</span>
         </h3>
         <p className="text-muted-foreground max-w-xl mx-auto">
-          Real MT5 terminal screenshots, posted regularly in our public channel — full post
-          history visible to everyone. Updated automatically on this page.
+          Real MT5 terminal screenshots from our live trading — updated automatically on this
+          page.
         </p>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
         {shots.slice(0, 6).map((s) => (
-          <a
+          <div
             key={s.file}
-            href={`https://t.me/pssforxr/${s.id}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group block rounded-xl overflow-hidden border border-border/40 bg-card/60 hover:border-gold/50 transition-colors"
+            className="rounded-xl overflow-hidden border border-border/40 bg-card/60"
           >
             <img
               src={`/performance/${s.file}`}
               alt={`XAUUSD Robot live trading result screenshot${s.date ? ` from ${s.date.slice(0, 10)}` : ""}`}
-              className="w-full h-48 object-cover object-top group-hover:opacity-90 transition-opacity"
+              className="w-full h-48 object-cover object-top"
               loading="lazy"
             />
             {s.date && (
@@ -54,18 +50,8 @@ function TelegramShots() {
                 {s.date.slice(0, 10)}
               </div>
             )}
-          </a>
+          </div>
         ))}
-      </div>
-      <div className="text-center mt-8">
-        <a
-          href={CHANNEL_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-[#229ED9] text-white font-bold px-8 py-3.5 rounded-xl hover:opacity-90 transition-opacity"
-        >
-          📊 Follow Daily Results on Telegram →
-        </a>
       </div>
     </motion.div>
   );
