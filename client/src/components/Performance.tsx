@@ -7,12 +7,23 @@ type ShotPost = { id: number; date: string | null; files: string[] };
 
 function TelegramShots() {
   const [posts, setPosts] = useState<ShotPost[]>([]);
+  const [lightbox, setLightbox] = useState<string | null>(null);
   useEffect(() => {
     fetch("/performance/manifest.json")
       .then((r) => (r.ok ? r.json() : []))
       .then(setPosts)
       .catch(() => {});
   }, []);
+  useEffect(() => {
+    if (!lightbox) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setLightbox(null);
+    window.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      window.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [lightbox]);
   if (!posts.length) return null;
   const shots = posts.flatMap((p) =>
     p.files.map((f) => ({ id: p.id, date: p.date, file: f })),
@@ -35,9 +46,12 @@ function TelegramShots() {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
         {shots.slice(0, 6).map((s) => (
-          <div
+          <button
             key={s.file}
-            className="rounded-xl overflow-hidden border border-border/40 bg-card/60"
+            type="button"
+            onClick={() => setLightbox(s.file)}
+            className="rounded-xl overflow-hidden border border-border/40 bg-card/60 hover:border-gold/50 transition-colors cursor-zoom-in text-left"
+            aria-label="View screenshot full size"
           >
             <img
               src={`/performance/${s.file}`}
@@ -50,9 +64,31 @@ function TelegramShots() {
                 {s.date.slice(0, 10)}
               </div>
             )}
-          </div>
+          </button>
         ))}
       </div>
+      {lightbox && (
+        <div
+          className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4 cursor-zoom-out"
+          onClick={() => setLightbox(null)}
+          role="dialog"
+          aria-modal="true"
+        >
+          <button
+            type="button"
+            onClick={() => setLightbox(null)}
+            className="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white text-2xl leading-none flex items-center justify-center"
+            aria-label="Close"
+          >
+            ×
+          </button>
+          <img
+            src={`/performance/${lightbox}`}
+            alt="Live trading result screenshot — full size"
+            className="max-w-full max-h-[92vh] w-auto h-auto rounded-lg shadow-2xl"
+          />
+        </div>
+      )}
     </motion.div>
   );
 }
