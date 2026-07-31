@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>Slippage in Gold Trading: Why Fills Beat Backtests</title>
+<meta name="description" content="What slippage is on XAUUSD, why orders fill at worse prices than expected, when gold slips hardest (news, rollover), and how EAs reduce it with VPS and filters.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/gold-slippage-explained/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/gold-slippage-explained.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/gold-slippage-explained.jpg">
+<meta property="og:title" content="Slippage in Gold Trading: Why Your Fills Are Worse Than Your Backtest">
+<meta property="og:description" content="The variable execution cost — why it happens, when it's worst, and how to keep it small.">
+<meta name="twitter:title" content="Gold Slippage Explained">
+<meta name="twitter:description" content="Why your fills are worse than your backtest — and what to do about it.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/gold-slippage-explained/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:22px 0}.toc strong{color:var(--gold2)}.toc ol{margin:8px 0 0;padding-left:20px}.toc li{margin:4px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Slippage in Gold Trading: Why Your Fills Are Worse Than Your Backtest","description":"What slippage is on XAUUSD, why market orders fill away from the expected price, when gold slips hardest, why backtests ignore it, and the practical ways an EA setup keeps it small.","image":"https://xauusdrobot.com/images/gold-slippage-explained.jpg","author":{"@type":"Organization","name":"XAUUSD Robot Team"},"publisher":{"@type":"Organization","name":"XAUUSD Robot","logo":{"@type":"ImageObject","url":"https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}},"datePublished":"2026-07-31","dateModified":"2026-07-31","mainEntityOfPage":"https://xauusdrobot.com/blog/gold-slippage-explained/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://xauusdrobot.com/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://xauusdrobot.com/blog/"},{"@type":"ListItem","position":3,"name":"Gold Slippage Explained","item":"https://xauusdrobot.com/blog/gold-slippage-explained/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is slippage in gold trading?","acceptedAnswer":{"@type":"Answer","text":"Slippage is the difference between the price you expected and the price your order actually filled at. You click buy at 2412.50, the fill comes back at 2412.87 — that 37 cents is slippage. It happens because gold's price moves in the milliseconds between sending an order and the broker executing it, and because there may not be enough liquidity at the quoted price."}},{"@type":"Question","name":"Why does slippage happen on XAUUSD?","acceptedAnswer":{"@type":"Answer","text":"Three causes: latency (the round trip from your platform to the broker's server takes time while price keeps moving), thin liquidity (not enough volume at the quoted price, so part of your order fills deeper in the book), and price gaps (after news or over weekends, price jumps levels entirely and orders fill at the next available price)."}},{"@type":"Question","name":"When is gold slippage the worst?","acceptedAnswer":{"@type":"Answer","text":"In the seconds around high-impact news (NFP, CPI, FOMC), at Sunday market open after weekend gaps, during rollover when liquidity resets, and in fast breakout moves. In those moments slippage of a dollar or more on XAUUSD is possible — dwarfing the normal spread."}},{"@type":"Question","name":"Does slippage affect stop-losses?","acceptedAnswer":{"@type":"Answer","text":"Yes — a stop-loss becomes a market order when triggered, so in fast markets it fills at the next available price, which can be beyond the stop level. This is why gaps and news spikes can produce losses slightly larger than the planned stop distance, and why sensible gold EAs avoid holding through scheduled releases."}},{"@type":"Question","name":"Why don't backtests show slippage?","acceptedAnswer":{"@type":"Answer","text":"Standard backtests fill every order exactly at the recorded historical price — zero latency, infinite liquidity. Real trading has neither. That's one of the main reasons live results lag backtests, and why a strategy's edge must be large enough to survive spread plus realistic slippage."}},{"@type":"Question","name":"Can slippage be positive?","acceptedAnswer":{"@type":"Answer","text":"Yes. If price moves in your favour between order and execution, you fill at a better price. With a fair broker using market execution, small positive and negative slippage should both occur in calm conditions — consistently negative-only slippage is a broker quality warning sign."}},{"@type":"Question","name":"How do I reduce slippage on a gold EA?","acceptedAnswer":{"@type":"Answer","text":"Run the EA on a VPS near the broker's server (single-digit millisecond latency), trade liquid hours, use a news filter so orders never fire into blown-out books, prefer brokers with quality execution, and measure real fills on demo before going live."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>Slippage in Gold Trading: Why Your Fills Are Worse Than Your Backtest</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated July 2026</p>
+<img class="hero" src="/images/gold-slippage-explained.jpg" alt="Slippage in gold trading — why fills are worse than the backtest" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> slippage is the gap between the price you <em>expected</em> and the price your order <em>actually filled at</em> — caused by latency, thin liquidity and price gaps. On gold it's usually a few cents in calm hours, but can hit <strong>a dollar or more during news and gaps</strong>. Backtests assume zero slippage, which is a big reason live results lag them. You shrink it with a <strong>low-latency VPS, liquid-hours trading and a news filter</strong> — you never eliminate it.</p></div>
+
+<div class="toc"><strong>On this page</strong><ol>
+<li><a href="#what">What slippage is</a></li>
+<li><a href="#why">The three causes</a></li>
+<li><a href="#when">When gold slips hardest</a></li>
+<li><a href="#stops">Slippage and stop-losses</a></li>
+<li><a href="#backtest">Why backtests hide it</a></li>
+<li><a href="#reduce">How to keep it small</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ol></div>
+
+<h2 id="what">What slippage is</h2>
+<p>You send a buy at <strong>2412.50</strong>. The confirmation comes back: filled at <strong>2412.87</strong>. Those 37 cents are slippage — the price moved (or liquidity ran out) in the moment between your click and the broker's execution. Together with the <a href="/blog/xauusd-spread-explained/">spread</a>, it forms gold's real execution cost: <strong>spread is the fixed toll, slippage is the variable one.</strong></p>
+<p>Unlike the spread, slippage isn't quoted anywhere in advance — it only exists in the difference between your order log and your fill log. Which is why most traders never measure it, and most backtests quietly pretend it doesn't exist.</p>
+
+<h2 id="why">The three causes</h2>
+<table>
+<thead><tr><th>Cause</th><th>What happens</th><th>Scale on gold</th></tr></thead>
+<tbody>
+<tr><td><strong>Latency</strong></td><td>Your order travels platform → broker → liquidity provider while price keeps moving. A 150ms round trip is an eternity in a fast market.</td><td>Cents in calm hours; much more in fast ones</td></tr>
+<tr><td><strong>Thin liquidity</strong></td><td>Not enough volume at the quoted price — the rest of your order fills deeper in the book at worse levels.</td><td>Grows with lot size and off-hours trading</td></tr>
+<tr><td><strong>Price gaps</strong></td><td>After news or weekends, price skips levels entirely. Orders fill at the next price that exists.</td><td>Can be dollars — the big one</td></tr>
+</tbody>
+</table>
+<p>Latency is the one you control most directly: a <a href="/blog/best-vps-gold-ea/">VPS near your broker's server</a> cuts the round trip from 100–300ms (home internet) to single digits.</p>
+
+<h2 id="when">When gold slips hardest</h2>
+<ul>
+<li><strong>News seconds (NFP, CPI, FOMC):</strong> liquidity vanishes exactly when volatility explodes — the worst combination. Fills a dollar+ away from the click price happen. Full picture in <a href="/blog/trading-gold-during-news-nfp-fomc-cpi/">trading gold during news</a>.</li>
+<li><strong>Sunday open:</strong> weekend gap + thin books = orders filling far from Friday's close.</li>
+<li><strong>Rollover (~21:00–23:00 GMT):</strong> the daily liquidity reset that also blows out spreads.</li>
+<li><strong>Fast breakouts:</strong> when everyone wants the same side at once, someone gets the bad fill — usually the slowest connection.</li>
+</ul>
+<p>Notice the overlap with the spread-widening windows from <a href="/blog/best-time-to-trade-xauusd/">the best time to trade XAUUSD</a> — both costs spike together. Avoiding those windows cuts both at once.</p>
+
+<h2 id="stops">Slippage and stop-losses</h2>
+<p>A stop-loss is a <em>trigger for a market order</em>, not a guaranteed exit price. In normal conditions the fill lands at or near the stop level. In a gap or news spike, it lands at the <strong>next available price</strong> — which can be beyond the stop. A planned $5 stop can occasionally cost $5.80.</p>
+<div class="box"><p style="margin:0"><strong>Important nuance:</strong> this is not a reason to skip stop-losses — it's a reason to (a) size positions so a slightly-worse fill is survivable, and (b) not hold positions into scheduled news. A hard stop with occasional slippage still beats no stop every time; the alternative to a slipped stop is an unbounded loss.</p></div>
+
+<h2 id="backtest">Why backtests hide it</h2>
+<p>A standard MT4/MT5 backtest fills every order at the exact recorded historical price: zero latency, infinite liquidity, no gaps within a bar. Real execution has none of those luxuries. Combined with optimistic spread assumptions, this is the core of the classic mystery — "great backtest, mediocre live results." The strategy didn't lie; the simulation just skipped two real costs.</p>
+<p>Practical rule from our <a href="/blog/how-to-backtest-gold-ea/">backtesting guide</a>: prefer real-tick tests with realistic spread, then <strong>assume a further haircut for slippage</strong> — and treat a strategy whose edge can't absorb that haircut as not viable. Frequent-trading systems feel this most: it's the same per-trade-cost math as the spread table in our <a href="/blog/xauusd-scalping-bot/">scalping guide</a>.</p>
+
+<h2 id="reduce">How to keep it small</h2>
+<ol>
+<li><strong>VPS with single-digit latency</strong> to your broker's server — the cheapest structural fix.</li>
+<li><strong>Trade liquid hours</strong> — London–NY overlap has the deepest books and cleanest fills.</li>
+<li><strong>News filter</strong> — never fire orders into a blown-out book. Our EAs stand aside around major releases.</li>
+<li><strong>Sensible lot sizes</strong> — oversized orders walk the book. Keep sizing tied to risk with the <a href="/tools/gold-lot-size-calculator/">lot size calculator</a>.</li>
+<li><strong>Broker execution quality</strong> — compare demo fills vs live fills; consistently negative-only slippage in calm markets is a red flag. Our <a href="/blog/best-brokers-xauusd-gold-ea/">broker guide</a> covers what to look for.</li>
+<li><strong>Measure it:</strong> your MT5 journal logs requested vs filled prices — audit a week of live trades and you'll know your real cost.</li>
+</ol>
+
+<div class="box"><p style="margin:0 0 10px"><strong>Where our robot stands:</strong> the free XAUUSD Robot trades liquid hours, avoids scheduled news, uses hard stops with survivable sizing, and targets moves large enough that normal slippage stays a rounding error rather than the edge. Run it on a VPS near your broker for best execution.</p><a class="cta" href="/">Get the Free Gold EA →</a></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>What is slippage in gold trading?</h3><p>The difference between your expected price and your actual fill — e.g. buy clicked at 2412.50, filled at 2412.87 = 37 cents slippage.</p>
+<h3>Why does it happen?</h3><p>Latency while the order travels, thin liquidity at the quoted price, and price gaps after news or weekends.</p>
+<h3>When is it worst on XAUUSD?</h3><p>News seconds, Sunday open, rollover hours and fast breakouts — the same windows where spreads blow out.</p>
+<h3>Does slippage affect stop-losses?</h3><p>Yes — stops become market orders and can fill beyond the stop level in gaps. Size for it, and don't hold through scheduled news.</p>
+<h3>Why don't backtests show it?</h3><p>Simulations fill at exact historical prices with zero latency and infinite liquidity. Live trading has neither — a key reason live results lag backtests.</p>
+<h3>Can slippage be positive?</h3><p>Yes — fills can improve if price moves your way mid-flight. Both directions should occur with a fair broker; negative-only is a warning sign.</p>
+<h3>How do I reduce it?</h3><p>Low-latency VPS, liquid hours, news filter, sensible lot sizes, a quality broker — and actually measuring your fills.</p>
+
+<h2>Conclusion</h2>
+<p>Slippage is the half of execution cost nobody quotes you. It can't be eliminated — price will always move while your order travels — but it can be managed down to a rounding error: fast connection, liquid hours, no news gambling, survivable sizing. Do that, and the gap between your backtest and your live account shrinks to something the strategy's edge can pay for. Ignore it, and you'll keep wondering why the robot that tested perfectly keeps finishing each month a little short.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Want to know if your fills are normal?</strong></p><p style="color:var(--muted);margin-top:4px;">Send us a screenshot of your trade journal — we'll tell you honestly what we see.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/xauusd-spread-explained/" style="font-weight:600;">→ XAUUSD Spread Explained: Gold's Hidden Trading Cost</a></li>
+<li><a href="/blog/best-vps-gold-ea/" style="font-weight:600;">→ Best VPS for a Gold EA: Latency &amp; Uptime</a></li>
+<li><a href="/blog/trading-gold-during-news-nfp-fomc-cpi/" style="font-weight:600;">→ Trading Gold During News: NFP, FOMC &amp; CPI</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+<li><a href="/blog/best-time-to-trade-xauusd/" style="font-weight:600;">→ Best Time to Trade XAUUSD: Sessions &amp; Hours</a></li>
+<li><a href="/tools/gold-lot-size-calculator/" style="font-weight:600;">→ Gold Lot Size Calculator (free tool)</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Slippage figures are typical ranges, not guarantees — measure your own broker's fills. Trading gold (XAUUSD) carries substantial risk of loss. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>
