@@ -8,7 +8,7 @@
 - Model: Free EAs via broker affiliate signup; no direct cost to the user. Delivered and set up over Telegram.
 - Strategy: Rule-based, non-martingale, non-grid; fixed stop-loss and risk management on the main robot. No guaranteed-profit claims.
 - Verified results: Myfxbook-tracked live results are linked on the site.
-- Recommended brokers: XS, Exness, Vantage, Markets4you (regulated, tight XAUUSD spreads, full MT4/MT5 EA support).
+- Recommended brokers: Markets4you, Exness, Vantage (regulated, tight XAUUSD spreads, full MT4/MT5 EA support).
 - Contact: Telegram @BBFx_Ai
 
 ## Key Pages
