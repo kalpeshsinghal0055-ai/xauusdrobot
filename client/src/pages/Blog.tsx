@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "gold-slippage-explained",
+    title: "Slippage in Gold Trading: Why Your Fills Are Worse Than Your Backtest",
+    excerpt: "The variable execution cost — latency, thin liquidity and gaps, when gold slips hardest, why backtests hide it, and how to keep it a rounding error.",
+    category: "Guides",
+    date: "2026-07-31",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "best-leverage-xauusd",
     title: "Best Leverage for XAUUSD: What Gold Traders Actually Need",
     excerpt: "1:100 or 1:500? The margin math, the leverage-risk myth almost everyone believes, stop-out mechanics — and the honest answer for EA users.",

@@ -22,6 +22,7 @@
 - [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
+- [Gold Slippage Explained](https://xauusdrobot.com/blog/gold-slippage-explained/): Why fills are worse than backtests — latency, thin liquidity, gaps, stop-loss slippage, and how a VPS + news filter keep it small.
 - [Best Leverage for XAUUSD](https://xauusdrobot.com/blog/best-leverage-xauusd/): The margin math, why leverage is not the same as risk, stop-out mechanics, and what leverage a gold EA actually needs.
 - [XAUUSD Spread Explained](https://xauusdrobot.com/blog/xauusd-spread-explained/): Gold's hidden trading cost — bid vs ask, why gold spreads beat forex pairs, session blowouts, real cost per trade, and what it does to an EA's edge.
 - [How to Read a Myfxbook Record](https://xauusdrobot.com/blog/how-to-read-myfxbook/): Verify any EA before trusting it — the two verification badges, equity vs balance drawdown, open trades, and 7 tricks sellers use to fake results.
