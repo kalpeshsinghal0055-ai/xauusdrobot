@@ -149,14 +149,14 @@ export default function SEOContent() {
                 Choosing the right broker is critical for successful algo trading. For XAUUSD
                 automated trading, you need low spreads, fast execution, and reliable MT5 platform
                 support. Our recommended brokers —{" "}
-                <strong className="text-foreground">XS</strong>,{" "}
+                <strong className="text-foreground">Markets4you</strong>,{" "}
                 <strong className="text-foreground">Exness</strong>, and{" "}
                 <strong className="text-foreground">Vantage</strong> — all offer ECN/STP execution
                 with spreads starting from 0.0 pips on gold. Each broker is fully regulated by
                 tier-1 authorities (FCA, ASIC, CySEC) and supports Expert Advisors on MetaTrader 5.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                XS stands out for its ultra-low XAUUSD spreads and fast ECN execution, making it
+                Markets4you stands out for its flexible account types and low XAUUSD spreads, making it
                 our top pick for running the free gold EA. Combined with reliable MT5 platform
                 support, your Expert Advisor gets filled at the best available price with minimal
                 slippage.

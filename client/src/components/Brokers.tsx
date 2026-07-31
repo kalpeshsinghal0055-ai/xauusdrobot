@@ -2,17 +2,17 @@ import { m as motion } from "framer-motion";
 
 const brokers = [
   {
-    name: "XS",
+    name: "Markets4you",
     badge: "TOP PICK",
     badgeColor: "bg-gold/20 text-gold",
-    desc: "Ultra-low XAUUSD spreads with lightning-fast ECN execution. Multi-regulated (FSC, CySEC, FSA). Our #1 recommended broker for running the free gold MT5 Expert Advisor.",
+    desc: "Flexible account types with low spreads on XAUUSD. Regulated, fast withdrawals, and full MT4/MT5 support. Our #1 recommended broker for running the free gold Expert Advisor.",
     specs: [
-      { label: "XAUUSD Spread", value: "From 0.0 pips" },
-      { label: "Min Deposit", value: "$5" },
+      { label: "XAUUSD Spread", value: "From 0.2 pips" },
+      { label: "Min Deposit", value: "$50" },
       { label: "Platform", value: "MT4 / MT5" },
-      { label: "Algo Trading", value: "Supported" },
+      { label: "Leverage", value: "Up to 1:1000" },
     ],
-    href: "https://my.xs.com/links/go/5382",
+    href: "https://www.markets4you.online/?affid=ky6kt3m",
   },
   {
     name: "Exness",
@@ -39,19 +39,6 @@ const brokers = [
       { label: "Leverage", value: "Up to 1:500" },
     ],
     href: "https://vigco.co/la-com-inv/bbfxai",
-  },
-  {
-    name: "Markets4you",
-    badge: "FLEXIBLE",
-    badgeColor: "bg-purple-500/20 text-purple-400",
-    desc: "Flexible account types with low spreads on XAUUSD. Regulated, fast withdrawals, and full MT4/MT5 support - ideal for running our free gold Expert Advisor.",
-    specs: [
-      { label: "XAUUSD Spread", value: "From 0.2 pips" },
-      { label: "Min Deposit", value: "$50" },
-      { label: "Platform", value: "MT4 / MT5" },
-      { label: "Leverage", value: "Up to 1:1000" },
-    ],
-    href: "https://www.markets4you.online/?affid=ky6kt3m",
   },
 ];
 

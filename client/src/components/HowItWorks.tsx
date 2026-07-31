@@ -5,7 +5,7 @@ const steps = [
     num: "01",
     icon: "🏦",
     title: "Open Affiliate Broker Account",
-    desc: "Register a live trading account with one of our recommended ECN brokers — XS, Exness, or Vantage — using our affiliate link. Takes less than 5 minutes. Low minimum deposit starting at $5.",
+    desc: "Register a live trading account with one of our recommended brokers — Markets4you, Exness, or Vantage — using our affiliate link. Takes less than 5 minutes. Low minimum deposit starting at $10.",
     cta: { label: "OPEN ACCOUNT →", href: "https://one.exnessonelink.com/a/uhk6peieiq" },
   },
   {

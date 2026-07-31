@@ -18,7 +18,6 @@ const postsMeta: Record<string, { title: string; seoTitle?: string; category: st
 
 const brokers = [
   { name: "Vantage", code: "bbfxai", url: "https://vigco.co/la-com-inv/bbfxai" },
-  { name: "XS", code: "5382", url: "https://my.xs.com/links/go/5382" },
   { name: "Exness", code: "uhk6peieiq", url: "https://one.exnessonelink.com/a/uhk6peieiq" },
   { name: "Markets4you", code: "ky6kt3m", url: "https://www.markets4you.online/?affid=ky6kt3m" },
 ];
