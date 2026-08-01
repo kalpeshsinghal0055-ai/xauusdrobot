@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "how-to-trade-gold-xauusd",
+    title: "How to Trade Gold (XAUUSD): The Complete Beginner's Guide",
+    excerpt: "From your first broker account to your first rule-based trade — pips, lots, sessions, strategies, risk rules and the manual vs automated decision.",
+    category: "Guides",
+    date: "2026-08-01",
+    readTime: "10 min read",
+    ext: true,
+  },
+  {
     slug: "gold-slippage-explained",
     title: "Slippage in Gold Trading: Why Your Fills Are Worse Than Your Backtest",
     excerpt: "The variable execution cost — latency, thin liquidity and gaps, when gold slips hardest, why backtests hide it, and how to keep it a rounding error.",
