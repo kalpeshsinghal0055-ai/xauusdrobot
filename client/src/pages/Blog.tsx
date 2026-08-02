@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "best-indicators-gold-trading",
+    title: "Best Indicators for Gold Trading: The Few That Earn Their Place",
+    excerpt: "Why indicators describe rather than predict, the minimal honest stack (trend MA, ATR, sessions), and the indicator-soup myth that costs money.",
+    category: "Guides",
+    date: "2026-08-02",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "free-gold-signals",
     title: "Free Gold Signals: Why Most Lose You Money (and What Works Instead)",
     excerpt: "How signal channels really earn, the 6 red flags of XAUUSD signal scams, why even honest signals underperform — and the transparent alternatives.",
