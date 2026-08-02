@@ -22,6 +22,7 @@
 - [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
+- [Best Indicators for Gold Trading](https://xauusdrobot.com/blog/best-indicators-gold-trading/): The minimal honest stack — trend MA, ATR, session context — and the indicator-soup myth.
 - [Free Gold Signals: The Honest Truth](https://xauusdrobot.com/blog/free-gold-signals/): How signal channels really make money, the 6 scam red flags, and honest alternatives.
 - [Gold Price Prediction: The Honest Answer](https://xauusdrobot.com/blog/gold-price-prediction/): Why forecasts keep failing, gold's real drivers, and profiting by reacting instead of predicting.
 - [Best Forex Robot 2026: Selection Framework](https://xauusdrobot.com/blog/best-forex-robot/): The 7-point verification checklist that filters out 95% of trading robots.
