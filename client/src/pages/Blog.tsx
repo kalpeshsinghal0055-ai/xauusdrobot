@@ -10,6 +10,24 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "what-is-xauusd",
+    title: "What Is XAUUSD? The Symbol, the Quote and How Gold Actually Trades",
+    excerpt: "Gold's currency code decoded — the quote, pips and lots, spot vs futures vs ETFs, and how XAUUSD differs from owning metal.",
+    category: "Guides",
+    date: "2026-08-05",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
+    slug: "trade-gold-with-100",
+    title: "Can You Trade Gold With $100? Yes — Here's the Only Way It Works",
+    excerpt: "The cent-account and 0.01-lot math, what $100 can realistically do, the mistakes that destroy tiny accounts, and the tuition-first growth path.",
+    category: "Guides",
+    date: "2026-08-05",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
     slug: "best-indicators-gold-trading",
     title: "Best Indicators for Gold Trading: The Few That Earn Their Place",
     excerpt: "Why indicators describe rather than predict, the minimal honest stack (trend MA, ATR, sessions), and the indicator-soup myth that costs money.",
