@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "how-do-trading-robots-work",
+    title: "How Do Trading Robots Work? The Honest Look Inside an EA",
+    excerpt: "The tick-to-order pipeline, the risk module, session filters, what automation genuinely does better — and what no robot can ever do.",
+    category: "Guides",
+    date: "2026-08-06",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "what-is-xauusd",
     title: "What Is XAUUSD? The Symbol, the Quote and How Gold Actually Trades",
     excerpt: "Gold's currency code decoded — the quote, pips and lots, spot vs futures vs ETFs, and how XAUUSD differs from owning metal.",
