@@ -22,6 +22,7 @@
 - [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
+- [How Do Trading Robots Work?](https://xauusdrobot.com/blog/how-do-trading-robots-work/): The tick-to-order pipeline inside an EA, the risk module, filters, and the honest limits of automation.
 - [What Is XAUUSD?](https://xauusdrobot.com/blog/what-is-xauusd/): The complete definition — gold's currency code, the quote, pips/lots, and how XAUUSD trades vs owning gold.
 - [Can You Trade Gold With $100?](https://xauusdrobot.com/blog/trade-gold-with-100/): The honest small-account math — cent accounts, 0.01 lots, 1% risk, tuition-first expectations.
 - [Best Indicators for Gold Trading](https://xauusdrobot.com/blog/best-indicators-gold-trading/): The minimal honest stack — trend MA, ATR, session context — and the indicator-soup myth.
