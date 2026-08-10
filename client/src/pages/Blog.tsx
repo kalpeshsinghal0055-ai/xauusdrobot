@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "support-resistance-gold",
+    title: "Support and Resistance in Gold: How XAUUSD Really Behaves at Levels",
+    excerpt: "Zones not lines, round-number magnetism, the wick-hunt trap — and how to trade levels with stops the hunt can't reach.",
+    category: "Guides",
+    date: "2026-08-10",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "how-do-trading-robots-work",
     title: "How Do Trading Robots Work? The Honest Look Inside an EA",
     excerpt: "The tick-to-order pipeline, the risk module, session filters, what automation genuinely does better — and what no robot can ever do.",
