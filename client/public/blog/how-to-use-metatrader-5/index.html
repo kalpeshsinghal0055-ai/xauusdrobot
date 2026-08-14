@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>How to Use MetaTrader 5: Beginner Tutorial (2026)</title>
+<meta name="description" content="How to use MetaTrader 5 step by step — install and login, reading charts, placing orders with stop-loss, the strategy tester, and running Expert Advisors.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/how-to-use-metatrader-5/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/how-to-use-metatrader-5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/how-to-use-metatrader-5.jpg">
+<meta property="og:title" content="How to Use MetaTrader 5: The Complete First-Week Walkthrough">
+<meta property="og:description" content="Install, charts, orders with stops, the tester and EAs — MT5 in one walkthrough.">
+<meta name="twitter:title" content="How to Use MetaTrader 5">
+<meta name="twitter:description" content="Install, charts, orders with stops, the tester and EAs — MT5 in one walkthrough.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/how-to-use-metatrader-5/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Use MetaTrader 5: The Complete First-Week Walkthrough", "description": "A complete beginner tutorial for MetaTrader 5 — installing and logging in, reading the chart and Market Watch, placing orders with stop-loss and take-profit, using the strategy tester, and installing Expert Advisors.", "image": "https://xauusdrobot.com/images/how-to-use-metatrader-5.jpg", "author": {"@type": "Organization", "name": "XAUUSD Robot Team"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}, "datePublished": "2026-08-01", "dateModified": "2026-08-01", "mainEntityOfPage": "https://xauusdrobot.com/blog/how-to-use-metatrader-5/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Use MetaTrader 5", "item": "https://xauusdrobot.com/blog/how-to-use-metatrader-5/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How do I start using MetaTrader 5?", "acceptedAnswer": {"@type": "Answer", "text": "Download MT5 from your broker (not the generic site), install, then File → Login to Trade Account with the login, password and server from your broker's welcome email. A green connection indicator bottom-right confirms you're in — then open XAUUSD from Market Watch onto a chart."}}, {"@type": "Question", "name": "Is MetaTrader 5 free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the platform costs nothing; brokers license it and give it to clients. You only ever pay trading costs (spread, commission, swap) on the trades themselves."}}, {"@type": "Question", "name": "How do I place an order with stop-loss in MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Press F9 to open the order window, set volume in lots, type the Stop Loss and Take Profit prices before clicking Buy or Sell. You can adjust later by dragging the SL/TP lines on the chart — but never enter without one."}}, {"@type": "Question", "name": "Where do I put EA files in MetaTrader 5?", "acceptedAnswer": {"@type": "Answer", "text": "File → Open Data Folder → MQL5 → Experts — copy the .ex5 file there, restart the platform, then drag the EA from Navigator onto a chart and enable Algo Trading (green toolbar button)."}}, {"@type": "Question", "name": "Why is my EA not trading in MT5?", "acceptedAnswer": {"@type": "Answer", "text": "The usual causes in order: the Algo Trading toolbar button is off (must be green), 'Allow algorithmic trading' unticked in Tools → Options, the EA lacks a valid licence/settings, or the market is closed. The Experts tab in Toolbox shows the EA's own log messages."}}, {"@type": "Question", "name": "Can I use MT5 on my phone?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — the free MT5 mobile app uses the same login and is excellent for monitoring positions and closing trades. EAs, however, only run while the desktop terminal (or a VPS) is running — the phone app can't host them."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>How to Use MetaTrader 5: The Complete First-Week Walkthrough</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
+<img class="hero" src="/images/how-to-use-metatrader-5.jpg" alt="How to use MetaTrader 5 — the complete beginner walkthrough" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> MetaTrader 5 has four skills worth learning in week one: <strong>(1) setup</strong> — install from your broker, log in with the server they emailed; <strong>(2) charts</strong> — open XAUUSD from Market Watch, switch timeframes, add a moving average; <strong>(3) orders</strong> — always via the order window with a <strong>stop-loss typed in before clicking Buy/Sell</strong>; <strong>(4) automation</strong> — drop an EA in the Experts folder, enable Algo Trading, test on demo. Everything else in the platform is optional; these four are the job.</p></div>
+
+<h2>Step 1: install and log in (10 minutes)</h2>
+<ol>
+<li><strong>Download MT5 from your broker</strong>, not metatrader.com — broker builds come pre-pointed at their servers. Every regulated broker links it under Platforms.</li>
+<li>Install, open, then <strong>File → Login to Trade Account</strong>: the login number, password and server name are in the email your broker sent when you opened the account (demo or live).</li>
+<li>Check the bottom-right corner: a green connection number means you're in; "Invalid account" almost always means the wrong <em>server</em> was selected, not the wrong password.</li>
+</ol>
+
+<h2>Step 2: read the platform in one tour</h2>
+<table>
+<thead><tr><th>Panel</th><th>What it's for</th></tr></thead>
+<tbody>
+<tr><td><strong>Market Watch</strong> (Ctrl+M)</td><td>Instrument list with live bid/ask — right-click → Symbols to find XAUUSD if hidden</td></tr>
+<tr><td><strong>Chart</strong></td><td>Drag a symbol from Market Watch onto it; M1–MN buttons switch timeframes</td></tr>
+<tr><td><strong>Navigator</strong> (Ctrl+N)</td><td>Your accounts, indicators and Expert Advisors live here</td></tr>
+<tr><td><strong>Toolbox</strong> (Ctrl+T)</td><td>Open trades, order history, alerts, and the EA logs (Experts tab)</td></tr>
+</tbody>
+</table>
+<p>Two chart habits worth building immediately: trade from the <strong>1H/4H timeframes</strong> (minute charts are noise — see <a href="/blog/best-indicators-gold-trading/">the indicator guide</a>), and add one moving average (Insert → Indicators → Trend) so the trend question always has an answer on screen.</p>
+
+<h2>Step 3: place an order properly (the part that matters)</h2>
+<ol>
+<li>Press <strong>F9</strong> (or right-click chart → Trading → New Order).</li>
+<li>Set <strong>Volume</strong> in lots — 0.01 to start, sized by risk with the <a href="/tools/gold-lot-size-calculator/">lot calculator</a>, never by feel.</li>
+<li><strong>Type the Stop Loss and Take Profit prices BEFORE clicking Buy or Sell.</strong> This is the whole discipline in one habit — an order without a stop is a promise to improvise later.</li>
+<li>Click Buy or Sell; the position appears in the Toolbox. Modify SL/TP anytime by dragging the lines on the chart or right-clicking the position.</li>
+</ol>
+<div class="box"><p style="margin:0"><strong>Gold-specific note:</strong> place stops beyond obvious levels with ATR-sized buffers — XAUUSD's <a href="/blog/support-resistance-gold/">wick-hunts</a> take out line-thin stops daily. And know your two costs before sizing anything: the <a href="/blog/xauusd-spread-explained/">spread</a> and <a href="/blog/gold-slippage-explained/">slippage</a>.</p></div>
+
+<h2>Step 4: the Strategy Tester — MT5's best feature</h2>
+<p>View → Strategy Tester (Ctrl+R) lets you replay any EA or indicator over years of history before a cent goes live. Choose the EA, XAUUSD, "Every tick based on real ticks" modelling, a realistic spread — then read the report's <strong>maximal drawdown</strong> before its profit line. The honest method is in <a href="/blog/how-to-backtest-gold-ea/">how to backtest properly</a>; this tester is the main reason serious EA users pick MT5 over MT4.</p>
+
+<h2>Step 5: install and run an Expert Advisor</h2>
+<ol>
+<li><strong>File → Open Data Folder → MQL5 → Experts</strong> — copy the EA file (.ex5) here.</li>
+<li>Restart MT5 (or refresh Navigator). The EA appears under Expert Advisors.</li>
+<li>Drag it onto the XAUUSD chart, allow live trading in the dialog, and click the <strong>Algo Trading</strong> toolbar button so it turns green.</li>
+<li>A smiley hat icon on the chart's top-right = running. Check the Experts tab in Toolbox for its logs.</li>
+<li><strong>Demo first, always</strong> — then the <a href="/blog/how-to-set-up-xauusd-robot-mt4-mt5/">full robot setup guide</a> covers settings and the VPS step for 24/5 running.</li>
+</ol>
+
+<h2>The settings that save beginners pain</h2>
+<ul>
+<li><strong>Tools → Options → Expert Advisors:</strong> "Allow algorithmic trading" must be ticked or every EA silently does nothing.</li>
+<li><strong>One-Click Trading off</strong> until you're experienced — it skips the order window, which means skipping the stop-loss habit.</li>
+<li><strong>Charts → Show trade levels on</strong> — seeing your SL/TP lines on the chart keeps risk visible.</li>
+<li><strong>Notifications:</strong> Toolbox → Alerts, or link the MT5 mobile app (same login) to monitor positions from your phone — monitoring, not managing; the desktop/VPS runs the show.</li>
+</ul>
+<div class="box"><p style="margin:0 0 10px"><strong>Put the platform to work:</strong> once the four skills feel comfortable on demo, the free XAUUSD Robot runs the disciplined version of everything above — rule-based entries, stop on every order, no martingale — 24/5 on this exact platform.</p><a class="cta" href="/free-gold-trading-robot-download/">Get the Free Gold Robot →</a></div>
+
+<h2 id="faq">Frequently asked questions</h2>
+<h3>How do I start using MetaTrader 5?</h3><p>Broker's MT5 build → File → Login with the emailed server details → drag XAUUSD onto a chart.</p>
+<h3>Is MetaTrader 5 free?</h3><p>Yes — free from any broker; you only pay trading costs.</p>
+<h3>How do I place an order with stop-loss in MT5?</h3><p>F9 → set lots → type SL/TP first → then Buy/Sell. Adjust by dragging chart lines.</p>
+<h3>Where do I put EA files in MetaTrader 5?</h3><p>File → Open Data Folder → MQL5 → Experts, then drag from Navigator + enable Algo Trading.</p>
+<h3>Why is my EA not trading in MT5?</h3><p>Algo Trading button off, options unticked, licence/settings, or market closed — check the Experts log.</p>
+<h3>Can I use MT5 on my phone?</h3><p>Yes for monitoring/manual trades — but EAs need the desktop terminal or a VPS running.</p>
+
+<h2>Conclusion</h2>
+<p>MetaTrader 5 looks intimidating and is actually four learnable skills: log in correctly, read the chart, order with a stop typed first, and let the tester prove things before money does. Master those on demo in a week and the platform disappears into the background — which is exactly where a platform belongs, whether your hands or a well-tested robot are doing the clicking.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Stuck on any MT5 step?</strong></p><p style="color:var(--muted);margin-top:4px;">Send a screenshot — we walk people through setup every day, free.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/how-to-set-up-xauusd-robot-mt4-mt5/" style="font-weight:600;">→ How to Set Up a XAUUSD Robot on MT4 & MT5</a></li>
+<li><a href="/blog/mt4-vs-mt5-for-gold-ea/" style="font-weight:600;">→ MT4 vs MT5 for a Gold EA</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+<li><a href="/blog/how-to-trade-gold-xauusd/" style="font-weight:600;">→ How to Trade Gold (XAUUSD): Beginner's Guide</a></li>
+<li><a href="/blog/best-vps-gold-ea/" style="font-weight:600;">→ Best VPS for a Gold EA</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss; a large majority of retail CFD accounts lose money. No results are guaranteed. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>

@@ -10,6 +10,15 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "how-to-use-metatrader-5",
+    title: "How to Use MetaTrader 5: The Complete First-Week Walkthrough",
+    excerpt: "Install and login, reading charts, orders with the stop typed first, the strategy tester, and running your first EA — MT5's four real skills.",
+    category: "Guides",
+    date: "2026-08-11",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "support-resistance-gold",
     title: "Support and Resistance in Gold: How XAUUSD Really Behaves at Levels",
     excerpt: "Zones not lines, round-number magnetism, the wick-hunt trap — and how to trade levels with stops the hunt can't reach.",

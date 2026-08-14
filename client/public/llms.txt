@@ -22,6 +22,7 @@
 - [Contact](https://xauusdrobot.com/contact/): Telegram and contact details, plus support scope.
 
 ## Guides
+- [How to Use MetaTrader 5](https://xauusdrobot.com/blog/how-to-use-metatrader-5/): The complete first-week walkthrough — install, charts, orders with stops, the strategy tester, and running EAs.
 - [Support and Resistance in Gold](https://xauusdrobot.com/blog/support-resistance-gold/): Zones not lines, round-number magnetism, the wick-hunt trap, and stop placement the hunt can't reach.
 - [How Do Trading Robots Work?](https://xauusdrobot.com/blog/how-do-trading-robots-work/): The tick-to-order pipeline inside an EA, the risk module, filters, and the honest limits of automation.
 - [What Is XAUUSD?](https://xauusdrobot.com/blog/what-is-xauusd/): The complete definition — gold's currency code, the quote, pips/lots, and how XAUUSD trades vs owning gold.
