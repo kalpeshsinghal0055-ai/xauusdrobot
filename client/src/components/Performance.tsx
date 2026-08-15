@@ -1,7 +1,7 @@
 import { m as motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const MYFXBOOK_URL = "https://www.myfxbook.com/members/BBFx_Ai/bbfxai-100-usd/12092687";
+const TELEGRAM_DM_URL = "https://t.me/BBFx_Ai";
 
 type ShotPost = { id: number; date: string | null; files: string[] };
 
@@ -114,8 +114,9 @@ export default function Performance() {
             <span className="text-gold">Myfxbook.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
-            We don&apos;t post screenshots you can&apos;t check. Our live account is tracked
-            independently on Myfxbook — see the real trades, drawdown and history for yourself.
+            Our live account is tracked independently on Myfxbook — message us on Telegram
+            and we&apos;ll send you the live link so you can see the real trades, drawdown and
+            history for yourself.
           </p>
         </motion.div>
 
@@ -129,25 +130,18 @@ export default function Performance() {
           <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-4">
             Live &amp; Independently Verified
           </div>
-          <a href={MYFXBOOK_URL} target="_blank" rel="noopener nofollow" className="block mb-6">
-            <img
-              src="https://widget.myfxbook.com/widget/widget.png?accountOid=12092687&type=4"
-              alt="Live Myfxbook performance for the BBFx AI XAUUSD account"
-              className="w-full h-auto rounded-lg border border-border/40"
-              loading="lazy"
-            />
-          </a>
           <p className="text-muted-foreground text-sm mb-6">
-            Full trade-by-trade history, updated in real time on Myfxbook. Past performance does
-            not guarantee future results — trade only with capital you can afford to lose.
+            Full trade-by-trade history, updated in real time on Myfxbook. Message us on
+            Telegram and we&apos;ll send you the live link. Past performance does not guarantee
+            future results — trade only with capital you can afford to lose.
           </p>
           <a
-            href={MYFXBOOK_URL}
+            href={TELEGRAM_DM_URL}
             target="_blank"
-            rel="noopener nofollow"
+            rel="noopener"
             className="inline-flex items-center gap-2 bg-gold text-background font-bold px-8 py-3.5 rounded-xl hover:opacity-90 transition-opacity"
           >
-            View Live Myfxbook Results →
+            Get the Myfxbook Link on Telegram →
           </a>
         </motion.div>
 

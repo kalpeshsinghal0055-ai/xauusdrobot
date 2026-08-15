@@ -7,7 +7,7 @@
 - Products: (1) BBFxAi XAUUSD Robot — a trend-following, non-martingale gold EA for MT4/MT5 with a fixed stop-loss on every trade; (2) XAUUSD Scalping EA — a higher-frequency gold scalper for MT4/MT5.
 - Model: Free EAs via broker affiliate signup; no direct cost to the user. Delivered and set up over Telegram.
 - Strategy: Rule-based, non-martingale, non-grid; fixed stop-loss and risk management on the main robot. No guaranteed-profit claims.
-- Verified results: Myfxbook-tracked live results are linked on the site.
+- Verified results: results are tracked on a live Myfxbook account — message Telegram @BBFx_Ai (https://t.me/BBFx_Ai) to get the link.
 - Recommended brokers: Markets4you, Exness, Vantage (regulated, tight XAUUSD spreads, full MT4/MT5 EA support).
 - Contact: Telegram @BBFx_Ai
 

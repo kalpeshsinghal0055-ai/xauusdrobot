@@ -82,12 +82,12 @@ export default function Navbar() {
             )
           )}
           <a
-            href="https://www.myfxbook.com/members/BBFx_Ai/bbfxai-100-usd/12092687"
+            href="https://t.me/BBFx_Ai"
             target="_blank"
             rel="noopener noreferrer"
             className="px-5 py-2.5 border border-emerald/40 bg-emerald/5 text-emerald font-semibold text-sm rounded tracking-wide hover:bg-emerald/10 hover:border-emerald/60 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2 shrink-0"
           >
-            <span>✔</span> MYFXBOOK VERIFIED
+            <span>✔</span> VERIFIED RESULTS
           </a>
           <a
             href="https://www.markets4you.online/?affid=ky6kt3m"
@@ -151,13 +151,13 @@ export default function Navbar() {
                 )
               )}
               <a
-                href="https://www.myfxbook.com/members/BBFx_Ai/bbfxai-100-usd/12092687"
+                href="https://t.me/BBFx_Ai"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 px-5 py-3 border border-emerald/40 bg-emerald/5 text-emerald font-semibold text-sm rounded tracking-wide text-center flex items-center justify-center gap-2"
               >
-                <span>✔</span> MYFXBOOK VERIFIED
+                <span>✔</span> VERIFIED RESULTS
               </a>
               <a
                 href="https://www.markets4you.online/?affid=ky6kt3m"
