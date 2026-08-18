@@ -33,7 +33,7 @@ main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter
 h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
 .meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
 ul,ol{padding-left:22px}li{margin:7px 0}
-.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}main h2{border-left:2px solid var(--gold);padding-left:13px}.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
 table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
 .cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
 .tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
@@ -55,7 +55,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
 <img class="hero" src="/images/best-indicators-gold-trading.jpg" alt="Best indicators for gold trading — the few that earn their place on a XAUUSD chart" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
 
-<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> no indicator predicts gold — they all <strong>describe</strong> price history in different ways. The few that earn their place on XAUUSD: <strong>moving averages</strong> (defining the trend you should trade with), <strong>ATR</strong> (sizing stops to current volatility), and <strong>session/news awareness</strong> (when signals are trustworthy at all). RSI/stochastics help only as context in ranges. The costly myth is <strong>indicator soup</strong> — stacking five oscillators until they agree isn't confluence, it's curve-fitting.</p></div>
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> no indicator predicts gold — they all <strong>describe</strong> price history in different ways. The few that earn their place on XAUUSD: <strong>moving averages</strong> (defining the trend you should trade with), <strong>ATR</strong> (sizing stops to current volatility), and <strong>session/news awareness</strong> (when signals are trustworthy at all). RSI/stochastics help only as context in ranges. The costly myth is <strong>indicator soup</strong> — stacking five oscillators until they agree isn't confluence, it's curve-fitting.</p></div>
 
 <h2>The truth about indicators first</h2>
 <p>Every indicator — every single one — is arithmetic performed on past prices. None contains information about the future that the price itself doesn't. What good indicators do is <strong>compress the past into a readable state</strong>: is this market trending or ranging? How volatile is it right now? That's genuinely useful for applying rules consistently. What they never do is predict — the honest foundation we covered in <a href="/blog/gold-price-prediction/">why nobody can predict gold</a>.</p>
@@ -91,7 +91,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <p>That's a complete, testable system — four components, no soup. It's also, not coincidentally, the architecture most serious gold EAs use.</p>
 <div class="box"><p style="margin:0 0 10px"><strong>Where our robot stands:</strong> the free XAUUSD Robot runs exactly this philosophy in code — trend-defined direction, volatility-aware stops, liquid-hours-only trading with a news filter, one consistent entry logic. No repainting arrows, no oscillator soup — and every trade carries a hard stop-loss.</p><a class="cta" href="/free-gold-trading-robot-download/">Get the Free Gold Robot →</a></div>
 
-<h2 id="faq">Frequently asked questions</h2>
+<h2 id="faq">Questions we get</h2>
 <h3>What is the best indicator for gold trading?</h3><p>A higher-timeframe moving average (trend), paired with ATR (stops) and session context — no single magic one.</p>
 <h3>Do indicators predict the gold price?</h3><p>No — they describe past-price conditions. Useful for consistent rules, useless for prediction.</p>
 <h3>Is RSI good for XAUUSD?</h3><p>In ranges yes, against trends no — 'overbought' in a gold trend is just what strength looks like.</p>
@@ -99,12 +99,12 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <h3>What is indicator soup?</h3><p>Stacking correlated indicators for fake 'confluence' — redundancy dressed as confirmation.</p>
 <h3>What indicators do gold EAs use?</h3><p>The same minimal stack, coded: trend, ATR sizing, session filters — always explainable.</p>
 
-<h2>Conclusion</h2>
+<h2>The verdict</h2>
 <p>The best indicators for gold aren't the exotic ones — they're the few with distinct, honest jobs: a moving average to define the trend, ATR to size risk to reality, and the discipline to only trust signals in liquid, news-free hours. Everything beyond that is decoration at best and curve-fitting at worst. Build the minimal stack, test it honestly, and let consistency — not a sixth oscillator — carry the edge.</p>
 
 <div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Want a second opinion on your chart setup?</strong></p><p style="color:var(--muted);margin-top:4px;">Send a screenshot — we'll tell you honestly what's earning its place.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
 
-<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
 <li><a href="/blog/support-resistance-gold/" style="font-weight:600;">→ Support &amp; Resistance in Gold: Levels Guide</a></li>
 <li><a href="/blog/how-to-trade-gold-xauusd/" style="font-weight:600;">→ How to Trade Gold (XAUUSD): Beginner's Guide</a></li>
 <li><a href="/blog/gold-ea-strategy-types/" style="font-weight:600;">→ Gold EA Strategy Types Explained</a></li>

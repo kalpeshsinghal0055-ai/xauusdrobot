@@ -33,7 +33,7 @@ main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter
 h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
 .meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
 ul,ol{padding-left:22px}li{margin:7px 0}
-.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}main h2{border-left:2px solid var(--gold);padding-left:13px}.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
 .toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:22px 0}.toc strong{color:var(--gold2)}.toc ol{margin:8px 0 0;padding-left:20px}.toc li{margin:4px 0}
 table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
 .cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
@@ -57,7 +57,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated July 2026</p>
 <img class="hero" src="/images/gold-ea-drawdown-explained.jpg" alt="Drawdown explained — the number that matters more than profit for a gold EA" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
 
-<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> Drawdown is the fall from your account's <strong>peak to its lowest point</strong> before a new peak — and <strong>maximum drawdown</strong> is the worst such fall ever recorded. It matters more than profit because recovery is asymmetric: a 25% drawdown needs +33% to break even, and a 50% drawdown needs +100%. For a gold EA, judge the <em>equity</em> drawdown (not just balance) on a verified record.</p></div>
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> Drawdown is the fall from your account's <strong>peak to its lowest point</strong> before a new peak — and <strong>maximum drawdown</strong> is the worst such fall ever recorded. It matters more than profit because recovery is asymmetric: a 25% drawdown needs +33% to break even, and a 50% drawdown needs +100%. For a gold EA, judge the <em>equity</em> drawdown (not just balance) on a verified record.</p></div>
 
 <div class="toc"><strong>On this page</strong><ol>
 <li><a href="#what">What drawdown actually is</a></li>
@@ -131,7 +131,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 
 <div class="box"><p style="margin:0 0 10px"><strong>Where our robot stands:</strong> the free XAUUSD Robot is non-martingale with a hard stop-loss on every trade and fixed fractional sizing — drawdown stays visible and bounded rather than hidden in floating losses. Results are tracked live on Myfxbook.</p><a class="cta" href="/">Get the Free Gold EA →</a></div>
 
-<h2 id="faq">Frequently asked questions</h2>
+<h2 id="faq">Questions we get</h2>
 <h3>What is drawdown in trading?</h3><p>The decline from an account's peak to its lowest point before a new peak — e.g. $1,200 → $900 is a 25% drawdown. It measures the pain a strategy puts you through.</p>
 <h3>What is maximum drawdown?</h3><p>The largest peak-to-trough fall ever recorded — the single most important risk number on any backtest or live record.</p>
 <h3>How much drawdown is acceptable for a gold EA?</h3><p>Roughly: under 10–15% conservative, 15–30% moderate, 40–50%+ a red flag. At 50% you need +100% just to break even.</p>
@@ -140,12 +140,12 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <h3>How do I check an EA's real drawdown?</h3><p>Maximal equity drawdown on a long backtest plus a third-party live record (Myfxbook). Distrust smooth curves from grid/martingale logic.</p>
 <h3>Does a stop-loss reduce drawdown?</h3><p>It caps each trade's loss, keeping drawdown bounded, visible and survivable — especially combined with 1–2% risk per trade.</p>
 
-<h2>Conclusion</h2>
+<h2>The verdict</h2>
 <p>Profit is the number strategies advertise; drawdown is the number they survive — or don't. Learn to read maximum <em>equity</em> drawdown, respect the asymmetric recovery math, and size every account for the worst streak instead of the average month. Do that, and you'll filter out most bad gold EAs before they cost you anything.</p>
 
 <div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Questions about drawdown or risk settings?</strong></p><p style="color:var(--muted);margin-top:4px;">We'll help you read a record or set sensible risk.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
 
-<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
 <li><a href="/blog/how-to-read-myfxbook/" style="font-weight:600;">→ How to Read a Myfxbook Record (Verify Any EA)</a></li>
 <li><a href="/blog/xauusd-hedge-ea/" style="font-weight:600;">→ XAUUSD Hedge EA: How Gold Hedging Robots Work</a></li>
 <li><a href="/blog/gold-ea-risk-management/" style="font-weight:600;">→ Gold EA Risk Management: Settings That Protect You</a></li>

@@ -33,7 +33,7 @@ main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter
 h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
 .meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
 ul,ol{padding-left:22px}li{margin:7px 0}
-.answer{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:12px;padding:18px 22px;margin:22px 0}.answer strong{color:var(--gold2)}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}main h2{border-left:2px solid var(--gold);padding-left:13px}.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
 table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
 .cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
 .tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
@@ -55,7 +55,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
 <img class="hero" src="/images/how-do-trading-robots-work.jpg" alt="How do trading robots work — the honest look inside an EA" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
 
-<div class="answer"><p style="margin:0"><strong>Quick answer:</strong> a trading robot (Expert Advisor) is a <strong>program running on your MetaTrader platform</strong> that repeats one loop endlessly: read incoming price data → check it against <strong>written strategy rules</strong> → when conditions match, send an order to your broker with a <strong>stop-loss and calculated position size</strong> attached. That's the whole machine. It executes rules with perfect consistency 24/5 — and it cannot predict prices, remove market risk, or turn a bad strategy good.</p></div>
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> a trading robot (Expert Advisor) is a <strong>program running on your MetaTrader platform</strong> that repeats one loop endlessly: read incoming price data → check it against <strong>written strategy rules</strong> → when conditions match, send an order to your broker with a <strong>stop-loss and calculated position size</strong> attached. That's the whole machine. It executes rules with perfect consistency 24/5 — and it cannot predict prices, remove market risk, or turn a bad strategy good.</p></div>
 
 <h2>The pipeline: tick to order</h2>
 <table>
@@ -97,7 +97,7 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <p>The free XAUUSD Robot is a working example of everything above: trend-following rules on gold, session + news filters deciding when it's allowed to act, fixed-fractional sizing with a hard stop on every order, no martingale anywhere in the loop — running 24/5 on MT4/MT5. The pipeline is explainable because honest pipelines always are.</p>
 <div class="box"><p style="margin:0 0 10px"><strong>See it run:</strong> free via partner-broker signup — test the whole machine on demo first, exactly as we'd tell you to test anyone's robot.</p><a class="cta" href="/free-gold-trading-robot-download/">Get the Free Gold Robot →</a></div>
 
-<h2 id="faq">Frequently asked questions</h2>
+<h2 id="faq">Questions we get</h2>
 <h3>How does a trading robot work?</h3><p>A loop: price in → filters → rules → sized order with stop out. Consistency, not prediction.</p>
 <h3>Do trading robots actually make money?</h3><p>Some verified ones do, with losing periods — the strategy, not the automation, decides.</p>
 <h3>Can a trading robot predict the market?</h3><p>No — they react to conditions by rule. Prediction claims are marketing.</p>
@@ -105,12 +105,12 @@ footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;p
 <h3>Do I need a VPS to run a trading robot?</h3><p>Standard for serious use — 24/5 uptime and low latency. A home PC works if always on.</p>
 <h3>Are trading robots safe to use?</h3><p>The mechanism is safe; the strategy inside decides. Stops + verification + demo-first = the safe end.</p>
 
-<h2>Conclusion</h2>
+<h2>The verdict</h2>
 <p>A trading robot is gloriously unmagical: a loop that reads prices, applies written rules, and sends risk-managed orders — thousands of times, identically, without ego. That boring consistency is the entire product, and it's genuinely valuable when the rules inside deserve it. Understand the pipeline and the marketing fog clears instantly: verify the record, read the rules, test on demo — and let the machine do what machines do best.</p>
 
 <div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Want to see inside a real EA's logic?</strong></p><p style="color:var(--muted);margin-top:4px;">Ask us how any part of our robot works — we explain it plainly.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
 
-<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">Related Guides</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
 <li><a href="/blog/best-forex-robot/" style="font-weight:600;">→ Best Forex Robot 2026: Selection Framework</a></li>
 <li><a href="/blog/do-gold-trading-robots-work/" style="font-weight:600;">→ Do Gold Trading Robots Actually Work?</a></li>
 <li><a href="/blog/gold-ea-strategy-types/" style="font-weight:600;">→ Gold EA Strategy Types Explained</a></li>

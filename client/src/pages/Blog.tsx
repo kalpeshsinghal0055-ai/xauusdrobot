@@ -341,72 +341,131 @@ const fadeUp = {
   }),
 };
 
+const LANES: { key: string; label: string; blurb: string; slugs: string[] }[] = [
+  {
+    key: "robots",
+    label: "Robots & automation",
+    blurb: "What an EA actually does between tick and order — and which ones survive contact with gold.",
+    slugs: [
+      "how-do-trading-robots-work", "do-gold-trading-robots-work", "xauusd-robot-complete-guide",
+      "best-forex-robot", "best-xauusd-robot-gold-ea-2026", "free-xauusd-gold-ea",
+      "xauusd-scalping-bot", "xauusd-hedge-ea", "gold-ea-strategy-types",
+    ],
+  },
+  {
+    key: "setup",
+    label: "Setup & infrastructure",
+    blurb: "Platform, broker, VPS — the plumbing that decides whether a working strategy stays working.",
+    slugs: [
+      "how-to-set-up-xauusd-robot-mt4-mt5", "how-to-use-metatrader-5",
+      "mt4-vs-mt5-for-gold-ea", "best-vps-gold-ea", "best-brokers-xauusd-gold-ea",
+    ],
+  },
+  {
+    key: "testing",
+    label: "Testing & verification",
+    blurb: "Prove it before you fund it: backtests, track records, drawdown and prop-firm rules.",
+    slugs: [
+      "how-to-backtest-gold-ea", "how-to-read-myfxbook",
+      "gold-ea-drawdown-explained", "best-gold-ea-prop-firm-ftmo",
+    ],
+  },
+  {
+    key: "risk",
+    label: "Risk & execution cost",
+    blurb: "Position size, leverage, spread and slippage — the four numbers that quietly decide the outcome.",
+    slugs: [
+      "gold-ea-risk-management", "best-leverage-xauusd", "xauusd-spread-explained",
+      "gold-slippage-explained", "how-much-money-to-start-gold-ea", "trade-gold-with-100",
+    ],
+  },
+  {
+    key: "market",
+    label: "Market context",
+    blurb: "The gold behaviour every automated system is exposed to, whether or not it models it.",
+    slugs: [
+      "what-is-xauusd", "what-moves-gold-price", "best-time-to-trade-xauusd",
+      "trading-gold-during-news-nfp-fomc-cpi", "support-resistance-gold",
+      "best-indicators-gold-trading", "how-to-trade-gold-xauusd", "gold-price-prediction",
+      "gold-investment-vs-trading", "is-forex-trading-profitable", "free-gold-signals",
+    ],
+  },
+];
+
 export default function Blog() {
   useSeo({
-    title: "XAUUSD Robot Blog — Gold Algo Trading Guides & MT5 EA Tips",
+    title: "The Lab — Gold EA & XAUUSD Automation Field Notes",
     description:
-      "Guides, tutorials and insights on XAUUSD algo trading, the free MT5 gold EA, broker setup and automated gold strategies from the BBFxAi team.",
+      "Field notes on automated gold trading: how EAs work, MT4/MT5 setup, backtesting and verification, risk and execution cost, and the XAUUSD market behaviour every robot is exposed to.",
     canonical: "https://xauusdrobot.com/blog/",
   });
+
+  const bySlug = new Map(blogPosts.map((p) => [p.slug, p]));
+  const claimed = new Set(LANES.flatMap((l) => l.slugs));
+  const lanes = LANES.map((l) => ({
+    ...l,
+    posts: l.slugs.map((sl) => bySlug.get(sl)).filter(Boolean) as typeof blogPosts,
+  })).filter((l) => l.posts.length > 0);
+  const rest = blogPosts.filter((p) => !claimed.has(p.slug));
+  if (rest.length)
+    lanes.push({ key: "more", label: "Also in the lab", blurb: "Recent additions not yet filed into a track.", slugs: [], posts: rest });
+
+  let n = 0;
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Navbar />
       <main className="pt-24 pb-24">
-        <section className="container text-center py-16 lg:py-20">
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-            <span className="inline-block px-4 py-1.5 text-xs font-semibold text-gold border border-gold/20 rounded-full uppercase tracking-widest mb-6">
-              Gold Trading Intelligence
+        <section className="container py-14 lg:py-16">
+          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="max-w-3xl">
+            <span className="inline-block font-mono text-[11px] tracking-[0.22em] uppercase text-gold mb-5">
+              The Lab · {blogPosts.length} entries
             </span>
-            <h1 className="font-serif text-4xl lg:text-6xl font-bold text-foreground mb-5 leading-tight">
-              XAUUSD <span className="text-gold">Insights</span> &amp; Guides
+            <h1 className="font-serif text-4xl lg:text-5xl font-bold text-foreground mb-4 leading-[1.12]">
+              Field notes on <span className="text-gold">gold automation</span>
             </h1>
-            <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
-              Deep-dive analysis, MT5 EA tutorials, and algorithmic trading strategies for serious gold traders.
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-2xl">
+              Working notes on building, testing and running XAUUSD Expert Advisors — written for the
+              person who has to make the thing behave on a live account, not for the brochure.
             </p>
           </motion.div>
         </section>
-        <div className="container">
-          <div className="h-px bg-gradient-to-r from-transparent via-gold/20 to-transparent mb-12" />
-        </div>
+
         <section className="container">
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {blogPosts.map((post, i) => (
-              <motion.div key={post.slug} custom={i} initial="hidden" animate="show" variants={fadeUp} className="group">
-                <a href={`/blog/${post.slug}${(post as any).ext ? "/" : ""}`}>
-                  <div className="h-full bg-card border border-border/30 rounded-xl overflow-hidden hover:border-gold/30 transition-all duration-300 hover:shadow-xl hover:shadow-gold/5 cursor-pointer">
-                    <div className="relative h-48 overflow-hidden bg-card">
-                      <img
-                        src={`/images/${post.slug}.jpg`}
-                        alt={post.title}
-                        width={1200}
-                        height={630}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="p-6">
-                      <div className="flex items-center gap-3 mb-3 flex-wrap">
-                        <span className="px-2.5 py-1 text-[10px] font-bold text-gold bg-gold/10 border border-gold/15 rounded-full uppercase tracking-wider">{post.category}</span>
-                        <span className="text-xs text-muted-foreground">{post.date}</span>
-                      </div>
-                      <h2 className="font-serif text-base lg:text-lg font-bold text-foreground leading-snug mb-3 group-hover:text-gold transition-colors line-clamp-3">{post.title}</h2>
-                      <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3 mb-5">{post.excerpt}</p>
-                      <div className="flex items-center justify-between pt-4 border-t border-border/20">
-                        <span className="text-xs text-muted-foreground">{post.readTime}</span>
-                        <span className="text-xs font-semibold text-gold uppercase tracking-wider group-hover:translate-x-1 transition-transform inline-block">Read Article →</span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              </motion.div>
-            ))}
-            <motion.div custom={blogPosts.length} initial="hidden" animate="show" variants={fadeUp}>
-              <div className="h-full bg-card/30 border border-dashed border-border/30 rounded-xl flex flex-col items-center justify-center py-16 px-6 text-center opacity-60">
-                <div className="text-3xl mb-3">✍️</div>
-                <p className="text-sm text-muted-foreground">More articles coming soon</p>
+          {lanes.map((lane) => (
+            <div key={lane.key} className="mb-14 lg:mb-16">
+              <div className="border-t border-gold/25 pt-5 mb-1">
+                <h2 className="font-mono text-[12px] tracking-[0.2em] uppercase text-gold mb-2">{lane.label}</h2>
+                <p className="text-sm text-muted-foreground max-w-2xl mb-2">{lane.blurb}</p>
               </div>
-            </motion.div>
-          </div>
+              <ul className="divide-y divide-border/30">
+                {lane.posts.map((post) => {
+                  n += 1;
+                  const idx = String(n).padStart(2, "0");
+                  return (
+                    <li key={post.slug}>
+                      <a
+                        href={`/blog/${post.slug}${(post as any).ext ? "/" : ""}`}
+                        className="group grid grid-cols-[2.5rem_1fr] sm:grid-cols-[2.75rem_1fr_auto] gap-x-4 gap-y-1 items-baseline py-5 hover:bg-card/40 transition-colors -mx-3 px-3 rounded"
+                      >
+                        <span className="font-mono text-xs text-muted-foreground/60 group-hover:text-gold transition-colors tabular-nums">
+                          {idx}
+                        </span>
+                        <div className="min-w-0">
+                          <h3 className="font-serif text-lg lg:text-xl font-bold text-foreground leading-snug group-hover:text-gold transition-colors">
+                            {post.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground leading-relaxed mt-1.5 max-w-2xl">{post.excerpt}</p>
+                        </div>
+                        <span className="hidden sm:block font-mono text-[11px] text-muted-foreground/70 whitespace-nowrap tabular-nums">
+                          {post.date} · {post.readTime.replace(" read", "")}
+                        </span>
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          ))}
         </section>
       </main>
       <Footer />
