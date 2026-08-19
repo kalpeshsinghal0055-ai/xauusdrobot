@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>How to Use MetaTrader 4: Beginner Tutorial (2026)</title>
+<meta name="description" content="How to use MetaTrader 4 step by step: install and log in, the four windows that matter, placing orders with a stop-loss, and installing an Expert Advisor.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/how-to-use-metatrader-4/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/how-to-use-metatrader-4.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/how-to-use-metatrader-4.jpg">
+<meta property="og:title" content="How to Use MetaTrader 4: Everything That Actually Matters">
+<meta property="og:description" content="Login, the four windows, orders with stops, and running an EA — MT4 in one pass.">
+<meta name="twitter:title" content="How to Use MetaTrader 4">
+<meta name="twitter:description" content="Login, the four windows, orders with stops, and running an EA — MT4 in one pass.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/how-to-use-metatrader-4/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}
+.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}
+main h2{border-left:2px solid var(--gold);padding-left:13px}
+.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "How to Use MetaTrader 4: Everything That Actually Matters", "description": "A practical MetaTrader 4 tutorial: installing the broker build and logging in, the four windows that do all the work, placing an order with the stop-loss set first, and installing and running an Expert Advisor on MT4.", "image": "https://xauusdrobot.com/images/how-to-use-metatrader-4.jpg", "author": {"@type": "Organization", "name": "XAUUSD Robot Team"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}, "datePublished": "2026-08-01", "dateModified": "2026-08-01", "mainEntityOfPage": "https://xauusdrobot.com/blog/how-to-use-metatrader-4/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "How to Use MetaTrader 4", "item": "https://xauusdrobot.com/blog/how-to-use-metatrader-4/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is MetaTrader 4 free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. MetaTrader 4 is provided free by brokers. You download the platform from your broker's website and use it with a demo or live account at no charge. Costs come from trading itself — the spread, any commission and swap fees — not from the software."}}, {"@type": "Question", "name": "Why does MetaTrader 4 say invalid account?", "acceptedAnswer": {"@type": "Answer", "text": "Nine times out of ten the server is wrong rather than the password. The server name in the login dialog must match exactly what your broker emailed, and brokers often run several servers with similar names. Check the email again, select the exact server from the dropdown, and confirm the account has been activated."}}, {"@type": "Question", "name": "How do I add gold to MetaTrader 4?", "acceptedAnswer": {"@type": "Answer", "text": "Open Market Watch with Ctrl+M, right-click inside it and choose Symbols, then find the metals or spot group and enable the gold instrument. Brokers name it differently — XAUUSD, GOLD, XAUUSD.m or similar — so check the specification before trading it, since contract size and minimum lot vary."}}, {"@type": "Question", "name": "Where do I put an EA file in MT4?", "acceptedAnswer": {"@type": "Answer", "text": "File then Open Data Folder, then MQL4 then Experts. Copy the .ex4 file into that folder and restart MetaTrader 4. The advisor then appears in the Navigator panel under Expert Advisors, ready to drag onto a chart."}}, {"@type": "Question", "name": "Can I run MetaTrader 4 and MetaTrader 5 at the same time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. They install into separate folders and run as independent programs, so you can keep both open on the same computer. They do not share Expert Advisors, though: a .ex4 file runs only on MT4 and a .ex5 only on MT5."}}, {"@type": "Question", "name": "Does MetaTrader 4 work on a Mac or phone?", "acceptedAnswer": {"@type": "Answer", "text": "There are mobile apps for iOS and Android and a web terminal, and they are fine for monitoring and manual orders. Expert Advisors do not run on them — automation needs the Windows desktop platform, which is the main reason algo traders use a VPS."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>How to Use MetaTrader 4: Everything That Actually Matters</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
+<img class="hero" src="/images/how-to-use-metatrader-4.jpg" alt="How to use MetaTrader 4 — beginner walkthrough of the platform" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> MetaTrader 4 is four windows and one habit. The windows: <strong>Market Watch</strong> (Ctrl+M) for instruments, the <strong>chart</strong> for price, <strong>Navigator</strong> (Ctrl+N) for accounts and Expert Advisors, and the <strong>Terminal</strong> (Ctrl+T) for open trades, history and the Experts log. The habit: press <strong>F9</strong> and type the stop-loss <em>before</em> you click Buy or Sell. To run an EA, drop the .ex4 file into File &rarr; Open Data Folder &rarr; MQL4 &rarr; Experts, restart, drag it onto a chart and switch AutoTrading on.</p></div>
+
+
+<h2>Install the broker's build, not the generic one</h2>
+<p>MT4 is distributed by brokers rather than by MetaQuotes, and the download link on your broker's site matters: their build ships pre-configured with their server addresses. A generic copy downloaded elsewhere will install fine and then fail to find your server in the login list, which is the single most common reason a first login does not work.</p>
+<p>Once installed, go to <strong>File &rarr; Login to Trade Account</strong> and enter three things from your broker's welcome email: login number, password, and the exact <strong>server name</strong>. If you see &ldquo;Invalid account&rdquo;, resist the urge to retype the password. In our experience that message almost always means the wrong server is selected from the dropdown &mdash; the passwords are usually fine.</p>
+<p>You know you are connected when the bottom-right corner shows a data rate in kb/s instead of &ldquo;No connection&rdquo;. If it stays disconnected, the account may simply not be activated yet.</p>
+
+<h2>The four windows that do all the work</h2>
+<p>MT4 looks busy, but almost everything you need lives in four panels:</p>
+<table>
+<tr><th>Window</th><th>Shortcut</th><th>What it is for</th></tr>
+<tr><td>Market Watch</td><td>Ctrl+M</td><td>The instrument list and live bid/ask. Right-click &rarr; Symbols to unhide anything missing, including gold if your broker names it XAUUSD.m or similar.</td></tr>
+<tr><td>Chart</td><td>&mdash;</td><td>Drag a symbol from Market Watch onto the chart area. The M1&ndash;MN toolbar switches timeframes.</td></tr>
+<tr><td>Navigator</td><td>Ctrl+N</td><td>Accounts, indicators, scripts and Expert Advisors. This is where an installed EA appears.</td></tr>
+<tr><td>Terminal</td><td>Ctrl+T</td><td>Open trades, account history, alerts and &mdash; critically &mdash; the <strong>Experts</strong> and <strong>Journal</strong> tabs, which are the platform's diary of what it tried to do.</td></tr>
+</table>
+<p>Two habits are worth forming immediately. First, work from the 1H and 4H charts while learning; the M1 chart mostly shows noise, and noise looks like opportunity. Second, put a single moving average on the chart so the question &ldquo;which way is this trending?&rdquo; always has an answer you can point at.</p>
+
+<h2>Placing an order, with the stop typed first</h2>
+<p>This is the part that separates a platform tutorial from a trading habit. Press <strong>F9</strong> to open the order window, then work top to bottom:</p>
+<ol>
+<li><strong>Symbol</strong> &mdash; confirm it is the instrument you meant. Brokers often list several gold variants.</li>
+<li><strong>Volume</strong> &mdash; in lots. Start at 0.01 and size it from the money you are willing to lose, never from what you hope to make.</li>
+<li><strong>Stop Loss and Take Profit</strong> &mdash; type these <em>before</em> touching Buy or Sell.</li>
+<li><strong>Then</strong> click Buy by Market or Sell by Market.</li>
+</ol>
+<p>You can adjust both levels afterwards by dragging the lines on the chart, so there is no cost to setting them early and every cost to setting them late. An order placed without a stop is a promise to improvise under pressure, and improvised exits are where most accounts quietly go.</p>
+<p>One related setting: leave <strong>One Click Trading</strong> switched off while you are learning. It removes the order window, and with it the moment where you were going to type the stop.</p>
+
+<h2>Where MT4 stops and MT5 starts</h2>
+<p>MT4 is older, lighter and still the default at many brokers. What it does not have is MT5's multi-threaded strategy tester, its real-tick modelling, or its built-in economic calendar. For manual trading the difference is small. For testing an automated strategy it is significant, which is why most serious algo work has migrated across &mdash; the trade-offs are laid out in our <a href="/blog/mt4-vs-mt5-for-gold-ea/">MT4 versus MT5 comparison</a>.</p>
+<p>The practical point: an EA compiled for MT4 (.ex4) will not run on MT5, and vice versa. If a developer offers only one, that decides your platform for you.</p>
+
+<h2>Running an Expert Advisor on MT4</h2>
+<ol>
+<li><strong>File &rarr; Open Data Folder &rarr; MQL4 &rarr; Experts</strong> and copy the .ex4 file in.</li>
+<li>Restart MT4. The EA now appears under Expert Advisors in the Navigator.</li>
+<li>Drag it onto the chart of the instrument it was built for.</li>
+<li>In the dialog, tick <strong>Allow live trading</strong> under the Common tab.</li>
+<li>Switch on the <strong>AutoTrading</strong> button in the toolbar. It turns green.</li>
+</ol>
+<p>A smiling face in the top-right corner of the chart means the EA is attached and running. A sad face means live trading is disabled somewhere &mdash; usually the AutoTrading button. If it is attached and still not placing trades, the Experts tab in the Terminal will tell you why; we walk through the full list in <a href="/blog/ea-not-trading-fix/">the EA troubleshooting checklist</a>.</p>
+
+<h2>What the platform will not tell you</h2>
+<p>MT4 shows the broker's feed, not the market's. Spread, execution speed and slippage all come from the broker, so two traders running the same strategy on the same chart can get measurably different results. That is not a platform bug; it is the reason <a href="/blog/gold-slippage-explained/">slippage</a> and <a href="/blog/xauusd-spread-explained/">spread</a> deserve their own guides, and the reason a strategy should be tested on the account it will actually run on.</p>
+<p>The platform is also indifferent to whether your position size makes sense. It will happily accept a lot size that risks a third of the account on one trade. Nothing in the software will stop you; that job is entirely yours.</p>
+
+
+<h2 id="faq">Questions we get</h2>
+<h3>Is MetaTrader 4 free to use?</h3><p>Yes. Brokers provide MT4 free for demo and live accounts. You pay trading costs such as spread and commission, never a platform fee.</p>
+<h3>Why does MetaTrader 4 say invalid account?</h3><p>Usually the wrong server is selected, not a wrong password. Match the server name exactly to your broker's welcome email.</p>
+<h3>How do I add gold to MetaTrader 4?</h3><p>Ctrl+M, right-click, Symbols, then enable gold from the metals group. The name varies by broker: XAUUSD, GOLD or XAUUSD.m.</p>
+<h3>Where do I put an EA file in MT4?</h3><p>File → Open Data Folder → MQL4 → Experts, then restart. The EA appears in Navigator under Expert Advisors.</p>
+<h3>Can I run MetaTrader 4 and MetaTrader 5 at the same time?</h3><p>Yes, they install separately and run side by side. EAs are not interchangeable — .ex4 is MT4 only, .ex5 is MT5 only.</p>
+<h3>Does MetaTrader 4 work on a Mac or phone?</h3><p>Mobile and web versions exist for monitoring and manual trades, but EAs only run on the Windows desktop version.</p>
+
+<h2>The verdict</h2>
+<p>MetaTrader 4 stops being intimidating once you see it as four windows and one habit: Market Watch, chart, Navigator, Terminal — and the stop-loss typed before the order goes in. Spend a week doing exactly that on a demo account and the platform disappears into the background, which is where a platform belongs. What is left to work on is the strategy, which was always the harder part.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Setting up MT4 for the first time?</strong></p><p style="color:var(--muted);margin-top:4px;">Send us a screenshot of where you are stuck — login, symbols or an EA that will not attach — and we will talk you through it.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/how-to-use-metatrader-5/" style="font-weight:600;">→ How to Use MetaTrader 5: The Complete First-Week Walkthrough</a></li>
+<li><a href="/blog/mt4-vs-mt5-for-gold-ea/" style="font-weight:600;">→ MT4 vs MT5 for a Gold EA: Which Is Better?</a></li>
+<li><a href="/blog/ea-not-trading-fix/" style="font-weight:600;">→ Your EA Isn't Placing Trades: The Checklist</a></li>
+<li><a href="/blog/how-to-set-up-xauusd-robot-mt4-mt5/" style="font-weight:600;">→ How to Set Up a XAUUSD Robot on MT4 & MT5</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss; a large majority of retail CFD accounts lose money. No results are guaranteed. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>
