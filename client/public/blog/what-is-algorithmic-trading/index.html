@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>What Is Algorithmic Trading? A Practical Guide (2026)</title>
+<meta name="description" content="What algorithmic trading actually is: the three layers inside every algo, how retail algo trading differs from institutional, and where it genuinely helps and where it does not.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/what-is-algorithmic-trading/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/what-is-algorithmic-trading.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/what-is-algorithmic-trading.jpg">
+<meta property="og:title" content="What Is Algorithmic Trading? The Practical Version">
+<meta property="og:description" content="The three layers inside every algo, and the honest limits of automating a strategy.">
+<meta name="twitter:title" content="What Is Algorithmic Trading?">
+<meta name="twitter:description" content="The three layers inside every algo, and the honest limits of automating a strategy.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/what-is-algorithmic-trading/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}
+.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}
+main h2{border-left:2px solid var(--gold);padding-left:13px}
+.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "What Is Algorithmic Trading? The Practical Version", "description": "A practical explanation of algorithmic trading: the definition without the mystique, the signal, risk and execution layers inside every algorithm, how retail algo trading differs from institutional, and the specific things automation does and does not improve.", "image": "https://xauusdrobot.com/images/what-is-algorithmic-trading.jpg", "author": {"@type": "Organization", "name": "XAUUSD Robot Team"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}, "datePublished": "2026-08-01", "dateModified": "2026-08-01", "mainEntityOfPage": "https://xauusdrobot.com/blog/what-is-algorithmic-trading/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "What Is Algorithmic Trading?", "item": "https://xauusdrobot.com/blog/what-is-algorithmic-trading/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is algorithmic trading profitable?", "acceptedAnswer": {"@type": "Answer", "text": "Automation does not decide profitability — the underlying strategy does, along with costs and risk control. An algorithm executes rules consistently, which helps a strategy with a genuine edge and does nothing for one without. Independent studies of retail trading consistently find most accounts lose money, and automating a losing approach does not change its expectancy."}}, {"@type": "Question", "name": "Do I need to know how to code?", "acceptedAnswer": {"@type": "Answer", "text": "Not to run one. Ready-made Expert Advisors install into MetaTrader without any programming, and visual strategy builders exist. You do need to understand what the rules are and what the risk settings do, because those decisions remain yours regardless of who wrote the code."}}, {"@type": "Question", "name": "How much money do you need to start algo trading?", "acceptedAnswer": {"@type": "Answer", "text": "Enough that a normal losing streak stays survivable at the smallest position size the instrument allows. On gold that usually means several hundred dollars rather than fifty, because the minimum 0.01 lot already carries meaningful risk per trade. Undersized accounts are forced into oversized risk."}}, {"@type": "Question", "name": "What is the difference between algorithmic trading and an Expert Advisor?", "acceptedAnswer": {"@type": "Answer", "text": "An Expert Advisor is one implementation of algorithmic trading — specifically, a program written for the MetaTrader platform. Algorithmic trading is the general practice, which also covers Python scripts against a broker API, TradingView strategies, and institutional execution systems."}}, {"@type": "Question", "name": "Is algorithmic trading legal?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, for retail traders at regulated brokers it is a normal, permitted activity, and most brokers support it explicitly. Individual brokers and prop firms may restrict specific behaviours such as latency arbitrage or certain news strategies, so the rules to read are the account terms rather than the law."}}, {"@type": "Question", "name": "Can algorithms predict the market?", "acceptedAnswer": {"@type": "Answer", "text": "No system reliably predicts price direction, and any that claimed to would have no reason to be sold. Working algorithms do not predict; they define a condition, act on it with controlled risk, and accept being wrong a known percentage of the time."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>What Is Algorithmic Trading? The Practical Version</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
+<img class="hero" src="/images/what-is-algorithmic-trading.jpg" alt="What is algorithmic trading — the signal, risk and execution layers explained" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> Algorithmic trading means a set of rules is executed by software instead of by a person. Every algorithm, from a hedge fund's to a retail Expert Advisor, is built from the same three layers: a <strong>signal layer</strong> that decides when a condition is met, a <strong>risk layer</strong> that decides how much to commit, and an <strong>execution layer</strong> that sends and manages the order. Automation reliably removes hesitation, fatigue and inconsistency. It does not create an edge, adapt to a market it was never shown, or make a losing strategy profitable &mdash; it only makes the strategy happen exactly as written, including when the strategy is wrong.</p></div>
+
+
+<h2>The definition, without the mystique</h2>
+<p>Algorithmic trading is the execution of a trading strategy by software according to predefined rules. That is the whole definition. The rules can be trivially simple &mdash; buy when the price closes above a moving average, exit at a fixed stop &mdash; or they can involve statistical models. The word &ldquo;algorithmic&rdquo; describes <em>who executes</em>, not how clever the strategy is.</p>
+<p>This matters because the term is often sold as though it were a strategy in itself. It is not. An algorithm is a delivery mechanism. Put a poor strategy inside one and you get poor results delivered with perfect discipline and no delay.</p>
+
+<h2>The three layers inside every algorithm</h2>
+<p>Whatever the marketing says, open up any automated system and you find the same three components stacked on top of each other.</p>
+<table>
+<tr><th>Layer</th><th>Question it answers</th><th>Typical failure</th></tr>
+<tr><td>Signal</td><td>Is the condition I am looking for true right now?</td><td>Fitted to history; the condition stops describing anything real</td></tr>
+<tr><td>Risk</td><td>Given that it is true, how much do I commit and where do I admit I was wrong?</td><td>Position sizing detached from account size; no hard invalidation point</td></tr>
+<tr><td>Execution</td><td>How do I get the order filled and managed at an acceptable cost?</td><td>Costs ignored in testing; live fills quietly worse than modelled</td></tr>
+</table>
+<p>Most public discussion is about the signal layer, because it is the interesting one. Most actual failures happen in the other two. A mediocre signal with a sound risk layer survives long enough to be improved; a brilliant signal with no risk layer does not survive its first bad week.</p>
+
+<h2>Institutional and retail algo trading are different jobs</h2>
+<p>The phrase covers two activities that share a name and little else.</p>
+<p>At institutional scale, much of the work is <strong>execution</strong>: an order too large to place at once has to be sliced across time and venues so it does not move the price against itself. That is what execution algorithms do, and it is a genuine, measurable edge that has nothing to do with predicting direction.</p>
+<p>At retail scale, order size is irrelevant to the market. Nothing you or we trade moves gold. So retail algo trading is almost entirely about the <strong>signal and risk</strong> layers &mdash; automating a discretionary idea so it runs consistently. Understanding this saves a lot of money, because material written about institutional algo trading describes advantages that simply do not transfer.</p>
+
+<h2>What automation is genuinely better at</h2>
+<ul>
+<li><strong>Consistency.</strong> The rule is applied identically at 3am and after three losses. Humans cannot do this reliably, and most of them know it.</li>
+<li><strong>Attention.</strong> Software watches every instrument and session without getting bored or looking away.</li>
+<li><strong>Speed.</strong> Not high-frequency speed, which retail does not have, but the difference between reacting in 200 milliseconds and reacting after you have finished your coffee.</li>
+<li><strong>Falsifiability.</strong> A written rule can be tested against history. &ldquo;I look for strong setups&rdquo; cannot. This is arguably the biggest benefit, and it applies before a single trade is placed.</li>
+</ul>
+<p>That last point is worth sitting with. Writing a strategy down precisely enough for software to execute it forces you to discover whether you actually have a strategy at all. Many discretionary traders find out at this step that they do not.</p>
+
+<h2>What it is not better at</h2>
+<p>An algorithm has no judgement, no context and no memory of anything outside its inputs. It cannot notice that today's move is a central bank surprise rather than a normal breakout unless someone gave it a calendar filter. It applies rules derived from a market that existed in the past to a market that exists now, and it cannot tell you when that assumption has stopped holding.</p>
+<p>It also cannot fix its own inputs. If the backtest used unrealistic spreads, the live account discovers the difference on your money &mdash; which is why <a href="/blog/how-to-backtest-gold-ea/">testing methodology</a> matters more than the equity curve it produces.</p>
+
+<h2>Where retail algo trading actually goes wrong</h2>
+<ol>
+<li><strong>Optimising until history looks perfect.</strong> Every added parameter fits the past better and the future worse. A curve that looks too clean usually is.</li>
+<li><strong>Treating no stop-loss as low risk.</strong> Systems that average into losers produce beautiful equity curves until the one trend that does not come back. The risk was deferred, not removed.</li>
+<li><strong>Testing on a different account than you will trade.</strong> Spread, execution and swap vary between brokers enough to flip a marginal strategy.</li>
+<li><strong>Turning it off at the bottom.</strong> The most common way an automated strategy fails is a human intervening during the drawdown it was designed to survive.</li>
+</ol>
+<p>Notice that only the first of these is a programming problem. The rest are judgement problems that automation moved rather than solved.</p>
+
+
+<h2 id="faq">Questions we get</h2>
+<h3>Is algorithmic trading profitable?</h3><p>Automation makes a strategy consistent, not profitable. If the underlying rules have no edge, executing them faultlessly changes nothing.</p>
+<h3>Do I need to know how to code?</h3><p>No. Ready-made EAs run without coding — but you still need to understand the rules and the risk settings.</p>
+<h3>How much money do you need to start algo trading?</h3><p>Enough that an ordinary losing streak survives at minimum lot size — on gold, typically several hundred dollars rather than fifty.</p>
+<h3>What is the difference between algorithmic trading and an Expert Advisor?</h3><p>An EA is algorithmic trading implemented for MetaTrader. The broader term also covers API scripts and institutional execution systems.</p>
+<h3>Is algorithmic trading legal?</h3><p>Yes, it is legal and normally supported. Restrictions come from individual broker or prop-firm terms, not from regulation.</p>
+<h3>Can algorithms predict the market?</h3><p>No. Working systems do not predict — they define a condition, act with controlled risk, and accept being wrong often.</p>
+
+<h2>The verdict</h2>
+<p>Algorithmic trading is a delivery mechanism, not a strategy. It takes whatever rules you give it and executes them without hesitation, fatigue or drift — which is a real advantage if the rules are sound and a fast route to consistent losses if they are not. The useful question is never whether to automate, but whether the strategy is written precisely enough to be worth automating, and whether the risk layer underneath it can survive being wrong several times in a row.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Thinking about automating a strategy?</strong></p><p style="color:var(--muted);margin-top:4px;">Tell us the rules you have in mind and we will give you an honest read on whether they are specific enough to automate.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/how-do-trading-robots-work/" style="font-weight:600;">→ How Do Trading Robots Work? Inside an EA</a></li>
+<li><a href="/blog/gold-ea-strategy-types/" style="font-weight:600;">→ Gold EA Strategy Types: Scalping, Grid, Trend & More</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+<li><a href="/blog/ai-trading-bot/" style="font-weight:600;">→ AI Trading Bots: What They Do and What They Don't</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss; a large majority of retail CFD accounts lose money. No results are guaranteed. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>

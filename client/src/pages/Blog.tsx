@@ -10,6 +10,51 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "ea-not-trading-fix",
+    title: "Your EA Isn't Placing Trades. Here's the Checklist.",
+    excerpt: "Nine causes in order of likelihood, how to confirm each from the Experts log, and the fix for every one — plus when not trading is the EA working correctly.",
+    category: "Guides",
+    date: "2026-08-18",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
+    slug: "copy-trading-vs-ea",
+    title: "Copy Trading vs Expert Advisors: Two Different Bets",
+    excerpt: "One bets on a person staying disciplined, the other on rules staying valid. The hidden risk in each, real cost structures, and which suits whom.",
+    category: "Comparison",
+    date: "2026-08-18",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
+    slug: "ai-trading-bot",
+    title: "AI Trading Bots: Separating the Software From the Sales Pitch",
+    excerpt: "What the AI label usually covers, the three things a model can genuinely do, why prediction accuracy is not an edge, and a ten-minute test for any claim.",
+    category: "Guides",
+    date: "2026-08-18",
+    readTime: "9 min read",
+    ext: true,
+  },
+  {
+    slug: "what-is-algorithmic-trading",
+    title: "What Is Algorithmic Trading? The Practical Version",
+    excerpt: "The three layers inside every algorithm, how retail algo trading differs from institutional, and the specific things automation does and does not fix.",
+    category: "Guides",
+    date: "2026-08-18",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
+    slug: "how-to-use-metatrader-4",
+    title: "How to Use MetaTrader 4: Everything That Actually Matters",
+    excerpt: "Install and log in, the four windows that do all the work, placing an order with the stop typed first, and installing an Expert Advisor on MT4.",
+    category: "Tutorial",
+    date: "2026-08-18",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
     slug: "how-to-use-metatrader-5",
     title: "How to Use MetaTrader 5: The Complete First-Week Walkthrough",
     excerpt: "Install and login, reading charts, orders with the stop typed first, the strategy tester, and running your first EA — MT5's four real skills.",
@@ -347,6 +392,7 @@ const LANES: { key: string; label: string; blurb: string; slugs: string[] }[] = 
     label: "Robots & automation",
     blurb: "What an EA actually does between tick and order — and which ones survive contact with gold.",
     slugs: [
+      "what-is-algorithmic-trading", "ai-trading-bot", "copy-trading-vs-ea",
       "how-do-trading-robots-work", "do-gold-trading-robots-work", "xauusd-robot-complete-guide",
       "best-forex-robot", "best-xauusd-robot-gold-ea-2026", "free-xauusd-gold-ea",
       "xauusd-scalping-bot", "xauusd-hedge-ea", "gold-ea-strategy-types",
@@ -357,6 +403,7 @@ const LANES: { key: string; label: string; blurb: string; slugs: string[] }[] = 
     label: "Setup & infrastructure",
     blurb: "Platform, broker, VPS — the plumbing that decides whether a working strategy stays working.",
     slugs: [
+      "how-to-use-metatrader-4", "ea-not-trading-fix",
       "how-to-set-up-xauusd-robot-mt4-mt5", "how-to-use-metatrader-5",
       "mt4-vs-mt5-for-gold-ea", "best-vps-gold-ea", "best-brokers-xauusd-gold-ea",
     ],

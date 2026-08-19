@@ -21,6 +21,9 @@ Key facts:
 - [About](https://xauusdrobot.com/about/) - [Contact](https://xauusdrobot.com/contact/)
 
 ## Robots & automation
+- [What Is Algorithmic Trading? A Practical Guide (2026)](https://xauusdrobot.com/blog/what-is-algorithmic-trading/): What algorithmic trading actually is: the three layers inside every algo, how retail algo trading differs from institutional, and where it genuinely helps and where it does not.
+- [AI Trading Bots: What They Really Do (2026 Guide)](https://xauusdrobot.com/blog/ai-trading-bot/): What AI trading bots actually do, what the label usually means on a sales page, the data problem nobody advertises, and a ten-minute test for any AI claim.
+- [Copy Trading vs Expert Advisors: Which Is Better?](https://xauusdrobot.com/blog/copy-trading-vs-ea/): Copy trading and Expert Advisors compared honestly: how each works, the hidden risk in both, real cost structures, and which suits which kind of trader.
 - [How Do Trading Robots Work?](https://xauusdrobot.com/blog/how-do-trading-robots-work/): The tick-to-order pipeline inside an EA, the risk module, filters, and the honest limits of automation.
 - [Do Gold Trading Robots Actually Work?](https://xauusdrobot.com/blog/do-gold-trading-robots-work/): An honest reality check on when XAUUSD robots succeed, when they fail, and how to spot a scam.
 - [XAUUSD Robot: The Complete 2026 Guide](https://xauusdrobot.com/blog/xauusd-robot-complete-guide/): What a gold trading robot is, how it works, the strategies it uses, and what to realistically expect.
@@ -32,6 +35,8 @@ Key facts:
 - [Gold EA Strategy Types Explained](https://xauusdrobot.com/blog/gold-ea-strategy-types/): Scalping, grid, martingale, trend and news gold EA strategies — how each works and the risks.
 
 ## Setup & infrastructure
+- [How to Use MetaTrader 4: Beginner Tutorial (2026)](https://xauusdrobot.com/blog/how-to-use-metatrader-4/): How to use MetaTrader 4 step by step: install and log in, the four windows that matter, placing orders with a stop-loss, and installing an Expert Advisor.
+- [EA Not Trading? 9 Reasons and How to Fix Each](https://xauusdrobot.com/blog/ea-not-trading-fix/): Expert Advisor attached but not opening trades? The nine causes in order of likelihood, how to confirm each from the Experts log, and the fix for every one.
 - [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Beginner-friendly, step-by-step install, backtest, and run guide.
 - [How to Use MetaTrader 5](https://xauusdrobot.com/blog/how-to-use-metatrader-5/): The complete first-week walkthrough — install, charts, orders with stops, the strategy tester, and running EAs.
 - [MT4 vs MT5 for a Gold EA](https://xauusdrobot.com/blog/mt4-vs-mt5-for-gold-ea/): Speed, backtesting, the economic calendar, and which MetaTrader platform to run your gold robot on.
