@@ -37,6 +37,8 @@ Key facts:
 ## Setup & infrastructure
 - [How to Use MetaTrader 4: Beginner Tutorial (2026)](https://xauusdrobot.com/blog/how-to-use-metatrader-4/): How to use MetaTrader 4 step by step: install and log in, the four windows that matter, placing orders with a stop-loss, and installing an Expert Advisor.
 - [EA Not Trading? 9 Reasons and How to Fix Each](https://xauusdrobot.com/blog/ea-not-trading-fix/): Expert Advisor attached but not opening trades? The nine causes in order of likelihood, how to confirm each from the Experts log, and the fix for every one.
+- [How to Use .set Preset Files in MT4 & MT5 (2026)](https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/): What a .set file contains, exactly where it has to go in MT4 and MT5, how to load and save one, and why a preset built for another account can quietly hurt yours.
+- [Running Multiple EAs on One Account: The Rules](https://xauusdrobot.com/blog/multiple-eas-one-account/): Can you run two Expert Advisors on one MT4 or MT5 account? Yes — but only with distinct magic numbers, shared-margin awareness and one EA per chart.
 - [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Beginner-friendly, step-by-step install, backtest, and run guide.
 - [How to Use MetaTrader 5](https://xauusdrobot.com/blog/how-to-use-metatrader-5/): The complete first-week walkthrough — install, charts, orders with stops, the strategy tester, and running EAs.
 - [MT4 vs MT5 for a Gold EA](https://xauusdrobot.com/blog/mt4-vs-mt5-for-gold-ea/): Speed, backtesting, the economic calendar, and which MetaTrader platform to run your gold robot on.

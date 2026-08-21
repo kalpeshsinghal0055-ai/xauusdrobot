@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>How to Use .set Preset Files in MT4 &amp; MT5 (2026)</title>
+<meta name="description" content="What a .set file contains, exactly where it has to go in MT4 and MT5, how to load and save one, and why a preset built for another account can quietly hurt yours.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/ea-preset-files-mt4-mt5.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/ea-preset-files-mt4-mt5.jpg">
+<meta property="og:title" content="Preset Files: How .set Actually Works in MetaTrader">
+<meta property="og:description" content="Where the file goes, how to load it, and why someone else's preset may not suit your account.">
+<meta name="twitter:title" content="How .set Preset Files Work">
+<meta name="twitter:description" content="Where the file goes, how to load it, and why someone else's preset may not suit your account.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}
+.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}
+main h2{border-left:2px solid var(--gold);padding-left:13px}
+.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Preset Files: How .set Actually Works in MetaTrader", "description": "A practical guide to MetaTrader preset files: what a .set file stores, the exact folder it belongs in on MT4 and MT5, how to load and save presets from the Expert Advisor inputs dialog, and why a preset built for a different account size or broker may not transfer safely.", "image": "https://xauusdrobot.com/images/ea-preset-files-mt4-mt5.jpg", "author": {"@type": "Organization", "name": "XAUUSD Robot Team"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}, "datePublished": "2026-08-01", "dateModified": "2026-08-01", "mainEntityOfPage": "https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Preset Files in MT4 &amp; MT5", "item": "https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is a .set file in MetaTrader?", "acceptedAnswer": {"@type": "Answer", "text": "It is a plain text file listing an Expert Advisor's input values, one per line, in the form InputName=value. It stores settings only — it cannot change the strategy, add features the EA does not have, or alter how the code behaves. You can open one in any text editor and read it before running it."}}, {"@type": "Question", "name": "Where do I put a .set file in MT4 or MT5?", "acceptedAnswer": {"@type": "Answer", "text": "Go to File then Open Data Folder inside the terminal, then MQL5 and Presets on MT5, or MQL4 and Presets on MT4. Always reach it through the terminal rather than browsing to Program Files, because each broker installation has its own separate data folder."}}, {"@type": "Question", "name": "How do I load a preset onto an Expert Advisor?", "acceptedAnswer": {"@type": "Answer", "text": "Open the EA properties with F7, go to the Inputs tab, click Load and choose the file, then click OK. Clicking Cancel or closing the window discards everything you loaded, which is the most common reason a preset appears not to work."}}, {"@type": "Question", "name": "Why is my preset not showing in the Load dialog?", "acceptedAnswer": {"@type": "Answer", "text": "Almost always because it is in the wrong data folder — usually another broker's terminal, or a path reached through Program Files instead of File then Open Data Folder. Copy it into the correct Presets folder and restart the terminal."}}, {"@type": "Question", "name": "Can I use someone else's preset file?", "acceptedAnswer": {"@type": "Answer", "text": "You can load it, but check the risk inputs first. Presets contain position sizing chosen for a particular balance, so a fixed lot suited to a large account can risk many times more on a small one. Symbol names, spread and leverage also differ between brokers, so test on demo with your own broker first."}}, {"@type": "Question", "name": "Do I need to restart MetaTrader after loading a preset?", "acceptedAnswer": {"@type": "Answer", "text": "Not for loading, but the EA must be re-attached or its properties confirmed with OK for the new values to apply. A restart is only needed after copying a new file into the Presets folder, and even then it is a precaution rather than a requirement."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>Preset Files: How .set Actually Works in MetaTrader</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
+<img class="hero" src="/images/ea-preset-files-mt4-mt5.jpg" alt="MetaTrader .set preset files explained for MT4 and MT5 Expert Advisors" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> A <strong>.set file</strong> is a plain text list of an Expert Advisor's input values &mdash; nothing more. It stores settings, not the strategy. Put it in <strong>MQL5/Presets</strong> (MT5) or <strong>MQL4/Presets</strong> (MT4) via File &rarr; Open Data Folder, then load it from the <strong>Inputs</strong> tab of the EA dialog using the <strong>Load</strong> button. The step most people miss: after loading you must click <strong>OK</strong>, and the EA has to be re-attached for the new values to take effect. A preset built for a different balance, broker or symbol can be actively unsafe on yours &mdash; the lot sizes and stop distances inside it were chosen for someone else's account.</p></div>
+
+
+<h2>What a .set file actually contains</h2>
+<p>Open one in Notepad and the mystery evaporates. It is a plain text file, one line per input, in the form <code>InputName=value</code>. That is the entire format.</p>
+<p>This matters because of what it means a preset <em>cannot</em> do. It cannot change the strategy, add a filter the EA does not have, or fix a system that does not work. It sets the values of switches that already exist in the code. A preset described as a &ldquo;profitable configuration&rdquo; is a list of numbers &mdash; useful, but not a different product.</p>
+<p>It also means you can read one before you run it. If a preset arrives from a stranger, open it and look at the risk inputs first: lot size, risk percentage, whether a stop-loss input is set to zero. Thirty seconds of reading has saved a lot of accounts.</p>
+
+<h2>Where the file has to go</h2>
+<p>MetaTrader will not find a preset sitting in your Downloads folder. There is exactly one correct location, and it differs by platform only in the folder name:</p>
+<table>
+<tr><th>Platform</th><th>Path</th></tr>
+<tr><td>MT5</td><td>File &rarr; Open Data Folder &rarr; <strong>MQL5 &rarr; Presets</strong></td></tr>
+<tr><td>MT4</td><td>File &rarr; Open Data Folder &rarr; <strong>MQL4 &rarr; Presets</strong></td></tr>
+</table>
+<p>Always reach the folder through <strong>File &rarr; Open Data Folder</strong> inside the terminal itself rather than browsing to Program Files. If you run more than one broker's terminal, each installation has its own data folder, and putting the preset in the wrong one produces the confusing situation where the file exists but the platform cannot see it.</p>
+<p>Restarting the terminal after copying the file is not strictly required, but it costs nothing and removes one variable when something does not appear.</p>
+
+<h2>Loading a preset, and the step people miss</h2>
+<ol>
+<li>Drag the EA onto a chart, or right-click the running EA and choose <strong>Properties</strong> (F7).</li>
+<li>Open the <strong>Inputs</strong> tab.</li>
+<li>Click <strong>Load</strong> at the bottom of the dialog and select the .set file.</li>
+<li>The values in the list change. <strong>Click OK.</strong></li>
+</ol>
+<p>Step four is where it goes wrong. Loading the file populates the dialog; it does not commit anything. Closing with Cancel, or with the window's X, discards every value you just loaded, and the EA carries on with its previous settings while you believe the preset is running.</p>
+<p>The way to confirm it took is to reopen Properties and check two or three distinctive values against the file. On a live account that thirty-second check is worth doing every time.</p>
+
+<h2>Saving your own</h2>
+<p>The <strong>Save</strong> button next to Load writes the current input values out to a .set file. This is more useful than it first appears:</p>
+<ul>
+<li><strong>Before changing anything.</strong> Save the working configuration first. If a change makes things worse, you can return to a known state instead of reconstructing it from memory.</li>
+<li><strong>Per account.</strong> A configuration that suits a $500 account is not the one for a $5,000 account. Name them accordingly.</li>
+<li><strong>Before reinstalling.</strong> A platform reinstall or a move to a <a href="/blog/best-vps-gold-ea/">VPS</a> wipes the data folder. A saved preset turns a rebuild into a two-minute job.</li>
+</ul>
+<p>Name files so the future version of you understands them: <code>gold-conservative-500usd.set</code> tells you something; <code>set1.set</code> does not.</p>
+
+<h2>Why someone else's preset may not suit your account</h2>
+<p>This is the part that costs money, and it is rarely explained when a preset is shared.</p>
+<p>A preset contains position sizing. If it uses a fixed lot &mdash; say 0.10 &mdash; that number was chosen against a specific balance. Applied to an account a tenth of the size, the same file risks ten times as much per trade. Nothing warns you; the EA simply does what it was told.</p>
+<p>Three other things travel badly:</p>
+<table>
+<tr><th>What differs</th><th>Why the preset breaks</th></tr>
+<tr><td>Broker symbol name</td><td>A preset referencing XAUUSD does nothing on a chart labelled XAUUSD.m</td></tr>
+<tr><td>Spread and execution</td><td>Stop and target distances tuned on a raw-spread account can be marginal on a standard one &mdash; see <a href="/blog/xauusd-spread-explained/">what gold's spread really costs</a></td></tr>
+<tr><td>Account leverage</td><td>Margin per position changes, so the same lot size may not be openable at all</td></tr>
+</table>
+<p>The safe procedure is unchanged from any other setting change: load the preset on demo first, on your own broker, and watch it for a full session before it touches funded money.</p>
+
+<h2>When a preset is the wrong fix</h2>
+<p>Presets get reached for when an EA is not behaving, and they are usually the wrong tool for that job. If the advisor is placing no trades at all, no configuration file will help &mdash; that is a setup problem, and the causes are listed in <a href="/blog/ea-not-trading-fix/">the troubleshooting checklist</a>.</p>
+<p>If the advisor is trading but losing, a different preset changes the numbers, not the edge. Swapping presets after a losing week is the automated equivalent of moving a stop-loss under pressure: it feels like action and it replaces a tested configuration with an untested one. The honest response is to <a href="/blog/how-to-backtest-gold-ea/">test the alternative properly</a> before running it, on the same broker and a long enough period to mean something.</p>
+
+
+<h2 id="faq">Questions we get</h2>
+<h3>What is a .set file in MetaTrader?</h3><p>A plain text list of an EA's input values. It stores settings only and cannot change the strategy itself.</p>
+<h3>Where do I put a .set file in MT4 or MT5?</h3><p>File → Open Data Folder → MQL5/Presets on MT5, or MQL4/Presets on MT4. Use the terminal's own menu, not Program Files.</p>
+<h3>How do I load a preset onto an Expert Advisor?</h3><p>F7 → Inputs tab → Load → pick the file → click OK. Cancelling discards the values you just loaded.</p>
+<h3>Why is my preset not showing in the Load dialog?</h3><p>It is in the wrong data folder. Copy it into the terminal's own MQL4/MQL5 Presets folder and restart.</p>
+<h3>Can I use someone else's preset file?</h3><p>Yes, but read the risk inputs first — lot sizes were chosen for someone else's balance. Test on demo before funding it.</p>
+<h3>Do I need to restart MetaTrader after loading a preset?</h3><p>No — but you must click OK, and re-attach the EA. Restart only after copying a new file into the Presets folder.</p>
+
+<h2>The verdict</h2>
+<p>A preset is a list of numbers, and treating it as anything more is where the trouble starts. Put it in the right folder, load it from the Inputs tab, click OK, then verify two values against the file. Read any preset that arrives from someone else before you run it, and remember that its lot sizes were chosen against a balance that is probably not yours.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Not sure a preset suits your account?</strong></p><p style="color:var(--muted);margin-top:4px;">Send us the .set file and your balance. We will tell you what the risk inputs actually mean at your account size.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/ea-not-trading-fix/" style="font-weight:600;">→ Your EA Isn't Placing Trades: The Checklist</a></li>
+<li><a href="/blog/how-to-set-up-xauusd-robot-mt4-mt5/" style="font-weight:600;">→ How to Set Up a XAUUSD Robot on MT4 & MT5</a></li>
+<li><a href="/blog/multiple-eas-one-account/" style="font-weight:600;">→ Running Multiple EAs on One Account</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss; a large majority of retail CFD accounts lose money. No results are guaranteed. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>
