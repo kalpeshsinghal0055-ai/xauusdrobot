@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>Running Multiple EAs on One Account: The Rules</title>
+<meta name="description" content="Can you run two Expert Advisors on one MT4 or MT5 account? Yes — but only with distinct magic numbers, shared-margin awareness and one EA per chart.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/multiple-eas-one-account/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/multiple-eas-one-account.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/multiple-eas-one-account.jpg">
+<meta property="og:title" content="Running Multiple EAs on One Account Without Chaos">
+<meta property="og:description" content="Magic numbers, shared margin, one EA per chart — and when a second account is the answer.">
+<meta name="twitter:title" content="Multiple EAs, One Account">
+<meta name="twitter:description" content="Magic numbers, shared margin, one EA per chart — and when a second account is the answer.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/multiple-eas-one-account/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}
+.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}
+main h2{border-left:2px solid var(--gold);padding-left:13px}
+.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Running Multiple EAs on One Account Without Chaos", "description": "How to run more than one Expert Advisor on a single MetaTrader account: the three resources EAs compete for, why magic numbers prevent advisors from closing each other's trades, how shared margin creates risk neither EA can see, and when a second account is the safer answer.", "image": "https://xauusdrobot.com/images/multiple-eas-one-account.jpg", "author": {"@type": "Organization", "name": "XAUUSD Robot Team"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}, "datePublished": "2026-08-01", "dateModified": "2026-08-01", "mainEntityOfPage": "https://xauusdrobot.com/blog/multiple-eas-one-account/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Multiple EAs, One Account", "item": "https://xauusdrobot.com/blog/multiple-eas-one-account/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Can I run two EAs on the same MT4 or MT5 account?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. MetaTrader allows multiple advisors on one account, but they do not coordinate. Each needs a unique magic number so it only manages its own trades, each needs its own chart window, and their combined position sizing has to be planned by you because neither can see the other's exposure."}}, {"@type": "Question", "name": "What is a magic number and why does it matter?", "acceptedAnswer": {"@type": "Answer", "text": "It is an integer an Expert Advisor stamps on every order it places so it can identify its own positions. If two advisors share the same magic number, each treats the other's trades as its own and may modify or close them. Any distinct integers work."}}, {"@type": "Question", "name": "Can I put two EAs on the same chart?", "acceptedAnswer": {"@type": "Answer", "text": "No. MetaTrader allows one advisor per chart window, and attaching a second silently replaces the first. To run two on the same instrument, open a second chart of that instrument and attach one advisor to each."}}, {"@type": "Question", "name": "How should I size risk when running multiple EAs?", "acceptedAnswer": {"@type": "Answer", "text": "Size for the combined worst case rather than per advisor. Two EAs each risking 2% can put 8% at risk on a day when both open two positions. Halving each advisor's risk relative to running it alone is the usual starting point."}}, {"@type": "Question", "name": "Is running multiple EAs actually diversification?", "acceptedAnswer": {"@type": "Answer", "text": "Only if they trade differently. Two trend-following systems on gold will often be positioned the same way at the same time, because they are reacting to the same move — which is one position in two parts rather than diversification. Check after a week whether both were long simultaneously."}}, {"@type": "Question", "name": "When should I use a separate account instead?", "acceptedAnswer": {"@type": "Answer", "text": "When the advisors would trade the same symbol in opposite directions, when their risk profiles differ sharply, or when you are evaluating one and need clean attribution. A cent account makes a separate evaluation account cheap."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>Running Multiple EAs on One Account Without Chaos</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
+<img class="hero" src="/images/multiple-eas-one-account.jpg" alt="Running multiple Expert Advisors on one MetaTrader account" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> Yes, MetaTrader allows it &mdash; but three things go wrong by default. <strong>1) Magic numbers:</strong> each EA must have a unique one, or advisors will manage and close each other's positions. <strong>2) Margin:</strong> it is shared across the whole account and neither EA can see what the other has committed, so combined exposure can exceed what either was sized for. <strong>3) Charts:</strong> one EA per chart &mdash; attaching a second replaces the first. Open a separate chart of the same symbol instead. If both EAs trade the same instrument in opposite directions, a second account is usually the cleaner answer.</p></div>
+
+
+<h2>The three things EAs compete for</h2>
+<p>MetaTrader will happily run several advisors at once. What it will not do is coordinate them. Each EA behaves as though it is alone on the account, and three shared resources turn that assumption into a problem.</p>
+<table>
+<tr><th>Shared resource</th><th>What goes wrong</th></tr>
+<tr><td>Position list</td><td>An EA that manages &ldquo;open trades&rdquo; without filtering can modify or close positions another EA opened</td></tr>
+<tr><td>Margin and equity</td><td>Both draw from one balance; neither knows the other's exposure, so combined risk exceeds either one's sizing</td></tr>
+<tr><td>The chart</td><td>Only one advisor can occupy a chart window at a time</td></tr>
+</table>
+<p>All three are solvable. The first is solved by a setting, the second by arithmetic you do yourself, and the third by opening more windows.</p>
+
+<h2>Magic numbers: the setting that prevents chaos</h2>
+<p>A magic number is an integer an EA stamps onto every order it places. It exists for exactly one purpose: so the advisor can tell its own positions apart from everything else on the account.</p>
+<p>When two EAs share the same magic number &mdash; and many default to 0 or 12345 &mdash; each sees the other's trades as its own. A trailing-stop routine belonging to one advisor will happily move the stop on a position the other opened. A close-all-on-target rule will close trades it never placed.</p>
+<div class="box"><p><strong>Rule:</strong> before running a second EA, open the properties of both and give each a distinct magic number. Any different integers work &mdash; 1001 and 1002 is fine. Write them down alongside your preset files, because a reinstall resets them.</p></div>
+<p>Manual trades carry no magic number, which is why a well-written EA also leaves them alone. If you trade by hand on the same account, check that any advisor you add filters by magic number rather than acting on every open position.</p>
+
+<h2>Margin is shared, and nobody is tracking the total</h2>
+<p>This is the risk that survives after the magic numbers are set, and it is the one that actually empties accounts.</p>
+<p>Suppose each EA is configured to risk 2% per trade. Individually reasonable. Run both, and a day where each opens two positions puts 8% of the account at risk simultaneously. Neither advisor did anything wrong, and neither can see the other's contribution.</p>
+<p>It compounds in a specific way on gold. If both systems are trend-following on XAU/USD, they will frequently be positioned the <em>same</em> way at the same time, because they are reading the same move. Diversification you thought you had turns out to be one position in two parts, and the <a href="/blog/gold-ea-drawdown-explained/">drawdown</a> arrives on both at once.</p>
+<p>The fix is arithmetic rather than software: size each EA so the <em>combined</em> worst case is survivable. Two advisors on one account should generally each risk half what a single one would, not the same amount twice. The account-size reasoning is in <a href="/blog/how-much-money-to-start-gold-ea/">how much money to start a gold EA</a>.</p>
+
+<h2>One chart, one EA</h2>
+<p>MetaTrader permits exactly one Expert Advisor per chart window. Dragging a second onto an occupied chart replaces the first, usually without a warning that anything was removed &mdash; a common way to discover, days later, that an advisor stopped running.</p>
+<p>To run two EAs on the same instrument, open a second chart of that instrument. Both windows can show XAUUSD, each with its own advisor. The timeframe of the chart is irrelevant unless the EA reads it, but keeping each advisor on the timeframe its author intended avoids one more variable.</p>
+<p>Because every chart consumes memory and every EA consumes processing, an account running several advisors is a strong argument for a <a href="/blog/best-vps-gold-ea/">VPS</a> rather than a laptop that sleeps.</p>
+
+<h2>A sane way to run two</h2>
+<ol>
+<li><strong>Demo both together first</strong>, for a full week. Problems between advisors only appear when both are active.</li>
+<li><strong>Distinct magic numbers</strong>, written down.</li>
+<li><strong>Halve the risk on each</strong> relative to running one alone.</li>
+<li><strong>Separate charts</strong>, one advisor each.</li>
+<li><strong>Check correlation</strong> after a week: if both were long at the same times, you have one strategy running twice.</li>
+<li><strong>Set an account-level ceiling</strong> &mdash; a drawdown level at which you stop everything, independent of what either EA thinks.</li>
+</ol>
+
+<h2>When a second account is the better answer</h2>
+<p>Some combinations should not share an account at all.</p>
+<p><strong>Opposite directions on the same symbol.</strong> One EA long XAUUSD while another is short is not a hedge in any useful sense; on a netting account they cancel to a smaller position, and on a hedging account you pay two spreads to hold roughly nothing.</p>
+<p><strong>Very different risk profiles.</strong> A conservative trend system sharing margin with an aggressive one means the conservative system's capital is exposed to the aggressive one's worst day.</p>
+<p><strong>Anything you want to evaluate.</strong> On a shared account you cannot cleanly attribute results. If the point is to find out whether an advisor works, give it its own account &mdash; ideally a cent account, which makes the test affordable.</p>
+
+
+<h2 id="faq">Questions we get</h2>
+<h3>Can I run two EAs on the same MT4 or MT5 account?</h3><p>Yes, with unique magic numbers, one chart each, and combined risk you size yourself — they cannot see each other.</p>
+<h3>What is a magic number and why does it matter?</h3><p>An ID stamped on each EA's orders. Shared numbers make advisors close each other's trades; give each a distinct one.</p>
+<h3>Can I put two EAs on the same chart?</h3><p>No — one EA per chart. Open a second chart of the same symbol and attach the other advisor there.</p>
+<h3>How should I size risk when running multiple EAs?</h3><p>Halve each EA's risk versus running it alone, and plan for the combined worst case, not per-advisor limits.</p>
+<h3>Is running multiple EAs actually diversification?</h3><p>Only if they genuinely differ. Two trend systems on gold usually take the same side at the same time.</p>
+<h3>When should I use a separate account instead?</h3><p>For opposite-direction systems, mismatched risk profiles, or when you need clean results for one advisor.</p>
+
+<h2>The verdict</h2>
+<p>MetaTrader lets several advisors share an account but does nothing to make them cooperate. Give each a distinct magic number, one chart, and half the risk you would give a single system — then check after a week whether they were genuinely trading different things. If they were not, you were running one strategy twice and paying two spreads for the privilege.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Planning to run two of our EAs together?</strong></p><p style="color:var(--muted);margin-top:4px;">Tell us which pair and your balance, and we will suggest magic numbers and a combined risk split that survives a bad week.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/ea-preset-files-mt4-mt5/" style="font-weight:600;">→ Preset Files: How .set Actually Works</a></li>
+<li><a href="/blog/gold-ea-risk-management/" style="font-weight:600;">→ Gold EA Risk Management: Safe Settings</a></li>
+<li><a href="/blog/best-vps-gold-ea/" style="font-weight:600;">→ Best VPS for Gold EA Trading</a></li>
+<li><a href="/blog/gold-ea-drawdown-explained/" style="font-weight:600;">→ Drawdown Explained: The Number That Matters</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss; a large majority of retail CFD accounts lose money. No results are guaranteed. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>

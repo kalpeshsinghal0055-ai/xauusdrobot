@@ -10,6 +10,24 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "multiple-eas-one-account",
+    title: "Running Multiple EAs on One Account Without Chaos",
+    excerpt: "Magic numbers, shared margin nobody is tracking, one advisor per chart — and the combinations that belong on a second account entirely.",
+    category: "Guides",
+    date: "2026-08-21",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
+    slug: "ea-preset-files-mt4-mt5",
+    title: "Preset Files: How .set Actually Works in MetaTrader",
+    excerpt: "What a .set file stores, the exact folder it belongs in, the step people miss when loading one, and why someone else's preset can quietly hurt your account.",
+    category: "Tutorial",
+    date: "2026-08-21",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
     slug: "ea-not-trading-fix",
     title: "Your EA Isn't Placing Trades. Here's the Checklist.",
     excerpt: "Nine causes in order of likelihood, how to confirm each from the Experts log, and the fix for every one — plus when not trading is the EA working correctly.",
@@ -403,6 +421,7 @@ const LANES: { key: string; label: string; blurb: string; slugs: string[] }[] = 
     label: "Setup & infrastructure",
     blurb: "Platform, broker, VPS — the plumbing that decides whether a working strategy stays working.",
     slugs: [
+      "ea-preset-files-mt4-mt5", "multiple-eas-one-account",
       "how-to-use-metatrader-4", "ea-not-trading-fix",
       "how-to-set-up-xauusd-robot-mt4-mt5", "how-to-use-metatrader-5",
       "mt4-vs-mt5-for-gold-ea", "best-vps-gold-ea", "best-brokers-xauusd-gold-ea",
