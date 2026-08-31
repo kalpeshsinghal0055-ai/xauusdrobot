@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>XAUUSD Robot — The Lab</title>
+  <link>https://xauusdrobot.com/blog/</link>
+  <atom:link href="https://xauusdrobot.com/feed.xml" rel="self" type="application/rss+xml" />
+  <description>Field notes on automated gold trading: Expert Advisor mechanics, MT4/MT5 setup, testing and verification, and the execution costs that decide live results.</description>
+  <language>en</language>
+  <lastBuildDate>Sat, 22 Aug 2026 12:00:00 +0000</lastBuildDate>
+  <item>
+    <title>Backtest Profitable, Live Account Losing. Why?</title>
+    <link>https://xauusdrobot.com/blog/backtest-live-mismatch/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/backtest-live-mismatch/</guid>
+    <description>Seven causes ordered by likelihood: curve fitting, unrealistic spread, unmodelled slippage, coarse tick data, broker mismatch, regime change and quiet human intervention.</description>
+    <pubDate>Sat, 22 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>The MT5 Strategy Tester, Operated Properly</title>
+    <link>https://xauusdrobot.com/blog/mt5-strategy-tester-guide/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/mt5-strategy-tester-guide/</guid>
+    <description>Modelling mode, spread, deposit and the forward period — the five settings that decide whether a backtest means anything, and which report figures to read first.</description>
+    <pubDate>Sat, 22 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Running MetaTrader and an EA on a Mac</title>
+    <link>https://xauusdrobot.com/blog/metatrader-on-mac/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/metatrader-on-mac/</guid>
+    <description>Four routes compared on whether they genuinely support Expert Advisors, why Apple Silicon removed the easy answer, and where the advisor should actually live.</description>
+    <pubDate>Sat, 22 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Can You Run an Expert Advisor on a Phone?</title>
+    <link>https://xauusdrobot.com/blog/run-ea-on-phone/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/run-ea-on-phone/</guid>
+    <description>No — the mobile apps ship without the MQL engine entirely. Why that is structural, what the apps are genuinely good for, and the three setups people use instead.</description>
+    <pubDate>Sat, 22 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Running Multiple EAs on One Account Without Chaos</title>
+    <link>https://xauusdrobot.com/blog/multiple-eas-one-account/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/multiple-eas-one-account/</guid>
+    <description>Magic numbers, shared margin nobody is tracking, one advisor per chart — and the combinations that belong on a second account entirely.</description>
+    <pubDate>Fri, 21 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Preset Files: How .set Actually Works in MetaTrader</title>
+    <link>https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/</guid>
+    <description>What a .set file stores, the exact folder it belongs in, the step people miss when loading one, and why someone else's preset can quietly hurt your account.</description>
+    <pubDate>Fri, 21 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Your EA Isn't Placing Trades. Here's the Checklist.</title>
+    <link>https://xauusdrobot.com/blog/ea-not-trading-fix/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/ea-not-trading-fix/</guid>
+    <description>Nine causes in order of likelihood, how to confirm each from the Experts log, and the fix for every one — plus when not trading is the EA working correctly.</description>
+    <pubDate>Tue, 18 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Copy Trading vs Expert Advisors: Two Different Bets</title>
+    <link>https://xauusdrobot.com/blog/copy-trading-vs-ea/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/copy-trading-vs-ea/</guid>
+    <description>One bets on a person staying disciplined, the other on rules staying valid. The hidden risk in each, real cost structures, and which suits whom.</description>
+    <pubDate>Tue, 18 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>AI Trading Bots: Separating the Software From the Sales Pitch</title>
+    <link>https://xauusdrobot.com/blog/ai-trading-bot/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/ai-trading-bot/</guid>
+    <description>What the AI label usually covers, the three things a model can genuinely do, why prediction accuracy is not an edge, and a ten-minute test for any claim.</description>
+    <pubDate>Tue, 18 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>What Is Algorithmic Trading? The Practical Version</title>
+    <link>https://xauusdrobot.com/blog/what-is-algorithmic-trading/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/what-is-algorithmic-trading/</guid>
+    <description>The three layers inside every algorithm, how retail algo trading differs from institutional, and the specific things automation does and does not fix.</description>
+    <pubDate>Tue, 18 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to Use MetaTrader 4: Everything That Actually Matters</title>
+    <link>https://xauusdrobot.com/blog/how-to-use-metatrader-4/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/how-to-use-metatrader-4/</guid>
+    <description>Install and log in, the four windows that do all the work, placing an order with the stop typed first, and installing an Expert Advisor on MT4.</description>
+    <pubDate>Tue, 18 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to Use MetaTrader 5: The Complete First-Week Walkthrough</title>
+    <link>https://xauusdrobot.com/blog/how-to-use-metatrader-5/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/how-to-use-metatrader-5/</guid>
+    <description>Install and login, reading charts, orders with the stop typed first, the strategy tester, and running your first EA — MT5's four real skills.</description>
+    <pubDate>Tue, 11 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Support and Resistance in Gold: How XAUUSD Really Behaves at Levels</title>
+    <link>https://xauusdrobot.com/blog/support-resistance-gold/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/support-resistance-gold/</guid>
+    <description>Zones not lines, round-number magnetism, the wick-hunt trap — and how to trade levels with stops the hunt can't reach.</description>
+    <pubDate>Mon, 10 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How Do Trading Robots Work? The Honest Look Inside an EA</title>
+    <link>https://xauusdrobot.com/blog/how-do-trading-robots-work/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/how-do-trading-robots-work/</guid>
+    <description>The tick-to-order pipeline, the risk module, session filters, what automation genuinely does better — and what no robot can ever do.</description>
+    <pubDate>Thu, 06 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>What Is XAUUSD? The Symbol, the Quote and How Gold Actually Trades</title>
+    <link>https://xauusdrobot.com/blog/what-is-xauusd/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/what-is-xauusd/</guid>
+    <description>Gold's currency code decoded — the quote, pips and lots, spot vs futures vs ETFs, and how XAUUSD differs from owning metal.</description>
+    <pubDate>Wed, 05 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Can You Trade Gold With $100? Yes — Here's the Only Way It Works</title>
+    <link>https://xauusdrobot.com/blog/trade-gold-with-100/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/trade-gold-with-100/</guid>
+    <description>The cent-account and 0.01-lot math, what $100 can realistically do, the mistakes that destroy tiny accounts, and the tuition-first growth path.</description>
+    <pubDate>Wed, 05 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Best Indicators for Gold Trading: The Few That Earn Their Place</title>
+    <link>https://xauusdrobot.com/blog/best-indicators-gold-trading/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/best-indicators-gold-trading/</guid>
+    <description>Why indicators describe rather than predict, the minimal honest stack (trend MA, ATR, sessions), and the indicator-soup myth that costs money.</description>
+    <pubDate>Sun, 02 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Free Gold Signals: Why Most Lose You Money (and What Works Instead)</title>
+    <link>https://xauusdrobot.com/blog/free-gold-signals/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/free-gold-signals/</guid>
+    <description>How signal channels really earn, the 6 red flags of XAUUSD signal scams, why even honest signals underperform — and the transparent alternatives.</description>
+    <pubDate>Sat, 01 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Gold Price Prediction: The Honest Answer Nobody Gives You</title>
+    <link>https://xauusdrobot.com/blog/gold-price-prediction/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/gold-price-prediction/</guid>
+    <description>Why bank and AI forecasts keep missing, what genuinely drives XAUUSD, and how traders profit by reacting with rules instead of predicting.</description>
+    <pubDate>Sat, 01 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Best Forex Robot 2026: The Selection Framework That Filters Out 95%</title>
+    <link>https://xauusdrobot.com/blog/best-forex-robot/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/best-forex-robot/</guid>
+    <description>Skip the affiliate top-10 lists — the 7-point verification checklist that eliminates most robots, and what a legitimate EA actually looks like.</description>
+    <pubDate>Sat, 01 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Is Forex Trading Profitable? The Numbers Nobody Shows You</title>
+    <link>https://xauusdrobot.com/blog/is-forex-trading-profitable/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/is-forex-trading-profitable/</guid>
+    <description>The broker-disclosed loss statistics, the four controllable reasons most accounts lose, and what the profitable minority does differently.</description>
+    <pubDate>Sat, 01 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Gold Investment vs Gold Trading: Two Different Games Explained</title>
+    <link>https://xauusdrobot.com/blog/gold-investment-vs-trading/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/gold-investment-vs-trading/</guid>
+    <description>Physical, ETFs and XAUUSD CFDs compared by goal, risk, cost and horizon — and an honest sorting of which path fits which person.</description>
+    <pubDate>Sat, 01 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>How to Trade Gold (XAUUSD): The Complete Beginner's Guide</title>
+    <link>https://xauusdrobot.com/blog/how-to-trade-gold-xauusd/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/how-to-trade-gold-xauusd/</guid>
+    <description>From your first broker account to your first rule-based trade — pips, lots, sessions, strategies, risk rules and the manual vs automated decision.</description>
+    <pubDate>Sat, 01 Aug 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Slippage in Gold Trading: Why Your Fills Are Worse Than Your Backtest</title>
+    <link>https://xauusdrobot.com/blog/gold-slippage-explained/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/gold-slippage-explained/</guid>
+    <description>The variable execution cost — latency, thin liquidity and gaps, when gold slips hardest, why backtests hide it, and how to keep it a rounding error.</description>
+    <pubDate>Fri, 31 Jul 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Best Leverage for XAUUSD: What Gold Traders Actually Need</title>
+    <link>https://xauusdrobot.com/blog/best-leverage-xauusd/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/best-leverage-xauusd/</guid>
+    <description>1:100 or 1:500? The margin math, the leverage-risk myth almost everyone believes, stop-out mechanics — and the honest answer for EA users.</description>
+    <pubDate>Thu, 30 Jul 2026 09:00:00 +0000</pubDate>
+  </item>
+</channel>
+</rss>

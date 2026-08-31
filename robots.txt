@@ -50,3 +50,4 @@ Allow: /
 
 User-agent: Amazonbot
 Allow: /
+Sitemap: https://xauusdrobot.com/feed.xml
