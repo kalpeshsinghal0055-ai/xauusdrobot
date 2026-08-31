@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>Backtest Profitable, Live Losing: 7 Reasons Why</title>
+<meta name="description" content="Seven reasons an EA that backtested well loses live: curve fitting, spread and slippage, data quality, symbol mismatch, regime change and human intervention.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/backtest-live-mismatch/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/backtest-live-mismatch.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/backtest-live-mismatch.jpg">
+<meta property="og:title" content="Backtest Profitable, Live Account Losing. Why?">
+<meta property="og:description" content="Seven causes, ordered by how often each is the real one.">
+<meta name="twitter:title" content="Why Live Doesn't Match the Backtest">
+<meta name="twitter:description" content="Seven causes, ordered by how often each is the real one.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/backtest-live-mismatch/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
+nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}
+.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}
+main h2{border-left:2px solid var(--gold);padding-left:13px}
+.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+.tgnav{display:inline-flex;align-items:center;gap:5px;background:#229ED9;color:#fff!important;padding:6px 14px;border-radius:8px;font-weight:700;font-size:14px;margin-left:16px}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:26px 0 50px;margin-top:20px}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Backtest Profitable, Live Account Losing. Why?", "description": "A diagnostic guide to the gap between backtest and live results for Expert Advisors: curve fitting, unrealistic spread assumptions, slippage, poor tick data, symbol and broker differences, market regime change, and the human interventions that quietly break a working system.", "image": "https://xauusdrobot.com/images/backtest-live-mismatch.jpg", "author": {"@type": "Organization", "name": "XAUUSD Robot Team"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}, "datePublished": "2026-08-01", "dateModified": "2026-08-01", "mainEntityOfPage": "https://xauusdrobot.com/blog/backtest-live-mismatch/"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Backtest vs Live", "item": "https://xauusdrobot.com/blog/backtest-live-mismatch/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why does my EA make money in backtest but lose live?", "acceptedAnswer": {"@type": "Answer", "text": "Most often the settings were fitted to historical data rather than to a durable behaviour, so they describe the past precisely and the future not at all. The next most common causes are an unrealistically tight test spread, slippage the tester does not model, and coarse tick data that hid stop-losses being reached inside a candle."}}, {"@type": "Question", "name": "How much difference between backtest and live is normal?", "acceptedAnswer": {"@type": "Answer", "text": "Live consistently trailing the backtest somewhat is expected, because every simulation is optimistic about execution costs. A profitable backtest turning into a steadily losing live account is not variance — that indicates a specific cause, usually in the test setup rather than the market."}}, {"@type": "Question", "name": "How do I know if my EA is curve fitted?", "acceptedAnswer": {"@type": "Answer", "text": "Run the same settings on data the optimiser never saw, using the Forward setting in the Strategy Tester. If results are strong on the optimised portion and collapse on the unseen portion, the settings were fitted. Shifting the date range by a few months and watching results fall apart is another reliable sign."}}, {"@type": "Question", "name": "Does slippage really change results that much?", "acceptedAnswer": {"@type": "Answer", "text": "For frequently trading systems, yes. Slippage is worst exactly when an advisor wants to act — breakouts, news, the session open — so it works against entries and stop-losses at the same time. A strategy taking many small profits can lose its entire edge to it while a slower system barely notices."}}, {"@type": "Question", "name": "Should I re-optimise when live results disappoint?", "acceptedAnswer": {"@type": "Answer", "text": "Rarely, and not as a first response. Re-optimising on the period that just disappointed you fits the settings to that stretch as well, which is the same mistake repeated. Diagnose the cause first — a forward test, realistic spread and real tick data usually reveal it."}}, {"@type": "Question", "name": "Can testing on a different broker cause the difference?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Spread structure, swap rates, execution model and even the recorded price history differ between brokers, and gold varies more than most instruments. Check the symbol name too, since XAUUSD and XAUUSD.m are separate symbols with separate data."}}]}</script>
+</head>
+<body>
+<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/blog/">Blog</a><a class="tgnav" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to us</a></nav></div></header>
+<main><div class="wrap">
+<h1>Backtest Profitable, Live Account Losing. Why?</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated August 2026</p>
+<img class="hero" src="/images/backtest-live-mismatch.jpg" alt="Why an EA that backtested profitably loses money on a live account" width="1200" height="630" style="width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block;" />
+
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> Work through these in order of likelihood. <strong>1) Curve fitting</strong> &mdash; the settings were tuned until history looked perfect. <strong>2) Spread</strong> &mdash; tested on an unrealistically tight value. <strong>3) Slippage</strong> &mdash; the tester fills at the modelled price, your broker does not. <strong>4) Tick data</strong> &mdash; a coarse modelling mode hid intrabar stop hits. <strong>5) Symbol or broker mismatch</strong> &mdash; different spread, swap and history. <strong>6) Regime change</strong> &mdash; the market stopped behaving the way the test period did. <strong>7) Intervention</strong> &mdash; someone closed trades or changed settings mid-run. A gap of some size is normal; a total reversal usually means one of the first four.</p></div>
+
+
+<h2>Some gap is expected. A reversal is not.</h2>
+<p>Live results trailing a backtest slightly is normal and unavoidable &mdash; every simulation is optimistic about costs. What needs explaining is the other case: a backtest showing steady growth and a live account losing steadily on the same settings. That is not variance. Something specific is different, and it is usually one of seven things.</p>
+
+<h2>1. The settings were fitted to history</h2>
+<p>This is the most common cause by a wide margin. Optimisation searches thousands of parameter combinations and returns whichever performed best on that exact data. If the search space is large enough, something will always look excellent &mdash; not because it captured a real behaviour, but because it memorised the noise in that particular stretch of history.</p>
+<p>The tell is a backtest that is <em>too</em> good: a smooth equity curve, an unusually high win rate, and results that fall apart if you shift the date range by a few months.</p>
+<p><strong>The test:</strong> run the same settings on a period the optimiser never saw. The Forward setting in the <a href="/blog/mt5-strategy-tester-guide/">MT5 Strategy Tester</a> does this in one run. If the forward half collapses, you have your answer.</p>
+
+<h2>2. The spread you tested is not the spread you trade</h2>
+<p>Leaving the tester's spread on &ldquo;current&rdquo; captures whatever it happens to be at that moment. Run it during a quiet hour and every trade is credited with a spread it would never have received during a session.</p>
+<p>The effect scales with how often the advisor trades. A system taking one trade a week barely notices; a scalper taking twenty a day can have its entire edge consumed. The arithmetic is in <a href="/blog/xauusd-spread-explained/">what gold's spread really costs</a>.</p>
+<p><strong>The test:</strong> rerun with the spread set 50% higher than your broker's typical figure. If profitability disappears, the edge was never larger than the costs.</p>
+
+<h2>3. Slippage, which the tester does not model</h2>
+<p>The Strategy Tester fills orders at the price it modelled. A live broker fills at whatever was available when the order arrived &mdash; which, during fast movement, is somewhere else.</p>
+<p>This asymmetry is not random. Slippage tends to be worse precisely when the advisor most wants to act: at breakouts, around news, at the open. Stop-losses are hit at worse prices than modelled; entries fill later than modelled. Both work against you, which is why the direction of the gap is consistently unfavourable rather than even. <a href="/blog/gold-slippage-explained/">Why fills beat backtests</a> covers the mechanics.</p>
+
+<h2>4. The tick data was too coarse to be honest</h2>
+<p>If the test ran on anything other than real ticks, it did not see what happened inside each candle. On gold, where a single hour can travel more than a currency pair moves in a day, that matters enormously.</p>
+<p>A stop-loss reached at 14:23 and recovered by 14:31 is a loss in reality and, in a coarse modelling mode, may never register at all. The backtest records a winner. Repeat that a few dozen times across a test and the equity curve is fiction.</p>
+<p><strong>The test:</strong> rerun on <em>Every tick based on real ticks</em> and compare. If the result changes materially, trust the new one.</p>
+
+<h2>5. Different broker, different instrument</h2>
+<p>Testing on one broker's data and trading on another's is testing a different instrument. Spread structure, swap rates, execution model, even the symbol's price history all differ. Gold specifically varies more between brokers than most instruments.</p>
+<p>The symbol suffix is worth checking too: XAUUSD and XAUUSD.m are separate symbols with separate histories, and a test run on one says less than it appears to about the other.</p>
+<p><strong>The fix:</strong> test on the account you will trade, using that broker's downloaded history.</p>
+
+<h2>6. The market changed</h2>
+<p>This is the honest, uncomfortable one. A ruleset derived from a trending period keeps executing faithfully into a ranging one. Nothing is broken; the condition the rules describe stopped occurring.</p>
+<p>Gold is prone to this because its behaviour is driven by macro forces that shift in phases &mdash; a year of rate-driven trending looks nothing like a year of consolidation. An advisor built and tested through one can look inexplicably poor in the other.</p>
+<p>There is no clever fix. What helps is testing across several distinct periods rather than one long favourable stretch, and accepting that a strategy has conditions it suits and conditions it does not.</p>
+
+<h2>7. Someone intervened</h2>
+<p>Worth stating plainly because it is common and rarely admitted. Closing a losing trade early, skipping a signal that felt wrong, nudging a setting after a bad week &mdash; each converts the tested system into a different, untested one.</p>
+<p>The backtest measured the rules executing without exception. If the live account did not do that, the two are not comparable, and the comparison will keep failing until they are.</p>
+
+<h2>A diagnostic order that saves time</h2>
+<ol>
+<li>Rerun with a <strong>forward period</strong>. Collapse there means fitting &mdash; stop, and rebuild.</li>
+<li>Rerun with <strong>real ticks</strong> and a <strong>realistic spread</strong>. If profit vanishes, the edge was inside the costs.</li>
+<li>Compare the <strong>symbol and broker</strong> against what you are trading live.</li>
+<li>Compare <strong>trade counts</strong> over the same window. Far fewer live trades usually means a filter or the symbol; far more usually means different settings.</li>
+<li>Check the <strong>Experts log</strong> for errors the backtest never encountered &mdash; requotes, insufficient margin, rejections.</li>
+<li>Only then consider <strong>regime change</strong>, because the first five are far more likely.</li>
+</ol>
+
+
+<h2 id="faq">Questions we get</h2>
+<h3>Why does my EA make money in backtest but lose live?</h3><p>Usually curve fitting, then unrealistic spread, unmodelled slippage, or coarse tick data hiding intrabar stop hits.</p>
+<h3>How much difference between backtest and live is normal?</h3><p>Live trailing somewhat is normal. A profitable test becoming a losing account points to a specific setup problem.</p>
+<h3>How do I know if my EA is curve fitted?</h3><p>Test on unseen data with the Forward setting. Strong before and collapsing after means the settings were fitted.</p>
+<h3>Does slippage really change results that much?</h3><p>For high-frequency systems yes — it hits hardest at breakouts and news, working against entries and stops together.</p>
+<h3>Should I re-optimise when live results disappoint?</h3><p>Rarely. Re-optimising on the disappointing period repeats the fitting mistake. Diagnose the cause first.</p>
+<h3>Can testing on a different broker cause the difference?</h3><p>Yes — spread, swap, execution and price history all differ by broker, and gold varies more than most instruments.</p>
+
+<h2>The verdict</h2>
+<p>A backtest is a claim about the past under assumptions you chose. When live results contradict it, the assumptions are the first place to look, not the market — and in most cases a forward test, a realistic spread and real tick data will locate the problem within an hour. What survives all three checks and still disappoints is worth taking seriously as a regime question. What fails them was never a strategy.</p>
+
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Live account not matching the test?</strong></p><p style="color:var(--muted);margin-top:4px;">Send us the backtest report and your tester settings and we will tell you which of the seven it is.</p><a class="tgbtn" href="https://t.me/xauusdrobot_bot" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/blog/mt5-strategy-tester-guide/" style="font-weight:600;">→ The MT5 Strategy Tester, Operated Properly</a></li>
+<li><a href="/blog/how-to-backtest-gold-ea/" style="font-weight:600;">→ How to Backtest a Gold EA Properly</a></li>
+<li><a href="/blog/gold-slippage-explained/" style="font-weight:600;">→ Slippage in Gold Trading Explained</a></li>
+<li><a href="/blog/ea-not-trading-fix/" style="font-weight:600;">→ Your EA Isn't Placing Trades: The Checklist</a></li>
+</ul></section>
+
+<p class="disclaim"><strong>Risk &amp; affiliate disclosure:</strong> Educational content only, not financial advice. Trading gold (XAUUSD), forex and CFDs carries substantial risk of loss; a large majority of retail CFD accounts lose money. No results are guaranteed. We may earn a commission if you open an account through partner links, at no extra cost to you — this funds the free EA. See our <a href="/affiliate-disclosure/">Affiliate Disclosure</a>.</p>
+</div></main>
+<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/privacy-policy/">Privacy</a> · <a href="/affiliate-disclosure/">Affiliate Disclosure</a> · <a href="/blog/">Blog</a></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+</body></html>

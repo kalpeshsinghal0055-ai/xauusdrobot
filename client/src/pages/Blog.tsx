@@ -10,6 +10,42 @@ import { useSeo } from "@/lib/seo";
 
 const blogPosts = [
   {
+    slug: "backtest-live-mismatch",
+    title: "Backtest Profitable, Live Account Losing. Why?",
+    excerpt: "Seven causes ordered by likelihood: curve fitting, unrealistic spread, unmodelled slippage, coarse tick data, broker mismatch, regime change and quiet human intervention.",
+    category: "Guides",
+    date: "2026-08-22",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
+    slug: "mt5-strategy-tester-guide",
+    title: "The MT5 Strategy Tester, Operated Properly",
+    excerpt: "Modelling mode, spread, deposit and the forward period — the five settings that decide whether a backtest means anything, and which report figures to read first.",
+    category: "Tutorial",
+    date: "2026-08-22",
+    readTime: "8 min read",
+    ext: true,
+  },
+  {
+    slug: "metatrader-on-mac",
+    title: "Running MetaTrader and an EA on a Mac",
+    excerpt: "Four routes compared on whether they genuinely support Expert Advisors, why Apple Silicon removed the easy answer, and where the advisor should actually live.",
+    category: "Tutorial",
+    date: "2026-08-22",
+    readTime: "7 min read",
+    ext: true,
+  },
+  {
+    slug: "run-ea-on-phone",
+    title: "Can You Run an Expert Advisor on a Phone?",
+    excerpt: "No — the mobile apps ship without the MQL engine entirely. Why that is structural, what the apps are genuinely good for, and the three setups people use instead.",
+    category: "Guides",
+    date: "2026-08-22",
+    readTime: "6 min read",
+    ext: true,
+  },
+  {
     slug: "multiple-eas-one-account",
     title: "Running Multiple EAs on One Account Without Chaos",
     excerpt: "Magic numbers, shared margin nobody is tracking, one advisor per chart — and the combinations that belong on a second account entirely.",
@@ -421,6 +457,7 @@ const LANES: { key: string; label: string; blurb: string; slugs: string[] }[] = 
     label: "Setup & infrastructure",
     blurb: "Platform, broker, VPS — the plumbing that decides whether a working strategy stays working.",
     slugs: [
+      "run-ea-on-phone", "metatrader-on-mac",
       "ea-preset-files-mt4-mt5", "multiple-eas-one-account",
       "how-to-use-metatrader-4", "ea-not-trading-fix",
       "how-to-set-up-xauusd-robot-mt4-mt5", "how-to-use-metatrader-5",
@@ -432,6 +469,7 @@ const LANES: { key: string; label: string; blurb: string; slugs: string[] }[] = 
     label: "Testing & verification",
     blurb: "Prove it before you fund it: backtests, track records, drawdown and prop-firm rules.",
     slugs: [
+      "mt5-strategy-tester-guide", "backtest-live-mismatch",
       "how-to-backtest-gold-ea", "how-to-read-myfxbook",
       "gold-ea-drawdown-explained", "best-gold-ea-prop-firm-ftmo",
     ],

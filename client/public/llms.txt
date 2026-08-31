@@ -39,6 +39,8 @@ Key facts:
 - [EA Not Trading? 9 Reasons and How to Fix Each](https://xauusdrobot.com/blog/ea-not-trading-fix/): Expert Advisor attached but not opening trades? The nine causes in order of likelihood, how to confirm each from the Experts log, and the fix for every one.
 - [How to Use .set Preset Files in MT4 & MT5 (2026)](https://xauusdrobot.com/blog/ea-preset-files-mt4-mt5/): What a .set file contains, exactly where it has to go in MT4 and MT5, how to load and save one, and why a preset built for another account can quietly hurt yours.
 - [Running Multiple EAs on One Account: The Rules](https://xauusdrobot.com/blog/multiple-eas-one-account/): Can you run two Expert Advisors on one MT4 or MT5 account? Yes — but only with distinct magic numbers, shared-margin awareness and one EA per chart.
+- [Can You Run an EA on Your Phone? (2026 Answer)](https://xauusdrobot.com/blog/run-ea-on-phone/): No — the MT4 and MT5 mobile apps cannot run Expert Advisors. Why the apps leave EAs out, and the three ways people actually run one without a PC on all day.
+- [MetaTrader on Mac: How to Run MT4/MT5 & EAs](https://xauusdrobot.com/blog/metatrader-on-mac/): Four ways to run MetaTrader 4 or 5 on macOS, which ones support Expert Advisors, and why Apple Silicon changed the answer for anyone running a robot.
 - [How to Set Up a XAUUSD Robot on MT4 & MT5](https://xauusdrobot.com/blog/how-to-set-up-xauusd-robot-mt4-mt5/): Beginner-friendly, step-by-step install, backtest, and run guide.
 - [How to Use MetaTrader 5](https://xauusdrobot.com/blog/how-to-use-metatrader-5/): The complete first-week walkthrough — install, charts, orders with stops, the strategy tester, and running EAs.
 - [MT4 vs MT5 for a Gold EA](https://xauusdrobot.com/blog/mt4-vs-mt5-for-gold-ea/): Speed, backtesting, the economic calendar, and which MetaTrader platform to run your gold robot on.
@@ -46,6 +48,8 @@ Key facts:
 - [Best Brokers for XAUUSD / Gold EA Trading](https://xauusdrobot.com/blog/best-brokers-xauusd-gold-ea/): What matters in spreads, execution and EA support, plus recommended brokers for automated gold trading.
 
 ## Testing & verification
+- [MT5 Strategy Tester: A Practical Walkthrough](https://xauusdrobot.com/blog/mt5-strategy-tester-guide/): Every setting in the MT5 Strategy Tester that changes your result: modelling mode, spread, deposit and leverage, forward periods, and how to read the report.
+- [Backtest Profitable, Live Losing: 7 Reasons Why](https://xauusdrobot.com/blog/backtest-live-mismatch/): Seven reasons an EA that backtested well loses live: curve fitting, spread and slippage, data quality, symbol mismatch, regime change and human intervention.
 - [How to Backtest a Gold EA Properly](https://xauusdrobot.com/blog/how-to-backtest-gold-ea/): Data quality, realistic spreads, forward testing, and avoiding over-optimisation on MT4 and MT5.
 - [How to Read a Myfxbook Record](https://xauusdrobot.com/blog/how-to-read-myfxbook/): Verify any EA before trusting it — the two verification badges, equity vs balance drawdown, open trades, and 7 tricks sellers use to fake results.
 - [What Is Drawdown in Trading? Gold EA Drawdown Guide](https://xauusdrobot.com/blog/gold-ea-drawdown-explained/): Drawdown explained simply: what max drawdown means, how much is acceptable for a gold EA, the brutal recovery math, and how to read it on a backtest or Myfxbook.
