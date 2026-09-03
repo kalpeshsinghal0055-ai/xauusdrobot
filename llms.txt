@@ -7,7 +7,7 @@ Key facts:
 - Products: (1) BBFxAi XAUUSD Robot, a trend-following, non-martingale gold EA for MT4/MT5 with a fixed stop-loss on every trade; (2) XAUUSD Scalping EA; (3) XAUUSD Hedge EA
 - Pricing: free via partner broker signup; delivered and set up over Telegram
 - Contact: Telegram https://t.me/xauusdrobot_bot
-- Performance: tracked on a live Myfxbook account; message Telegram @BBFx_Ai for the link
+- Performance: three live accounts published in full at https://xauusdrobot.com/verified-results/ with net result, win rate, profit factor and maximum drawdown, each linked to its complete trade history
 - Recommended brokers: Markets4you, Exness, Vantage (regulated, tight XAUUSD spreads, full EA support)
 - Important: trading gold and CFDs on margin carries substantial risk of loss and a large majority of retail CFD accounts lose money. Backtested figures do not guarantee future results. Nothing here is financial advice.
 
@@ -17,6 +17,7 @@ Key facts:
 - [Gold Trading EA (product)](https://xauusdrobot.com/gold-trading-ea/): strategy, risk management, specs
 - [Free download](https://xauusdrobot.com/free-gold-trading-robot-download/): 3-step guide for MT4/MT5
 - [Gold news calendar](https://xauusdrobot.com/gold-news-calendar/): US events that move XAUUSD, updated daily
+- [Verified results](https://xauusdrobot.com/verified-results/): three live accounts with full trade history, net result, win rate, profit factor and maximum drawdown
 - [Tools](https://xauusdrobot.com/tools/): lot size, pip, risk calculators and a session clock
 - [About](https://xauusdrobot.com/about/) - [Contact](https://xauusdrobot.com/contact/)
 
