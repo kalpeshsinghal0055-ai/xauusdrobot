@@ -5,6 +5,9 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
 <title>XAUUSD Lot Size Calculator — Free Gold Position Sizer</title>
@@ -24,13 +27,13 @@
 <meta name="robots" content="index,follow">
 <style>
 :root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.7;font-size:17px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;line-height:1.7;font-size:17px}
 a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
 .wrap{max-width:800px;margin:0 auto;padding:0 20px}
-header.site{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(13,15,20,.9);backdrop-filter:blur(8px);z-index:10}
-header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
-.brand{font-weight:800;font-size:20px;color:var(--text)}.brand span{color:var(--gold)}
-nav a{color:var(--muted);margin-left:22px;font-size:15px}nav a:hover{color:var(--gold2);text-decoration:none}
+
+
+
+
 main{padding:40px 0 20px}h1{font-size:31px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
 h2{font-size:22px;margin:36px 0 12px;color:var(--gold2)}h3{font-size:18px;margin:22px 0 8px}
 .meta{color:var(--muted);font-size:14px;margin:2px 0 20px}p,li{color:#d6dae2}strong{color:#fff}
@@ -48,18 +51,82 @@ table{width:100%;border-collapse:collapse;margin:18px 0;font-size:15px}th,td{tex
 .tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:20px 22px;margin:26px 0;text-align:center}
 .tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:11px 26px;border-radius:10px;margin-top:10px;font-size:15px}
 .disclaim{color:var(--muted);font-size:13px;border-top:1px solid var(--line);margin-top:30px;padding-top:16px}
-footer.site{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:24px 0 46px;margin-top:20px}
+
 ul,ol{padding-left:22px}
 
-@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}header.site nav a{padding:10px 6px;display:inline-block}footer.site a{padding:8px 4px;display:inline-block}h1{font-size:27px}}
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}h1{font-size:27px}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"XAUUSD Lot Size Calculator","url":"https://xauusdrobot.com/tools/gold-lot-size-calculator/","applicationCategory":"FinanceApplication","operatingSystem":"Any (web browser)","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free gold position-size calculator: enter account balance, risk percent and stop-loss distance to get the exact XAUUSD lot size for MT4 and MT5.","publisher":{"@type":"Organization","name":"XAUUSD Robot","logo":{"@type":"ImageObject","url":"https://xauusdrobot.com/photo_2026-05-29_13-44-37.jpg"}}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://xauusdrobot.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://xauusdrobot.com/tools/"},{"@type":"ListItem","position":3,"name":"Gold Lot Size Calculator","item":"https://xauusdrobot.com/tools/gold-lot-size-calculator/"}]}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I calculate lot size for XAUUSD?","acceptedAnswer":{"@type":"Answer","text":"Divide your dollar risk by the stop-loss distance in dollars multiplied by 100 (the ounces in one standard gold lot). Example: risking $20 with a $10 stop gives 20 / (10 x 100) = 0.02 lots."}},{"@type":"Question","name":"How much is 0.01 lots on gold?","acceptedAnswer":{"@type":"Answer","text":"On a standard XAUUSD contract, 0.01 lots equals 1 ounce of gold, so every $1 move in the gold price changes your P/L by about $1. It is the smallest size most brokers allow."}},{"@type":"Question","name":"What risk percent should I use with a gold EA?","acceptedAnswer":{"@type":"Answer","text":"Most disciplined traders risk 1-2% of the account per trade. Smaller risk keeps a losing streak survivable — ten 1% losses leaves about 90% of the account, while ten 10% losses is ruin."}},{"@type":"Question","name":"Should I round the lot size up or down?","acceptedAnswer":{"@type":"Answer","text":"Always round down to the nearest 0.01. Rounding up quietly risks more than you planned, which defeats the point of position sizing."}},{"@type":"Question","name":"Does this work for MT4 and MT5?","acceptedAnswer":{"@type":"Answer","text":"Yes. The standard gold contract of 100 ounces per lot is the same on MT4 and MT5 at most brokers, but always check your broker's XAUUSD contract specification, as a few use different sizes."}}]}</script>
 <link rel="alternate" type="application/rss+xml" title="XAUUSD Robot — The Lab" href="https://xauusdrobot.com/feed.xml" />
+<style id="xr-shell">
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+.xr-header{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.2)}
+.xr-bar{background:linear-gradient(90deg,#a87c2a,#e8b53a,#a87c2a);color:#0d0f14;text-align:center;padding:6px 16px;font:700 12px/1.4 'DM Sans',system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+@media(min-width:640px){.xr-bar{font-size:14px}}
+.xr-bar span{display:inline-block;animation:xrFlash 1.2s ease-in-out infinite}
+@keyframes xrFlash{0%,100%{opacity:1}50%{opacity:.25}}
+.xr-container{width:100%;max-width:1280px;margin:0 auto;padding:0 16px}
+@media(min-width:640px){.xr-container{padding:0 24px}}
+.xr-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+@media(min-width:1024px){.xr-nav{height:80px}}
+.xr-brand{display:flex;align-items:center;gap:8px;flex-shrink:0;margin:0;text-decoration:none!important}
+.xr-brand img{height:32px;width:auto;display:block}
+@media(min-width:1024px){.xr-brand img{height:40px}}
+.xr-brand b{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:18px;color:var(--text);transition:color .3s}
+.xr-brand:hover b{color:var(--gold)}
+@media(min-width:1024px){.xr-brand b{font-size:20px}}
+.xr-brand b i{font-style:normal;color:var(--gold)}
+.xr-links{display:none;align-items:center;gap:18px}
+@media(min-width:1260px){.xr-links{display:flex}}
+@media(min-width:1280px){.xr-links{gap:20px}}
+.xr-links>a.lnk{font:500 14px/1 'DM Sans',system-ui,sans-serif;color:var(--muted);letter-spacing:.025em;text-transform:uppercase;text-decoration:none;margin:0;white-space:nowrap;transition:color .3s}
+.xr-links>a.lnk:hover{color:var(--gold);text-decoration:none}
+.xr-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:4px;font:600 14px/1 'DM Sans',system-ui,sans-serif;letter-spacing:.025em;text-decoration:none!important;white-space:nowrap;flex-shrink:0;margin:0;transition:all .3s}
+.xr-btn-verified{border:1px solid rgba(34,195,138,.4);background:rgba(34,195,138,.05);color:#22c38a}
+.xr-btn-verified:hover{background:rgba(34,195,138,.1);border-color:rgba(34,195,138,.6)}
+.xr-btn-gold{background:linear-gradient(90deg,#a87c2a,#e8b53a,#f5d78a);color:#0d0f14}
+.xr-btn-gold:hover{box-shadow:0 10px 15px -3px rgba(232,181,58,.2)}
+.xr-btn-join{background:linear-gradient(90deg,#e8b53a,#f5d78a,#e8b53a);color:#0d0f14;font-weight:700;box-shadow:0 0 0 2px rgba(232,181,58,.6);display:none}
+@media(min-width:1480px){.xr-btn-join{display:inline-flex}.xr-nav.xr-container{max-width:1480px}}
+.xr-burger{display:inline-flex;align-items:center;background:none;border:0;color:var(--text);padding:8px;margin:0;cursor:pointer}
+@media(min-width:1260px){.xr-burger{display:none}}
+.xr-mobile{display:none;background:rgba(13,15,20,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1)}
+.xr-mobile.open{display:block}
+@media(min-width:1260px){.xr-mobile{display:none!important}}
+.xr-mobile .xr-container{display:flex;flex-direction:column;gap:14px;padding-top:24px;padding-bottom:24px}
+.xr-mobile a.lnk{font:500 16px/1 'DM Sans',system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.025em;padding:8px 0;margin:0;text-decoration:none}
+.xr-mobile .xr-btn{justify-content:center;padding:12px 20px}
+.xr-mobile .xr-btn-join{display:inline-flex}
+.xr-footer{border-top:1px solid rgba(90,100,125,.25);background:rgba(21,25,34,.3);margin-top:40px}
+.xr-foot{padding-top:64px;padding-bottom:64px}
+@media(min-width:1024px){.xr-foot{padding-top:80px;padding-bottom:80px}}
+.xr-fgrid{display:grid;gap:40px}
+@media(min-width:768px){.xr-fgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.xr-fgrid{grid-template-columns:repeat(5,1fr);gap:32px}.xr-fbrand{grid-column:span 2}}
+.xr-fbrand .xr-brand img{height:32px}
+.xr-fbrand p{color:var(--muted);font-size:14px;line-height:1.65;max-width:24rem;margin:16px 0 24px}
+.xr-fbtns{display:flex;gap:12px}
+.xr-chip{padding:8px 16px;font:600 12px/1.4 'DM Sans',system-ui,sans-serif;border-radius:4px;text-decoration:none!important;border:1px solid;transition:background .3s}
+.xr-chip.gold{color:var(--gold);border-color:rgba(232,181,58,.2)}.xr-chip.gold:hover{background:rgba(232,181,58,.05)}
+.xr-chip.green{color:#22c38a;border-color:rgba(34,195,138,.2)}.xr-chip.green:hover{background:rgba(34,195,138,.05)}
+.xr-fh{font:700 12px/1.4 'DM Sans',system-ui,sans-serif;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px}
+.xr-footer ul{list-style:none;margin:0;padding:0}.xr-footer li{margin:0 0 10px;padding:0}
+.xr-footer li a,.xr-footer li span{font-size:14px;color:var(--muted);text-decoration:none;transition:color .3s}.xr-footer li a:hover{color:var(--gold);text-decoration:none}
+.xr-spec{margin-top:48px;padding-top:32px;border-top:1px solid rgba(90,100,125,.25)}
+.xr-spec .xr-fh{text-align:center;color:rgba(232,181,58,.6)}
+.xr-specs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;font-size:12px;color:var(--muted)}
+.xr-legal{margin-top:32px;padding-top:32px;border-top:1px solid rgba(90,100,125,.25);text-align:center}
+.xr-legal p{font-size:12px;color:var(--muted);margin:0 0 12px}
+.xr-legal p a{color:var(--muted);text-decoration:none;transition:color .3s}.xr-legal p a:hover{color:var(--gold);text-decoration:none}
+.xr-legal .sep{margin:0 8px}
+.xr-legal a.by{color:rgba(232,181,58,.6)}
+.xr-legal .disc{font-size:10px;color:rgba(154,163,178,.5);max-width:56rem;margin:16px auto 0;line-height:1.65}
+</style>
 </head>
 <body>
-<header class="site"><div class="wrap"><a class="brand" href="/">XAUUSD<span> Robot</span></a><nav><a href="/">Home</a><a href="/tools/">Tools</a><a href="/blog/">Blog</a></nav></div></header>
+<header class="xr-header"><div class="xr-bar"><span>⚡ First Try Then Trust ⚡</span></div><nav class="xr-container xr-nav" aria-label="Main"><a class="xr-brand" href="/"><img src="/images/xr-logo.webp" alt="BBFx AI - XAUUSD Robot" width="192" height="192"><b>XAUUSD<i>Robot</i></b></a><div class="xr-links"><a class="lnk" href="/#how">How It Works</a><a class="lnk" href="/#features">Features</a><a class="lnk" href="/#bots">Free Algos</a><a class="lnk" href="/#brokers">Brokers</a><a class="lnk" href="/blog/">Blog</a><a class="lnk" href="/tools/">Tools</a><a class="lnk" href="/#faq">FAQ</a><a class="lnk" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a><a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a><a class="xr-btn xr-btn-gold" href="https://www.markets4you.online/?affid=ky6kt3m" target="_blank" rel="noopener noreferrer sponsored nofollow">GET FREE EA</a><a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer"><span>🚀</span> JOIN COMMUNITY</a></div><button class="xr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="xrMobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button></nav><div class="xr-mobile" id="xrMobile"><div class="xr-container"><a class="lnk" href="/#how">How It Works</a><a class="lnk" href="/#features">Features</a><a class="lnk" href="/#bots">Free Algos</a><a class="lnk" href="/#brokers">Brokers</a><a class="lnk" href="/blog/">Blog</a><a class="lnk" href="/tools/">Tools</a><a class="lnk" href="/#faq">FAQ</a><a class="lnk" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a><a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a><a class="xr-btn xr-btn-gold" href="https://www.markets4you.online/?affid=ky6kt3m" target="_blank" rel="noopener noreferrer sponsored nofollow">GET FREE EA</a><a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer"><span>🚀</span> JOIN COMMUNITY</a></div></div></header>
 <main><div class="wrap">
 <h1>Gold Lot Size Calculator (XAUUSD Position Sizer)</h1>
 <p class="meta">Free · Instant · No sign-up · Works for MT4 &amp; MT5</p>
@@ -135,7 +202,8 @@ calc();
 
 <p class="disclaim">Educational tool only, not financial advice. Assumes the standard 100 oz XAUUSD contract — verify your broker's specification. Trading gold carries substantial risk of loss.</p>
 </div></main>
-<footer class="site"><div class="wrap">© 2026 XAUUSD Robot · <a href="/tools/">Tools</a> · <a href="/blog/">Blog</a> · <a href="/">Home</a></div></footer>
+<footer class="xr-footer"><div class="xr-container xr-foot"><div class="xr-fgrid"><div class="xr-fbrand"><a class="xr-brand" href="/"><img src="/images/xr-logo.webp" alt="BBFx AI - XAUUSD Robot" width="192" height="192"><b>XAUUSD<i>Robot</i></b></a><p>AI-powered free gold trading algorithms for MetaTrader 4 &amp; MT5. Built by BBFx AI. Free XAUUSD Expert Advisor for MT4 &amp; MT5, with three live accounts published in full.</p><div class="xr-fbtns"><a class="xr-chip gold" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a><a class="xr-chip green" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Signals</a></div></div><div><div class="xr-fh">Navigation</div><ul><li><a href="/#how">How It Works</a></li><li><a href="/#features">EA Features</a></li><li><a href="/#bots">Free Algos</a></li><li><a href="/#performance">Performance</a></li><li><a href="/#brokers">Brokers</a></li><li><a href="/#faq">FAQ</a></li></ul></div><div><div class="xr-fh">Free EAs</div><ul><li><a href="/gold-trading-ea/">Gold Trading EA (XAUUSD PRO)</a></li><li><a href="/free-gold-trading-robot-download/">Free Robot Download</a></li><li><span>BTCUSD PRO</span></li><li><a href="/blog/xauusd-scalping-bot/">XAUUSD Scalping EA</a></li><li><a href="/blog/xauusd-hedge-ea/">XAUUSD Hedge EA</a></li></ul></div><div><div class="xr-fh">Quick Links</div><ul><li><a href="https://one.exnessonelink.com/a/uhk6peieiq" target="_blank" rel="noopener noreferrer sponsored nofollow">Get Free EA (Exness)</a></li><li><a href="https://vigco.co/la-com-inv/bbfxai" target="_blank" rel="noopener noreferrer sponsored nofollow">Get Free Algo (Vantage)</a></li><li><a href="/gold-news-calendar/">Gold News Calendar</a></li><li><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram Support</a></li><li><a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer sponsored nofollow">VPS Hosting</a></li></ul></div></div><div class="xr-spec"><div class="xr-fh">Algo Specification</div><div class="xr-specs"><span>Platform: MT4 &amp; MT5</span><span>Assets: XAUUSD &amp; BTCUSD</span><span>Strategy: Trend Following</span><span>Risk: Fixed Fractional</span><span>Martingale: ✗ Disabled</span><span>News Filter: ✓ Built-in</span><span>Cost: 100% Free</span></div></div><div class="xr-legal"><p><a href="/about/">About</a><span class="sep">·</span><a href="/contact/">Contact</a><span class="sep">·</span><a href="/privacy-policy/">Privacy Policy</a><span class="sep">·</span><a href="/affiliate-disclosure/">Affiliate Disclosure</a><span class="sep">·</span><a href="/tools/">Free Tools</a><span class="sep">·</span><a href="/sitemap/">Sitemap</a></p><p>© 2026 XAUUSDRobot.com by <a class="by" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">BBFx AI</a>. All rights reserved.</p><p class="disc">⚠️ Risk Disclaimer: Trading gold (XAUUSD), forex, and cryptocurrencies involves significant risk of loss. Past performance of any Expert Advisor or automated trading system does not guarantee future results. Never trade with money you cannot afford to lose. The XAUUSD Robot and all algo trading bots are provided for informational and affiliate purposes only. This website does not constitute financial advice. Affiliate broker links on this page may earn us a commission at no extra cost to you. Results may vary. Always conduct your own due diligence before trading.</p></div></div></footer>
 <script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
 <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<script>(function(){var b=document.querySelector(".xr-burger"),m=document.getElementById("xrMobile");if(!b||!m)return;b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});m.addEventListener("click",function(e){if(e.target.closest("a"))m.classList.remove("open");});})();</script>
 </body></html>
