@@ -105,6 +105,28 @@ export default function HeroSection() {
             </a>
           </motion.div>
 
+          {/* Independently verified account */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-8"
+          >
+            <a
+              href="https://www.copyconnectfx.com/p/RGbEVAWp72cXcupuwkIV"
+              target="_blank"
+              rel="noopener"
+              className="inline-block"
+            >
+              <img
+                src="https://www.copyconnectfx.com/badge/p/RGbEVAWp72cXcupuwkIV.svg"
+                alt="Account 11429969 — verified trading results on CopyConnectFX"
+                width={340}
+                height={96}
+              />
+            </a>
+          </motion.div>
+
           {/* License key contact */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
