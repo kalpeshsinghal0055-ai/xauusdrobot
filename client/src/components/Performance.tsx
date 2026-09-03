@@ -179,7 +179,7 @@ export default function Performance() {
               href="/verified-results/"
               className="inline-flex items-center gap-2 bg-gold text-background font-bold px-8 py-3.5 rounded-xl hover:opacity-90 transition-opacity"
             >
-              How to read these records →
+              See all three accounts →
             </a>
           </div>
         </motion.div>
