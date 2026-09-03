@@ -20,7 +20,7 @@ const reviews = [
     initials: "EZ",
   },
   {
-    text: "What I appreciate is the honesty — results are tracked live on Myfxbook so you can check the real account yourself, and they're upfront that trading carries risk.",
+    text: "What I appreciate is the honesty — the live accounts are published in full so you can check the real trades yourself, and they're upfront that trading carries risk.",
     name: "Rohit S.",
     role: "Full-time Forex Trader, IN",
     initials: "RS",

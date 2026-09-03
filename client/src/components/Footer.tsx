@@ -20,7 +20,7 @@ export default function Footer() {
             </div>
             <p className="text-muted-foreground text-sm leading-relaxed max-w-sm mb-6">
               AI-powered free gold trading algorithms for MetaTrader 4 & MT5. Built by BBFx AI.
-              Free XAUUSD Expert Advisor for MT4 & MT5, with results tracked live on Myfxbook.
+              Free XAUUSD Expert Advisor for MT4 & MT5, with three live accounts published in full.
             </p>
             <div className="flex gap-3">
               <a

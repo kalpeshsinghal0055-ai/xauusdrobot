@@ -1,7 +1,6 @@
 import { m as motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const TELEGRAM_DM_URL = "https://t.me/BBFx_Ai";
 
 type ShotPost = { id: number; date: string | null; files: string[] };
 
@@ -106,43 +105,83 @@ export default function Performance() {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <span className="text-gold text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">
+                    <span className="text-gold text-sm font-semibold uppercase tracking-[0.2em] mb-4 block">
             Performance
           </span>
           <h2 className="font-serif text-4xl lg:text-5xl xl:text-6xl font-bold text-foreground mb-4">
-            Verified on{" "}
-            <span className="text-gold">Myfxbook.</span>
+            Three live accounts,{" "}
+            <span className="text-gold">published whole.</span>
           </h2>
           <p className="text-muted-foreground text-lg max-w-xl mx-auto leading-relaxed">
-            Our live account is tracked independently on Myfxbook — message us on Telegram
-            and we&apos;ll send you the live link so you can see the real trades, drawdown and
-            history for yourself.
+            Net result, win rate, profit factor and maximum drawdown for each &mdash; including
+            the small account that barely moved. Every badge links to that account&apos;s full
+            trade history.
           </p>
         </motion.div>
 
-        {/* Myfxbook link card */}
+        {/* Verified accounts */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="max-w-lg mx-auto text-center p-8 lg:p-10 rounded-2xl bg-card/60 border border-border/40"
+          className="max-w-4xl mx-auto"
         >
-          <div className="text-sm font-semibold text-gold uppercase tracking-wider mb-4">
-            Live &amp; Independently Verified
+          <div className="flex flex-wrap justify-center gap-5">
+            <a
+              href="https://www.copyconnectfx.com/p/GG5yHLWOoWyco7J2HB2E"
+              target="_blank"
+              rel="noopener"
+              className="inline-block"
+            >
+              <img
+                src="https://www.copyconnectfx.com/badge/p/GG5yHLWOoWyco7J2HB2E.svg"
+                alt="Account 11324902 — verified trading results on CopyConnectFX"
+                width={340}
+                height={96}
+                loading="lazy"
+              />
+            </a>
+            <a
+              href="https://www.copyconnectfx.com/p/wGJIt1aADIe3jO_dUQa4"
+              target="_blank"
+              rel="noopener"
+              className="inline-block"
+            >
+              <img
+                src="https://www.copyconnectfx.com/badge/p/wGJIt1aADIe3jO_dUQa4.svg"
+                alt="Account 11324901 — verified trading results on CopyConnectFX"
+                width={340}
+                height={96}
+                loading="lazy"
+              />
+            </a>
+            <a
+              href="https://www.copyconnectfx.com/p/RGbEVAWp72cXcupuwkIV"
+              target="_blank"
+              rel="noopener"
+              className="inline-block"
+            >
+              <img
+                src="https://www.copyconnectfx.com/badge/p/RGbEVAWp72cXcupuwkIV.svg"
+                alt="Account 11429969 — verified trading results on CopyConnectFX"
+                width={340}
+                height={96}
+                loading="lazy"
+              />
+            </a>
           </div>
-          <p className="text-muted-foreground text-sm mb-6">
-            Full trade-by-trade history, updated in real time on Myfxbook. Message us on
-            Telegram and we&apos;ll send you the live link. Past performance does not guarantee
-            future results — trade only with capital you can afford to lose.
+          <p className="text-muted-foreground text-sm text-center mt-8 max-w-2xl mx-auto">
+            Read the drawdown figure before the profit figure &mdash; it is the one that tells you
+            what holding these positions felt like. Past results do not predict future ones.
           </p>
-          <a
-            href={TELEGRAM_DM_URL}
-            target="_blank"
-            rel="noopener"
-            className="inline-flex items-center gap-2 bg-gold text-background font-bold px-8 py-3.5 rounded-xl hover:opacity-90 transition-opacity"
-          >
-            Get the Myfxbook Link on Telegram →
-          </a>
+          <div className="text-center mt-6">
+            <a
+              href="/verified-results/"
+              className="inline-flex items-center gap-2 bg-gold text-background font-bold px-8 py-3.5 rounded-xl hover:opacity-90 transition-opacity"
+            >
+              How to read these records →
+            </a>
+          </div>
         </motion.div>
 
         <TelegramShots />
