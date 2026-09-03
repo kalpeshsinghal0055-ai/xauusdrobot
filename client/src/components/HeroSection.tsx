@@ -105,7 +105,7 @@ export default function HeroSection() {
             </a>
           </motion.div>
 
-          {/* Independently verified account */}
+          {/* Verified records */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -113,17 +113,12 @@ export default function HeroSection() {
             className="mt-8"
           >
             <a
-              href="https://www.copyconnectfx.com/p/RGbEVAWp72cXcupuwkIV"
-              target="_blank"
-              rel="noopener"
-              className="inline-block"
+              href="/verified-results/"
+              className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-full border border-emerald/30 bg-emerald/5 text-sm text-emerald hover:bg-emerald/10 transition-colors"
             >
-              <img
-                src="https://www.copyconnectfx.com/badge/p/RGbEVAWp72cXcupuwkIV.svg"
-                alt="Account 11429969 — verified trading results on CopyConnectFX"
-                width={340}
-                height={96}
-              />
+              <span className="w-2 h-2 rounded-full bg-emerald" />
+              <span className="font-medium">Three live accounts, published in full</span>
+              <span className="text-emerald/70">→</span>
             </a>
           </motion.div>
 
