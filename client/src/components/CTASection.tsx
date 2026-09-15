@@ -8,6 +8,8 @@ export default function CTASection() {
         <img
           src="/images/gold-bars-abstract.webp"
           alt="Gold bars - Start algo trading today"
+          width={1536}
+          height={1024}
           className="w-full h-full object-cover opacity-20"
           loading="lazy"
         />

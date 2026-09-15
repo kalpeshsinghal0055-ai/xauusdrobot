@@ -91,6 +91,14 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-legal .sep{margin:0 8px}
 .xr-legal a.by{color:rgba(232,181,58,.6)}
 .xr-legal .disc{font-size:10px;color:rgba(154,163,178,.5);max-width:56rem;margin:16px auto 0;line-height:1.65}
+.xr-vps{margin:48px 0 0}
+.xr-vps-in{max-width:900px;margin:0 auto;border:1px solid rgba(232,181,58,.18);background:rgba(21,25,34,.6);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.xr-vps-t{display:flex;flex-direction:column;gap:6px;text-align:center;align-items:center}
+.xr-vps-k{font:700 11px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.xr-vps-t strong{font-family:'Playfair Display',Georgia,serif;font-size:20px;color:var(--text);font-weight:700;line-height:1.25}
+.xr-vps-t span.d{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:60ch}
+.xr-vps-a{display:block;width:100%;max-width:728px}.xr-vps-a img{width:100%;height:auto;display:block;border-radius:8px}
+.xr-vps-s{font-size:11px;color:rgba(154,163,178,.55);text-align:center;margin:10px 0 0}
 </style>"""
 
 MENU_SVG = ('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" '
@@ -176,6 +184,24 @@ MENU_JS = ('<script>(function(){var b=document.querySelector(".xr-burger"),m=doc
 for piece in (SHELL_CSS, HEADER, footer("2026"), MENU_JS):
     assert "`" not in piece and "${" not in piece, "shell must be safe inside a JS template literal"
 
+
+VPS_HTML = ('<aside class="xr-vps"><div class="xr-container"><div class="xr-vps-in">'
+            '<div class="xr-vps-t"><span class="xr-vps-k">Keep it running</span>'
+            '<strong>An EA only trades while the terminal is online.</strong>'
+            '<span class="d">A VPS keeps MetaTrader on 24/7 - through reboots, sleep and dropped Wi-Fi. '
+            'GoVPSFX hosts three terminals on one plan.</span></div>'
+            '<a class="xr-vps-a" href="https://my.govpsfx.com/?ref=NDM0ODU6OkVO" target="_blank" rel="noopener noreferrer sponsored nofollow">'
+            '<img src="/images/govpsfx-728x90.gif" alt="GoVPSFX - VPS for forex with three MetaTrader terminals" width="728" height="90" loading="lazy"></a>'
+            '</div><p class="xr-vps-s">Sponsored. We earn a commission if you sign up through this link, at no extra cost to you.</p></div></aside>')
+NO_VPS = ("verified-results/", "privacy-policy/", "affiliate-disclosure/", "about/", "contact/", "sitemap/")
+assert "`" not in VPS_HTML and "${" not in VPS_HTML
+
+def place_vps(s, rel):
+    s = re.sub(r'<aside class="xr-vps">.*?</aside>', "", s, count=1, flags=re.S)
+    if any(rel.startswith(x) for x in NO_VPS):
+        return s
+    return s.replace('<footer class="xr-footer">', VPS_HTML + '<footer class="xr-footer">', 1)
+
 # ------------------------------------------------------- old-shell CSS rules
 DEAD_RULES = [
     r"header\.site \.wrap\{[^}]*\}",
@@ -238,6 +264,7 @@ for fp in pages:
         skipped += 1
         print("  skip  %-60s %s" % (rel, notes))
         continue
+    out = place_vps(out, rel)
     io.open(fp, "w", encoding="utf-8", newline="\n").write(out)
     done += 1
     extra = ("  <- " + "; ".join(notes)) if notes else ""
@@ -251,5 +278,6 @@ out, notes = convert(g, year="${year}")
 if out is None:
     print("calendar generator: SKIPPED -", notes)
 else:
+    out = place_vps(out, "gold-news-calendar/")
     io.open(CAL_GEN, "w", encoding="utf-8", newline="\n").write(out)
     print("calendar generator: converted", ("(" + "; ".join(notes) + ")") if notes else "")

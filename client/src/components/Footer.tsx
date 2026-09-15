@@ -11,6 +11,8 @@ export default function Footer() {
               <img
                 src={LOGO_SRC}
                 alt="BBFx AI Logo"
+                width={192}
+                height={192}
                 loading="lazy"
                 className="h-8 w-auto"
               />
@@ -48,18 +50,23 @@ export default function Footer() {
               Navigation
             </div>
             <ul className="space-y-2.5">
-              {["How It Works", "EA Features", "Free Algos", "Performance", "Brokers", "FAQ"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href={`#${item.toLowerCase().replace(/\s+/g, "")}`}
-                      className="text-sm text-muted-foreground hover:text-gold transition-colors"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                ["How It Works", "/#how"],
+                ["EA Features", "/#features"],
+                ["Free Algos", "/#bots"],
+                ["Performance", "/#performance"],
+                ["Brokers", "/#brokers"],
+                ["FAQ", "/#faq"],
+              ].map(([item, href]) => (
+                <li key={item}>
+                  <a
+                    href={href}
+                    className="text-sm text-muted-foreground hover:text-gold transition-colors"
+                  >
+                    {item}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -193,6 +200,7 @@ export default function Footer() {
             <a href="/affiliate-disclosure/" className="hover:text-gold transition-colors">Affiliate Disclosure</a>
             <span className="mx-2">·</span>
             <a href="/tools/" className="hover:text-gold transition-colors">Free Tools</a>
+            <span className="mx-2">·</span>
             <a href="/sitemap/" className="hover:text-gold transition-colors">Sitemap</a>
           </p>
           <p className="text-xs text-muted-foreground mb-4">

@@ -10,6 +10,7 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import StatsBar from "@/components/StatsBar";
 import HowItWorks from "@/components/HowItWorks";
+import VpsBanner from "../components/VpsBanner";
 import Features from "@/components/Features";
 import { useSeo } from "@/lib/seo";
 
@@ -37,6 +38,7 @@ export default function Home() {
         <HeroSection />
         <StatsBar />
         <HowItWorks />
+        <VpsBanner />
         <Features />
         <Suspense fallback={<div className="min-h-screen" aria-hidden="true" />}>
           <AlgoTable />

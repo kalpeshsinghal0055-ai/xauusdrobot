@@ -13,6 +13,8 @@ export default function HeroSection() {
           src="/images/hero-gold-vault.webp"
           srcSet="/images/hero-gold-vault-828.webp 828w, /images/hero-gold-vault.webp 1680w"
           sizes="100vw"
+          width={1680}
+          height={720}
           alt="Gold vault background - XAUUSD algo trading"
           fetchPriority="high"
           className="w-full h-full object-cover"

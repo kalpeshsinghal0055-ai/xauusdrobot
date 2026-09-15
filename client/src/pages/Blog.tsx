@@ -500,7 +500,7 @@ export default function Blog() {
   useSeo({
     title: "The Lab — Gold EA & XAUUSD Automation Field Notes",
     description:
-      "Field notes on automated gold trading: how EAs work, MT4/MT5 setup, backtesting and verification, risk and execution cost, and the XAUUSD market behaviour every robot is exposed to.",
+      "Field notes on automated gold trading: how EAs work, MT4/MT5 setup, backtesting, verification, risk, execution cost, and the XAUUSD behaviour every robot faces.",
     canonical: "https://xauusdrobot.com/blog/",
   });
 

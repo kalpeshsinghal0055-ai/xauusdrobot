@@ -53,6 +53,8 @@ export default function Navbar() {
           <img
             src={LOGO_SRC}
             alt="BBFx AI - XAUUSD Robot"
+            width={192}
+            height={192}
             className="h-8 lg:h-10 w-auto"
           />
           <span className="font-serif font-bold text-lg lg:text-xl text-foreground group-hover:text-gold transition-colors">
@@ -61,7 +63,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav Links */}
-        <div className="hidden lg:flex items-center gap-6 xl:gap-8">
+        <div className="hidden xl:flex items-center gap-5">
           {navLinks.map((link) =>
             link.internal ? (
               <Link key={link.href} href={link.href}>
@@ -99,7 +101,7 @@ export default function Navbar() {
             href="https://t.me/BBFxAi_Community"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-5 py-2.5 bg-gradient-to-r from-gold via-gold-light to-gold text-background font-bold text-sm rounded tracking-wide ring-2 ring-gold/60 hover:shadow-xl hover:shadow-gold/40 transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] shrink-0 flex items-center gap-2"
+            className="px-5 py-2.5 bg-gradient-to-r from-gold via-gold-light to-gold text-background font-bold text-sm rounded tracking-wide ring-2 ring-gold/60 hover:shadow-xl hover:shadow-gold/40 transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] shrink-0 hidden 2xl:flex items-center gap-2"
           >
             <span>🚀</span> JOIN COMMUNITY
           </a>
@@ -108,7 +110,7 @@ export default function Navbar() {
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="lg:hidden p-2 text-foreground"
+          className="xl:hidden p-2 text-foreground"
           aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -122,7 +124,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background/95 backdrop-blur-xl border-b border-gold/10"
+            className="xl:hidden bg-background/95 backdrop-blur-xl border-b border-gold/10"
           >
             <div className="container py-6 flex flex-col gap-4">
               {navLinks.map((link) =>
