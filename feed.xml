@@ -6,7 +6,7 @@
   <atom:link href="https://xauusdrobot.com/feed.xml" rel="self" type="application/rss+xml" />
   <description>Field notes on automated gold trading: Expert Advisor mechanics, MT4/MT5 setup, testing and verification, and the execution costs that decide live results.</description>
   <language>en</language>
-  <lastBuildDate>Sat, 22 Aug 2026 12:00:00 +0000</lastBuildDate>
+  <lastBuildDate>Fri, 18 Sep 2026 12:00:00 +0000</lastBuildDate>
   <item>
     <title>Backtest Profitable, Live Account Losing. Why?</title>
     <link>https://xauusdrobot.com/blog/backtest-live-mismatch/</link>
