@@ -3,6 +3,7 @@
 > XAUUSD Robot is a working notebook on automated gold trading: how an Expert Advisor turns a tick into an order, how to set one up on MetaTrader 4 and 5, how to test and verify it before funding it, and the execution costs that decide whether a backtested edge survives contact with a live account. The site also provides free XAUUSD Expert Advisors for MT4/MT5 to traders who open an account through a partner broker link. Editorial focus is the software and its infrastructure; beginner gold-market education is not this site's focus.
 
 Key facts:
+- Last updated: 2026-09-18
 - Editorial scope: Expert Advisor mechanics, MT4/MT5 setup and VPS infrastructure, backtesting and track-record verification, and the risk and execution-cost arithmetic of running a robot on gold
 - Products: (1) BBFxAi XAUUSD Robot, a trend-following, non-martingale gold EA for MT4/MT5 with a fixed stop-loss on every trade; (2) XAUUSD Scalping EA; (3) XAUUSD Hedge EA
 - Pricing: free via partner broker signup; delivered and set up over Telegram
