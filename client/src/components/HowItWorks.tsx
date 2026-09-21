@@ -11,9 +11,9 @@ const steps = [
   {
     num: "02",
     icon: "📲",
-    title: "Contact Us on Telegram",
-    desc: "Message us on Telegram with your broker confirmation. Our team will verify your account and install your free XAUUSD Expert Advisor on your MetaTrader 4 or MT5 platform within 24 hours.",
-    cta: { label: "MESSAGE NOW →", href: "https://t.me/BBFx_Ai" },
+    title: "Submit Your Account Number",
+    desc: "Enter your broker and account number on our request page. We verify it against the partner report and your free XAUUSD Expert Advisor download is ready within 24 hours. Prefer to talk? Message us on Telegram instead.",
+    cta: { label: "REQUEST YOUR EA →", href: "https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot" },
   },
   {
     num: "03",
