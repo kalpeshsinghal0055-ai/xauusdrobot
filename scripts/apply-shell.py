@@ -117,8 +117,8 @@ def link_html(cls):
     return "".join(out)
 
 BUTTONS = ('<a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a>'
-           '<a class="xr-btn xr-btn-gold" href="https://www.markets4you.online/?affid=ky6kt3m" target="_blank" '
-           'rel="noopener noreferrer sponsored nofollow">GET FREE EA</a>'
+           '<a class="xr-btn xr-btn-gold" href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot" target="_blank" '
+           'rel="noopener">GET FREE EA</a>'
            '<a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer">'
            '<span>🚀</span> JOIN COMMUNITY</a>')
 
@@ -154,8 +154,8 @@ def footer(year):
             '<li><a href="/blog/xauusd-scalping-bot/">XAUUSD Scalping EA</a></li>'
             '<li><a href="/blog/xauusd-hedge-ea/">XAUUSD Hedge EA</a></li></ul></div>'
             '<div><div class="xr-fh">Quick Links</div><ul>'
-            '<li><a href="https://one.exnessonelink.com/a/uhk6peieiq" target="_blank" rel="noopener noreferrer sponsored nofollow">Get Free EA (Exness)</a></li>'
-            '<li><a href="https://vigco.co/la-com-inv/bbfxai" target="_blank" rel="noopener noreferrer sponsored nofollow">Get Free Algo (Vantage)</a></li>'
+            '<li><a href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot" target="_blank" rel="noopener">Get Free EA</a></li>'
+            '<li><a href="https://vigco.co/la-com-inv/bbfxai" target="_blank" rel="noopener noreferrer sponsored nofollow">Open Vantage Account</a></li>'
             '<li><a href="/gold-news-calendar/">Gold News Calendar</a></li>'
             '<li><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram Support</a></li>'
             '<li><a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer sponsored nofollow">VPS Hosting</a></li></ul></div>'

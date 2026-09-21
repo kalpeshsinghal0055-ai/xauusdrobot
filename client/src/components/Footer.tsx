@@ -122,12 +122,12 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href="https://one.exnessonelink.com/a/uhk6peieiq"
+                  href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot"
                   target="_blank"
-                  rel="noopener noreferrer sponsored nofollow"
+                  rel="noopener"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
-                  Get Free EA (Exness)
+                  Get Free EA
                 </a>
               </li>
               <li>
@@ -137,7 +137,7 @@ export default function Footer() {
                   rel="noopener noreferrer sponsored nofollow"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
                 >
-                  Get Free Algo (Vantage)
+                  Open Vantage Account
                 </a>
               </li>
               <li>

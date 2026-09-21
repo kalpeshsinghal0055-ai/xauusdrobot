@@ -84,6 +84,7 @@ gtag('config', 'G-L0Y8GMG2PG');
     var u; try{ u=new URL(href,location.href); }catch(err){ return; }
     var host=u.hostname.replace(/^www\./,""), page=location.pathname;
     if(/\.(ex5|ex4|mq5|mq4|zip)$/i.test(u.pathname)){ send("ea_download",{file_name:u.pathname.split("/").pop(),page_path:page}); return; }
+    if(host==="xauusdrobot-ea-production.up.railway.app"){ send("ea_request_click",{link_url:u.href,page_path:page}); return; }
     if(host==="t.me"||host==="telegram.me"){ send("telegram_click",{link_url:u.href,page_path:page}); return; }
     if(host==="myfxbook.com"){ send("results_click",{link_url:u.href,page_path:page}); return; }
     for(var d in PARTNERS){ if(host===d||host.indexOf("."+d)===host.length-d.length-1){ send("affiliate_click",{partner:PARTNERS[d],link_url:u.href,page_path:page}); return; } }

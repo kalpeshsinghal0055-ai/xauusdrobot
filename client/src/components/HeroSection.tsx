@@ -75,16 +75,17 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="/BBFxAi_GGHP_v2_0_0.ex5"
-              download
+              href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot"
+              target="_blank"
+              rel="noopener"
               className="group px-8 py-4 bg-emerald text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-emerald/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
               <span>⬇</span> DOWNLOAD EA (.EX5)
             </a>
             <a
-              href="https://www.markets4you.online/?affid=ky6kt3m"
+              href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot"
               target="_blank"
-              rel="noopener noreferrer sponsored nofollow"
+              rel="noopener"
               className="group px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
               <span>⚡</span> GET FREE MT5 ALGO

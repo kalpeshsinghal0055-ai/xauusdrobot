@@ -36,9 +36,9 @@ export default function CTASection() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://one.exnessonelink.com/a/uhk6peieiq"
+              href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot"
               target="_blank"
-              rel="noopener noreferrer sponsored nofollow"
+              rel="noopener"
               className="px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded hover:shadow-xl hover:shadow-gold/25 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
               <span>⚡</span> GET FREE MT5 EA NOW
