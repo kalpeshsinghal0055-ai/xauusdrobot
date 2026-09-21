@@ -40,6 +40,17 @@ const brokers = [
     ],
     href: "https://vigco.co/la-com-inv/bbfxai",
   },
+  {
+    name: "XS",
+    badge: "NEW PARTNER",
+    badgeColor: "bg-emerald/20 text-emerald",
+    desc: "Multi-asset broker with MetaTrader 4 and 5 and full Expert Advisor support. Open your XS account through our partner link to qualify for the free gold EA.",
+    specs: [
+      { label: "Platform", value: "MT4 / MT5" },
+      { label: "Algo Trading", value: "Supported" },
+    ],
+    href: "https://my.xs.com/links/go/5382",
+  },
 ];
 
 export default function Brokers() {

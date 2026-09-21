@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: "Which broker should I use for the XAUUSD algo?",
-    a: "We recommend Markets4you (flexible low-spread accounts, our top pick), Exness (lowest spreads, instant withdrawals), or Vantage (great low-spread option). All are regulated, support MT5 EAs, and give excellent gold trading conditions.",
+    a: "We recommend Markets4you (flexible low-spread accounts, our top pick), Exness (lowest spreads, instant withdrawals), Vantage (great low-spread option), or XS (MT4/MT5 with full EA support). All are regulated, support MT5 EAs, and give excellent gold trading conditions.",
   },
   {
     q: "Do I need trading experience to use the algo?",

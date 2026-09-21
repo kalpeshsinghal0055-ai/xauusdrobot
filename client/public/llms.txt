@@ -9,7 +9,7 @@ Key facts:
 - Pricing: free via partner broker signup; delivered and set up over Telegram
 - Contact: Telegram https://t.me/xauusdrobot_bot
 - Performance: three live accounts published in full at https://xauusdrobot.com/verified-results/ with net result, win rate, profit factor and maximum drawdown, each linked to its complete trade history
-- Recommended brokers: Markets4you, Exness, Vantage (regulated, tight XAUUSD spreads, full EA support)
+- Recommended brokers: Markets4you, Exness, Vantage, XS (full MT4/MT5 EA support)
 - Important: trading gold and CFDs on margin carries substantial risk of loss and a large majority of retail CFD accounts lose money. Backtested figures do not guarantee future results. Nothing here is financial advice.
 
 ## Main pages
