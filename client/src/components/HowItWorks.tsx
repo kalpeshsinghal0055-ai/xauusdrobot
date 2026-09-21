@@ -13,7 +13,7 @@ const steps = [
     icon: "📲",
     title: "Submit Your Account Number",
     desc: "Enter your broker and account number on our request page. We verify it against the partner report and your free XAUUSD Expert Advisor download is ready within 24 hours. Prefer to talk? Message us on Telegram instead.",
-    cta: { label: "REQUEST YOUR EA →", href: "https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot" },
+    cta: { label: "REQUEST YOUR EA →", href: "https://get.xauusdrobot.com/get/xauusd-robot" },
   },
   {
     num: "03",

@@ -122,7 +122,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot"
+                  href="https://get.xauusdrobot.com/get/xauusd-robot"
                   target="_blank"
                   rel="noopener"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"

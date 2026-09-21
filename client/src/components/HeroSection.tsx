@@ -75,7 +75,7 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="https://xauusdrobot-ea-production.up.railway.app/get/xauusd-robot"
+              href="https://get.xauusdrobot.com/get/xauusd-robot"
               target="_blank"
               rel="noopener"
               className="group px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
