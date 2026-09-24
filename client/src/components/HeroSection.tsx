@@ -28,7 +28,7 @@ export default function HeroSection() {
         <div className="max-w-3xl">
           {/* Live Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-emerald/30 bg-emerald/5 mb-8"
@@ -41,7 +41,7 @@ export default function HeroSection() {
 
           {/* Main Heading - H1 for SEO */}
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[0.95] mb-6"
@@ -55,7 +55,7 @@ export default function HeroSection() {
 
           {/* Subtitle */}
           <motion.p
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-lg lg:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
@@ -69,7 +69,7 @@ export default function HeroSection() {
 
           {/* CTA Buttons */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             className="flex flex-wrap gap-4"
@@ -102,7 +102,7 @@ export default function HeroSection() {
 
           {/* Verified records */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.35 }}
             className="mt-8"
@@ -119,12 +119,21 @@ export default function HeroSection() {
 
           {/* License key contact */}
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-5 text-sm text-muted-foreground"
           >
-            For license key, contact{" "}
+            Your license key is issued with the EA when your{" "}
+            <a
+              href="https://get.xauusdrobot.com/get/xauusd-robot"
+              target="_blank"
+              rel="noopener"
+              className="text-gold font-semibold hover:underline"
+            >
+              request is approved
+            </a>
+            {" "}— or ask{" "}
             <a
               href="https://t.me/BBFx_Ai"
               target="_blank"
