@@ -36,7 +36,7 @@
       'The algo is free because the broker pays us, not you. We check the account number against the ' +
       'partner report before sending the licence key and the file.</p>' +
       '<div style="display:flex;flex-direction:column;gap:10px">' +
-      '<a class="ag-yes" href="' + FORM + '" target="_blank" rel="noopener" ' +
+      '<a class="ag-yes" data-no-gate href="' + FORM + '" target="_blank" rel="noopener" ' +
       'style="display:block;text-align:center;padding:13px 18px;border-radius:6px;font-weight:700;font-size:14px;' +
       'letter-spacing:.04em;text-decoration:none;background:linear-gradient(90deg,#a87c2a,#e8b53a,#f5d78a);color:#0d0f14">' +
       'YES &mdash; OPEN THE REQUEST FORM</a>' +
@@ -80,6 +80,7 @@
     if (!a) return;
     if (a.href.indexOf('get.xauusdrobot.com') === -1) return;
     if (a.hasAttribute('data-no-gate')) return;
+    if (box && box.contains(a)) return;          // the dialog's own buttons must pass through
     e.preventDefault();
     open();
   }, true);
