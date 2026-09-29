@@ -95,7 +95,7 @@ export default function Navbar() {
             rel="noopener"
             className="px-5 py-2.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shrink-0"
           >
-            GET FREE EA
+            OPEN ACCOUNT
           </a>
           <a
             href="https://t.me/BBFxAi_Community"
@@ -163,7 +163,7 @@ export default function Navbar() {
                 rel="noopener"
                 className="px-5 py-3 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide text-center"
               >
-                GET FREE EA
+                OPEN ACCOUNT
               </a>
               <a
                 href="https://t.me/BBFxAi_Community"

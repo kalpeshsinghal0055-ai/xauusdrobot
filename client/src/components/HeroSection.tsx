@@ -80,7 +80,7 @@ export default function HeroSection() {
               rel="noopener"
               className="group px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
             >
-              <span>⚡</span> GET FREE MT5 ALGO
+              <span>⚡</span> OPEN ACCOUNT &amp; GET THE ALGO
             </a>
             <a
               href="https://t.me/BBFxAi_Community"
@@ -98,40 +98,6 @@ export default function HeroSection() {
             >
               <span>💬</span> TALK TO US
             </a>
-          </motion.div>
-
-          {/* Algo access - the broker route, for people who would rather not use the form */}
-          <motion.div
-            initial={false}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.32 }}
-            className="mt-7 inline-flex flex-col gap-3 rounded-lg border border-emerald/30 bg-emerald/[0.04] px-5 py-4"
-          >
-            <span className="text-emerald text-[11px] font-semibold uppercase tracking-[0.18em]">
-              Algo access &middot; 2 steps
-            </span>
-            <div className="flex flex-wrap items-center gap-3">
-              <a
-                href="https://my.xs.com/links/go/5382"
-                target="_blank"
-                rel="noopener noreferrer sponsored nofollow"
-                className="px-6 py-3 rounded bg-emerald text-background font-bold text-sm tracking-wide hover:brightness-110 transition-all duration-300 flex items-center gap-2"
-              >
-                <span>1</span> OPEN XS ACCOUNT &rarr;
-              </a>
-              <a
-                href="https://t.me/BBFx_Ai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 rounded border border-emerald/40 text-emerald font-semibold text-sm tracking-wide hover:bg-emerald/10 hover:border-emerald/70 transition-all duration-300 flex items-center gap-2"
-              >
-                <span>2</span> SEND IT ON TELEGRAM
-              </a>
-            </div>
-            <p className="text-xs text-muted-foreground max-w-sm leading-relaxed">
-              Open the account, send us the number on Telegram, and we set the algo up with you.
-              Prefer to do it in writing? Use the request form above.
-            </p>
           </motion.div>
 
           {/* Verified records */}
