@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="impact-site-verification" value="e8240d91-15af-4e48-8b42-feff03c71466" />
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
+<title>Gold EA Lot Size: Fixed Lots or Percent Risk? | XAUUSD Robot</title>
+<meta name="description" content="The two ways an EA can size a gold trade, what each does to an account as the balance moves, and the settings that quietly turn a 1% plan into something else.">
+<link rel="canonical" href="https://xauusdrobot.com/blog/gold-ea-lot-size-settings/">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://xauusdrobot.com/images/gold-ea-lot-size-settings.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://xauusdrobot.com/images/gold-ea-lot-size-settings.jpg">
+<meta property="og:title" content="Gold EA Lot Size Settings">
+<meta property="og:description" content="Fixed lots or percent risk — what each setting does to a gold account.">
+<meta name="twitter:title" content="Gold EA Lot Size Settings">
+<meta name="twitter:description" content="Fixed lots or percent risk — what each setting does to a gold account.">
+<meta property="og:url" content="https://xauusdrobot.com/blog/gold-ea-lot-size-settings/">
+<meta name="robots" content="index,follow">
+<style>
+:root{--bg:#0d0f14;--card:#151922;--text:#e6e8ee;--muted:#9aa3b2;--gold:#e8b53a;--gold2:#f5cf6b;--line:#232936;--green:#3fb56a;--red:#e0603f}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:'DM Sans',system-ui,sans-serif;line-height:1.75;font-size:17px}
+a{color:var(--gold2);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:800px;margin:0 auto;padding:0 20px}
+
+
+
+
+main{padding:40px 0 20px}h1{font-size:32px;line-height:1.2;margin:0 0 4px;letter-spacing:-.5px}
+h2{font-size:23px;margin:38px 0 12px;color:var(--gold2);line-height:1.3}h3{font-size:19px;margin:24px 0 8px}
+.meta{color:var(--muted);font-size:14px;margin:2px 0 22px}p,li{color:#d6dae2}strong{color:#fff}
+ul,ol{padding-left:22px}li{margin:7px 0}.lead{font-size:19px;color:#e9ecf2}
+img.hero{width:100%;height:auto;border-radius:14px;margin:10px 0 26px;display:block}
+.answer{background:#111620;border:1px solid var(--line);border-top:2px solid var(--gold);border-radius:4px;padding:18px 22px;margin:26px 0}.answer strong{color:var(--gold2)}.answer>p>strong:first-child{color:var(--gold);font:700 11px/1.6 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;display:block;margin-bottom:7px}main h2{border-left:2px solid var(--gold);padding-left:13px}.meta{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12.5px;letter-spacing:.04em;text-transform:uppercase}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:22px 0}.toc strong{color:var(--gold2)}.toc ol{margin:8px 0 0;padding-left:20px}.toc li{margin:4px 0}
+table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{text-align:left;padding:11px 12px;border-bottom:1px solid var(--line);vertical-align:top}th{color:var(--gold2);font-weight:700;background:var(--card)}
+.box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 22px;margin:20px 0}
+.cta{display:inline-block;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#1a1200;font-weight:700;padding:12px 24px;border-radius:10px;margin:6px 0}.cta:hover{text-decoration:none;opacity:.92}
+
+.tgnav:hover{opacity:.9;text-decoration:none}
+.tgbox{background:linear-gradient(135deg,rgba(34,158,217,.14),rgba(34,158,217,.04));border:1px solid #229ED9;border-radius:14px;padding:22px 24px;margin:28px 0;text-align:center}
+.tgbox p{margin:0}.tgbtn{display:inline-block;background:#229ED9;color:#fff!important;font-weight:700;padding:12px 30px;border-radius:10px;margin-top:12px;font-size:16px}
+.tgbtn:hover{opacity:.9;text-decoration:none}
+.disclaim{color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:34px;padding-top:18px}
+
+
+@media(max-width:640px){table{display:block;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}h1{font-size:27px}}
+</style>
+<link rel="alternate" type="application/rss+xml" title="XAUUSD Robot — The Lab" href="https://xauusdrobot.com/feed.xml" />
+<style id="xr-shell">
+h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
+.xr-header{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.2)}
+.xr-bar{background:linear-gradient(90deg,#a87c2a,#e8b53a,#a87c2a);color:#0d0f14;text-align:center;padding:6px 16px;font:700 12px/1.4 'DM Sans',system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}
+@media(min-width:640px){.xr-bar{font-size:14px}}
+.xr-bar span{display:inline-block;animation:xrFlash 1.2s ease-in-out infinite}
+@keyframes xrFlash{0%,100%{opacity:1}50%{opacity:.25}}
+.xr-container{width:100%;max-width:1280px;margin:0 auto;padding:0 16px}
+@media(min-width:640px){.xr-container{padding:0 24px}}
+.xr-nav{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+@media(min-width:1024px){.xr-nav{height:80px}}
+.xr-brand{display:flex;align-items:center;gap:8px;flex-shrink:0;margin:0;text-decoration:none!important}
+.xr-brand img{height:32px;width:auto;display:block}
+@media(min-width:1024px){.xr-brand img{height:40px}}
+.xr-brand b{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:18px;color:var(--text);transition:color .3s}
+.xr-brand:hover b{color:var(--gold)}
+@media(min-width:1024px){.xr-brand b{font-size:20px}}
+.xr-brand b i{font-style:normal;color:var(--gold)}
+.xr-links{display:none;align-items:center;gap:18px}
+@media(min-width:1260px){.xr-links{display:flex}}
+@media(min-width:1280px){.xr-links{gap:20px}}
+.xr-links>a.lnk{font:500 14px/1 'DM Sans',system-ui,sans-serif;color:var(--muted);letter-spacing:.025em;text-transform:uppercase;text-decoration:none;margin:0;white-space:nowrap;transition:color .3s}
+.xr-links>a.lnk:hover{color:var(--gold);text-decoration:none}
+.xr-btn{display:inline-flex;align-items:center;gap:8px;padding:10px 20px;border-radius:4px;font:600 14px/1 'DM Sans',system-ui,sans-serif;letter-spacing:.025em;text-decoration:none!important;white-space:nowrap;flex-shrink:0;margin:0;transition:all .3s}
+.xr-btn-verified{border:1px solid rgba(34,195,138,.4);background:rgba(34,195,138,.05);color:#22c38a}
+.xr-btn-verified:hover{background:rgba(34,195,138,.1);border-color:rgba(34,195,138,.6)}
+.xr-btn-gold{background:linear-gradient(90deg,#a87c2a,#e8b53a,#f5d78a);color:#0d0f14}
+.xr-btn-gold:hover{box-shadow:0 10px 15px -3px rgba(232,181,58,.2)}
+.xr-btn-join{background:linear-gradient(90deg,#e8b53a,#f5d78a,#e8b53a);color:#0d0f14;font-weight:700;box-shadow:0 0 0 2px rgba(232,181,58,.6);display:none}
+@media(min-width:1480px){.xr-btn-join{display:inline-flex}.xr-nav.xr-container{max-width:1480px}}
+.xr-burger{display:inline-flex;align-items:center;background:none;border:0;color:var(--text);padding:8px;margin:0;cursor:pointer}
+@media(min-width:1260px){.xr-burger{display:none}}
+.xr-mobile{display:none;background:rgba(13,15,20,.95);backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1)}
+.xr-mobile.open{display:block}
+@media(min-width:1260px){.xr-mobile{display:none!important}}
+.xr-mobile .xr-container{display:flex;flex-direction:column;gap:14px;padding-top:24px;padding-bottom:24px}
+.xr-mobile a.lnk{font:500 16px/1 'DM Sans',system-ui,sans-serif;color:var(--muted);text-transform:uppercase;letter-spacing:.025em;padding:8px 0;margin:0;text-decoration:none}
+.xr-mobile .xr-btn{justify-content:center;padding:12px 20px}
+.xr-mobile .xr-btn-join{display:inline-flex}
+.xr-footer{border-top:1px solid rgba(90,100,125,.25);background:rgba(21,25,34,.3);margin-top:40px}
+.xr-foot{padding-top:64px;padding-bottom:64px}
+@media(min-width:1024px){.xr-foot{padding-top:80px;padding-bottom:80px}}
+.xr-fgrid{display:grid;gap:40px}
+@media(min-width:768px){.xr-fgrid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.xr-fgrid{grid-template-columns:repeat(5,1fr);gap:32px}.xr-fbrand{grid-column:span 2}}
+.xr-fbrand .xr-brand img{height:32px}
+.xr-fbrand p{color:var(--muted);font-size:14px;line-height:1.65;max-width:24rem;margin:16px 0 24px}
+.xr-fbtns{display:flex;gap:12px}
+.xr-chip{padding:8px 16px;font:600 12px/1.4 'DM Sans',system-ui,sans-serif;border-radius:4px;text-decoration:none!important;border:1px solid;transition:background .3s}
+.xr-chip.gold{color:var(--gold);border-color:rgba(232,181,58,.2)}.xr-chip.gold:hover{background:rgba(232,181,58,.05)}
+.xr-chip.green{color:#22c38a;border-color:rgba(34,195,138,.2)}.xr-chip.green:hover{background:rgba(34,195,138,.05)}
+.xr-fh{font:700 12px/1.4 'DM Sans',system-ui,sans-serif;color:var(--gold);text-transform:uppercase;letter-spacing:.05em;margin:0 0 16px}
+.xr-footer ul{list-style:none;margin:0;padding:0}.xr-footer li{margin:0 0 10px;padding:0}
+.xr-footer li a,.xr-footer li span{font-size:14px;color:var(--muted);text-decoration:none;transition:color .3s}.xr-footer li a:hover{color:var(--gold);text-decoration:none}
+.xr-spec{margin-top:48px;padding-top:32px;border-top:1px solid rgba(90,100,125,.25)}
+.xr-spec .xr-fh{text-align:center;color:rgba(232,181,58,.6)}
+.xr-specs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 24px;font-size:12px;color:var(--muted)}
+.xr-legal{margin-top:32px;padding-top:32px;border-top:1px solid rgba(90,100,125,.25);text-align:center}
+.xr-legal p{font-size:12px;color:var(--muted);margin:0 0 12px}
+.xr-legal p a{color:var(--muted);text-decoration:none;transition:color .3s}.xr-legal p a:hover{color:var(--gold);text-decoration:none}
+.xr-legal .sep{margin:0 8px}
+.xr-legal a.by{color:rgba(232,181,58,.6)}
+.xr-legal .disc{font-size:10px;color:rgba(154,163,178,.5);max-width:56rem;margin:16px auto 0;line-height:1.65}
+.xr-vps{margin:48px 0 0}
+.xr-vps-in{max-width:900px;margin:0 auto;border:1px solid rgba(232,181,58,.18);background:rgba(21,25,34,.6);border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:16px;align-items:center}
+.xr-vps-t{display:flex;flex-direction:column;gap:6px;text-align:center;align-items:center}
+.xr-vps-k{font:700 11px/1.4 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.xr-vps-t strong{font-family:'Playfair Display',Georgia,serif;font-size:20px;color:var(--text);font-weight:700;line-height:1.25}
+.xr-vps-t span.d{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:60ch}
+.xr-vps-a{display:block;width:100%;max-width:728px}.xr-vps-a img{width:100%;height:auto;display:block;border-radius:8px}
+.xr-vps-s{font-size:11px;color:rgba(154,163,178,.55);text-align:center;margin:10px 0 0}
+</style>
+<script src="/access-gate.js?v=ec52f5c4" defer></script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Gold EA Lot Size: Fixed Lots or Percent Risk?", "description": "The two ways an EA can size a gold trade, what each does to an account as the balance moves, and the settings that quietly turn a 1% plan into something else.", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Organization", "name": "XAUUSD Robot"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/images/xr-logo.webp"}}, "image": "https://xauusdrobot.com/images/gold-ea-lot-size-settings.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xauusdrobot.com/blog/gold-ea-lot-size-settings/"}, "keywords": "gold ea lot size, ea risk percent setting, xauusd ea position size", "abstract": "Fixed lots trade the same size forever: predictable, and gradually wrong as the balance changes. Percent risk recalculates from balance and stop distance, so the dollar risk stays constant - which is what a risk plan actually means. Percent risk is the better default; fixed lots are for testing and for accounts too small to size properly."}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Home", "item": "https://xauusdrobot.com/"}, {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xauusdrobot.com/blog/"}, {"@type": "ListItem", "position": 3, "name": "Gold EA Lot Size Settings", "item": "https://xauusdrobot.com/blog/gold-ea-lot-size-settings/"}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Should a gold EA use fixed lots or percent risk?", "acceptedAnswer": {"@type": "Answer", "text": "Percent risk for a funded account, because the dollar risk stays constant as the balance moves. Fixed lots are useful for testing and comparison runs, where you want the size held still while something else changes."}}, {"@type": "Question", "name": "What lot size should a gold EA trade on a $1,000 account?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the stop distance, not the balance alone. At 1% risk with a $4 stop the answer is about 0.025 lots, rounded down to 0.02. A wider stop means a smaller size for the same risk."}}, {"@type": "Question", "name": "Should an EA size from balance or equity?", "acceptedAnswer": {"@type": "Answer", "text": "Equity is the more defensive choice, because it accounts for open losing positions and shrinks new trades during a drawdown. Sizing from balance keeps opening full-size trades while the account is already under water."}}, {"@type": "Question", "name": "Why does my EA open a bigger lot than I set?", "acceptedAnswer": {"@type": "Answer", "text": "Usually a lot multiplier, recovery mode or grid step that adds positions after a loss, overriding the risk setting. Rounding is the other cause: if the calculated size falls below the broker minimum, some EAs round up instead of skipping the trade."}}, {"@type": "Question", "name": "Is 1% risk per trade safe for a gold EA?", "acceptedAnswer": {"@type": "Answer", "text": "It is a reasonable default, but safety depends on how many positions the EA holds at once. Five open trades at 1% each is a 5% exposure, not 1%, and gold can move all of them together."}}]}</script>
+</head>
+<body>
+<header class="xr-header"><div class="xr-bar"><span>⚡ First Try Then Trust ⚡</span></div><nav class="xr-container xr-nav" aria-label="Main"><a class="xr-brand" href="/"><img src="/images/xr-logo.webp" alt="BBFx AI - XAUUSD Robot" width="192" height="192"><b>XAUUSD<i>Robot</i></b></a><div class="xr-links"><a class="lnk" href="/#how">How It Works</a><a class="lnk" href="/#features">Features</a><a class="lnk" href="/#bots">Free Algos</a><a class="lnk" href="/#brokers">Brokers</a><a class="lnk" href="/blog/">Blog</a><a class="lnk" href="/tools/">Tools</a><a class="lnk" href="/#faq">FAQ</a><a class="lnk" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a><a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a><a class="xr-btn xr-btn-gold" href="https://get.xauusdrobot.com/get/xauusd-robot" target="_blank" rel="noopener">OPEN ACCOUNT</a><a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer"><span>🚀</span> JOIN COMMUNITY</a></div><button class="xr-burger" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="xrMobile"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button></nav><div class="xr-mobile" id="xrMobile"><div class="xr-container"><a class="lnk" href="/#how">How It Works</a><a class="lnk" href="/#features">Features</a><a class="lnk" href="/#bots">Free Algos</a><a class="lnk" href="/#brokers">Brokers</a><a class="lnk" href="/blog/">Blog</a><a class="lnk" href="/tools/">Tools</a><a class="lnk" href="/#faq">FAQ</a><a class="lnk" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a><a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a><a class="xr-btn xr-btn-gold" href="https://get.xauusdrobot.com/get/xauusd-robot" target="_blank" rel="noopener">OPEN ACCOUNT</a><a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer"><span>🚀</span> JOIN COMMUNITY</a></div></div></header>
+<main><div class="wrap">
+<h1>Gold EA Lot Size: Fixed Lots or Percent Risk?</h1>
+<p class="meta">By the <strong style="color:var(--gold2);">XAUUSD Robot Team</strong> · Updated October 2026</p>
+<img class="hero" src="/images/gold-ea-lot-size-settings.jpg" alt="Choosing between fixed lot and percent risk sizing on a XAUUSD expert advisor" width="1200" height="630" />
+<div class="answer"><p style="margin:0"><strong>TL;DR</strong> <strong>Fixed lots</strong> trade the same size forever: predictable, and gradually wrong as the balance changes. <strong>Percent risk</strong> recalculates from balance and stop distance, so the dollar risk stays constant - which is what a risk plan actually means. Percent risk is the better default; fixed lots are for testing and for accounts too small to size properly.</p></div>
+<h2>What the two settings really do</h2>
+<p><strong>Fixed lot</strong> means the EA opens 0.05 lots whether the account holds $500 or $5,000, and whether the stop is $2 or $12 away. The size is a constant; the risk is whatever falls out of it.</p>
+<p><strong>Percent risk</strong> inverts that. You fix the risk — say 1% of balance — and the EA solves for the size using the stop distance on that trade. The size varies; the risk does not.</p>
+<p>Only one of those matches how a risk plan is normally described. "I risk 1% per trade" is a percent-risk statement, and running it as a fixed lot means it is only true on the day you set it.</p>
+<h2>What fixed lots do over time</h2>
+<p>Take 0.05 lots on a $1,000 account with a $4 stop. The risk is $20, or 2%.</p>
+<p>Double the account to $2,000 and the same setting risks 1% — the EA has quietly become more conservative than intended. Halve the account to $500 and it risks 4%, exactly when the account can least afford it.</p>
+<p>That is the structural problem with fixed lots: risk drifts in the wrong direction. It falls when you are winning and rises when you are losing.</p>
+<h2>Where percent risk goes wrong</h2>
+<p>Percent risk is the better model, but it has failure modes of its own, and they are worth knowing before you trust it:</p>
+<ul><li><strong>Tiny accounts hit the broker minimum.</strong> 1% of $200 with a $5 stop calls for 0.004 lots. The minimum is 0.01, so the EA either refuses to trade or rounds up and risks 2.5%. Rounding up is the dangerous default.</li><li><strong>Stop distance of zero.</strong> Strategies without a fixed stop have nothing to divide by. Some EAs fall back to a default lot that has no relationship to your risk setting.</li><li><strong>Balance or equity?</strong> Sizing from balance ignores open losses; sizing from equity shrinks positions during a drawdown. Equity is the more defensive choice, and worth checking which one your EA uses.</li></ul>
+<h2>The setting that undoes the plan</h2>
+<p>Many gold EAs ship with a lot multiplier, a recovery mode, or a grid step that opens additional positions after a loss. Each of those bypasses the sizing logic entirely.</p>
+<p>A 1% risk setting with a 2x multiplier after a loss is not a 1% plan. Four losses in and the position is sixteen times the first one — the risk setting is still displaying 1% while the account is exposed to far more. Our guide on <a href="/blog/gold-ea-strategy-types/">EA strategy types</a> covers what martingale and grid do to a balance in detail.</p>
+<p>If an EA has these switches, know their state before you fund it. They are usually on.</p>
+<h2>How to set it, in order</h2>
+<ol><li>Decide the risk per trade as a percentage. One per cent is a sensible default and two is an aggressive one.</li><li>Confirm the EA sizes from equity, not balance, if it offers the choice.</li><li>Check the broker minimum lot against what your balance and stop distance actually produce. If they collide, the account is too small for that stop, not the stop too big for the account.</li><li>Turn off any multiplier or recovery mode until you have watched the EA trade without it.</li><li>Verify with the <a href="/tools/gold-lot-size-calculator/">lot size calculator</a>: enter your balance, risk and stop, and compare its answer to the size the EA actually opens.</li></ol>
+<p>Step five is the one people skip, and it is the one that catches configuration errors before the market does.</p>
+<h2 id="faq">Questions we get</h2>
+<h3>Should a gold EA use fixed lots or percent risk?</h3><p>Percent risk for a funded account, because the dollar risk stays constant as the balance moves. Fixed lots are useful for testing and comparison runs, where you want the size held still while something else changes.</p>
+<h3>What lot size should a gold EA trade on a $1,000 account?</h3><p>It depends on the stop distance, not the balance alone. At 1% risk with a $4 stop the answer is about 0.025 lots, rounded down to 0.02. A wider stop means a smaller size for the same risk.</p>
+<h3>Should an EA size from balance or equity?</h3><p>Equity is the more defensive choice, because it accounts for open losing positions and shrinks new trades during a drawdown. Sizing from balance keeps opening full-size trades while the account is already under water.</p>
+<h3>Why does my EA open a bigger lot than I set?</h3><p>Usually a lot multiplier, recovery mode or grid step that adds positions after a loss, overriding the risk setting. Rounding is the other cause: if the calculated size falls below the broker minimum, some EAs round up instead of skipping the trade.</p>
+<h3>Is 1% risk per trade safe for a gold EA?</h3><p>It is a reasonable default, but safety depends on how many positions the EA holds at once. Five open trades at 1% each is a 5% exposure, not 1%, and gold can move all of them together.</p>
+<div class="tgbox"><p style="font-size:18px;color:#fff;"><strong>Want the sizing checked before you go live?</strong></p><p style="color:var(--muted);margin-top:4px;">Tell us your balance, risk setting and stop distance and we will confirm what the EA should be opening.</p><a class="tgbtn" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener">💬 Talk to Us on Telegram</a></div>
+<section style="margin-top:44px;border-top:1px solid var(--line);padding-top:28px;"><h2 style="margin-top:0">More from the lab</h2><ul style="list-style:none;padding:0;margin:0;display:grid;gap:12px;">
+<li><a href="/tools/gold-lot-size-calculator/" style="font-weight:600;">&rarr; Gold lot size calculator</a></li>
+<li><a href="/blog/gold-ea-risk-management/" style="font-weight:600;">&rarr; Gold EA risk management</a></li>
+<li><a href="/blog/gold-ea-strategy-types/" style="font-weight:600;">&rarr; Gold EA strategy types</a></li>
+<li><a href="/blog/how-much-money-to-start-gold-ea/" style="font-weight:600;">&rarr; How much to start a gold EA</a></li>
+</ul></section>
+</div></main>
+
+<aside class="xr-vps"><div class="xr-container"><div class="xr-vps-in"><div class="xr-vps-t"><span class="xr-vps-k">Keep it running</span><strong>An EA only trades while the terminal is online.</strong><span class="d">A VPS keeps MetaTrader on 24/7 - through reboots, sleep and dropped Wi-Fi. GoVPSFX hosts three terminals on one plan.</span></div><a class="xr-vps-a" href="https://my.govpsfx.com/?ref=NDM0ODU6OkVO" target="_blank" rel="noopener noreferrer sponsored nofollow"><img src="/images/govpsfx-728x90.gif" alt="GoVPSFX - VPS for forex with three MetaTrader terminals" width="728" height="90" loading="lazy"></a></div><p class="xr-vps-s">Sponsored. We earn a commission if you sign up through this link, at no extra cost to you.</p></div></aside><footer class="xr-footer"><div class="xr-container xr-foot"><div class="xr-fgrid"><div class="xr-fbrand"><a class="xr-brand" href="/"><img src="/images/xr-logo.webp" alt="BBFx AI - XAUUSD Robot" width="192" height="192"><b>XAUUSD<i>Robot</i></b></a><p>AI-powered free gold trading algorithms for MetaTrader 4 &amp; MT5. Built by BBFx AI. Free XAUUSD Expert Advisor for MT4 &amp; MT5, with three live accounts published in full.</p><div class="xr-fbtns"><a class="xr-chip gold" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a><a class="xr-chip green" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Signals</a></div></div><div><div class="xr-fh">Navigation</div><ul><li><a href="/#how">How It Works</a></li><li><a href="/#features">EA Features</a></li><li><a href="/#bots">Free Algos</a></li><li><a href="/#performance">Performance</a></li><li><a href="/#brokers">Brokers</a></li><li><a href="/#faq">FAQ</a></li></ul></div><div><div class="xr-fh">Free EAs</div><ul><li><a href="/gold-trading-ea/">Gold Trading EA (XAUUSD PRO)</a></li><li><a href="/free-gold-trading-robot-download/">Free Robot Download</a></li><li><span>BTCUSD PRO</span></li><li><a href="/blog/xauusd-scalping-bot/">XAUUSD Scalping EA</a></li><li><a href="/blog/xauusd-hedge-ea/">XAUUSD Hedge EA</a></li></ul></div><div><div class="xr-fh">Quick Links</div><ul><li><a href="https://get.xauusdrobot.com/get/xauusd-robot" target="_blank" rel="noopener">Get Free EA</a></li><li><a href="https://vigco.co/la-com-inv/bbfxai" target="_blank" rel="noopener noreferrer sponsored nofollow">Open Vantage Account</a></li><li><a href="/gold-news-calendar/">Gold News Calendar</a></li><li><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram Support</a></li><li><a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer sponsored nofollow">VPS Hosting</a></li></ul></div></div><div class="xr-spec"><div class="xr-fh">Algo Specification</div><div class="xr-specs"><span>Platform: MT4 &amp; MT5</span><span>Assets: XAUUSD &amp; BTCUSD</span><span>Strategy: Trend Following</span><span>Risk: Fixed Fractional</span><span>Martingale: ✗ Disabled</span><span>News Filter: ✓ Built-in</span><span>Cost: 100% Free</span></div></div><div class="xr-legal"><p><a href="/about/">About</a><span class="sep">·</span><a href="/contact/">Contact</a><span class="sep">·</span><a href="/privacy-policy/">Privacy Policy</a><span class="sep">·</span><a href="/affiliate-disclosure/">Affiliate Disclosure</a><span class="sep">·</span><a href="/tools/">Free Tools</a><span class="sep">·</span><a href="/sitemap/">Sitemap</a></p><p>© 2026 XAUUSDRobot.com by <a class="by" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">BBFx AI</a>. All rights reserved.</p><p class="disc">⚠️ Risk Disclaimer: Trading gold (XAUUSD), forex, and cryptocurrencies involves significant risk of loss. Past performance of any Expert Advisor or automated trading system does not guarantee future results. Never trade with money you cannot afford to lose. The XAUUSD Robot and all algo trading bots are provided for informational and affiliate purposes only. This website does not constitute financial advice. Affiliate broker links on this page may earn us a commission at no extra cost to you. Results may vary. Always conduct your own due diligence before trading.</p></div></div></footer>
+<script>window.intercomSettings={api_base:"https://api-iam.intercom.io",app_id:"bsw3dmm7",action_color:"#e8b53a",background_color:"#151922"};</script>
+<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',w.intercomSettings);}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/bsw3dmm7';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();</script>
+<script>(function(){var b=document.querySelector(".xr-burger"),m=document.getElementById("xrMobile");if(!b||!m)return;b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false");});m.addEventListener("click",function(e){if(e.target.closest("a"))m.classList.remove("open");});})();</script>
+</body></html>
