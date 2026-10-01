@@ -8,6 +8,41 @@
   <language>en</language>
   <lastBuildDate>Fri, 18 Sep 2026 12:00:00 +0000</lastBuildDate>
   <item>
+    <title>Points vs Pips: Why Your Gold EA's Stop Is 10x Off</title>
+    <link>https://xauusdrobot.com/blog/points-vs-pips-xauusd-ea/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/points-vs-pips-xauusd-ea/</guid>
+    <description>MetaTrader counts gold in points, traders talk in pips, and the gap between them is a factor of ten. How to tell which unit an input wants before it costs you a position.</description>
+    <pubDate>Wed, 01 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Gold EA Lot Size: Fixed Lots or Percent Risk?</title>
+    <link>https://xauusdrobot.com/blog/gold-ea-lot-size-settings/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/gold-ea-lot-size-settings/</guid>
+    <description>The two ways an EA can size a gold trade, what each does to an account as the balance moves, and the settings that quietly turn a 1% plan into something else.</description>
+    <pubDate>Wed, 01 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Server Time vs GMT: Setting an EA's Trading Hours</title>
+    <link>https://xauusdrobot.com/blog/ea-trading-hours-server-time/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/ea-trading-hours-server-time/</guid>
+    <description>An EA reads hours in broker server time, which is rarely your time and rarely GMT. How to find the offset, what daylight saving does to it, and how to check the window is right.</description>
+    <pubDate>Wed, 01 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Free Margin: Why Your Gold EA Stopped Trading</title>
+    <link>https://xauusdrobot.com/blog/ea-free-margin-no-trades/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/ea-free-margin-no-trades/</guid>
+    <description>An EA that places no orders is often not broken but out of free margin. What the number means, how open positions eat it, and the checks that separate it from other causes.</description>
+    <pubDate>Wed, 01 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
+    <title>Losing Streaks: The Maths a Gold EA Must Survive</title>
+    <link>https://xauusdrobot.com/blog/losing-streak-gold-ea-math/</link>
+    <guid isPermaLink="true">https://xauusdrobot.com/blog/losing-streak-gold-ea-math/</guid>
+    <description>How long a losing run to expect at a given win rate, what each risk level does to the balance when it arrives, and the recovery arithmetic that makes deep drawdowns so expensive.</description>
+    <pubDate>Wed, 01 Oct 2026 09:00:00 +0000</pubDate>
+  </item>
+  <item>
     <title>Backtest Profitable, Live Account Losing. Why?</title>
     <link>https://xauusdrobot.com/blog/backtest-live-mismatch/</link>
     <guid isPermaLink="true">https://xauusdrobot.com/blog/backtest-live-mismatch/</guid>

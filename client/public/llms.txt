@@ -3,7 +3,7 @@
 > XAUUSD Robot is a working notebook on automated gold trading: how an Expert Advisor turns a tick into an order, how to set one up on MetaTrader 4 and 5, how to test and verify it before funding it, and the execution costs that decide whether a backtested edge survives contact with a live account. The site also provides free XAUUSD Expert Advisors for MT4/MT5 to traders who open an account through a partner broker link. Editorial focus is the software and its infrastructure; beginner gold-market education is not this site's focus.
 
 Key facts:
-- Last updated: 2026-09-24
+- Last updated: 2026-10-01
 - Editorial scope: Expert Advisor mechanics, MT4/MT5 setup and VPS infrastructure, backtesting and track-record verification, and the risk and execution-cost arithmetic of running a robot on gold
 - Products: (1) BBFxAi XAUUSD Robot, a trend-following, non-martingale gold EA for MT4/MT5 with a fixed stop-loss on every trade; (2) XAUUSD Scalping EA; (3) XAUUSD Hedge EA
 - Pricing: free via partner broker signup. Requests are made at https://get.xauusdrobot.com/get/xauusd-robot; once the broker account is verified by hand, the licence key and the EA file are emailed from support@xauusdrobot.com
@@ -63,6 +63,13 @@ No subscription, no card, no payment at any step. Deposits stay in the trader's 
 - [How to Read a Myfxbook Record](https://xauusdrobot.com/blog/how-to-read-myfxbook/): Verify any EA before trusting it — the two verification badges, equity vs balance drawdown, open trades, and 7 tricks sellers use to fake results.
 - [What Is Drawdown in Trading? Gold EA Drawdown Guide](https://xauusdrobot.com/blog/gold-ea-drawdown-explained/): Drawdown explained simply: what max drawdown means, how much is acceptable for a gold EA, the brutal recovery math, and how to read it on a backtest or Myfxbook.
 - [Best Gold EA for Prop Firm & FTMO Challenges](https://xauusdrobot.com/blog/best-gold-ea-prop-firm-ftmo/): Whether a gold EA can pass a prop firm challenge, the rules that matter, and honest expectations.
+
+## Configuring the robot
+- [Points vs Pips: Why Your Gold EA's Stop Is 10x Off](https://xauusdrobot.com/blog/points-vs-pips-xauusd-ea/): MetaTrader counts gold in points, traders talk in pips, and the gap between them is a factor of ten. How to tell which unit an input wants before it costs you a position.
+- [Gold EA Lot Size: Fixed Lots or Percent Risk?](https://xauusdrobot.com/blog/gold-ea-lot-size-settings/): The two ways an EA can size a gold trade, what each does to an account as the balance moves, and the settings that quietly turn a 1% plan into something else.
+- [Server Time vs GMT: Setting an EA's Trading Hours](https://xauusdrobot.com/blog/ea-trading-hours-server-time/): An EA reads hours in broker server time, which is rarely your time and rarely GMT. How to find the offset, what daylight saving does to it, and how to check the window is right.
+- [Free Margin: Why Your Gold EA Stopped Trading](https://xauusdrobot.com/blog/ea-free-margin-no-trades/): An EA that places no orders is often not broken but out of free margin. What the number means, how open positions eat it, and the checks that separate it from other causes.
+- [Losing Streaks: The Maths a Gold EA Must Survive](https://xauusdrobot.com/blog/losing-streak-gold-ea-math/): How long a losing run to expect at a given win rate, what each risk level does to the balance when it arrives, and the recovery arithmetic that makes deep drawdowns so expensive.
 
 ## Risk & execution cost
 - [Gold EA Risk Management](https://xauusdrobot.com/blog/gold-ea-risk-management/): Risk per trade, lot sizing, stop-loss, and drawdown limits that keep a gold robot safe.

@@ -118,7 +118,7 @@ def link_html(cls):
 
 BUTTONS = ('<a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a>'
            '<a class="xr-btn xr-btn-gold" href="https://get.xauusdrobot.com/get/xauusd-robot" target="_blank" '
-           'rel="noopener">GET FREE EA</a>'
+           'rel="noopener">OPEN ACCOUNT</a>'
            '<a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer">'
            '<span>🚀</span> JOIN COMMUNITY</a>')
 
