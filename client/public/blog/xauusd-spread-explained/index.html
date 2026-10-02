@@ -5,9 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
 <title>XAUUSD Spread Explained: Gold's Hidden Trading Cost</title>
@@ -56,6 +54,8 @@ table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{t
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is the spread in XAUUSD trading?", "acceptedAnswer": {"@type": "Answer", "text": "The gap between bid (sell price) and ask (buy price) — e.g. 2412.30 / 2412.55 = 25 cents. Every trade starts down by this amount."}}, {"@type": "Question", "name": "Why is the gold spread so high?", "acceptedAnswer": {"@type": "Answer", "text": "Higher volatility and more fragmented liquidity than major forex pairs — market makers charge more to quote gold's risk."}}, {"@type": "Question", "name": "What is a good spread for XAUUSD?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly 10–25 cents (+ commission) on a raw account during liquid hours; 30–50 cents is typical on standard accounts."}}, {"@type": "Question", "name": "When is the spread widest?", "acceptedAnswer": {"@type": "Answer", "text": "Daily rollover (~21:00–23:00 GMT), the Asian session, Sunday open, and the seconds around NFP/CPI/FOMC — when it can hit several dollars."}}, {"@type": "Question", "name": "How does spread affect a gold EA?", "acceptedAnswer": {"@type": "Answer", "text": "It takes a fixed bite of every trade's target. Scalping systems can lose their whole edge to it; slower trend systems are more tolerant."}}, {"@type": "Question", "name": "Can spread widening hit my stop-loss?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — long stops fill at the bid, and a blown-out spread drops the bid even without a real price move. News-time spreads take out tight stops on their own."}}, {"@type": "Question", "name": "How do I pay less spread?", "acceptedAnswer": {"@type": "Answer", "text": "Raw account type, liquid hours, avoid rollover/news, measure your broker's real average, size positions by risk."}}]}</script>
 <link rel="alternate" type="application/rss+xml" title="XAUUSD Robot — The Lab" href="https://xauusdrobot.com/feed.xml" />
 <style id="xr-shell">
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans-latin.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('/fonts/playfair-display-latin.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-header{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.2)}
 .xr-bar{background:linear-gradient(90deg,#a87c2a,#e8b53a,#a87c2a);color:#0d0f14;text-align:center;padding:6px 16px;font:700 12px/1.4 'DM Sans',system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}

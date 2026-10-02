@@ -5,9 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
 <title>How to Use MetaTrader 4: Beginner Tutorial (2026)</title>
@@ -57,6 +55,8 @@ table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{t
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is MetaTrader 4 free to use?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Brokers provide MT4 free for demo and live accounts. You pay trading costs such as spread and commission, never a platform fee."}}, {"@type": "Question", "name": "Why does MetaTrader 4 say invalid account?", "acceptedAnswer": {"@type": "Answer", "text": "Usually the wrong server is selected, not a wrong password. Match the server name exactly to your broker's welcome email."}}, {"@type": "Question", "name": "How do I add gold to MetaTrader 4?", "acceptedAnswer": {"@type": "Answer", "text": "Ctrl+M, right-click, Symbols, then enable gold from the metals group. The name varies by broker: XAUUSD, GOLD or XAUUSD.m."}}, {"@type": "Question", "name": "Where do I put an EA file in MT4?", "acceptedAnswer": {"@type": "Answer", "text": "File → Open Data Folder → MQL4 → Experts, then restart. The EA appears in Navigator under Expert Advisors."}}, {"@type": "Question", "name": "Can I run MetaTrader 4 and MetaTrader 5 at the same time?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, they install separately and run side by side. EAs are not interchangeable — .ex4 is MT4 only, .ex5 is MT5 only."}}, {"@type": "Question", "name": "Does MetaTrader 4 work on a Mac or phone?", "acceptedAnswer": {"@type": "Answer", "text": "Mobile and web versions exist for monitoring and manual trades, but EAs only run on the Windows desktop version."}}]}</script>
 <link rel="alternate" type="application/rss+xml" title="XAUUSD Robot — The Lab" href="https://xauusdrobot.com/feed.xml" />
 <style id="xr-shell">
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans-latin.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('/fonts/playfair-display-latin.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-header{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.2)}
 .xr-bar{background:linear-gradient(90deg,#a87c2a,#e8b53a,#a87c2a);color:#0d0f14;text-align:center;padding:6px 16px;font:700 12px/1.4 'DM Sans',system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}

@@ -5,9 +5,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-L0Y8GMG2PG"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-L0Y8GMG2PG');</script>
 <title>What Is Drawdown in Trading? Gold EA Drawdown Guide</title>
@@ -56,6 +54,8 @@ table{width:100%;border-collapse:collapse;margin:20px 0;font-size:15.5px}th,td{t
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is drawdown in trading?", "acceptedAnswer": {"@type": "Answer", "text": "The decline from an account's peak to its lowest point before a new peak — e.g. $1,200 → $900 is a 25% drawdown. It measures the pain a strategy puts you through."}}, {"@type": "Question", "name": "What is maximum drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "The largest peak-to-trough fall ever recorded — the single most important risk number on any backtest or live record."}}, {"@type": "Question", "name": "How much drawdown is acceptable for a gold EA?", "acceptedAnswer": {"@type": "Answer", "text": "Roughly: under 10–15% conservative, 15–30% moderate, 40–50%+ a red flag. At 50% you need +100% just to break even."}}, {"@type": "Question", "name": "Why is drawdown more important than profit?", "acceptedAnswer": {"@type": "Answer", "text": "Recovery is asymmetric — 25% down needs +33%, 50% down needs +100%. Deep drawdowns mean the account was repeatedly near ruin regardless of the profit shown."}}, {"@type": "Question", "name": "Balance vs equity drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "Balance counts closed trades only; equity includes floating losses. Equity is the honest number — martingale systems hide risk in open trades."}}, {"@type": "Question", "name": "How do I check an EA's real drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "Maximal equity drawdown on a long backtest plus a third-party live record (Myfxbook). Distrust smooth curves from grid/martingale logic."}}, {"@type": "Question", "name": "Does a stop-loss reduce drawdown?", "acceptedAnswer": {"@type": "Answer", "text": "It caps each trade's loss, keeping drawdown bounded, visible and survivable — especially combined with 1–2% risk per trade."}}]}</script>
 <link rel="alternate" type="application/rss+xml" title="XAUUSD Robot — The Lab" href="https://xauusdrobot.com/feed.xml" />
 <style id="xr-shell">
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans-latin.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('/fonts/playfair-display-latin.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-header{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.2)}
 .xr-bar{background:linear-gradient(90deg,#a87c2a,#e8b53a,#a87c2a);color:#0d0f14;text-align:center;padding:6px 16px;font:700 12px/1.4 'DM Sans',system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}

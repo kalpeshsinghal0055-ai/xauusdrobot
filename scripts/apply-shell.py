@@ -23,12 +23,14 @@ io.open(LOGO_OUT, "wb").write(base64.b64decode(b64))
 print("logo written:", LOGO_OUT, len(b64) * 3 // 4, "bytes")
 
 # ---------------------------------------------------------------- shell CSS
-FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
-         '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'
-         '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800;900'
-         '&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">')
+FONTS = ('\n'
+         '\n'
+         '<link rel="preload" href="/fonts/playfair-display-latin.woff2" as="font" type="font/woff2" crossorigin>'
+         '<link rel="preload" href="/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>')
 
 SHELL_CSS = """<style id="xr-shell">
+@font-face{font-family:'DM Sans';src:url('/fonts/dm-sans-latin.woff2') format('woff2');font-weight:100 1000;font-style:normal;font-display:swap}
+@font-face{font-family:'Playfair Display';src:url('/fonts/playfair-display-latin.woff2') format('woff2');font-weight:400 900;font-style:normal;font-display:swap}
 h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-header{position:sticky;top:0;z-index:50;background:rgba(13,15,20,.9);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(232,181,58,.1);box-shadow:0 10px 15px -3px rgba(0,0,0,.2)}
 .xr-bar{background:linear-gradient(90deg,#a87c2a,#e8b53a,#a87c2a);color:#0d0f14;text-align:center;padding:6px 16px;font:700 12px/1.4 'DM Sans',system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase}
@@ -224,6 +226,13 @@ def convert(s, year="2026"):
         s = re.sub(r'<style id="xr-shell">.*?</style>', lambda _: SHELL_CSS, s, count=1, flags=re.S)
         s = re.sub(r'<header class="xr-header">.*?</header>', lambda _: HEADER, s, count=1, flags=re.S)
         s = re.sub(r'<footer class="xr-footer">.*?</footer>', lambda _: footer(year), s, count=1, flags=re.S)
+        # Both faces are self-hosted and preloaded now. Without this the refresh path
+        # would leave the old Google links - and their dead handshake hints - in place.
+        s = re.sub(r'<link[^>]*href="https://fonts\.googleapis\.com/css2\?[^"]*"[^>]*>', '', s)
+        s = re.sub(r'\s*<link rel="preconnect" href="https://fonts\.(?:googleapis|gstatic)\.com"[^>]*>', '', s)
+        if 'playfair-display-latin.woff2' not in s or 'dm-sans-latin.woff2' not in s:
+            # anchor on the viewport meta, the same place the conversion path uses
+            s = re.sub(r'(<meta name="viewport"[^>]*>)', lambda m: m.group(1) + '\n' + FONTS, s, count=1)
         return s, ["refreshed"]
     if not re.search(r'<header class="site">.*?</header>', s, re.S):
         return None, "no old-shell header"
