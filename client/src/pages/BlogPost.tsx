@@ -99,7 +99,7 @@ function Post2() {
           <div>
             <h3 className="text-foreground font-semibold text-sm mb-1">Recommended: GoVPSFX</h3>
             <p className="text-xs text-muted-foreground mb-3">A VPS keeps the EA running 24/5 without your PC on. Use this code for optimal compatibility:</p>
-            <a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer" className="font-mono text-xs bg-background border border-gold/20 text-gold px-3 py-1.5 rounded inline-block">NDM0ODU6OlJV</a>
+            <a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="sponsored nofollow noopener noreferrer" className="font-mono text-xs bg-background border border-gold/20 text-gold px-3 py-1.5 rounded inline-block">NDM0ODU6OlJV</a>
           </div>
         </div>
       </div>

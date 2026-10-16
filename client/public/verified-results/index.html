@@ -121,6 +121,11 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-vps-t span.d{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:60ch}
 .xr-vps-a{display:block;width:100%;max-width:728px}.xr-vps-a img{width:100%;height:auto;display:block;border-radius:8px}
 .xr-vps-s{font-size:11px;color:rgba(154,163,178,.55);text-align:center;margin:10px 0 0}
+/* WCAG 2.2 target size (2.5.8): the desktop nav links rendered 14px tall and the footer
+   links 18px, small enough to mistap. The nav links are flex items in a 64px bar, so the
+   padding only grows the hit area; the footer links need inline-block first. */
+.xr-links>a.lnk{padding-block:10px}
+.xr-footer li a{display:inline-block;padding-block:4px}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Verified Results", "description": "Three live XAUUSD trading accounts, each linked to its complete trade-by-trade record.", "url": "https://xauusdrobot.com/verified-results/", "mainEntity": {"@type": "ItemList", "name": "Live trading accounts", "numberOfItems": 3, "itemListOrder": "https://schema.org/ItemListUnordered", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Account 11324902", "url": "https://www.copyconnectfx.com/p/GG5yHLWOoWyco7J2HB2E"},{"@type": "ListItem", "position": 2, "name": "Account 11324901", "url": "https://www.copyconnectfx.com/p/wGJIt1aADIe3jO_dUQa4"},{"@type": "ListItem", "position": 3, "name": "Account 11429969", "url": "https://www.copyconnectfx.com/p/RGbEVAWp72cXcupuwkIV"}]}}</script>
 <script src="/access-gate.js?v=d428c553" defer></script>

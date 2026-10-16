@@ -124,6 +124,11 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-vps-t span.d{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:60ch}
 .xr-vps-a{display:block;width:100%;max-width:728px}.xr-vps-a img{width:100%;height:auto;display:block;border-radius:8px}
 .xr-vps-s{font-size:11px;color:rgba(154,163,178,.55);text-align:center;margin:10px 0 0}
+/* WCAG 2.2 target size (2.5.8): the desktop nav links rendered 14px tall and the footer
+   links 18px, small enough to mistap. The nav links are flex items in a 64px bar, so the
+   padding only grows the hit area; the footer links need inline-block first. */
+.xr-links>a.lnk{padding-block:10px}
+.xr-footer li a{display:inline-block;padding-block:4px}
 </style>
 <script src="/access-gate.js?v=d428c553" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Losing Streaks: The Maths a Gold EA Survives", "description": "How long a losing run to expect at a given win rate, what it costs at 1%, 2% and 5% risk, and the recovery maths that makes deep drawdowns so expensive.", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Organization", "name": "XAUUSD Robot"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/images/xr-logo.webp"}}, "image": "https://xauusdrobot.com/images/losing-streak-gold-ea-math.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xauusdrobot.com/blog/losing-streak-gold-ea-math/"}, "keywords": "gold ea losing streak, ea drawdown recovery, risk per trade streak", "abstract": "A 50% win rate produces a run of seven losses somewhere in 200 trades more often than not - that is normal, not broken. At 1% risk a seven-loss run costs about 7%. At 5% risk it costs about 30%, and recovering 30% needs a 43% gain. The risk setting decides whether a normal streak is an inconvenience or an ending."}</script>

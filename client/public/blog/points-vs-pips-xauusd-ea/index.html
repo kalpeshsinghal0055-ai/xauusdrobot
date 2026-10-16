@@ -124,6 +124,11 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-vps-t span.d{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:60ch}
 .xr-vps-a{display:block;width:100%;max-width:728px}.xr-vps-a img{width:100%;height:auto;display:block;border-radius:8px}
 .xr-vps-s{font-size:11px;color:rgba(154,163,178,.55);text-align:center;margin:10px 0 0}
+/* WCAG 2.2 target size (2.5.8): the desktop nav links rendered 14px tall and the footer
+   links 18px, small enough to mistap. The nav links are flex items in a 64px bar, so the
+   padding only grows the hit area; the footer links need inline-block first. */
+.xr-links>a.lnk{padding-block:10px}
+.xr-footer li a{display:inline-block;padding-block:4px}
 </style>
 <script src="/access-gate.js?v=d428c553" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Points vs Pips: Why a Gold EA's Stop Is 10x Off", "description": "MetaTrader counts gold in points, traders talk in pips, and the gap is a factor of ten. How to tell which unit an EA input wants before it costs you.", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Organization", "name": "XAUUSD Robot"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/images/xr-logo.webp"}}, "image": "https://xauusdrobot.com/images/points-vs-pips-xauusd-ea.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xauusdrobot.com/blog/points-vs-pips-xauusd-ea/"}, "keywords": "xauusd points vs pips, gold ea stop loss points, mt5 points gold", "abstract": "MetaTrader counts in points - the last decimal of the quote. On a two-decimal gold feed a point is $0.01, and a pip is $0.10, so 1 pip = 10 points. An EA input labelled StopLoss = 300 almost always means 300 points, which is a $3.00 move, not a $30 one. Check the unit before you trust the number."}</script>
