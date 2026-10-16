@@ -124,6 +124,11 @@ h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;letter-spacing:-.01em}
 .xr-vps-t span.d{color:var(--muted);font-size:14.5px;line-height:1.55;max-width:60ch}
 .xr-vps-a{display:block;width:100%;max-width:728px}.xr-vps-a img{width:100%;height:auto;display:block;border-radius:8px}
 .xr-vps-s{font-size:11px;color:rgba(154,163,178,.55);text-align:center;margin:10px 0 0}
+/* WCAG 2.2 target size (2.5.8): the desktop nav links rendered 14px tall and the footer
+   links 18px, small enough to mistap. The nav links are flex items in a 64px bar, so the
+   padding only grows the hit area; the footer links need inline-block first. */
+.xr-links>a.lnk{padding-block:10px}
+.xr-footer li a{display:inline-block;padding-block:4px}
 </style>
 <script src="/access-gate.js?v=d428c553" defer></script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Server Time vs GMT: An EA's Trading Hours", "description": "An EA reads hours in broker server time, rarely your time and rarely GMT. Find the offset, handle daylight saving, and check the window is really right.", "datePublished": "2026-10-01", "dateModified": "2026-10-01", "author": {"@type": "Organization", "name": "XAUUSD Robot"}, "publisher": {"@type": "Organization", "name": "XAUUSD Robot", "logo": {"@type": "ImageObject", "url": "https://xauusdrobot.com/images/xr-logo.webp"}}, "image": "https://xauusdrobot.com/images/ea-trading-hours-server-time.jpg", "mainEntityOfPage": {"@type": "WebPage", "@id": "https://xauusdrobot.com/blog/ea-trading-hours-server-time/"}, "keywords": "ea trading hours server time, mt5 gmt offset, gold ea session filter", "abstract": "An EA's hour inputs are in broker server time, not your local time and usually not GMT. Most gold brokers run GMT+2 or GMT+3, and the offset shifts with daylight saving. Set the window to 8-17 server thinking you got London and you may have set 6-15 London, missing the New York overlap entirely. Find the offset once, write it down, re-check it in March and October."}</script>
