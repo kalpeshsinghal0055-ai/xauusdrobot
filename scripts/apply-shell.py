@@ -112,6 +112,10 @@ MENU_SVG = ('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke=
             'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="6" x2="20" y2="6"/>'
             '<line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg>')
 
+# /ea is NOT in here on purpose. Measured at every breakpoint the nav shows at
+# (>=1260px): the eight links plus three buttons already fill it to 1247px of 1480,
+# and a ninth pushed the row to 1327px and put a horizontal scrollbar on the page.
+# /ea is reached from the footer's Free EAs column instead, on all 66 pages.
 LINKS = [("/#how", "How It Works"), ("/#features", "Features"), ("/#bots", "Free Algos"),
          ("/#brokers", "Brokers"), ("/blog/", "Blog"), ("/tools/", "Tools"), ("/#faq", "FAQ"),
          ("https://t.me/BBFx_Ai", "Telegram")]
@@ -155,6 +159,7 @@ def footer(year):
             '<li><a href="/#bots">Free Algos</a></li><li><a href="/#performance">Performance</a></li>'
             '<li><a href="/#brokers">Brokers</a></li><li><a href="/#faq">FAQ</a></li></ul></div>'
             '<div><div class="xr-fh">Free EAs</div><ul>'
+            '<li><a href="/ea/">Free MT5 Gold EAs</a></li>'
             '<li><a href="/gold-trading-ea/">Gold Trading EA (XAUUSD PRO)</a></li>'
             '<li><a href="/free-gold-trading-robot-download/">Free Robot Download</a></li>'
             '<li><span>BTCUSD PRO</span></li>'
