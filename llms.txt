@@ -6,7 +6,7 @@ Key facts:
 - Last updated: 2026-10-28
 - Editorial scope: Expert Advisor mechanics, MT4/MT5 setup and VPS infrastructure, backtesting and track-record verification, and the risk and execution-cost arithmetic of running a robot on gold
 - Products: (1) BBFxAi XAUUSD Robot, a trend-following, non-martingale gold EA for MT4/MT5 with a fixed stop-loss on every trade; (2) XAUUSD Scalping EA; (3) XAUUSD Hedge EA
-- Pricing: free via partner broker signup. Two request routes: the form at https://get.xauusdrobot.com/get/xauusd-robot for the XAUUSD Robot EA, and the Telegram bot @xauusdrobot_bot (see https://xauusdrobot.com/ea/) for Aurum Session, Oracle Gold and Pyramid Core. For the form route, once the broker account is verified by hand, the licence key and the EA file are emailed from support@xauusdrobot.com
+- Pricing: free via partner broker signup. Two request routes: the form at https://t.me/xauusdrobot_bot?start=ea for the XAUUSD Robot EA, and the Telegram bot @xauusdrobot_bot (see https://xauusdrobot.com/ea/) for Aurum Session, Oracle Gold and Pyramid Core. For the form route, once the broker account is verified by hand, the licence key and the EA file are emailed from support@xauusdrobot.com
 - Contact: Telegram https://t.me/xauusdrobot_bot
 - Performance: three live accounts published in full at https://xauusdrobot.com/verified-results/ with net result, win rate, profit factor and maximum drawdown, each linked to its complete trade history
 - Recommended brokers: Markets4you, Exness, Vantage, XS (full MT4/MT5 EA support)
@@ -15,7 +15,7 @@ Key facts:
 ## How to get the EA
 Free, but tied to a partner account - broker commission is what funds the EA.
 1. Open a live account with one of the partner brokers (Markets4you, Exness, Vantage or XS) through the link on the request page.
-2. Submit the request form at https://get.xauusdrobot.com/get/xauusd-robot with email, Telegram handle and account number.
+2. Submit the request form at https://t.me/xauusdrobot_bot?start=ea with email, Telegram handle and account number.
 3. The account is checked against the partner report by hand, then the licence key and the EA file arrive by email.
 No subscription, no card, no payment at any step. Deposits stay in the trader's own broker account.
 
