@@ -118,7 +118,7 @@ MENU_SVG = ('<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke=
 # /ea is reached from the footer's Free EAs column instead, on all 66 pages.
 LINKS = [("/#how", "How It Works"), ("/#features", "Features"), ("/#bots", "Free Algos"),
          ("/#brokers", "Brokers"), ("/blog/", "Blog"), ("/tools/", "Tools"), ("/#faq", "FAQ"),
-         ("https://t.me/BBFx_Ai", "Telegram")]
+         ("https://t.me/xauusdrobot_bot?start=support", "Telegram")]
 
 def link_html(cls):
     out = []
@@ -128,7 +128,7 @@ def link_html(cls):
     return "".join(out)
 
 BUTTONS = ('<a class="xr-btn xr-btn-verified" href="/verified-results/"><span>✔</span> VERIFIED RESULTS</a>'
-           '<a class="xr-btn xr-btn-gold" href="https://get.xauusdrobot.com/get/xauusd-robot" target="_blank" '
+           '<a class="xr-btn xr-btn-gold" href="https://t.me/xauusdrobot_bot?start=ea" target="_blank" '
            'rel="noopener">OPEN ACCOUNT</a>'
            '<a class="xr-btn xr-btn-join" href="https://t.me/BBFxAi_Community" target="_blank" rel="noopener noreferrer">'
            '<span>🚀</span> JOIN COMMUNITY</a>')
@@ -151,8 +151,8 @@ def footer(year):
             '<div class="xr-fbrand">' + BRAND +
             '<p>AI-powered free gold trading algorithms for MetaTrader 4 &amp; MT5. Built by BBFx AI. '
             'Free XAUUSD Expert Advisor for MT4 &amp; MT5, with three live accounts published in full.</p>'
-            '<div class="xr-fbtns"><a class="xr-chip gold" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram</a>'
-            '<a class="xr-chip green" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Signals</a></div>'
+            '<div class="xr-fbtns"><a class="xr-chip gold" href="https://t.me/xauusdrobot_bot?start=support" target="_blank" rel="noopener noreferrer">Telegram</a>'
+            '<a class="xr-chip green" href="https://t.me/xauusdrobot_bot?start=support" target="_blank" rel="noopener noreferrer">Signals</a></div>'
             '</div>'
             '<div><div class="xr-fh">Navigation</div><ul>'
             '<li><a href="/#how">How It Works</a></li><li><a href="/#features">EA Features</a></li>'
@@ -166,10 +166,10 @@ def footer(year):
             '<li><a href="/blog/xauusd-scalping-bot/">XAUUSD Scalping EA</a></li>'
             '<li><a href="/blog/xauusd-hedge-ea/">XAUUSD Hedge EA</a></li></ul></div>'
             '<div><div class="xr-fh">Quick Links</div><ul>'
-            '<li><a href="https://get.xauusdrobot.com/get/xauusd-robot" target="_blank" rel="noopener">Get Free EA</a></li>'
+            '<li><a href="https://t.me/xauusdrobot_bot?start=ea" target="_blank" rel="noopener">Get Free EA</a></li>'
             '<li><a href="https://vigco.co/la-com-inv/bbfxai" target="_blank" rel="noopener noreferrer sponsored nofollow">Open Vantage Account</a></li>'
             '<li><a href="/gold-news-calendar/">Gold News Calendar</a></li>'
-            '<li><a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">Telegram Support</a></li>'
+            '<li><a href="https://t.me/xauusdrobot_bot?start=support" target="_blank" rel="noopener noreferrer">Telegram Support</a></li>'
             '<li><a href="https://my.govpsfx.com/?ref=NDM0ODU6OlJV" target="_blank" rel="noopener noreferrer sponsored nofollow">VPS Hosting</a></li></ul></div>'
             '</div>'
             '<div class="xr-spec"><div class="xr-fh">Algo Specification</div><div class="xr-specs">'
@@ -180,7 +180,7 @@ def footer(year):
             '<p><a href="/about/">About</a><span class="sep">·</span><a href="/contact/">Contact</a><span class="sep">·</span>'
             '<a href="/privacy-policy/">Privacy Policy</a><span class="sep">·</span><a href="/affiliate-disclosure/">Affiliate Disclosure</a>'
             '<span class="sep">·</span><a href="/tools/">Free Tools</a><span class="sep">·</span><a href="/sitemap/">Sitemap</a></p>'
-            '<p>© ' + year + ' XAUUSDRobot.com by <a class="by" href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer">BBFx AI</a>. All rights reserved.</p>'
+            '<p>© ' + year + ' XAUUSDRobot.com by <a class="by" href="https://t.me/xauusdrobot_bot?start=support" target="_blank" rel="noopener noreferrer">BBFx AI</a>. All rights reserved.</p>'
             '<p class="disc">⚠️ Risk Disclaimer: Trading gold (XAUUSD), forex, and cryptocurrencies involves significant risk of loss. '
             'Past performance of any Expert Advisor or automated trading system does not guarantee future results. Never trade with '
             'money you cannot afford to lose. The XAUUSD Robot and all algo trading bots are provided for informational and affiliate '

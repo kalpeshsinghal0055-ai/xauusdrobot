@@ -11,7 +11,7 @@ const navLinks = [
   { href: "/blog", label: "Blog", internal: true },
   { href: "/tools/", label: "Tools" },
   { href: "/#faq", label: "FAQ" },
-  { href: "https://t.me/BBFx_Ai", label: "Telegram", external: true },
+  { href: "https://t.me/xauusdrobot_bot?start=support", label: "Telegram", external: true },
 ];
 
 export default function Navbar() {
@@ -90,7 +90,7 @@ export default function Navbar() {
             <span>✔</span> VERIFIED RESULTS
           </a>
           <a
-            href="https://get.xauusdrobot.com/get/xauusd-robot"
+            href="https://t.me/xauusdrobot_bot?start=ea"
             target="_blank"
             rel="noopener"
             className="px-5 py-2.5 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide hover:shadow-lg hover:shadow-gold/20 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shrink-0"
@@ -158,7 +158,7 @@ export default function Navbar() {
                 <span>✔</span> VERIFIED RESULTS
               </a>
               <a
-                href="https://get.xauusdrobot.com/get/xauusd-robot"
+                href="https://t.me/xauusdrobot_bot?start=ea"
                 target="_blank"
                 rel="noopener"
                 className="px-5 py-3 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-semibold text-sm rounded tracking-wide text-center"

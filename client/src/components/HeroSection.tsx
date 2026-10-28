@@ -75,7 +75,7 @@ export default function HeroSection() {
             className="flex flex-wrap gap-4"
           >
             <a
-              href="https://get.xauusdrobot.com/get/xauusd-robot"
+              href="https://t.me/xauusdrobot_bot?start=ea"
               target="_blank"
               rel="noopener"
               className="group px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded transition-all duration-300 hover:shadow-xl hover:shadow-gold/25 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
@@ -91,7 +91,7 @@ export default function HeroSection() {
               <span>🚀</span> JOIN BBFXAI COMMUNITY
             </a>
             <a
-              href="https://t.me/BBFx_Ai"
+              href="https://t.me/xauusdrobot_bot?start=support"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 border border-gold/30 text-gold font-semibold text-base rounded hover:bg-gold/5 hover:border-gold/60 transition-all duration-300 flex items-center gap-2"
@@ -126,7 +126,7 @@ export default function HeroSection() {
           >
             Your license key is issued with the EA when your{" "}
             <a
-              href="https://get.xauusdrobot.com/get/xauusd-robot"
+              href="https://t.me/xauusdrobot_bot?start=ea"
               target="_blank"
               rel="noopener"
               className="text-gold font-semibold hover:underline"
@@ -135,7 +135,7 @@ export default function HeroSection() {
             </a>
             {" "}— or ask{" "}
             <a
-              href="https://t.me/BBFx_Ai"
+              href="https://t.me/xauusdrobot_bot?start=support"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold font-semibold hover:underline"

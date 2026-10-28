@@ -111,7 +111,7 @@ export default function SEOContent() {
                 professional XAUUSD robot installed on your MT4/MT5, free setup support, and access
                 to our private Telegram community with live{" "}
                 <a
-                  href="https://t.me/BBFx_Ai"
+                  href="https://t.me/xauusdrobot_bot?start=support"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gold hover:text-gold-light transition-colors"

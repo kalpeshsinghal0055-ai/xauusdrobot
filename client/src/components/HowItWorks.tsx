@@ -13,14 +13,14 @@ const steps = [
     icon: "📲",
     title: "Submit Your Account Number",
     desc: "Enter your broker and account number on our request page. We verify it against the partner report and your free XAUUSD Expert Advisor download is ready within 24 hours. Prefer to talk? Message us on Telegram instead.",
-    cta: { label: "REQUEST YOUR EA →", href: "https://get.xauusdrobot.com/get/xauusd-robot" },
+    cta: { label: "REQUEST YOUR EA →", href: "https://t.me/xauusdrobot_bot?start=ea" },
   },
   {
     num: "03",
     icon: "🤖",
     title: "Let the Algo Trade 24/7",
     desc: "Your MT5 gold algo runs automatically — scanning XAUUSD for high-probability setups, executing trades, managing risk, and compounding profits. You just monitor performance.",
-    cta: { label: "JOIN LIVE SIGNALS →", href: "https://t.me/BBFx_Ai" },
+    cta: { label: "JOIN LIVE SIGNALS →", href: "https://t.me/xauusdrobot_bot?start=support" },
   },
 ];
 

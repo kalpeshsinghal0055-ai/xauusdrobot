@@ -36,7 +36,7 @@ export default function CTASection() {
           {/* CTA Buttons */}
           <div className="flex flex-wrap justify-center gap-4">
             <a
-              href="https://get.xauusdrobot.com/get/xauusd-robot"
+              href="https://t.me/xauusdrobot_bot?start=ea"
               target="_blank"
               rel="noopener"
               className="px-8 py-4 bg-gradient-to-r from-gold-dark via-gold to-gold-light text-background font-bold text-base rounded hover:shadow-xl hover:shadow-gold/25 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2"
@@ -44,7 +44,7 @@ export default function CTASection() {
               <span>⚡</span> GET FREE MT5 EA NOW
             </a>
             <a
-              href="https://t.me/BBFx_Ai"
+              href="https://t.me/xauusdrobot_bot?start=support"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 border border-gold/30 text-gold font-semibold text-base rounded hover:bg-gold/5 hover:border-gold/60 transition-all duration-300 flex items-center gap-2"
@@ -52,7 +52,7 @@ export default function CTASection() {
               <span>💬</span> TELEGRAM SUPPORT
             </a>
             <a
-              href="https://t.me/BBFx_Ai"
+              href="https://t.me/xauusdrobot_bot?start=support"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 border border-emerald/30 text-emerald font-semibold text-base rounded hover:bg-emerald/5 hover:border-emerald/60 transition-all duration-300 flex items-center gap-2"

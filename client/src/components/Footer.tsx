@@ -26,7 +26,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-3">
               <a
-                href="https://t.me/BBFx_Ai"
+                href="https://t.me/xauusdrobot_bot?start=support"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-xs font-semibold text-gold border border-gold/20 rounded hover:bg-gold/5 transition-colors"
@@ -34,7 +34,7 @@ export default function Footer() {
                 Telegram
               </a>
               <a
-                href="https://t.me/BBFx_Ai"
+                href="https://t.me/xauusdrobot_bot?start=support"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-xs font-semibold text-emerald border border-emerald/20 rounded hover:bg-emerald/5 transition-colors"
@@ -122,7 +122,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               <li>
                 <a
-                  href="https://get.xauusdrobot.com/get/xauusd-robot"
+                  href="https://t.me/xauusdrobot_bot?start=ea"
                   target="_blank"
                   rel="noopener"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
@@ -150,7 +150,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://t.me/BBFx_Ai"
+                  href="https://t.me/xauusdrobot_bot?start=support"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm text-muted-foreground hover:text-gold transition-colors"
@@ -206,7 +206,7 @@ export default function Footer() {
           <p className="text-xs text-muted-foreground mb-4">
             © 2026 XAUUSDRobot.com by{" "}
             <a
-              href="https://t.me/BBFx_Ai"
+              href="https://t.me/xauusdrobot_bot?start=support"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gold/60 hover:text-gold transition-colors"

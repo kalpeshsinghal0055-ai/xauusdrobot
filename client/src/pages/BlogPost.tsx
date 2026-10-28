@@ -25,7 +25,7 @@ const brokers = [
 function SupportCards() {
   return (
     <div className="my-6 flex justify-center">
-      <a href="https://t.me/BBFx_Ai" target="_blank" rel="noopener noreferrer"
+      <a href="https://t.me/xauusdrobot_bot?start=support" target="_blank" rel="noopener noreferrer"
         className="flex flex-col items-center justify-center bg-card border border-border/30 rounded-xl py-6 px-10 text-center hover:border-gold/30 transition-all hover:-translate-y-0.5 w-full max-w-sm">
         <div className="text-3xl mb-2">✈️</div>
         <div className="text-[10px] text-muted-foreground uppercase tracking-widest mb-1">Talk to us on Telegram</div>
