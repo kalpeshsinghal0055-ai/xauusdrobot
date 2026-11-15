@@ -80,7 +80,7 @@ export default function HowItWorks() {
                   href={step.cta.href}
                   target="_blank"
                   rel={/(exness|xs\.com|icmarkets|tickmill|vigco|markets4you|govpsfx)/.test(step.cta.href) ? "noopener noreferrer sponsored nofollow" : "noopener noreferrer"}
-                  className="inline-flex items-center text-gold font-semibold text-sm hover:text-gold-light transition-colors tracking-wide"
+                  className="inline-flex items-center py-1.5 text-gold font-semibold text-sm hover:text-gold-light transition-colors tracking-wide"
                 >
                   {step.cta.label}
                 </a>

@@ -83,7 +83,7 @@ export default function Home() {
           </a>
           </div>
           <div className="text-center mt-8">
-            <a href="/blog/" className="text-gold font-semibold hover:underline">View all guides →</a>
+            <a href="/blog/" className="inline-block py-1.5 text-gold font-semibold hover:underline">View all guides →</a>
           </div>
         </div>
       </section>

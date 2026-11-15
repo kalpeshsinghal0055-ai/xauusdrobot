@@ -7,6 +7,12 @@
  * an unversioned edit stays invisible for four hours.
  *
  * Run it after ANY edit to the source:  node scripts/build-access-gate.mjs
+ *
+ * NOT CURRENTLY SHIPPED. Since 2026-10-28 no page links to get.xauusdrobot.com,
+ * so the dialog could never open and the include was removed from all 66 pages
+ * (and client/public/access-gate.js deleted) on 2026-11-15. The source is kept
+ * because the gate itself still runs at get.xauusdrobot.com: if the site links
+ * there again, run this and re-add the <script> tag rather than rewriting it.
  */
 import { createHash } from 'node:crypto';
 import fs from 'node:fs';

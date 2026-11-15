@@ -67,7 +67,7 @@ export default function Navbar() {
           {navLinks.map((link) =>
             link.internal ? (
               <Link key={link.href} href={link.href}>
-                <span className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase cursor-pointer">
+                <span className="inline-block py-1.5 text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase cursor-pointer">
                   {link.label}
                 </span>
               </Link>
@@ -77,7 +77,7 @@ export default function Navbar() {
                 href={link.href}
                 target={link.external ? "_blank" : undefined}
                 rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase"
+                className="inline-block py-1.5 text-sm font-medium text-muted-foreground hover:text-gold transition-colors duration-300 tracking-wide uppercase"
               >
                 {link.label}
               </a>
